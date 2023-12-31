@@ -1,0 +1,276 @@
+:root {
+  --primary-color: #EF3E00;
+  --primary-font-family: "Montserrat", sans-serif;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: var(--primary-font-family) !important;
+}
+
+.MuiTypography-root {
+  font-family: var(--primary-font-family) !important;
+  font-weight: 500;
+}
+
+.MuiAccordionSummary-root .MuiSvgIcon-root {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar-contact {
+  padding: 15px 25px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: 25px;
+  font-weight: 600;
+}
+
+.navbar-links {
+  color: #000;
+  transition: .3s;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+}
+
+.border-bottom-class {
+  padding: 20px 16px;
+}
+
+.navbar-dropdown-links {
+  color: #fff;
+  transition: .3s;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.navbar-links:hover,
+.active-link {
+  color: var(--primary-color);
+  border-bottom: 3px solid var(--primary-color);
+}
+
+.active {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.title-logo {
+  font-weight: 700;
+}
+
+.manufacturing-unit-images {
+  transition: .3s;
+}
+
+.manufacturing-unit-images:hover {
+  transform: scale(1.05);
+}
+
+.MuiListItemIcon-root {
+  min-width: 25px !important;
+}
+
+.dropdown1 {
+  position: relative;
+  text-align: center;
+}
+
+.dropdown1 span,
+.dropdown1 a {
+  padding: 21px 16px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 190%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  background-color: var(--primary-color);
+  min-width: 200px;
+  box-shadow: 2px 8px 16px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  padding: 0px 10px;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 5px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content div {
+  color: white;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+.dropdown1:hover .dropdown-content {
+  display: block;
+}
+
+.counter-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.counter {
+  text-align: center;
+}
+
+.counter h3 {
+  padding: 0.5rem 0;
+  font-weight: 800;
+}
+
+.counter h6 {
+  padding-bottom: 1rem;
+}
+
+.count {
+  color: var(--primary-color);
+}
+
+.color-primary {
+  color: var(--primary-color) !important;
+}
+
+.background-primary {
+  background-color: var(--primary-color) !important;
+}
+
+.loading-button {
+  background: var(--primary-color) !important;
+  color: white !important;
+  border: 2px solid var(--primary-color) !important;
+  border-radius: 25px !important;
+  font-weight: 600 !important;
+  font-family: var(--primary-font-family) !important;
+  font-size: calc(0.6rem + 0.5vw) !important;
+  transition: 0.5s !important;
+}
+
+.loading-button:hover {
+  background: var(--primary-color) !important;
+  color: white !important;
+}
+
+
+/* RHFTextField.css */
+
+.MuiTextField-root {
+  width: 100%;
+}
+
+.MuiFilledInput-root {
+  background-color: #fff;
+  transition: background-color 0.3s;
+}
+
+.MuiFilledInput-underline:after {
+  border-bottom-color: var(--primary-color) !important;
+}
+
+.MuiInputLabel-filled {
+  color: #b8b8b8;
+}
+
+.MuiInputLabel-filled.Mui-focused {
+  color: var(--primary-color);
+}
+
+.font--size-1125 {
+  font-size: '1.125rem' !important;
+}
+
+.stack-contact {
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.06);
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.stack-contact:hover {
+  transform: translateY(-5px);
+}
+
+.MuiDivider-root {
+  border-color: black !important;
+}
+
+.mb--25 {
+  margin-bottom: 20px !important;
+}
+
+.icon-small {
+  font-size: small !important;
+}
+
+.fw-600 {
+  font-weight: 600 !important;
+}
