@@ -10,7 +10,9 @@ import Link from 'next/link';
 //import MenuIcon from '@mui/icons-material/Menu';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
-import SearchIcon from '@mui/icons-material/Search';
+import Search from './Search';
+
+
 
 const AppBar = styled(MuiAppBar)`
     background-color: rgba(255,255,255);
@@ -93,11 +95,8 @@ const Navbar = () => {
                                         />
                                     </Link>
                                 </Typography>
-                                <Tooltip title="Search Product" placement='top'>
-                                    <IconButton>
-                                        <SearchIcon />
-                                    </IconButton>
-                                </Tooltip>
+                                <Search/>
+
                                 <IconButton edge="end" onClick={toggleDrawer}>
                                     <SegmentSharpIcon fontSize='large' style={{ color: 'black' }} />
                                 </IconButton>
@@ -230,11 +229,7 @@ const Navbar = () => {
                                             Contact
                                         </Link>
                                     </Stack>
-                                    <Tooltip title="Search Product" placement='top'>
-                                        <IconButton>
-                                            <SearchIcon />
-                                        </IconButton>
-                                    </Tooltip>
+                                    <Search/>
                                 </Stack>
                             </>
                     }
