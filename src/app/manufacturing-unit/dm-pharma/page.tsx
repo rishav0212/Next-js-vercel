@@ -1,14 +1,10 @@
 import { Container, Grid, Stack, Toolbar, Typography } from "@mui/material";
 
 export default function SaarBiotechContent() {
-
-    return (
-        <>
-        
-        <div>
-            dm-pharma  
-        </div>
-             {/* <Toolbar />
+  return (
+    <>
+      <div>dm-pharma</div>
+      {/* <Toolbar />
 
             <div  className="text-center color-primary"><Typography variant="h4">Saar Biotech Manufacuring Unit</Typography></div>
 
@@ -75,6 +71,6 @@ export default function SaarBiotechContent() {
 
                 <Toolbar />
             </Container>  */}
-        </>
-    )
+    </>
+  );
 }
