@@ -13,7 +13,7 @@ function queryResponse({params}) {
             <h1>Products with {params.query}</h1>
             <ul>
                 {filtered.map((item)=>(
-                        <Link href={"/products/" + item.name}><li>{item.id}   :   {item.name}</li></Link>
+                        <Link href={"/products/" + item.name}><li key={item.id}>{item.id}   :   {item.name}</li></Link>
                     )
                     )
                 }

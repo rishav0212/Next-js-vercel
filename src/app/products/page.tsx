@@ -12,9 +12,9 @@ function Products() {
             <h1>Products</h1>
             <ul>
                 
-                {items.map(dataitem =>(
+                {items.map(item =>(
                     <div style={{alignContent : "center" }}>
-                        <li><Link href = {"/products/" + dataitem.name}>{dataitem.id} -   {dataitem.name}</Link></li>
+                        <li key={item.id}><Link href = {"/products/" + item.name}>{item.id} -   {item.name}</Link></li>
                     </div>
                 ))}
             </ul>
