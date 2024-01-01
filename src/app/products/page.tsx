@@ -13,9 +13,7 @@ function Products() {
             <ul>
                 
                 {items.map(item =>(
-                    <div style={{alignContent : "center" }}>
                         <li key={item.id}><Link href = {"/products/" + item.name}>{item.id} -   {item.name}</Link></li>
-                    </div>
                 ))}
             </ul>
         </div>
