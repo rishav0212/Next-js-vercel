@@ -9,16 +9,16 @@ function Search() {
     const router = useRouter()
 
 
-    const handleSubmit = ()=>{
+    const addQuery = ()=>{
         router.push("/products/" + text)
     }
 
-    ///// with unseeffect page is rendred everytime when we add a leeter in search
+    ///// with useEffect page is rendred everytime when we add a leeter in search
 
     useEffect(()=>{
         if(text.length>=1){
-        handleSubmit}
-    }, [text, handleSubmit])
+        addQuery()}
+    }, [text, addQuery])
 
     ////
 
@@ -36,7 +36,7 @@ function Search() {
                 value={text}
                 onChange={(e)=> setText(e.target.value)}
             />
-            <button onClick={()=>handleSubmit()}>Search</button>
+            <button onClick={()=>addQuery()}>Search</button>
         </>
      );
 }
