@@ -15,9 +15,10 @@ function Search() {
 
     ///// with unseeffect page is rendred everytime when we add a leeter in search
 
-    useEffect(
-        handleSubmit,
-        [text, handleSubmit])
+    useEffect(()=>{
+        if(text.length>=1){
+        handleSubmit}
+    }, [text, handleSubmit])
 
     ////
 
