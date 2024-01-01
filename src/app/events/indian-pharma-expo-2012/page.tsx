@@ -1,9 +1,12 @@
 import { Container, Grid, Stack, Toolbar, Typography } from "@mui/material";
+import * as React from 'react';
 
 export default function Expo2012Content() {
     return (
         <>
-            <Toolbar />
+            <div>Expo2012Content</div>
+
+            {/* <Toolbar />
 
             <Typography variant="h4" className="color-primary text-center">Indian Pharma Expo 2012</Typography>
 
@@ -43,7 +46,7 @@ export default function Expo2012Content() {
 
                 <Toolbar />
 
-            </Container>
+            </Container> */}
         </>
     )
 }

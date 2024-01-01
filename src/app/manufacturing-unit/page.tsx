@@ -1,4 +1,4 @@
-function Products() {
+function Units() {
     return ( 
         <div>
             Units
@@ -6,4 +6,4 @@ function Products() {
      );
 }
 
-export default Products;
+export default Units;

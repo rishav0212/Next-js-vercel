@@ -1,4 +1,4 @@
-function Products() {
+function Events() {
     return ( 
         <div>
             Events
@@ -6,4 +6,4 @@ function Products() {
      );
 }
 
-export default Products;
+export default Events;

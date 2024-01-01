@@ -4,9 +4,13 @@ export default function SaarBiotechContent() {
 
     return (
         <>
-            <Toolbar />
+        
+        <div>
+            dm-pharma  
+        </div>
+             {/* <Toolbar />
 
-            <Typography variant="h4" className="text-center color-primary">Saar Biotech Manufacuring Unit</Typography>
+            <div  className="text-center color-primary"><Typography variant="h4">Saar Biotech Manufacuring Unit</Typography></div>
 
             <Toolbar />
             <Container>
@@ -42,7 +46,7 @@ export default function SaarBiotechContent() {
                 <Toolbar />
                 <Toolbar />
 
-                <Typography variant="h4" className="text-center color-primary">Our Strengths</Typography>
+                <div  className="text-center color-primary"><Typography variant="h4">Our Strengths</Typography></div>
 
                 <Toolbar />
 
@@ -70,7 +74,7 @@ export default function SaarBiotechContent() {
                 </Grid>
 
                 <Toolbar />
-            </Container>
+            </Container>  */}
         </>
     )
 }
