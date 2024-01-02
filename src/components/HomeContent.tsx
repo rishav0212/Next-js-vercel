@@ -193,10 +193,12 @@ export default function HomeContent() {
               <AccordionSummary
                 aria-controls="panel1d-content"
                 id="panel1d-header"
-                as={Typography}
-                sx={{ color: "white" }}
+                // as={Typography}
+                // sx={{ color: "white" }}
               >
-                Vitamin D3 400/800 IU Drops/ 25ml Spray
+                <Typography sx={{ color: "white" }}>Vitamin D3 400/800 IU Drops/ 25ml Spray</Typography>
+
+
               </AccordionSummary>
               <AccordionDetails>
                 <Typography>
