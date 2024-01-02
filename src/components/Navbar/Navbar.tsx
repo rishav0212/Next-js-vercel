@@ -36,7 +36,7 @@ const AppBar = styled(MuiAppBar)`
   /* Add your custom styles here */
 `;
 
-const StyledLink = styled("a")({
+const StyledLink = styled('div')({
   textDecoration: "none",
   color: "black",
   fontSize: "16px",
@@ -64,7 +64,7 @@ const Navbar = () => {
   const path = usePathname()
   const url = path.slice(0, path.indexOf('/', 1)!==-1?path.indexOf('/',1):path.length)
 
-  console.log(path.indexOf('/', 1))
+  // console.log(path.indexOf('/', 1))
 
   const toggleDrawer = () => {
     setOpenDrawer(!openDrawer);
@@ -171,6 +171,7 @@ const Navbar = () => {
                     >
                       About
                     </Link>
+
                     <div className="dropdown1">
                       <span
                         className={`navbar-links border-bottom-class ${
@@ -303,7 +304,7 @@ const Navbar = () => {
                           </StyledLink>
                         </Link>
                       </div>
-                    </div>
+                    </div> 
                   </Stack>
                   <Link href="/contact" className="navbar-contact">
                     Contact
