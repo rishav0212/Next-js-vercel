@@ -1,11 +1,11 @@
+"use client"
 import { Container, Grid, Stack, Toolbar, Typography } from "@mui/material";
 import * as React from "react";
 
 export default function Expo2013Content() {
   return (
     <>
-      <div>Expo2013Content</div>
-      {/* <Toolbar />
+      <Toolbar />
 
             <Typography variant="h4" className="color-primary text-center">Indian Pharma Expo 2013</Typography>
 
@@ -32,13 +32,13 @@ export default function Expo2013Content() {
                         >
                             <Typography variant="h6" className="color-primary text-start">Exhibition Highlights</Typography>
                             <Typography variant="body1">
-                                <li> B2B (Business-to-business) Exhibition </li>
+                                 B2B (Business-to-business) Exhibition 
                             </Typography>
                             <Typography variant="body1">
-                                <li>Pharmaceuticals Products Exhibition</li>
+                                Pharmaceuticals Products Exhibition
                             </Typography>
                             <Typography variant="body1">
-                                <li>Perfect platform for All Contract  &  API manufacturers.</li>
+                                Perfect platform for All Contract  &  API manufacturers.
                             </Typography>
                         </Stack>
                     </Grid>
@@ -46,7 +46,7 @@ export default function Expo2013Content() {
 
                 <Toolbar />
 
-            </Container> */}
+            </Container>
     </>
   );
 }
