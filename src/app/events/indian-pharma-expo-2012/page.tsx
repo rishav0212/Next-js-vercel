@@ -1,12 +1,15 @@
-import { Container, Grid, Stack, Toolbar, Typography } from "@mui/material";
-import * as React from "react";
+"use client"
+
+import {Container, Grid, Stack, Toolbar, Typography } from "@mui/material";
+// import  from '@mui/material/Grid'
+import React from "react";
+// import { } from "@mui/system";
 
 export default function Expo2012Content() {
   return (
     <>
-      <div>Expo2012Content</div>
 
-      {/* <Toolbar />
+            <Toolbar />
 
             <Typography variant="h4" className="color-primary text-center">Indian Pharma Expo 2012</Typography>
 
@@ -32,13 +35,13 @@ export default function Expo2012Content() {
                         >
                             <Typography variant="h6" className="color-primary text-start">Exhibition Highlights</Typography>
                             <Typography variant="body1">
-                                <li>Pharmaceuticals Products Exhibition </li>
+                                Pharmaceuticals Products Exhibition 
                             </Typography>
                             <Typography variant="body1">
-                                <li>Expo based on the theme 'Destination for Innovative and Reliable Healthcare Products'.</li>
+                                Expo based on the theme 'Destination for Innovative and Reliable Healthcare Products'.
                             </Typography>
                             <Typography variant="body1">
-                                <li>B2B Exhibition</li>
+                                B2B Exhibition
                             </Typography>
                         </Stack>
                     </Grid>
@@ -46,7 +49,7 @@ export default function Expo2012Content() {
 
                 <Toolbar />
 
-            </Container> */}
+            </Container>
     </>
   );
 }

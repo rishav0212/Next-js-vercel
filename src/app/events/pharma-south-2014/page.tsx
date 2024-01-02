@@ -1,12 +1,12 @@
+"use client";
 import { Container, Grid, Stack, Toolbar, Typography } from "@mui/material";
 import * as React from "react";
 
 export default function PharmacContent() {
   return (
     <>
-      <div>PharmacContent</div>
 
-      {/* <Toolbar />
+      <Toolbar />
 
             <Typography variant="h4" className="color-primary text-center">Pharmac South 2014</Typography>
 
@@ -36,13 +36,13 @@ export default function PharmacContent() {
                         >
                             <Typography variant="h6" className="color-primary text-start">Exhibition Highlights</Typography>
                             <Typography variant="body1">
-                                <li>Pharmaceuticals Products Exhibition </li>
+                                Pharmaceuticals Products Exhibition 
                             </Typography>
                             <Typography variant="body1">
-                                <li>Expo based on the theme 'Destination for Innovative and Reliable Healthcare Products'.</li>
+                                Expo based on the theme 'Destination for Innovative and Reliable Healthcare Products'.
                             </Typography>
                             <Typography variant="body1">
-                                <li>B2B Exhibition</li>
+                                B2B Exhibition
                             </Typography>
                         </Stack>
                     </Grid>
@@ -50,7 +50,7 @@ export default function PharmacContent() {
 
                 <Toolbar />
 
-    </Container>*/}
+    </Container>
     </>
   );
 }
