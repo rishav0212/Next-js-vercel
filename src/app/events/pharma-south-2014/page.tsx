@@ -1,12 +1,12 @@
 import { Container, Grid, Stack, Toolbar, Typography } from "@mui/material";
-import * as React from 'react';
+import * as React from "react";
 
 export default function PharmacContent() {
-    return (
-        <>
-        <div>PharmacContent</div>
+  return (
+    <>
+      <div>PharmacContent</div>
 
-            {/* <Toolbar />
+      {/* <Toolbar />
 
             <Typography variant="h4" className="color-primary text-center">Pharmac South 2014</Typography>
 
@@ -51,6 +51,6 @@ export default function PharmacContent() {
                 <Toolbar />
 
     </Container>*/}
-        </> 
-    )
+    </>
+  );
 }

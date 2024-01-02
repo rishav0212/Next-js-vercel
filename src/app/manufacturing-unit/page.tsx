@@ -1,9 +1,5 @@
 function Units() {
-    return ( 
-        <div>
-            Units
-        </div>
-     );
+  return <div>Units</div>;
 }
 
 export default Units;
