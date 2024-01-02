@@ -27,6 +27,8 @@ import Link from "next/link";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import Search from "./Search";
+import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 
 const AppBar = styled(MuiAppBar)`
   background-color: rgba(255, 255, 255);
@@ -59,8 +61,10 @@ const Navbar = () => {
   // const location = useLocation();
 
   // const url = (window.location.href).split('/')[3];
-  const url =
-    typeof window !== "undefined" ? window.location.href.split("/")[3] : "";
+  const path = usePathname()
+  const url = path.slice(0, path.indexOf('/', 1)!==-1?path.indexOf('/',1):path.length)
+
+  console.log(path.indexOf('/', 1))
 
   const toggleDrawer = () => {
     setOpenDrawer(!openDrawer);
@@ -154,7 +158,7 @@ const Navbar = () => {
                     <Link
                       href="/"
                       className={`navbar-links border-bottom-class ${
-                        url === "" ? "active-link" : ""
+                        url === "/" ? "active-link" : ""
                       }`}
                     >
                       Home
@@ -162,7 +166,7 @@ const Navbar = () => {
                     <Link
                       href="/about"
                       className={`navbar-links border-bottom-class ${
-                        url === "about" ? "active-link" : ""
+                        url === "/about" ? "active-link" : ""
                       }`}
                     >
                       About
@@ -170,7 +174,7 @@ const Navbar = () => {
                     <div className="dropdown1">
                       <span
                         className={`navbar-links border-bottom-class ${
-                          url === "manufacturing-unit" ? "active-link" : ""
+                          url === "/manufacturing-unit" ? "active-link" : ""
                         }`}
                       >
                         Manufacturing Unit
@@ -206,7 +210,7 @@ const Navbar = () => {
                       <Link
                         href="/products"
                         className={`navbar-links border-bottom-class ${
-                          url === "products" ? "active-link" : ""
+                          url === "/products" ? "active-link" : ""
                         }`}
                       >
                         Products
@@ -258,7 +262,7 @@ const Navbar = () => {
                     <div className="dropdown1">
                       <span
                         className={`navbar-links border-bottom-class ${
-                          url === "events" ? "active-link" : ""
+                          url === "/events" ? "active-link" : ""
                         }`}
                       >
                         Events
