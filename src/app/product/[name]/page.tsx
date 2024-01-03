@@ -51,7 +51,7 @@ const ProductTemplate = ({ params }) => {
 
         <div className="font--size-1125">
           {(info[product].sprayPresentation).map((dataitem)=>{
-            return <Typography >{dataitem}</Typography>
+            return <Typography key={dataitem.id} >{dataitem}</Typography>
           })}
         </div>
 
@@ -66,7 +66,7 @@ const ProductTemplate = ({ params }) => {
         <ul>
           {info[product].indicationsList.map((dataitem)=>{
             return (
-              <ListItem>
+              <ListItem key={dataitem.id} >
                 <ListItemIcon>
                   <FiberManualRecord className="color-primary icon-small" />
                 </ListItemIcon>
