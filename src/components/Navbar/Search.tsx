@@ -10,7 +10,6 @@ import items from "@/product_names/names";
 function Search() {
   const [text, setText] = useState("");
   const router = useRouter();  
-  const [isDropdownOpen, setIsDropdownOpen] = useState(true);
   
   const inputRef = useRef(null);
 
@@ -31,6 +30,9 @@ function Search() {
 
   const handleSelection = (e, value)=>{
     // setText(value)    
+    if(value===null){
+      return
+    }
     router.push("/products/" + value);
     if (inputRef.current) {
       inputRef.current.blur();
@@ -38,6 +40,9 @@ function Search() {
     setText('')
 
   }
+
+  // const isOptionEqualToValue = (option, value) => option===value||value!=='';
+
 
   return (
     <>
@@ -47,6 +52,7 @@ function Search() {
           id="combo-box-demo"
           options={items.map((item)=>(item.name))}
           sx={{ width: 200}}
+          // isOptionEqualToValue={isOptionEqualToValue}
           
           renderInput={(params) => <TextField {...params} label="Search Product..."
           onKeyPress={(e)=>{if (e.key==="Enter") addQuery()}}

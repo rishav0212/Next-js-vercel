@@ -54,7 +54,6 @@ const items = [
     { id: 53, name: 'Metoprolol Succinate' },
     { id: 54, name: 'Carvedilol' },
     { id: 55, name: 'Propranolol' },
-    { id: 56, name: 'Atenolol' },
     { id: 57, name: 'Clonidine' },
     { id: 58, name: 'Doxazosin' },
     { id: 59, name: 'Terazosin' },
@@ -89,16 +88,11 @@ const items = [
     { id: 88, name: 'Sildenafil' },
     { id: 89, name: 'Tadalafil' },
     { id: 90, name: 'Vardenafil' },
-    { id: 91, name: 'Finasteride' },
-    { id: 92, name: 'Dutasteride' },
-    { id: 93, name: 'Sildenafil' },
-    { id: 94, name: 'Tadalafil' },
-    { id: 95, name: 'Vardenafil' },
     { id: 96, name: 'Fluconazole' },
     { id: 97, name: 'Ketoconazole' },
     { id: 98, name: 'Clotrimazole' },
     { id: 99, name: 'Miconazole' },
     { id: 100, name: 'Nystatin' }
-]
-  
+];
+
 export default items;
