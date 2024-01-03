@@ -1,4 +1,4 @@
-import items from "@/product_names/names";
+import items from "@/product_details/names";
 import Link from "next/link";
 import React from "react";
 
