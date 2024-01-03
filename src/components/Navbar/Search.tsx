@@ -3,7 +3,7 @@ import React, { useEffect, useState, useRef } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import { IconButton, TextField } from "@mui/material";
 import { useRouter } from "next/navigation";
-import { Autocomplete } from "@mui/lab";
+import  Autocomplete  from "@mui/material/Autocomplete";
 import items from "@/product_names/names";
 
 
@@ -54,9 +54,9 @@ function Search() {
         />}
         // value={text}
         onInputChange={(e, value)=>setText(value)}
-        value = {text}
+        value = {text===""?null:text}
         onChange={handleSelection}
-                
+
       />
     </>
   );
