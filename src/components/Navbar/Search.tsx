@@ -4,7 +4,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import { IconButton, TextField } from "@mui/material";
 import { useRouter } from "next/navigation";
 import  Autocomplete  from "@mui/material/Autocomplete";
-import items from "@/product_names/names";
+import items from "@/product_details/names";
 
 
 function Search() {

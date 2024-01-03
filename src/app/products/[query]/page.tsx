@@ -1,5 +1,5 @@
 import React from "react";
-import items from "@/product_names/names";
+import items from "@/product_details/names";
 import Link from "next/link";
 
 function queryResponse({ params }) {
@@ -12,7 +12,7 @@ function queryResponse({ params }) {
       <h1>Products with {params.query}</h1>
       <ul>
         {filtered.map((item) => (
-          <Link href={"/products/" + item.name} key={item.id}>
+          <Link href={"/product/" + item.name} key={item.id}>
             <li>
               {item.id} : {item.name}
             </li>
