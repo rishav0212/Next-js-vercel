@@ -96,7 +96,7 @@ function TabPanel(props) {
     >
       {value === index && (
         <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
+          {children}
         </Box>
       )}
     </div>
@@ -193,10 +193,12 @@ export default function HomeContent() {
               <AccordionSummary
                 aria-controls="panel1d-content"
                 id="panel1d-header"
-                as={Typography}
-                sx={{ color: "white" }}
+                // as={Typography}
+                // sx={{ color: "white" }}
               >
-                Vitamin D3 400/800 IU Drops/ 25ml Spray
+                <Typography sx={{ color: "white" }}>Vitamin D3 400/800 IU Drops/ 25ml Spray</Typography>
+
+
               </AccordionSummary>
               <AccordionDetails>
                 <Typography>
@@ -204,7 +206,7 @@ export default function HomeContent() {
                   such as rickets and osteomalacia in children.
                   <br />
                   <br />
-                  <Link href={"/products/vitamin-d3-drops"} className="active">
+                  <Link href={"/product/vitamin-d3-drops"} className="active">
                     Read more...
                   </Link>
                 </Typography>
@@ -227,7 +229,7 @@ export default function HomeContent() {
                   <br />
                   <br />
                   <Link
-                    href={"/products/immunity-booster-spray"}
+                    href={"/product/immunity-booster-spray"}
                     className="active"
                   >
                     Read more...
@@ -251,7 +253,7 @@ export default function HomeContent() {
                   formulated to directly deliver iron into the bloodstream.
                   <br />
                   <br />
-                  <Link href={"/products/iron-oral-spray"} className="active">
+                  <Link href={"/product/iron-oral-spray"} className="active">
                     Read more...
                   </Link>
                 </Typography>
@@ -276,7 +278,7 @@ export default function HomeContent() {
                   <br />
                   <br />
                   <Link
-                    href={"/products/multivitamin-oral-spray"}
+                    href={"/product/multivitamin-oral-spray"}
                     className="active"
                   >
                     Read more...

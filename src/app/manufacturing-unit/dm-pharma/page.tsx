@@ -1,28 +1,28 @@
-import { Container, Grid, Stack, Toolbar, Typography } from "@mui/material";
+"use client"
 
-export default function SaarBiotechContent() {
+import { Container, Grid, Stack, Toolbar, Typography } from "@mui/material";
+import * as React from "react";
+
+export default function DmPharmaContent() {
   return (
     <>
-      <div>dm-pharma</div>
-      {/* <Toolbar />
+     = <Toolbar />
 
-            <div  className="text-center color-primary"><Typography variant="h4">Saar Biotech Manufacuring Unit</Typography></div>
+            <Typography variant="h4" className="text-center color-primary">DM Pharma Manufacuring Unit</Typography>
 
             <Toolbar />
             <Container>
                 <Grid container spacing={8}>
                     <Grid item xs={12} sm={12} md={8} lg={8}>
-                        <Typography className="lh-lg">
-                            Our Factory is located in Baddi, District Solan of Himachal Pradesh. The facilities and the location of the factory have created an extra edge for manufacturing and distributing the products.
+                        <Typography className="d-flex align-self-center lh-lg">
+                            The facilities and location of the factory have created an extra edge for manufacturing and distributing the products. The factory consists of Production department, R&D department, Accounts department and other sub-departments.
                             <br /><br />
-                            The factory consists of Production department, QC department, QA department, Accounts department and various other sub-departments. The factory is operating with team of professionals.The factory carries out management and production as per GMP requirements. It is equipped with sophisticated, modern and quality control equipments.
+                            The factory is operating with experienced and hard working employees. It is equipped with sophisticated, modern and vquality control equipments.
+                            The facility has also been equipped to handle the development of formulation OF New DRUGS. Our product range comprises Anti-retrovirals, Anti-malarials, Cardiovascular and Dermatology.
                             <br /><br />
-                            The facility has also been equipped to handle the development of formulation of New DRUGS. Our product range comprises Anti-Allergic, Anti-Inflammatory, Antitussive, Expectorant, Dermatological and Ophthalmology.
+                            The well-planned and state-of-the-art facilities at DM Pharma have led to its accelerated growth in the pharmaceutical sector. Infrastructure plays a key role in the development and progress of a company. The reputation of our company is built on Manufacturing and R&D facilities that are designed to meet global standards, and stringent Quality standards that ensure wetdeliver only the best formulations and products.
                             <br /><br />
-                            Focusing on superior customer service, it is Saar Biotech policy to conduct business in a transparent manner.
-                            <br /><br />
-                            From production to the packaging of goods, internal processes follow strict GMP requirements. Every batch of production is thoroughly tested to ensure the conformity of quality.
-
+                            World-class manufacturing facilities coupled with a state-of-the-art R&D centre that manufactures innovative products, and ably supported by an intelligent Quality Management Systems implemented to perfection has taken DM Pharma to a commendable position in the domestic as well as global market.
                         </Typography>
                     </Grid>
                     <Grid item xs={12} sm={12} md={4} lg={4}>
@@ -31,10 +31,11 @@ export default function SaarBiotechContent() {
                             justifyContent={"center"}
                             className="w-100 h-100"
                         >
-                            <img className="manufacturing-unit-images" src="/images/saar-image1.jpg" alt="Saar Biotech" />
-                            <img className="manufacturing-unit-images" src="/images/saar-image2.jpg" alt="Saar Biotech" />
-                            <img className="manufacturing-unit-images" src="/images/saar-image3.jpg" alt="Saar Biotech" />
-                            <img className="manufacturing-unit-images" src="/images/saar-image4.jpg" alt="Saar Biotech" />
+                            <img className="manufacturing-unit-images" src="/images/dm-image1.jpg" alt="Saar Biotech" />
+                            <img className="manufacturing-unit-images" src="/images/dm-image2.jpg" alt="Saar Biotech" />
+                            <img className="manufacturing-unit-images" src="/images/dm-image3.jpg" alt="Saar Biotech" />
+                            <img className="manufacturing-unit-images" src="/images/dm-image4.jpg" alt="Saar Biotech" />
+                            <img className="manufacturing-unit-images" src="/images/dm-image5.jpg" alt="Saar Biotech" />
                         </Stack>
                     </Grid>
                 </Grid>
@@ -42,7 +43,7 @@ export default function SaarBiotechContent() {
                 <Toolbar />
                 <Toolbar />
 
-                <div  className="text-center color-primary"><Typography variant="h4">Our Strengths</Typography></div>
+                <Typography variant="h4" className="text-center color-primary">Our Strengths</Typography>
 
                 <Toolbar />
 
@@ -70,7 +71,7 @@ export default function SaarBiotechContent() {
                 </Grid>
 
                 <Toolbar />
-            </Container>  */}
+            </Container>
     </>
   );
 }
