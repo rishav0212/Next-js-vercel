@@ -10,11 +10,11 @@ import {
 } from "@mui/material";
 import { FiberManualRecord, Spa } from "@mui/icons-material";
 import info from '@/product_details/info'
-import { Span } from "next/dist/trace";
 
-const ProductTemplate = ({ params }) => {
 
-    const product = params.name
+export default async function ProductTemplate({ params }){
+
+  const product = params.name
   return (
     <>
       <Toolbar />
@@ -26,7 +26,7 @@ const ProductTemplate = ({ params }) => {
 
 
       <Container maxWidth="md">
-        
+
         <Typography variant="subtitle1" className="fw-600 mb-2 mt-5">
           Indications:- {info[product].indications}
         </Typography>
@@ -41,7 +41,7 @@ const ProductTemplate = ({ params }) => {
         <Typography variant="button" className="font--size-1125">
           Spray Presentation:
         </Typography>
-        
+
         <Typography
           variant="h6"
           className="color-primary mb--25 mt-4 text-uppercase"
@@ -50,7 +50,7 @@ const ProductTemplate = ({ params }) => {
         </Typography>
 
         <div className="font--size-1125">
-          {(info[product].sprayPresentation).map((dataitem)=>{
+          {(info[product].sprayPresentation).map((dataitem) => {
             return <Typography key={dataitem.id} >{dataitem}</Typography>
           })}
         </div>
@@ -64,7 +64,7 @@ const ProductTemplate = ({ params }) => {
         </Typography>
 
         <ul>
-          {info[product].indicationsList.map((dataitem)=>{
+          {info[product].indicationsList.map((dataitem) => {
             return (
               <ListItem key={dataitem.id} >
                 <ListItemIcon>
@@ -99,4 +99,11 @@ const ProductTemplate = ({ params }) => {
   );
 };
 
-export default ProductTemplate;
+export function generateStaticParams() {
+  return (Object.keys(info).map((key) => {
+    name: key
+    console.log(key)
+  }))
+};
+
+// export default ProductTemplate;

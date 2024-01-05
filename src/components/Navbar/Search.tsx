@@ -23,9 +23,6 @@ function Search() {
       inputRef.current.blur();
     }
     setText('')
-
-
-
   };
 
   const handleSelection = (e, value)=>{
@@ -33,7 +30,7 @@ function Search() {
     if(value===null){
       return
     }
-    router.push("/products/" + value);
+    router.push("/product/" + value);
     if (inputRef.current) {
       inputRef.current.blur();
     }
@@ -54,7 +51,7 @@ function Search() {
           sx={{ width: 200}}
           // isOptionEqualToValue={isOptionEqualToValue}
           
-          renderInput={(params) => <TextField {...params} label="Search Product..."
+          renderInput={(params) => <TextField {...params} label="Search Product"
           onKeyPress={(e)=>{if (e.key==="Enter") addQuery()}}
           inputRef={inputRef}
         />}
