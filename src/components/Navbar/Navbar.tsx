@@ -29,6 +29,10 @@ import RemoveIcon from "@mui/icons-material/Remove";
 import Search from "./Search";
 import { useRouter } from "next/router";
 import { usePathname } from "next/navigation";
+import Dropdown from "./dropdown";
+import DrawerItem from "./DrawerItems";
+
+
 
 const AppBar = styled(MuiAppBar)`
   background-color: rgba(255, 255, 255);
@@ -36,31 +40,13 @@ const AppBar = styled(MuiAppBar)`
   /* Add your custom styles here */
 `;
 
-const StyledLink = styled('div')({
-  textDecoration: "none",
-  color: "black",
-  fontSize: "16px",
-  fontWeight: "600",
-  paddingLeft: "20px",
-  paddingTop: "5px",
-  paddingRight: "20px",
-  textAlign: "center",
-  justifyContent: "center",
-  transition: ".3s",
-  "&:hover": {
-    textDecoration: "underline",
-  },
-});
 
 const Navbar = () => {
   // const classes = useStyles();
   // const theme = useTheme();
   const isMobile = useMediaQuery(`(max-width: 950px)`);
   const [openDrawer, setOpenDrawer] = useState(false);
-
-  // const location = useLocation();
-
-  // const url = (window.location.href).split('/')[3];
+  
   const path = usePathname()
   const url = path.slice(0, path.indexOf('/', 1)!==-1?path.indexOf('/',1):path.length)
 
@@ -91,6 +77,41 @@ const Navbar = () => {
     setManufacturingUnitOpen(false);
     setProductsOpen(false);
   };
+
+
+  const units_menu = {
+    menu_name :"Manufacturing Unit", 
+    to: "/manufacturing-unit", 
+    items :{
+      'Saar Biotech' : "/saar-biotech",
+      'DM Pharma' : "/dm-pharma",
+      'Infrastructure' : "/dm-pharma",
+      'Factory Video' : "/dm-pharma"
+    }}
+  
+  const products_menu = {
+    menu_name :"Products", 
+    to: "/products", 
+    items :{
+      'Suspensions' : "/suspensions",
+      'Syrups' : "/syrups",
+      'External Preparation' : "/external",
+      'Miscellaneous Products' : "/misc",
+      'Tablets' : "/tablets",
+      'Capsules': "/capsules",
+      'Sachets' : "/sachets"
+    }}
+
+  const events_menu = {
+    menu_name :"Events", 
+    to: "/events", 
+    items :{
+      'B2B' : "/b2b",
+      'Pharma South 2014' : "/pharma-south-2014",
+      'Indian Pharma Expo 2013' : "/indian-pharma-expo-2013",
+      'Indian Pharma Expo 2012' : "/indian-pharma-expo-2012",
+      'Brochure': "/brochure",
+    }}
 
   return (
     <>
@@ -155,156 +176,13 @@ const Navbar = () => {
                     alignItems={"center"}
                     justifyContent={"center"}
                   >
-                    <Link
-                      href="/"
-                      className={`navbar-links border-bottom-class ${
-                        url === "/" ? "active-link" : ""
-                      }`}
-                    >
-                      Home
-                    </Link>
-                    <Link
-                      href="/about"
-                      className={`navbar-links border-bottom-class ${
-                        url === "/about" ? "active-link" : ""
-                      }`}
-                    >
-                      About
-                    </Link>
+                    
+                    < Dropdown props={{menu_name:"Home", to:"/", items:{}}} url = {url} />
+                    < Dropdown props={{menu_name:"About", to:"/about", items:{}}} url= {url}  />
+                    < Dropdown props = {units_menu} url= {url}  />
+                    < Dropdown props = {products_menu} url= {url} />
+                    < Dropdown props = {events_menu} url= {url} />
 
-                    <div className="dropdown1">
-                      <span
-                        className={`navbar-links border-bottom-class ${
-                          url === "/manufacturing-unit" ? "active-link" : ""
-                        }`}
-                      >
-                        Manufacturing Unit
-                      </span>
-                      <div className="dropdown-content">
-                        <Link href="/manufacturing-unit/saar-biotech">
-                          <StyledLink>
-                            <span>Saar Biotech</span>
-                          </StyledLink>
-                        </Link>
-                        <Divider />
-                        <Link href="/manufacturing-unit/dm-pharma">
-                          <StyledLink>
-                            <span>DM Pharma</span>
-                          </StyledLink>
-                        </Link>
-                        <Divider />
-                        <Link href="/manufacturing-unit/dm-pharma">
-                          <StyledLink>
-                            <span>Infrastructure</span>
-                          </StyledLink>
-                        </Link>
-                        <Divider />
-                        <Link href="/manufacturing-unit/dm-pharma">
-                          <StyledLink>
-                            <span>Factory Video</span>
-                          </StyledLink>
-                        </Link>
-                      </div>
-                    </div>
-
-                    <div className="dropdown1">
-                      <Link
-                        href="/products"
-                        className={`navbar-links border-bottom-class ${
-                          url === "/products" ? "active-link" : ""
-                        }`}
-                      >
-                        Products
-                      </Link>
-                      <div className="dropdown-content">
-                        <Link href="/products/suspensions">
-                          <StyledLink>
-                            <span>Suspensions</span>
-                          </StyledLink>
-                        </Link>
-                        <Divider />
-                        <Link href="/products/syrups">
-                          <StyledLink>
-                            <span>Syrups</span>
-                          </StyledLink>
-                        </Link>
-                        <Divider />
-                        <Link href="/products/external">
-                          <StyledLink>
-                            <span>External Preparation</span>
-                          </StyledLink>
-                        </Link>
-                        <Divider />
-                        <Link href="/products/misc">
-                          <StyledLink>
-                            <span>Miscellaneous Products</span>
-                          </StyledLink>
-                        </Link>
-                        <Divider />
-                        <Link href="/products/tablets">
-                          <StyledLink>
-                            <span>Tablets</span>
-                          </StyledLink>
-                        </Link>
-                        <Divider />
-                        <Link href="/products/capsules">
-                          <span>Capsules</span>
-                        </Link>
-                        <Divider />
-                        <Link href="/products/sachets">
-                          <StyledLink>
-                            {" "}
-                            <span>Sachets</span>
-                          </StyledLink>
-                        </Link>
-                      </div>
-                    </div>
-
-                    <div className="dropdown1">
-                      <span
-                        className={`navbar-links border-bottom-class ${
-                          url === "/events" ? "active-link" : ""
-                        }`}
-                      >
-                        Events
-                      </span>
-                      <div className="dropdown-content">
-                        <Link href="/events/b2b">
-                          <StyledLink>
-                            {" "}
-                            <span>B2B</span>
-                          </StyledLink>
-                        </Link>
-                        <Divider />
-                        <Link href="/events/pharma-south-2014">
-                          <StyledLink>
-                            {" "}
-                            <span>Pharma South 2014</span>
-                          </StyledLink>
-                        </Link>
-                        <Divider />
-                        <Link href="/events/indian-pharma-expo-2013">
-                          <StyledLink>
-                            {" "}
-                            <span>Indian Pharma Expo 2013</span>
-                          </StyledLink>
-                        </Link>
-                        <Divider />
-                        <Link href="/events/indian-pharma-expo-2012">
-                          <StyledLink>
-                            {" "}
-                            <span>Indian Pharma Expo 2012</span>
-                          </StyledLink>
-                        </Link>
-                        <Divider />
-                        <Link href="/events/brochure">
-                          <StyledLink>
-                            {" "}
-                            <span>Brochure</span>
-                          </StyledLink>
-                        </Link>
-                      </div>
-                    </div> 
                   </Stack>
                   <Link href="/contact" className="navbar-contact">
                     Contact
@@ -346,6 +224,7 @@ const Navbar = () => {
                 <ListItem>
                   <Link
                     href={"/"}
+                    onClick={toggleDrawer}
                     className={`navbar-links ${
                       url === "/" ? "active-link" : ""
                     }`}
@@ -362,6 +241,7 @@ const Navbar = () => {
                 <ListItem>
                   <Link
                     href={"/about"}
+                    onClick={toggleDrawer}
                     className={`navbar-links ${
                       url === "/about" ? "active-link" : ""
                     }`}
@@ -406,43 +286,8 @@ const Navbar = () => {
                     fontWeight: "500",
                   }}
                 >
-                  <List component="div" disablePadding>
-                    <ListItem className="text-center justify-content-center">
-                      <Link
-                        href="/manufacturing-unit/saar-biotech"
-                        className="navbar-dropdown-links"
-                      >
-                        <ListItemText primary="Saar Biotech" />
-                      </Link>
-                    </ListItem>
-                    <Divider />
-                    <ListItem className="text-center justify-content-center">
-                      <Link
-                        href="/manufacturing-unit/dm-pharma"
-                        className="navbar-dropdown-links"
-                      >
-                        <ListItemText primary="DM Pharma" />
-                      </Link>
-                    </ListItem>
-                    <Divider />
-                    <ListItem className="text-center justify-content-center">
-                      <Link
-                        href="/manufacturing-unit/infrastructure"
-                        className="navbar-dropdown-links"
-                      >
-                        <ListItemText primary="Infrastructure" />
-                      </Link>
-                    </ListItem>
-                    <Divider />
-                    <ListItem className="text-center justify-content-center">
-                      <Link
-                        href="/manufacturing-unit/factory-video"
-                        className="navbar-dropdown-links"
-                      >
-                        <ListItemText primary="Factory Video" />
-                      </Link>
-                    </ListItem>
-                  </List>
+                  < DrawerItem props = {units_menu} onclick = {toggleDrawer} />
+
                 </Collapse>
 
                 <ListItem onClick={handleProductsChange}>
@@ -474,70 +319,8 @@ const Navbar = () => {
                     fontWeight: "500",
                   }}
                 >
-                  <List component="div" disablePadding>
-                    <ListItem className="text-center justify-content-center">
-                      <Link
-                        href="/products/suspensions"
-                        className="navbar-dropdown-links"
-                      >
-                        <ListItemText primary="Suspensions" />
-                      </Link>
-                    </ListItem>
-                    <Divider />
-                    <ListItem className="text-center justify-content-center">
-                      <Link
-                        href="/products/syrups"
-                        className="navbar-dropdown-links"
-                      >
-                        <ListItemText primary="Syrups" />
-                      </Link>
-                    </ListItem>
-                    <Divider />
-                    <ListItem className="text-center justify-content-center">
-                      <Link
-                        href="/products/external-preparation"
-                        className="navbar-dropdown-links"
-                      >
-                        <ListItemText primary="External Preparation" />
-                      </Link>
-                    </ListItem>
-                    <Divider />
-                    <ListItem className="text-center justify-content-center">
-                      <Link
-                        href="/products/misc-products"
-                        className="navbar-dropdown-links"
-                      >
-                        <ListItemText primary="Miscellaneous products" />
-                      </Link>
-                    </ListItem>
-                    <Divider />
-                    <ListItem className="text-center justify-content-center">
-                      <Link
-                        href="/products/tablets"
-                        className="navbar-dropdown-links"
-                      >
-                        <ListItemText primary="Tablets" />
-                      </Link>
-                    </ListItem>
-                    <Divider />
-                    <ListItem className="text-center justify-content-center">
-                      <Link
-                        href="/products/capsules"
-                        className="navbar-dropdown-links"
-                      >
-                        <ListItemText primary="Capsules" />
-                      </Link>
-                    </ListItem>
-                    <Divider />
-                    <ListItem className="text-center justify-content-center">
-                      <Link
-                        href="/products/sachets"
-                        className="navbar-dropdown-links"
-                      >
-                        <ListItemText primary="Sachets" />
-                      </Link>
-                    </ListItem>
-                  </List>
+                  < DrawerItem props = {products_menu} onclick = {toggleDrawer}/>
+
                 </Collapse>
 
                 <ListItem onClick={handleEventsChange}>
@@ -569,52 +352,8 @@ const Navbar = () => {
                     fontWeight: "500",
                   }}
                 >
-                  <List component="div" disablePadding>
-                    <ListItem className="text-center justify-content-center">
-                      <Link
-                        href="/events/b2b"
-                        className="navbar-dropdown-links"
-                      >
-                        <ListItemText primary="B2B" />
-                      </Link>
-                    </ListItem>
-                    <Divider />
-                    <ListItem className="text-center justify-content-center">
-                      <Link
-                        href="/events/pharma-south-2014"
-                        className="navbar-dropdown-links"
-                      >
-                        <ListItemText primary="Pharma South 2014" />
-                      </Link>
-                    </ListItem>
-                    <Divider />
-                    <ListItem className="text-center justify-content-center">
-                      <Link
-                        href="/events/indian-pharma-expo-2013"
-                        className="navbar-dropdown-links"
-                      >
-                        <ListItemText primary="Indian Pharma Expo 2013" />
-                      </Link>
-                    </ListItem>
-                    <Divider />
-                    <ListItem className="text-center justify-content-center">
-                      <Link
-                        href="/events/indian-pharma-expo-2012"
-                        className="navbar-dropdown-links"
-                      >
-                        <ListItemText primary="Indian Pharma Expo 2012" />
-                      </Link>
-                    </ListItem>
-                    <Divider />
-                    <ListItem className="text-center justify-content-center">
-                      <Link
-                        href="/events/brochure"
-                        className="navbar-dropdown-links"
-                      >
-                        <ListItemText primary="Brochure" />
-                      </Link>
-                    </ListItem>
-                  </List>
+                  < DrawerItem props = {events_menu} onclick = {toggleDrawer} />
+
                 </Collapse>
 
                 <ListItem>
