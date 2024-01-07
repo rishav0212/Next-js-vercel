@@ -18,7 +18,9 @@ function Products() {
     //   </ul>
     // </div>
 
-    <ListWithPagination list={items} />
+    <div>
+      
+    </div>
   );
 }
 
