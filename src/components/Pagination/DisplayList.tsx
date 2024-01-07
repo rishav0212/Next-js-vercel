@@ -19,6 +19,11 @@ const DisplayList = ({ list, initialPage = 1 }) => {
     const paginatedList = list.slice((currentPage - 1) * limit, currentPage * limit);
     let array = paginationRange(totalPages, currentPage, limit, 1)
 
+    useEffect(()=>{
+        array = paginationRange(totalPages, currentPage, limit, 1)
+
+    },[currentPage,limit])
+
 
 
     return (
