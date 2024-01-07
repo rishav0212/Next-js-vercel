@@ -1,6 +1,8 @@
 "use client"
+
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import styles from "./pagination.module.css"
 
 const DisplayList = ({ list, initialPage = 1 }) => {
     const [currentPage, setCurrentPage] = useState(initialPage);
@@ -14,18 +16,19 @@ const DisplayList = ({ list, initialPage = 1 }) => {
 
     return (
         <div className="container py-4 " >
-            <nav>
-                <ul className="pagination-sm pagination justify-content-center" >
+            <nav className='d-flex justify-content-center'>
+                <ul className={"pagination"}>
 
                     <li>
-                        <button className={`btn page-item ${currentPage === 1 ? 'disabled' : '' }`} onClick={() => handlePageChange(currentPage - 1)} aria-label="Previous">
-                            <span aria-hidden="true">&laquo; Prev</span>
+                        <button className={`btn page-item ${styles.prev} ${currentPage === 1 ? `disabled ${styles.disabled}`: '' }`} onClick={() => handlePageChange(currentPage - 1)} aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                            <span>Prev</span>
                         </button>
                     </li>
 
                     {[...Array(Math.ceil(list.length / limit))].map((_, index) => (
                         <li key={index + 1}>
-                            <button className={`btn  page-item ${currentPage === index + 1 ? 'active' : ''} `} onClick={() => handlePageChange(index + 1)}>
+                            <button className={`${styles['button-des']} ${currentPage===index+1?styles.active:null} btn page-item `} onClick={() => handlePageChange(index + 1)}>
                                 {index + 1}
                             </button>
                         </li>
@@ -33,29 +36,34 @@ const DisplayList = ({ list, initialPage = 1 }) => {
 
 
                     <li>
-                        <button className={`btn page-item ${currentPage === Math.ceil(list.length / limit) ? 'disabled' : ''}`}onClick={() => handlePageChange(currentPage + 1)} aria-label="Next">
-                            <span aria-hidden="true">Next &raquo;</span>
+                        <button className={`btn page-item ${styles.prev} ${currentPage === Math.ceil(list.length / limit) ? `disabled ${styles.disabled}` : ''}`}onClick={() => handlePageChange(currentPage + 1)} aria-label="Next">
+                            <span>Next</span>
+                            <span aria-hidden="true">&raquo;</span>
                         </button>
                     </li>
 
-                    
-                    <li className="justify-content-end">
-                        <select className ="btn active" onChange={(e)=>{setLimit(Number(e.target.value))}}>
-                            {/* <option selected>{limit}</option> */}
-                            <option value="10">10</option>
-                            <option value="20">20</option>
-                            <option value="30">30</option>
-                        </select>
-                    </li>
+                
 
                 </ul>
+                <div className={styles.entries}>
+                    <span className='p-2'>Show</span>
+                    <select className ="p-1" onChange={(e)=>{setLimit(Number(e.target.value))}}>
+                        {/* <option selected>{limit}</option> */}
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                    </select>
+                    <span className='p-2'>entries</span>
+            </div>
             </nav>
+
+
 
 
             
 
-            <div className="w-50 d-flex mx-auto justify-content-center ">
-                <table className="table table-responsive">
+            <div className="w-75 mx-auto justify-content-center table-responsive">
+                <table className="table ">
                     <thead>
                         <tr>
                             <th className="p-3">S.no</th>
