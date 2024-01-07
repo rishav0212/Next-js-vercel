@@ -25,7 +25,7 @@ const paginationRange = (total, page, limit, sibling) => {
         let pages = range(1, 3 + 2 * sibling);
         return [...pages, " ...", total]
     } else if (showLeftDots && !showRightDots) {
-        let pages = range(total - (3 + 2 * sibling), total);
+        let pages = range(total - (3 + 2 * sibling)+1, total);
         return [1, "... ", ...pages];
     } else {
         let pages = range(left, right);
