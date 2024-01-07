@@ -8,7 +8,7 @@ import { IconButton, TextField } from "@mui/material";
 import items from "@/product_details/names";
 
 
-function queryResponse({ params }) {
+function QueryResponse({ params }) {
 
   const filtered = items.filter((item) =>
     item.name.toLowerCase().includes(params.query.toLowerCase())
@@ -129,4 +129,4 @@ function queryResponse({ params }) {
   );
 }
 
-export default queryResponse;
+export default QueryResponse;
