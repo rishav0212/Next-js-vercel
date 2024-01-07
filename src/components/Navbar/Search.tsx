@@ -16,20 +16,23 @@ function Search({query}) {
 
 
 
-  const addQuery = () => {
-
-    router.push("/products/" + text);
+  const addQuery = useCallback(() => {
+     
+    
+    router.push("/products/"+(text===""?'!':text));
     if (inputRef.current) {
       inputRef.current.blur();
     }
-  };
+  },[text]);
 
   const handleSelection = useCallback((e, value)=>{
     // setText(value)    
     if(value===null){
+      setText("")
+      router.push("/products/!")
       return
     }
-    router.push("/product/" + value);
+    router.push("/products/" + value);
     if (inputRef.current) {
       inputRef.current.blur();
     }

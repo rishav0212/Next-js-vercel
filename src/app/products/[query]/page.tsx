@@ -7,24 +7,23 @@ import SearchIcon from "@mui/icons-material/Search";
 import { IconButton, TextField } from "@mui/material";
 import items from "@/product_details/names";
 import Search from "@/components/Navbar/Search";
-import { margin } from "@mui/system";
 
 
 function QueryResponse({ params }) {
 
-  let query = params.query;
+  let query = decodeURIComponent(params.query);
 
   //////////////
   const subCategoryList = [
-    'Anitbiotic', 'Anticold', 'Analgesic & Anti-Inflammatory', 'Antacid',
+    'Antibiotic', 'Anticold', 'Analgesic & Anti-Inflammatory', 'Antacid',
     'Dry Syrup', 'Tonic Syrup', 'Drops', 'Cough Syrup',
     'Asal Sprays', 'Intments', 'Shampoo', 'Lotions', 'Roll On'
   ]
 
   const categories = {
-    'Suspensions': ['Anitbiotic', 'Anticold', 'Analgesic & Anti-Inflammatory', 'Antacid'],
+    'Suspensions': ['Antibiotic', 'Anticold', 'Analgesic & Anti-Inflammatory', 'Antacid'],
     'Syrups': ['Dry Syrup', 'Tonic Syrup', 'Drops', 'Cough Syrup'],
-    'External Preparations': ['Asal Sprays', 'Intments', 'Shampoo', 'Lotions', 'Roll On'],
+    'External Preparations': ['Nasal Sprays', 'Ointments', 'Shampoo', 'Lotions', 'Roll On'],
     'Miscellaneous Products': [],
     'Tablets': [],
     'Capsules': [],

@@ -91,7 +91,7 @@ const Navbar = () => {
   
   const products_menu = {
     menu_name :"Products", 
-    to: "/products", 
+    to: "/products/!", 
     items :{
       'Suspensions' : "/suspensions",
       'Syrups' : "/syrups",
