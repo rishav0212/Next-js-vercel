@@ -134,7 +134,8 @@ const Navbar = () => {
                   />
                 </Link>
               </Typography>
-              <Search />
+
+              {url!=="/products" ?<Search query=""/>:null}
 
               <IconButton edge="end" onClick={toggleDrawer}>
                 <SegmentSharpIcon fontSize="large" style={{ color: "black" }} />
@@ -188,7 +189,8 @@ const Navbar = () => {
                     Contact
                   </Link>
                 </Stack>
-                <Search />
+                {url!=="/products"?<Search query=""/>:null}
+                
               </Stack>
             </>
           )}

@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useCallback } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import { IconButton, TextField } from "@mui/material";
 import { useRouter } from "next/navigation";
@@ -7,25 +7,24 @@ import  Autocomplete  from "@mui/material/Autocomplete";
 import items from "@/product_details/names";
 
 
-function Search() {
-  const [text, setText] = useState("");
+function Search({query}) {
+  const [text, setText] = useState(query);
   const router = useRouter();  
+  console.log(query)
   
   const inputRef = useRef(null);
 
 
 
   const addQuery = () => {
-    console.log(text)
 
     router.push("/products/" + text);
     if (inputRef.current) {
       inputRef.current.blur();
     }
-    setText('')
   };
 
-  const handleSelection = (e, value)=>{
+  const handleSelection = useCallback((e, value)=>{
     // setText(value)    
     if(value===null){
       return
@@ -34,9 +33,8 @@ function Search() {
     if (inputRef.current) {
       inputRef.current.blur();
     }
-    setText('')
 
-  }
+  }, [text])
 
   // const isOptionEqualToValue = (option, value) => option===value||value!=='';
 

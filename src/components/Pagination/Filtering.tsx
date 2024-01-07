@@ -101,34 +101,29 @@ function QueryResponse({ params }) {
   )
 
   ///////////
-  // // boolean "main" to check if clicked on category from navbar
-  // let main = false;    
-  // const x = useCallback(()=>{
-  //   for (const key in links){
-  //     if(query === links[key]){
-  //       setMainCategory(key)
-  //       main =true;
-  //       break
-  //     }
-  //   }
-  // },[])
-
-  
-  // console.log(main)
-
-  const filtered = query!=='!'?items.filter((item) =>
-    item.name.toLowerCase().includes(query.toLowerCase())
-  ) : items;
-
-
-  const [list, setList] = useState(filtered)
-
+  // boolean "main" to check if clicked on category from navbar
+  let main = false;    
+  let filtered = []
+  const [list, setList] = useState([])
+  useEffect(()=>{
+    for (const key in links){
+      if(query === links[key]){
+        setMainCategory(key)
+        main = true;
+        break
+      }
+    }
+    filtered = !main ? items.filter((item) =>
+      item.name.toLowerCase().includes(params.query.toLowerCase())
+    ) : items;
+    setList(filtered)
+  },[query])
 
 
   return (
     <>
       <div className="d-flex pt-4 justify-content-center">
-        <Search query={query==='!'?"":query}/>
+        <Search query={!main?"":query}/>
         <Autocomplete
           disablePortal
           id="combo-box-demo"
