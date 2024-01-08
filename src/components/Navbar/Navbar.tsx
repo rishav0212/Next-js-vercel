@@ -93,13 +93,13 @@ const Navbar = () => {
     menu_name :"Products", 
     to: "/products", 
     items :{
-      'Suspensions' : "/suspensions",
-      'Syrups' : "/syrups",
-      'External Preparation' : "/external",
-      'Miscellaneous Products' : "/misc",
-      'Tablets' : "/tablets",
-      'Capsules': "/capsules",
-      'Sachets' : "/sachets"
+      'Suspensions' : "/Suspensions",
+      'Syrups' : "/Syrups",
+      'External Preparation' : "/External Preparation",
+      'Miscellaneous Products' : "/Miscellaneous Products",
+      'Tablets' : "/Tablets",
+      'Capsules': "/Capsules",
+      'Sachets' : "/Sachets"
     }}
 
   const events_menu = {

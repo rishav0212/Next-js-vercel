@@ -19,10 +19,11 @@ const DisplayList = ({ list, initialPage = 1 }) => {
     const paginatedList = list.slice((currentPage - 1) * limit, currentPage * limit);
     let array = paginationRange(totalPages, currentPage, limit, 1)
 
-    useEffect(()=>{
-        array = paginationRange(totalPages, currentPage, limit, 1)
 
-    },[currentPage,limit])
+    useEffect(() => {
+        array = paginationRange(totalPages, currentPage, limit, 1)
+        console.log(array)
+    }, [currentPage, limit])
 
 
 
@@ -39,10 +40,11 @@ const DisplayList = ({ list, initialPage = 1 }) => {
                     </li>
 
                     {array.map((value, index) => (
-                        <li key={value}>
+                        <li key={value}>{(value === '...' || value === '... ') ? <button className={"disabled "+styles['button-des']}>{value}</button> :
                             <button className={`${styles['button-des']} ${currentPage === value ? styles.active : null} btn page-item `} onClick={() => handlePageChange(value)}>
                                 {value}
                             </button>
+                        }
                         </li>
                     ))}
 

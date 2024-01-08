@@ -29,7 +29,7 @@ const paginationRange = (total, page, limit, sibling) => {
         return [1, "... ", ...pages];
     } else {
         let pages = range(left, right);
-        return [1,"...", ...pages,"...",total]
+        return [1,"... ", ...pages,"...",total]
     }
 
     return[]

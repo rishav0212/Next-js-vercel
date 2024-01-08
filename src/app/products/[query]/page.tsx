@@ -30,14 +30,14 @@ function QueryResponse({ params }) {
     'Sachets': []
   }
 
-  const links ={
-    'Suspensions' : "suspensions",
-    'Syrups' : "syrups",
-    'External Preparation' : "external",
-    'Miscellaneous Products' : "misc",
-    'Tablets' : "tablets",
+  const links = {
+    'Suspensions': "suspensions",
+    'Syrups': "syrups",
+    'External Preparation': "external",
+    'Miscellaneous Products': "misc",
+    'Tablets': "tablets",
     'Capsules': "capsules",
-    'Sachets' : "sachets"
+    'Sachets': "sachets"
   }
 
   //////////////
@@ -112,12 +112,12 @@ function QueryResponse({ params }) {
   //   }
   // },[])
 
-  
+
   // console.log(main)
 
-  const filtered = query!=='!'?items.filter((item) =>
-    item.name.toLowerCase().includes(query.toLowerCase())
-  ) : items;
+  const filtered = query !== '!' ? items.filter((item) => (
+    item.name.toLowerCase().includes(query.toLowerCase()) || item['mainCategory'] === query
+  )) : items;
 
 
   const [list, setList] = useState(filtered)
@@ -127,12 +127,12 @@ function QueryResponse({ params }) {
   return (
     <>
       <div className="d-flex pt-4 justify-content-center">
-        <Search query={query==='!'?"":query}/>
+        <Search query={query === '!' ? "" : query} />
         <Autocomplete
           disablePortal
           id="combo-box-demo"
           options={Object.keys(categories)}
-          sx={{ width: 200}}
+          sx={{ width: 200 }}
 
           renderInput={(params) => <TextField {...params} label="Main Category"
             inputRef={inputMainRef}
@@ -159,7 +159,7 @@ function QueryResponse({ params }) {
         />
       </div>
 
-      <DisplayList list={subCategory===""?list:sublist} />
+      <DisplayList list={subCategory === "" ? list : sublist} />
     </>
   );
 }
