@@ -1,4 +1,4 @@
-import QueryResponse from "@/components/QueryResponse";
+import QueryResponse from "@/components/QueryResponse/QueryResponse";
 
 function Page({ params }) {
 

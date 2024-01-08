@@ -1,7 +1,7 @@
 "use client"
 import React, { use, useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import DisplayList from "@/components/Pagination/DisplayList";
+import DisplayList from "@/components/QueryResponse/Pagination/DisplayList";
 import Autocomplete from "@mui/material/Autocomplete";
 import SearchIcon from "@mui/icons-material/Search";
 import { IconButton, TextField } from "@mui/material";
@@ -80,7 +80,7 @@ function QueryResponse({ q }) {
   }, [mainCategory, setMainCategory])
 
   useEffect(
-    handleChangedMain, [mainCategory, setMainCategory]
+    handleChangedMain, [handleChangedMain,mainCategory, setMainCategory]
   )
 
   //////////////
@@ -95,7 +95,7 @@ function QueryResponse({ q }) {
   }, [subCategory, setSubCategory])
 
   useEffect(
-    handleChangedSub, [subCategory, setSubCategory]
+    handleChangedSub, [handleChangedSub, subCategory, setSubCategory]
   )
 
   ///////////
