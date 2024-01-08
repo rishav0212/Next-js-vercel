@@ -112,10 +112,10 @@ export default async function ProductTemplate({ params }) {
   );
 };
 
-export function generateStaticParams() {
-  return (Object.keys(info).map((key) => {
+export async function generateStaticParams() {
+  return (Object.keys(info).map((key) => ({
     name: key
-  }))
+  })))
 };
 
 export const metadata: Metadata = {
