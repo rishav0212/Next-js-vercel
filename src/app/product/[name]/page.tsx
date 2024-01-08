@@ -13,7 +13,7 @@ import info from '@/product_details/info'
 import { Metadata } from "next";
 
 
-export default async function ProductTemplate({ params }){
+export default async function ProductTemplate({ params }) {
 
   const product = params.name
   return (
@@ -38,44 +38,56 @@ export default async function ProductTemplate({ params }){
           Approved Name -{" "}
           <span style={{ color: "black" }}>{info[product].approvedName}</span>
         </Typography>
+        {
 
-        <Typography variant="button" className="font--size-1125">
-          Spray Presentation:
-        </Typography>
+          info[product].sprayPresentation ?
+            <>
+              <Typography variant="button" className="font--size-1125">
+                Spray Presentation:
+              </Typography>
 
-        <Typography
-          variant="h6"
-          className="color-primary mb--25 mt-4 text-uppercase"
-        >
-          Description
-        </Typography>
+              <div className="font--size-1125">
+                {(info[product].sprayPresentation).map((dataitem) => {
+                  return <Typography key={dataitem.id} >{dataitem}</Typography>
+                })}
+              </div>
+            </> : null
+        }
 
-        <div className="font--size-1125">
-          {(info[product].sprayPresentation).map((dataitem) => {
-            return <Typography key={dataitem.id} >{dataitem}</Typography>
-          })}
-        </div>
+        {info[product].description ? <>
+          <Typography
+            variant="h6"
+            className="color-primary mb--25 mt-4 text-uppercase"
+          >
+            Description
+          </Typography>
 
-        <Typography className="my-3">
-          {info[product].description}
-        </Typography>
+          <Typography className="my-3">
+            {info[product].description}
+          </Typography>
+        </> : null
 
-        <Typography variant="h6" className="color-primary mt-4 text-uppercase">
-          Indications
-        </Typography>
+        }
 
-        <ul>
-          {info[product].indicationsList.map((dataitem) => {
-            return (
-              <ListItem key={dataitem.id} >
-                <ListItemIcon>
-                  <FiberManualRecord className="color-primary icon-small" />
-                </ListItemIcon>
-                <ListItemText>{dataitem}</ListItemText>
-              </ListItem>
-            )
-          })}
-        </ul>
+        {
+          info[product].indicationsList ? <>
+            <Typography variant="h6" className="color-primary mt-4 text-uppercase">
+              Indications
+            </Typography>
+
+            <ul>
+              {info[product].indicationsList.map((dataitem) => {
+                return (
+                  <ListItem key={dataitem.id} >
+                    <ListItemIcon>
+                      <FiberManualRecord className="color-primary icon-small" />
+                    </ListItemIcon>
+                    <ListItemText>{dataitem}</ListItemText>
+                  </ListItem>
+                )
+              })}
+            </ul>
+          </> : null}
 
         <Typography variant="h6" className="color-primary mt-4 text-uppercase">
           Side Effects

@@ -1,14 +1,14 @@
 const items =[{
     "id": 1,
     "name": "AZITHROMYCIN",
-    "link": "sa1.html",
+    "link": "sa1",
     "mainCategory": "Suspensions",
     "subCategory": "Antibiotic"
 },
 {
     "id": 2,
     "name": "OFLOXACIN",
-    "link": "sa2.html",
+    "link": "sa2",
     "mainCategory": "Suspensions",
     "subCategory": "Antibiotic"
 },
@@ -29,14 +29,14 @@ const items =[{
 {
     "id": 5,
     "name": "ROXITHROMYCIN",
-    "link": "sa6.html",
+    "link": "sa6",
     "mainCategory": "Suspensions",
     "subCategory": "Antibiotic"
 },
 {
     "id": 6,
     "name": "OFLOXACIN +  NITOZOXANIDE",
-    "link": "sa8.html",
+    "link": "sa8",
     "mainCategory": "Suspensions",
     "subCategory": "Antibiotic"
 },
@@ -71,28 +71,28 @@ const items =[{
 {
     "id": 11,
     "name": "CETIRIZINE DIHCL",
-    "link": "sac6.html",
+    "link": "sac6",
     "mainCategory": "Suspensions",
     "subCategory": "Anticold"
 },
 {
     "id": 12,
     "name": "LEVOCETIRIZINE DIHCL",
-    "link": "sac1.html",
+    "link": "sac1",
     "mainCategory": "Suspensions",
     "subCategory": "Anticold"
 },
 {
     "id": 13,
     "name": "DICYCLOMINE HCL + PCM",
-    "link": "Dicyclomine+PCM.html",
+    "link": "Dicyclomine+PCM",
     "mainCategory": "Suspensions",
     "subCategory": "Anticold"
 },
 {
     "id": 14,
     "name": "FEXOFENADINE HCL",
-    "link": "sac2.html",
+    "link": "sac2",
     "mainCategory": "Suspensions",
     "subCategory": "Anticold"
 },
@@ -106,7 +106,7 @@ const items =[{
 {
     "id": 16,
     "name": "DEFLAZACORT",
-    "link": "Deflazacort.html",
+    "link": "Deflazacort",
     "mainCategory": "Suspensions",
     "subCategory": "Analgesic & Anti-Inflammatory"
 },
