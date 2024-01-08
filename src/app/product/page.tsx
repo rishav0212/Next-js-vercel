@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { redirect } from "next/navigation";
 
 function Products() {
@@ -11,3 +12,8 @@ function Products() {
 }
 
 export default Products;
+
+export const metadata: Metadata = {
+  title: "About Us | Saar Biotech",
+  description: "",
+};

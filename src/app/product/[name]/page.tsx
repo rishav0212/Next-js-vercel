@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import { FiberManualRecord, Spa } from "@mui/icons-material";
 import info from '@/product_details/info'
+import { Metadata } from "next";
 
 
 export default async function ProductTemplate({ params }){
@@ -102,8 +103,12 @@ export default async function ProductTemplate({ params }){
 export function generateStaticParams() {
   return (Object.keys(info).map((key) => {
     name: key
-    console.log(key)
   }))
+};
+
+export const metadata: Metadata = {
+  title: "Products | Saar Biotech",
+  description: "",
 };
 
 // export default ProductTemplate;

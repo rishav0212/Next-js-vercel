@@ -7,6 +7,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import { IconButton, TextField } from "@mui/material";
 import items from "@/product_details/names";
 import Search from "@/components/Navbar/Search";
+import { Metadata } from "next";
 
 
 function QueryResponse({ params }) {

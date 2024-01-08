@@ -40,7 +40,7 @@ const DisplayList = ({ list, initialPage = 1 }) => {
                     </li>
 
                     {array.map((value, index) => (
-                        <li key={value}>{(value === '...' || value === '... ') ? <button className={"disabled "+styles['button-des']}>{value}</button> :
+                        <li key={value}>{(value === '...' || value === '... ') ? <button className={"disabled " + styles['button-des']}>{value}</button> :
                             <button className={`${styles['button-des']} ${currentPage === value ? styles.active : null} btn page-item `} onClick={() => handlePageChange(value)}>
                                 {value}
                             </button>
@@ -76,9 +76,10 @@ const DisplayList = ({ list, initialPage = 1 }) => {
 
 
 
-            <div className="w-75 mx-auto justify-content-center table-responsive">
-                <table className="table ">
-                    <thead>
+            <div className="container w-75 mx-auto justify-content-center table-responsive">
+                <table className="table table-light table-bordered table-striped align-middle">
+                    <caption>Products</caption>
+                    <thead className="table-primary">
                         <tr>
                             <th className="p-3">S.no</th>
                             <th className="p-3">Composition</th>
@@ -93,7 +94,7 @@ const DisplayList = ({ list, initialPage = 1 }) => {
                                 <td>{index + 1 + (currentPage - 1) * limit}</td>
                                 <td>
                                     <Link
-                                        href={"https://www.saarbiotech.in/" + item.link}>
+                                        href={item.link}>
                                         {item.name}
                                     </Link>
                                 </td>
