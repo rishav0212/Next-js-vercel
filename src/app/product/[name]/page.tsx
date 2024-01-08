@@ -36,7 +36,7 @@ export default async function ProductTemplate({ params }) {
           className="color-primary mb--25 mt-4 text-uppercase"
         >
           Approved Name -{" "}
-          <span style={{ color: "black" }}>{info[product].approvedName}</span>
+          <span style={{ color: "black" }}>{info[product].approved_name}</span>
         </Typography>
         {
 

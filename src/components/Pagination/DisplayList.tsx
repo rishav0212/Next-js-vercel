@@ -94,7 +94,7 @@ const DisplayList = ({ list, initialPage = 1 }) => {
                                 <td>{index + 1 + (currentPage - 1) * limit}</td>
                                 <td>
                                     <Link
-                                        href={item.link}>
+                                        href={"/product/"+item.link}>
                                         {item.name}
                                     </Link>
                                 </td>
