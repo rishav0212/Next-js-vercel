@@ -14,6 +14,7 @@ export default Page;
 export async function generateStaticParams() {
   return(
   [
+    {'query':"!"},
     { 'query': "Suspensions" },
     { 'query': "Syrups" }, 
     { 'query': "External Preparation" }, 
