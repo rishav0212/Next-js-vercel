@@ -2,7 +2,7 @@ const ironOralSpray = {
     id :3,
     name: "Iron Oral Spray",
     indications: "Avoiding digestive comfort and enhancing bioavailability",
-    approvedName: "Iron Oral Spray",
+    approved_name: "Iron Oral Spray",
     sprayPresentation: [
       "Iron (As Ferric ammonium citrate) : 4.2 mg",
     ],

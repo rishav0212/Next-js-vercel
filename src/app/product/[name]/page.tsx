@@ -10,13 +10,16 @@ import {
 } from "@mui/material";
 import { FiberManualRecord, Spa } from "@mui/icons-material";
 import info from '@/product_details/info'
-import { Span } from "next/dist/trace";
+import { Metadata } from "next";
+import Search from "@/components/Navbar/Search";
 
-const ProductTemplate = ({ params }) => {
 
-    const product = params.name
+export default async function ProductTemplate({ params }) {
+
+  const product = params.name
   return (
     <>
+      <Search query = ""/>
       <Toolbar />
       <Typography variant="h4" className="text-center color-primary">
         {info[product].name}
@@ -26,7 +29,7 @@ const ProductTemplate = ({ params }) => {
 
 
       <Container maxWidth="md">
-        
+
         <Typography variant="subtitle1" className="fw-600 mb-2 mt-5">
           Indications:- {info[product].indications}
         </Typography>
@@ -35,46 +38,58 @@ const ProductTemplate = ({ params }) => {
           className="color-primary mb--25 mt-4 text-uppercase"
         >
           Approved Name -{" "}
-          <span style={{ color: "black" }}>{info[product].approvedName}</span>
+          <span style={{ color: "black" }}>{info[product].approved_name}</span>
         </Typography>
+        {
 
-        <Typography variant="button" className="font--size-1125">
-          Spray Presentation:
-        </Typography>
-        
-        <Typography
-          variant="h6"
-          className="color-primary mb--25 mt-4 text-uppercase"
-        >
-          Description
-        </Typography>
+          info[product].sprayPresentation ?
+            <>
+              <Typography variant="button" className="font--size-1125">
+                Spray Presentation:
+              </Typography>
 
-        <div className="font--size-1125">
-          {(info[product].sprayPresentation).map((dataitem)=>{
-            return <Typography key={dataitem.id} >{dataitem}</Typography>
-          })}
-        </div>
+              <div className="font--size-1125">
+                {(info[product].sprayPresentation).map((dataitem) => {
+                  return <Typography key={dataitem.id} >{dataitem}</Typography>
+                })}
+              </div>
+            </> : null
+        }
 
-        <Typography className="my-3">
-          {info[product].description}
-        </Typography>
+        {info[product].description ? <>
+          <Typography
+            variant="h6"
+            className="color-primary mb--25 mt-4 text-uppercase"
+          >
+            Description
+          </Typography>
 
-        <Typography variant="h6" className="color-primary mt-4 text-uppercase">
-          Indications
-        </Typography>
+          <Typography className="my-3">
+            {info[product].description}
+          </Typography>
+        </> : null
 
-        <ul>
-          {info[product].indicationsList.map((dataitem)=>{
-            return (
-              <ListItem key={dataitem.id} >
-                <ListItemIcon>
-                  <FiberManualRecord className="color-primary icon-small" />
-                </ListItemIcon>
-                <ListItemText>{dataitem}</ListItemText>
-              </ListItem>
-            )
-          })}
-        </ul>
+        }
+
+        {
+          info[product].indicationsList ? <>
+            <Typography variant="h6" className="color-primary mt-4 text-uppercase">
+              Indications
+            </Typography>
+
+            <ul>
+              {info[product].indicationsList.map((dataitem) => {
+                return (
+                  <ListItem key={dataitem.id} >
+                    <ListItemIcon>
+                      <FiberManualRecord className="color-primary icon-small" />
+                    </ListItemIcon>
+                    <ListItemText>{dataitem}</ListItemText>
+                  </ListItem>
+                )
+              })}
+            </ul>
+          </> : null}
 
         <Typography variant="h6" className="color-primary mt-4 text-uppercase">
           Side Effects
@@ -99,4 +114,15 @@ const ProductTemplate = ({ params }) => {
   );
 };
 
-export default ProductTemplate;
+export async function generateStaticParams() {
+  return (Object.keys(info).map((key) => ({
+    name: key
+  })))
+};
+
+export const metadata: Metadata = {
+  title: "Products | Saar Biotech",
+  description: "",
+};
+
+// export default ProductTemplate;

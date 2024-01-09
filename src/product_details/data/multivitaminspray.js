@@ -2,7 +2,7 @@ const multiVitaminOralSpray = {
   id :2,
   name: "MultiVitamin Oral Spray",
   indications: "Health Supplement",
-  approvedName: "Multivitamin Oral Spray",
+  approved_name: "Multivitamin Oral Spray",
   sprayPresentation: [
     "Vitamin C : 5 mg",
     "Vitamin B3(Niacin) : 2 mg",

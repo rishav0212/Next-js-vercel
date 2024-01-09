@@ -25,13 +25,15 @@ const StyledLink = styled(Link)({
 
 export default function Dropdown({props, url}){
 
+    const to = props.to
+
     return(
         <div>
             <div className="dropdown1">
                 <Link
                 href={props.to}
                 className={`navbar-links border-bottom-class ${
-                    url === props.to ? "active-link" : ""
+                    url === to.slice(0, props.to.indexOf('/', 1)!==-1? to.indexOf('/',1):to.length) ? "active-link" : ""
                 }`}
                 >
                 {props.menu_name}

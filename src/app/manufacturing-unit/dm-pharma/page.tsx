@@ -1,12 +1,13 @@
 "use client"
 
 import { Container, Grid, Stack, Toolbar, Typography } from "@mui/material";
+import Image from "next/image";
 import * as React from "react";
 
 export default function DmPharmaContent() {
-  return (
-    <>
-     = <Toolbar />
+    return (
+        <>
+            <Toolbar />
 
             <Typography variant="h4" className="text-center color-primary">DM Pharma Manufacuring Unit</Typography>
 
@@ -31,11 +32,12 @@ export default function DmPharmaContent() {
                             justifyContent={"center"}
                             className="w-100 h-100"
                         >
-                            <img className="manufacturing-unit-images" src="/images/dm-image1.jpg" alt="Saar Biotech" />
-                            <img className="manufacturing-unit-images" src="/images/dm-image2.jpg" alt="Saar Biotech" />
-                            <img className="manufacturing-unit-images" src="/images/dm-image3.jpg" alt="Saar Biotech" />
-                            <img className="manufacturing-unit-images" src="/images/dm-image4.jpg" alt="Saar Biotech" />
-                            <img className="manufacturing-unit-images" src="/images/dm-image5.jpg" alt="Saar Biotech" />
+                            <Image className="manufacturing-unit-images" width={250} height={100} src={"/images/dm-image1.jpg"} alt={"Saar Biotech"} />
+                            <Image className="manufacturing-unit-images" width={250} height={100} src={"/images/dm-image2.jpg"} alt={"Saar Biotech"} />
+                            <Image className="manufacturing-unit-images" width={250} height={100} src={"/images/dm-image3.jpg"} alt={"Saar Biotech"} />
+                            <Image className="manufacturing-unit-images" width={250} height={100} src={"/images/dm-image4.jpg"} alt={"Saar Biotech"} />
+                            <Image className="manufacturing-unit-images" width={250} height={100} src={"/images/dm-image5.jpg"} alt={"Saar Biotech"} />
+
                         </Stack>
                     </Grid>
                 </Grid>
@@ -72,6 +74,6 @@ export default function DmPharmaContent() {
 
                 <Toolbar />
             </Container>
-    </>
-  );
+        </>
+    );
 }

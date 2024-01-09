@@ -1,26 +1,26 @@
-import React from "react";
-import items from "@/product_details/names";
-import Link from "next/link";
+import QueryResponse from "@/components/QueryResponse/QueryResponse";
 
-function queryResponse({ params }) {
-  const filtered = items.filter((item) =>
-    item.name.toLowerCase().includes(params.query.toLowerCase())
-  );
+function Page({ params }) {
+
+
 
   return (
-    <div>
-      <h1>Products with {params.query}</h1>
-      <ul>
-        {filtered.map((item) => (
-          <Link href={"/product/" + item.name} key={item.id}>
-            <li>
-              {item.id} : {item.name}
-            </li>
-          </Link>
-        ))}
-      </ul>
-    </div>
+    <QueryResponse q = {params.query}/>
   );
 }
 
-export default queryResponse;
+export default Page;
+
+export async function generateStaticParams() {
+  return(
+  [
+    { 'query': "Suspensions" },
+    { 'query': "Syrups" }, 
+    { 'query': "External Preparation" }, 
+    { 'query': "Miscellaneous Products" }, 
+    { 'query': "tablets" },
+    { 'query': "capsules" },
+    { 'query': "sachets" }
+  ]
+)
+}

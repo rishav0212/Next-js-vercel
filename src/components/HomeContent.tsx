@@ -129,8 +129,6 @@ export default function HomeContent() {
     const speed = 300;
 
     counters.forEach((counter) => {
-      console.log(counter);
-
       const updateCount = () => {
         const target = parseInt(counter.getAttribute("data-target"));
         const count = parseInt(counter.innerHTML);

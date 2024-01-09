@@ -1,13 +1,14 @@
 "use client"
 
 import { Container, Grid, Stack, Toolbar, Typography } from "@mui/material";
+import Image from "next/image";
 
 export default function SaarBiotechContent() {
-  return (
-    <>
-      <Toolbar />
+    return (
+        <>
+            <Toolbar />
 
-            <div  className="text-center color-primary"><Typography variant="h4">Saar Biotech Manufacuring Unit</Typography></div>
+            <div className="text-center color-primary"><Typography variant="h4">Saar Biotech Manufacuring Unit</Typography></div>
 
             <Toolbar />
             <Container>
@@ -32,10 +33,10 @@ export default function SaarBiotechContent() {
                             justifyContent={"center"}
                             className="w-100 h-100"
                         >
-                            <img className="manufacturing-unit-images" src="/images/saar-image1.jpg" alt="Saar Biotech" />
-                            <img className="manufacturing-unit-images" src="/images/saar-image2.jpg" alt="Saar Biotech" />
-                            <img className="manufacturing-unit-images" src="/images/saar-image3.jpg" alt="Saar Biotech" />
-                            <img className="manufacturing-unit-images" src="/images/saar-image4.jpg" alt="Saar Biotech" />
+                            <Image className="manufacturing-unit-images" width={250} height={100} src={"/images/saar-image1.jpg"} alt={"Saar Biotech"} />
+                            <Image className="manufacturing-unit-images" width={250} height={100} src={"/images/saar-image2.jpg"} alt={"Saar Biotech"} />
+                            <Image className="manufacturing-unit-images" width={250} height={100} src={"/images/saar-image3.jpg"} alt={"Saar Biotech"} />
+                            <Image className="manufacturing-unit-images" width={250} height={100} src={"/images/saar-image4.jpg"} alt={"Saar Biotech"} />
                         </Stack>
                     </Grid>
                 </Grid>
@@ -43,7 +44,7 @@ export default function SaarBiotechContent() {
                 <Toolbar />
                 <Toolbar />
 
-                <div  className="text-center color-primary"><Typography variant="h4">Our Strengths</Typography></div>
+                <div className="text-center color-primary"><Typography variant="h4">Our Strengths</Typography></div>
 
                 <Toolbar />
 
@@ -71,7 +72,7 @@ export default function SaarBiotechContent() {
                 </Grid>
 
                 <Toolbar />
-            </Container> 
-    </>
-  );
+            </Container>
+        </>
+    );
 }

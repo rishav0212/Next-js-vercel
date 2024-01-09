@@ -93,13 +93,13 @@ const Navbar = () => {
     menu_name :"Products", 
     to: "/products", 
     items :{
-      'Suspensions' : "/suspensions",
-      'Syrups' : "/syrups",
-      'External Preparation' : "/external",
-      'Miscellaneous Products' : "/misc",
-      'Tablets' : "/tablets",
-      'Capsules': "/capsules",
-      'Sachets' : "/sachets"
+      'Suspensions' : "/Suspensions",
+      'Syrups' : "/Syrups",
+      'External Preparation' : "/External Preparation",
+      'Miscellaneous Products' : "/Miscellaneous Products",
+      'Tablets' : "/Tablets",
+      'Capsules': "/Capsules",
+      'Sachets' : "/Sachets"
     }}
 
   const events_menu = {
@@ -134,7 +134,8 @@ const Navbar = () => {
                   />
                 </Link>
               </Typography>
-              <Search />
+
+              {url!=="/products" ?<Search query=""/>:null}
 
               <IconButton edge="end" onClick={toggleDrawer}>
                 <SegmentSharpIcon fontSize="large" style={{ color: "black" }} />
@@ -188,7 +189,8 @@ const Navbar = () => {
                     Contact
                   </Link>
                 </Stack>
-                <Search />
+                {url!=="/products"?<Search query=""/>:null}
+                
               </Stack>
             </>
           )}
