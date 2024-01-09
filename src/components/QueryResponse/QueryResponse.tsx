@@ -1,13 +1,9 @@
 "use client"
 import React, { use, useCallback, useEffect, useRef, useState } from "react";
-import Link from "next/link";
 import DisplayList from "@/components/QueryResponse/Pagination/DisplayList";
 import Autocomplete from "@mui/material/Autocomplete";
-import SearchIcon from "@mui/icons-material/Search";
-import { IconButton, TextField } from "@mui/material";
+import { TextField } from "@mui/material";
 import items from "@/product_details/names";
-import Search from "@/components/Navbar/Search";
-import { ThreeSixty } from "@mui/icons-material";
 
 function QueryResponse({ q = "" }) {
 
@@ -28,29 +24,20 @@ function QueryResponse({ q = "" }) {
     'Sachets': []
   }
 
-  const links = {
-    'Suspensions': "suspensions",
-    'Syrups': "syrups",
-    'External Preparation': "external",
-    'Miscellaneous Products': "misc",
-    'Tablets': "tablets",
-    'Capsules': "capsules",
-    'Sachets': "sachets"
-  }
 
   //////////////
 
   const [filtered, setFiltered] = useState(items);
-  const [sublist, setSublist] = useState([])
-  const [list, setList] = useState([])
   const [query, setQuery] = useState("");
   const [textinProduct, setTextinProduct] = useState("")
-  const inputMainRef = useRef(null)
-  const inputSubRef = useRef(null)
-  const inputRef = useRef(null)
   const [mainCategory, setMainCategory] = useState("")
   const [subCategory, setSubCategory] = useState("")
   const [subCateOptions, setSubCateOptions] = useState(subCategoryList)
+
+  
+  const inputMainRef = useRef(null)
+  const inputSubRef = useRef(null)
+  const inputRef = useRef(null)
 
 
 
@@ -96,14 +83,9 @@ function QueryResponse({ q = "" }) {
 
   const handleChangedMain = useCallback(() => {
     if (mainCategory !== "") {
-      const new_list = filtered.filter((item) =>
-        item['mainCategory'].toLowerCase() === mainCategory.toLowerCase()
-      )
       setSubCateOptions(categories[mainCategory])
-      setList(new_list)
     } else {
       setSubCateOptions(subCategoryList)
-      setList(filtered)
     }
     setSubCategory("")
   }, [mainCategory, setMainCategory])
@@ -115,12 +97,7 @@ function QueryResponse({ q = "" }) {
   //////////////
 
   const handleChangedSub = useCallback(() => {
-    if (subCategory !== "") {
-      const new_list = list.filter((item) =>
-        item['subCategory'] === subCategory
-      )
-      setSublist(new_list)
-    }
+    
   }, [subCategory, setSubCategory])
 
   useEffect(
@@ -129,31 +106,25 @@ function QueryResponse({ q = "" }) {
 
   //////////
   useEffect(() => {
-    for (const key in links) {
+    for (const key in categories) {
       if (q === key) {
         setMainCategory(key)
-
         break;
       }
-
     }
   }, [])
 
-  const handleChangedQuery = useCallback(() => {
-    if (query !== "") {
-      const new_list = items.filter((item) => (
-        item.name.toLowerCase().includes(query.toLowerCase())
-      ))
-      setFiltered(new_list)
-    } else {
-      setFiltered(items)
-    }
-    setMainCategory("")
-  }, [query, setQuery])
+  // const handleChangedQuery = useCallback(
 
-  useEffect(() =>
-    handleChangedQuery, [query, setQuery]
-  )
+  useEffect(() => {
+      const new_list = items.filter((item) => (
+        item.name.toLowerCase().includes(query.toLowerCase()) &&
+        item.mainCategory.includes(mainCategory)  &&
+        item.subCategory.includes(subCategory)
+
+      ))
+      setFiltered((prev) =>new_list)
+  }, [query,mainCategory, subCategory,setMainCategory, setSubCategory, setQuery])
 
 
 
@@ -209,7 +180,7 @@ function QueryResponse({ q = "" }) {
         />
       </div>
 
-      <DisplayList list={subCategory === "" ? mainCategory === "" ? filtered : list : sublist} />
+      <DisplayList list={filtered} />
     </>
   );
 }

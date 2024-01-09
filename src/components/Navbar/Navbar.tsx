@@ -95,7 +95,7 @@ const Navbar = () => {
     items :{
       'Suspensions' : "/Suspensions",
       'Syrups' : "/Syrups",
-      'External Preparation' : "/External Preparation",
+      'External Preparation' : "/External Preparations",
       'Miscellaneous Products' : "/Miscellaneous Products",
       'Tablets' : "/Tablets",
       'Capsules': "/Capsules",
