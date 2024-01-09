@@ -1,16 +1,11 @@
 "use client"
 import React, { use, useCallback, useEffect, useRef, useState } from "react";
-import Link from "next/link";
 import DisplayList from "@/components/QueryResponse/Pagination/DisplayList";
 import Autocomplete from "@mui/material/Autocomplete";
-import SearchIcon from "@mui/icons-material/Search";
-import { IconButton, TextField } from "@mui/material";
+import { TextField } from "@mui/material";
 import items from "@/product_details/names";
-import Search from "@/components/Navbar/Search";
 
-function QueryResponse({ q }) {
-
-  let query = decodeURIComponent(q);
+function QueryResponse({ q = "" }) {
 
   //////////////
   const subCategoryList = [
@@ -29,28 +24,25 @@ function QueryResponse({ q }) {
     'Sachets': []
   }
 
-  const links = {
-    'Suspensions': "suspensions",
-    'Syrups': "syrups",
-    'External Preparation': "external",
-    'Miscellaneous Products': "misc",
-    'Tablets': "tablets",
-    'Capsules': "capsules",
-    'Sachets': "sachets"
-  }
 
   //////////////
 
-  const [sublist, setSublist] = useState([])
-  const inputMainRef = useRef(null)
-  const inputSubRef = useRef(null)
+  const [filtered, setFiltered] = useState(items);
+  const [query, setQuery] = useState("");
+  const [textinProduct, setTextinProduct] = useState("")
   const [mainCategory, setMainCategory] = useState("")
   const [subCategory, setSubCategory] = useState("")
   const [subCateOptions, setSubCateOptions] = useState(subCategoryList)
 
+  
+  const inputMainRef = useRef(null)
+  const inputSubRef = useRef(null)
+  const inputRef = useRef(null)
+
 
 
   ///////////////////
+
 
   const handleSelectionMain = (e, value) => {
     value ? setMainCategory(value) : setMainCategory("")
@@ -62,71 +54,101 @@ function QueryResponse({ q }) {
     inputSubRef.current ? inputSubRef.current.blur() : null
   }
 
+  ////////////////
+  const handleSelection = ((e, value) => {
+    if(value){
+      setQuery(value)
+      setTextinProduct(value)
+    } else{
+      setQuery("")
+      setTextinProduct("")
+    }
+
+    inputRef.current ? inputRef.current.blur() : null
+
+  })
 
   ///////////////
 
+  const handleEnterPressed = (e) => {
+    if (e.key === "Enter") {
+
+      setQuery(textinProduct)
+      inputRef.current ? inputRef.current.blur() : null
+    }
+  }
+
+
+  /////////////
+
   const handleChangedMain = useCallback(() => {
     if (mainCategory !== "") {
-      const new_list = filtered.filter((item) =>
-        item['mainCategory'].toLowerCase() === mainCategory.toLowerCase()
-      )
       setSubCateOptions(categories[mainCategory])
-      setList(new_list)
     } else {
       setSubCateOptions(subCategoryList)
-      setList(filtered)
     }
     setSubCategory("")
   }, [mainCategory, setMainCategory])
 
   useEffect(
-    handleChangedMain, [handleChangedMain,mainCategory, setMainCategory]
+    handleChangedMain, [handleChangedMain, mainCategory, setMainCategory]
   )
 
   //////////////
 
   const handleChangedSub = useCallback(() => {
-    if (subCategory !== "") {
-      const new_list = list.filter((item) =>
-        item['subCategory'] === subCategory
-      )
-      setSublist(new_list)
-    }
+    
   }, [subCategory, setSubCategory])
 
   useEffect(
     handleChangedSub, [handleChangedSub, subCategory, setSubCategory]
   )
 
-  ///////////
-  // // boolean "main" to check if clicked on category from navbar
-  // let main = false;    
-  // const x = useCallback(()=>{
-  //   for (const key in links){
-  //     if(query === links[key]){
-  //       setMainCategory(key)
-  //       main =true;
-  //       break
-  //     }
-  //   }
-  // },[])
+  //////////
+  useEffect(() => {
+    for (const key in categories) {
+      if (q === key) {
+        setMainCategory(key)
+        break;
+      }
+    }
+  }, [])
 
+  // const handleChangedQuery = useCallback(
 
-  // console.log(main)
+  useEffect(() => {
+      const new_list = items.filter((item) => (
+        item.name.toLowerCase().includes(query.toLowerCase()) &&
+        item.mainCategory.includes(mainCategory)  &&
+        item.subCategory.includes(subCategory)
 
-  const filtered = query !== '!' ? items.filter((item) => (
-    item.name.toLowerCase().includes(query.toLowerCase()) || item['mainCategory'] === query
-  )) : items;
-
-
-  const [list, setList] = useState(filtered)
+      ))
+      setFiltered((prev) =>new_list)
+  }, [query,mainCategory, subCategory,setMainCategory, setSubCategory, setQuery])
 
 
 
   return (
     <>
       <div className="d-flex pt-4 justify-content-center">
-        <Search query={query === '!' ? "" : query} />
+        <Autocomplete
+          disablePortal
+          id="combo-box-demo"
+          options={items.map((item) => (item.name))}
+          sx={{ width: 200 }}
+          // isOptionEqualToValue={isOptionEqualToValue}
+
+          renderInput={(params) => <TextField {...params} label="Search Product"
+            onKeyPress={handleEnterPressed}
+            inputRef={inputRef}
+          />}
+          // value={query}
+          onInputChange={(e, value) => setTextinProduct(value)}
+          value={textinProduct === "" ? null : textinProduct}
+          onChange={handleSelection}
+
+        />
+
         <Autocomplete
           disablePortal
           id="combo-box-demo"
@@ -158,7 +180,7 @@ function QueryResponse({ q }) {
         />
       </div>
 
-      <DisplayList list={subCategory === "" ? list : sublist} />
+      <DisplayList list={filtered} />
     </>
   );
 }
