@@ -264,13 +264,13 @@ const items = [{
     "mainCategory": "Syrups",
     "subCategory": "Tonic Syrup"
 },
-{
-    "id": 39,
-    "name": "ALPHA AMYLASE   ( BACTERIAL 1:800)  +   PAPAIN",
-    "link": "ALPHA14",
-    "mainCategory": "Syrups",
-    "subCategory": "Tonic Syrup"
-},
+// {
+//     "id": 39,
+//     "name": "ALPHA AMYLASE   ( BACTERIAL 1:800)  +   PAPAIN",
+//     "link": "ALPHA14",
+//     "mainCategory": "Syrups",
+//     "subCategory": "Tonic Syrup"
+// },
 {
     "id": 40,
     "name": "L-LYSINE   + NICOTINAMIDE     +  D-PANTHENOL   +   RIBO. SOD. PHOS.   +  THIAMINE HCL   + PYRIDOXINE HCL    +  CYANOC. (IN FOOD)",
