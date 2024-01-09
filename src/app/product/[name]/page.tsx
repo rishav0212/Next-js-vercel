@@ -20,7 +20,6 @@ export default async function ProductTemplate({ params }) {
   console.log(product)
   return (
     <>
-      <Search query = ""/>
       <Toolbar />
       <Typography variant="h4" className="text-center color-primary">
         {info[product].name}
