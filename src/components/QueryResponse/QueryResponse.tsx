@@ -13,6 +13,17 @@ function QueryResponse({ q = "" }) {
   const theme = useTheme();
 
   //////////////
+
+  /////////////
+  const all_products = [];
+  Object.keys(items).map((main) => {
+    Object.keys(items[main]).map((sub) => {
+      items[main][sub].map((product) => {
+        all_products.push(product.name);
+      });
+    });
+  });
+
   const subCategoryList = [
     "Antibiotic",
     "Anticold",
@@ -52,7 +63,7 @@ function QueryResponse({ q = "" }) {
 
   //////////////
 
-  const [filtered, setFiltered] = useState(items);
+  const [filtered, setFiltered] = useState({});
   const [query, setQuery] = useState("");
   const [textinProduct, setTextinProduct] = useState("");
   const [mainCategory, setMainCategory] = useState("");
@@ -64,6 +75,19 @@ function QueryResponse({ q = "" }) {
   const inputRef = useRef(null);
 
   ///////////////////
+
+  useEffect(() => {
+    setFiltered(items);
+  }, []);
+
+  useEffect(() => {
+    for (const key in categories) {
+      if (q === key) {
+        setMainCategory(key);
+        break;
+      }
+    }
+  }, []);
 
   const handleSelectionMain = (e, value) => {
     value ? setMainCategory(value) : setMainCategory("");
@@ -108,46 +132,36 @@ function QueryResponse({ q = "" }) {
     setSubCategory("");
   }, [mainCategory, setMainCategory]);
 
-  useEffect(handleChangedMain, [
-    handleChangedMain,
-    mainCategory,
-    setMainCategory,
-  ]);
+  useEffect(handleChangedMain, [handleChangedMain, mainCategory]);
 
   //////////////
 
   const handleChangedSub = useCallback(() => {}, [subCategory, setSubCategory]);
 
   useEffect(handleChangedSub, [handleChangedSub, subCategory, setSubCategory]);
+  /////////
+
+  useEffect(() => {
+    let new_list = {};
+    Object.keys(items).map((main, index) => {
+      let sub_list = {};
+      if (mainCategory === main || mainCategory === "") {
+        Object.keys(items[main]).map((sub) => {
+          if (subCategory === sub || subCategory === "") {
+            const inner_search = items[main][sub].filter((product) =>
+              product.name.toLowerCase().includes(query.toLowerCase())
+            );
+            inner_search.length ? (sub_list[sub] = inner_search) : null;
+          }
+        });
+      }
+
+      Object.keys(sub_list).length ? (new_list[main] = sub_list) : null;
+    });
+    setFiltered(new_list);
+  }, [query, mainCategory, subCategory]);
 
   //////////
-  useEffect(() => {
-    for (const key in categories) {
-      if (q === key) {
-        setMainCategory(key);
-        break;
-      }
-    }
-  }, []);
-
-  // const handleChangedQuery = useCallback(
-
-  useEffect(() => {
-    const new_list = items.filter(
-      (item) =>
-        item.name.toLowerCase().includes(query.toLowerCase()) &&
-        item.mainCategory.includes(mainCategory) &&
-        item.subCategory.includes(subCategory)
-    );
-    setFiltered((prev) => new_list);
-  }, [
-    query,
-    mainCategory,
-    subCategory,
-    setMainCategory,
-    setSubCategory,
-    setQuery,
-  ]);
 
   return (
     <>
@@ -174,8 +188,8 @@ function QueryResponse({ q = "" }) {
           <Grid item xs={11} sm={6} md={3} sx={{ fontSize: "1vh" }}>
             <Autocomplete
               disablePortal
-              id="combo-box-demo"
-              options={items.map((item) => item.name)}
+              id="Composition"
+              options={all_products}
               // sx={{ width: 200 }}
               // isOptionEqualToValue={isOptionEqualToValue}
 
@@ -196,7 +210,7 @@ function QueryResponse({ q = "" }) {
           <Grid item xs={11} sm={6} md={3}>
             <Autocomplete
               disablePortal
-              id="combo-box-demo"
+              id="mainCategory"
               options={Object.keys(categories)}
               // sx={{ width: 200 }}
               renderInput={(params) => (
@@ -213,7 +227,7 @@ function QueryResponse({ q = "" }) {
           <Grid item xs={11} sm={6} md={3}>
             <Autocomplete
               disablePortal
-              id="combo-box-demo"
+              id="subCategory"
               options={subCateOptions}
               // sx={{ width: 200 }}
               renderInput={(params) => (
@@ -227,7 +241,7 @@ function QueryResponse({ q = "" }) {
               value={subCategory === "" ? null : subCategory}
             />
           </Grid>
-          <Grid margin={0} md={9} sm={12} xs={11} textAlign={"right"}>
+          <Grid item margin={0} md={9} sm={12} xs={11} textAlign={"right"}>
             <Button
               sx={{}}
               onClick={() => {
@@ -241,12 +255,14 @@ function QueryResponse({ q = "" }) {
         </Grid>
 
         <Grid
+          container
+          item
           xs={12}
           sm={12}
           md={10}
           sx={{
-            width: { md: "80vw", sm: "80vw", xs: "90vw" },
-            fontSize: { md: "1.2vw", sm: "1.7vw", xs: "2.5vw" },
+            width: { md: "80vw", sm: "80vw" },
+            fontSize: { md: 15, sm: "1.7vw", xs: "2.5vw" },
           }}
         >
           <DisplayList list={filtered} />
