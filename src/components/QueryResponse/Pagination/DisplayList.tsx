@@ -76,11 +76,12 @@ const DisplayList = ({ list, initialPage = 1 }) => {
 
 
 
-            <div className="container w-75 mx-auto justify-content-center table-responsive">
+            <div className="container justify-content-center ">
                 <table className="table table-light table-bordered table-striped align-middle">
                     <caption>Products</caption>
                     <thead className="table-primary">
                         <tr>
+                            <th className="p-3">Dosage Form</th>
                             <th className="p-3">S.no</th>
                             <th className="p-3">Composition</th>
                             <th className="p-3">Name</th>
@@ -90,7 +91,8 @@ const DisplayList = ({ list, initialPage = 1 }) => {
                     <tbody>
 
                         {paginatedList.map((item, index) => (
-                            <tr key={item.id}>
+                            <tr key={item.id}>{index==0?
+                                <td rowSpan={10}>{item.mainCategory}</td>:null}
                                 <td>{index + 1 + (currentPage - 1) * limit}</td>
                                 <td>
                                     <Link

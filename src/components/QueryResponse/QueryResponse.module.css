@@ -1,0 +1,20 @@
+.headingText{
+    font-size: 30vh;
+}
+
+.searchSectionMain{
+    display: flex;
+    justify-content: space-around;
+    margin: 4vw;
+    padding: 0 4vw;
+}
+
+.searchSection{
+    display: flex;
+
+}
+
+.textField{
+    margin : 0 0.5vw;
+
+}
