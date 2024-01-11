@@ -1,11 +1,12 @@
 import QueryResponse from "@/components/QueryResponse/QueryResponse";
+import { redirect } from "next/dist/server/api-utils";
 
 function Page({ params }) {
 
 
 
   return (
-    <QueryResponse q = {params.query}/>
+    <QueryResponse q = {decodeURI(params.query)}/>
   );
 }
 

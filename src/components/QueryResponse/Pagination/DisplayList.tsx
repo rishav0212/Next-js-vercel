@@ -94,7 +94,7 @@ const DisplayList = ({ list, initialPage = 1 }) => {
                                 <td>{index + 1 + (currentPage - 1) * limit}</td>
                                 <td>
                                     <Link
-                                        href={"/product/"+item.link}>
+                                        href={item.link.includes('dmpharma')?item.link:"/product/"+item.link}>
                                         {item.name}
                                     </Link>
                                 </td>

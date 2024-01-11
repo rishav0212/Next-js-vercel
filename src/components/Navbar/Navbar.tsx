@@ -95,7 +95,7 @@ const Navbar = () => {
     items :{
       'Suspensions' : "/Suspensions",
       'Syrups' : "/Syrups",
-      'External Preparation' : "/External Preparation",
+      'External Preparation' : "/External Preparations",
       'Miscellaneous Products' : "/Miscellaneous Products",
       'Tablets' : "/Tablets",
       'Capsules': "/Capsules",
@@ -135,7 +135,7 @@ const Navbar = () => {
                 </Link>
               </Typography>
 
-              {url!=="/products" ?<Search query=""/>:null}
+              {/* {url!=="/products" ?<Search query=""/>:null} */}
 
               <IconButton edge="end" onClick={toggleDrawer}>
                 <SegmentSharpIcon fontSize="large" style={{ color: "black" }} />
@@ -189,7 +189,7 @@ const Navbar = () => {
                     Contact
                   </Link>
                 </Stack>
-                {url!=="/products"?<Search query=""/>:null}
+                {/* {url!=="/products"?<Search query=""/>:null} */}
                 
               </Stack>
             </>

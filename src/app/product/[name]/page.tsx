@@ -17,9 +17,9 @@ import Search from "@/components/Navbar/Search";
 export default async function ProductTemplate({ params }) {
 
   const product = params.name
+  console.log(product)
   return (
     <>
-      <Search query = ""/>
       <Toolbar />
       <Typography variant="h4" className="text-center color-primary">
         {info[product].name}
