@@ -4,6 +4,8 @@ import React, { useState, useEffect, useCallback, useMemo } from "react";
 import Link from "next/link";
 import styles from "./pagination.module.css";
 import paginationRange from "@/utils/appUtils";
+import { Grid, useMediaQuery } from "@mui/material";
+import { useTheme } from "@mui/system";
 
 const MakeRows = ({ paginatedList }) => {
   //FUNCTION TO MAKE ROWS CATEGORY BY COUNTING PRODUCTS IN MAIN CATEGORY AND SUB CATEGORY
@@ -93,6 +95,10 @@ const MakeRows = ({ paginatedList }) => {
 };
 
 const DisplayList = ({ list, initialPage = 1 }) => {
+  const theme = useTheme();
+  const isSmallerScreen = useMediaQuery(theme.breakpoints.down("sm"));
+  console.log(isSmallerScreen);
+
   const all_products = [];
   Object.keys(list).map((main) => {
     Object.keys(list[main]).map((sub) => {
@@ -103,7 +109,7 @@ const DisplayList = ({ list, initialPage = 1 }) => {
   });
 
   const [currentPage, setCurrentPage] = useState(initialPage);
-  const [limit, setLimit] = useState(10);
+  const [limit, setLimit] = useState(20);
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
@@ -123,12 +129,22 @@ const DisplayList = ({ list, initialPage = 1 }) => {
   }, [currentPage, limit]);
 
   return (
-    <div className="container py-4 ">
-      <nav className="d-flex justify-content-center">
-        <ul className={"pagination"}>
-          <li>
+    <>
+      <Grid
+        container
+        item
+        justifyContent="center"
+        alignContent="center"
+        margin={1}
+        sx={{
+          fontSize: { md: 17, sm: 15, xs: 14 },
+          width: { md: "800px", sm:"800px", xs:"350px"},
+        }}
+      >
+        {!isSmallerScreen ? (
+          <Grid item xs={2.4} sm={1.3} md={1.3}>
             <button
-              className={`btn page-item ${styles.prev} ${
+              className={`btn ${styles.prev} ${
                 currentPage === 1 ? `disabled ${styles.disabled}` : ""
               }`}
               onClick={() => handlePageChange(currentPage - 1)}
@@ -137,60 +153,77 @@ const DisplayList = ({ list, initialPage = 1 }) => {
               <span aria-hidden="true">&laquo;</span>
               <span>Prev</span>
             </button>
-          </li>
+          </Grid>
+        ) : null}
 
-          {array.map((value, index) => (
-            <li key={index}>
-              {value === "..." || value === "... " ? (
-                <button className={"disabled " + styles["button-des"]}>
-                  {value}
-                </button>
-              ) : (
-                <button
-                  className={`${styles["button-des"]} ${
-                    currentPage === value ? styles.active : null
-                  } btn page-item `}
-                  onClick={() => handlePageChange(value)}
-                >
-                  {value}
-                </button>
-              )}
-            </li>
-          ))}
+        {array.map((value, index) => (
+          <Grid item key={index} xs={1.7} sm={0.7} md={0.7}>
+            {value === "..." || value === "... " ? (
+              <button className={"disabled " + styles["button-des"]}>
+                {value}
+              </button>
+            ) : (
+              <button
+                className={`${styles["button-des"]} ${
+                  currentPage === value ? styles.active : null
+                } btn `}
+                onClick={() => handlePageChange(value)}
+              >
+                {value}
+              </button>
+            )}
+          </Grid>
+        ))}
 
-          <li>
+        {isSmallerScreen ? (
+          <Grid item xs={2.4}>
             <button
-              className={`btn page-item ${styles.prev} ${
-                currentPage === Math.ceil(all_products.length / limit)
-                  ? `disabled ${styles.disabled}`
-                  : ""
+              className={`btn ${styles.prev} ${
+                currentPage === 1 ? `disabled ${styles.disabled}` : ""
               }`}
-              onClick={() => handlePageChange(currentPage + 1)}
-              aria-label="Next"
+              onClick={() => handlePageChange(currentPage - 1)}
+              aria-label="Previous"
             >
-              <span>Next</span>
-              <span aria-hidden="true">&raquo;</span>
+              <span aria-hidden="true">&laquo;</span>
+              <span>Prev</span>
             </button>
-          </li>
-        </ul>
-        <div className={styles.entries}>
+          </Grid>
+        ) : null}
+
+        <Grid item xs={2.4} sm={1.3} md={1.3}>
+          <button
+            className={`btn ${styles.prev} ${
+              currentPage === Math.ceil(all_products.length / limit)
+                ? `disabled ${styles.disabled}`
+                : ""
+            }`}
+            onClick={() => handlePageChange(currentPage + 1)}
+            aria-label="Next"
+          >
+            <span>Next</span>
+            <span aria-hidden="true">&raquo;</span>
+          </button>
+        </Grid>
+
+        <Grid item className={styles.entries} xs={7} sm={4} md={4}>
           <span className="p-2">Show</span>
           <select
             className="p-1"
             onChange={(e) => {
               setLimit(Number(e.target.value));
             }}
+            value={limit}
           >
             <option value="10">10</option>
             <option value="20">20</option>
             <option value="30">30</option>
           </select>
-          <span className="p-2">entries</span>
-        </div>
-      </nav>
+          <span className="p-2">Products</span>
+        </Grid>
+      </Grid>
 
-      <div className="container justify-content-center ">
-        <table className="table table-light table-responsive table-bordered align-middle ">
+      <Grid container margin={2} sx={{width:"85vw", overflow:"auto"}} >
+        <table className="table table-light table-bordered align-middle ">
           <caption>Products</caption>
           <thead className="table-primary">
             <tr>
@@ -210,8 +243,8 @@ const DisplayList = ({ list, initialPage = 1 }) => {
             )}
           </tbody>
         </table>
-      </div>
-    </div>
+      </Grid>
+    </>
   );
 };
 
