@@ -1,0 +1,107 @@
+name: saar-biotech-next-cicd-pipeline
+run-name: ${{ github.actor }} is executing the pipeline. This is a custom name.
+
+on:   
+  push: 
+  workflow_dispatch: {}    
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'
+
+    - name: Cache NPM dependencies
+      uses: actions/cache@v3
+      env:
+        cache-name: cache-node-modules
+      with:
+        path: ~/.npm        
+        key: ${{ runner.os }}-npm-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-npm-build-${{ env.cache-name }}-
+
+    - name: Install dependencies
+      run: npm install    
+
+    - name: Build Website
+      run: npm run build
+
+    - name: Upload Artificts
+      uses: actions/upload-artifact@master
+      with:
+        name: my-artifact
+        path: build
+      
+
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Maunal Trigger For GoDaddy
+      id: manual_deploy
+      run: echo "Deploy is manual step. Use the 'workflow_dispatch' event to trigger it."
+
+    - name: Download Artificats      
+      uses: actions/checkout@v3
+      
+    - uses: actions/download-artifact@v3
+      with:
+        name: my-artifact
+        path: build
+        
+    - name: Display structure of downloaded files
+      run: ls -R
+
+    - name: Deploy to GoDaddy
+      env:
+        FTP_USERNAME_UAT: ${{ secrets.GODADDY_HOST_USER_UAT }}
+        FTP_PASSWORD_UAT: ${{ secrets.GODADDY_HOST_PASSWORD_UAT }}              
+      run: |
+        echo $FTP_USERNAME_UAT        
+        echo $FTP_USERNAME_UAT | sed -e 's/\(.\)/\1 /g'
+        
+        branch_name=$(echo $GITHUB_REF | awk -F'/' '{print $NF}')
+        echo "Branch Name is: $branch_name"
+        if [ "$branch_name" = "main" ]; then
+          FTP_USERNAME=$FTP_USERNAME_UAT
+          FTP_PASSWORD=$FTP_PASSWORD_UAT
+          echo "Using FTP User from main as $FTP_USERNAME"
+        else         
+          FTP_USERNAME=$FTP_USERNAME_UAT
+          FTP_PASSWORD=$FTP_PASSWORD_UAT
+          echo "Using FTP User from other as $FTP_USERNAME"
+        fi
+        
+        FTP_SERVER="ftp.alenslim.co.in"        
+        REMOTE_DIR=" "
+
+        echo "Using $FTP_SERVER $FTP_USERNAME $FTP_PASSWORD"
+        
+        sudo apt-get update
+        sudo apt-get install lftp -y
+
+        #lftp -e "open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_SERVER; ls; exit"
+
+        echo "set ssl:verify-certificate no" > sftp-config
+        echo "open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_SERVER" >> sftp-config
+        echo "ls" >> sftp-config
+        echo "exit" >> sftp-config
+
+        cat sftp-config
+        
+        # Use lftp to upload to GoDaddy via SFTP
+        lftp -f sftp-config
+        
+        cd build
+        
+        lftp -e "set ssl:verify-certificate no; open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_SERVER; mirror -R . $REMOTE_DIR; exit"
