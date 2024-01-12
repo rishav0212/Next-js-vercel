@@ -6,7 +6,7 @@ on:
   workflow_dispatch: {}    
 
 jobs:
-  build:
+  buildAndExport:
     runs-on: ubuntu-latest
     
     steps:
@@ -32,18 +32,18 @@ jobs:
       run: npm install    
 
     - name: Build Website
-      run: npm run build
+      run: npm run export
 
     - name: Upload Artificts
       uses: actions/upload-artifact@master
       with:
         name: my-artifact
-        path: .next
+        path: out
       
 
 
   deploy:
-    needs: build
+    needs: buildAndExport
     runs-on: ubuntu-latest
 
     steps:
