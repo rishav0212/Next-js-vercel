@@ -1,4 +1,5 @@
-import QueryResponse from "@/components/QueryResponse/SearchResponse";
+import SearchResponse from "@/components/SearchResponse/SearchResponse";
+
 import { redirect } from "next/dist/server/api-utils";
 import Banner from "@/components/Banner";
 
@@ -6,7 +7,7 @@ function Page({ params }) {
   return (
     <>
       <Banner />
-      <QueryResponse q={decodeURI(params.query)} />
+      <SearchResponse q={decodeURI(params.query)} />
     </>
   );
 }
