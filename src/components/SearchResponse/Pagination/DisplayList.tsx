@@ -35,9 +35,9 @@ const MakeRows = ({ paginatedList }) => {
   });
   numberOfProductsSub.push(count);
 
-  let prevMain = "";
+  let prevMain = "-1";
   let prevMainIndex = 0;
-  let prevSub = "";
+  let prevSub = "-1";
   let prevSubIndex = 0;
 
   return (

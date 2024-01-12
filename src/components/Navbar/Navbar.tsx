@@ -32,23 +32,23 @@ import { usePathname } from "next/navigation";
 import Dropdown from "./dropdown";
 import DrawerItem from "./DrawerItems";
 
-
-
 const AppBar = styled(MuiAppBar)`
   background-color: rgba(255, 255, 255);
   background-image: none;
   /* Add your custom styles here */
 `;
 
-
 const Navbar = () => {
   // const classes = useStyles();
   // const theme = useTheme();
   const isMobile = useMediaQuery(`(max-width: 950px)`);
   const [openDrawer, setOpenDrawer] = useState(false);
-  
-  const path = usePathname()
-  const url = path.slice(0, path.indexOf('/', 1)!==-1?path.indexOf('/',1):path.length)
+
+  const path = usePathname();
+  const url = path.slice(
+    0,
+    path.indexOf("/", 1) !== -1 ? path.indexOf("/", 1) : path.length
+  );
 
   // console.log(path.indexOf('/', 1))
 
@@ -78,40 +78,42 @@ const Navbar = () => {
     setProductsOpen(false);
   };
 
-
   const units_menu = {
-    menu_name :"Manufacturing Unit", 
-    to: "/manufacturing-unit", 
-    items :{
-      'Saar Biotech' : "/saar-biotech",
-      'DM Pharma' : "/dm-pharma",
-      'Infrastructure' : "/dm-pharma",
-      'Factory Video' : "/dm-pharma"
-    }}
-  
+    menu_name: "Manufacturing Unit",
+    to: "/manufacturing-unit",
+    items: {
+      "Saar Biotech": "/saar-biotech",
+      "DM Pharma": "/dm-pharma",
+      Infrastructure: "/dm-pharma",
+      "Factory Video": "/dm-pharma",
+    },
+  };
+
   const products_menu = {
-    menu_name :"Products", 
-    to: "/products", 
-    items :{
-      'Suspensions' : "/Suspensions",
-      'Syrups' : "/Syrups",
-      'External Preparation' : "/External Preparations",
-      'Miscellaneous Products' : "/Miscellaneous Products",
-      'Tablets' : "/Tablets",
-      'Capsules': "/Capsules",
-      'Sachets' : "/Sachets"
-    }}
+    menu_name: "Products",
+    to: "/products",
+    items: {
+      Suspensions: "/Suspensions",
+      Syrups: "/Syrups",
+      "External Preparation": "/External Preparations",
+      "Miscellaneous Products": "/Miscellaneous Products",
+      Tablets: "/Tablets",
+      Capsules: "/Capsules",
+      Sachets: "/Sachets",
+    },
+  };
 
   const events_menu = {
-    menu_name :"Events", 
-    to: "/events", 
-    items :{
-      'B2B' : "/b2b",
-      'Pharma South 2014' : "/pharma-south-2014",
-      'Indian Pharma Expo 2013' : "/indian-pharma-expo-2013",
-      'Indian Pharma Expo 2012' : "/indian-pharma-expo-2012",
-      'Brochure': "/brochure",
-    }}
+    menu_name: "Events",
+    to: "/events",
+    items: {
+      B2B: "/b2b",
+      "Pharma South 2014": "/pharma-south-2014",
+      "Indian Pharma Expo 2013": "/indian-pharma-expo-2013",
+      "Indian Pharma Expo 2012": "/indian-pharma-expo-2012",
+      Brochure: "/brochure",
+    },
+  };
 
   return (
     <>
@@ -177,20 +179,23 @@ const Navbar = () => {
                     alignItems={"center"}
                     justifyContent={"center"}
                   >
-                    
-                    < Dropdown props={{menu_name:"Home", to:"/", items:{}}} url = {url} />
-                    < Dropdown props={{menu_name:"About", to:"/about", items:{}}} url= {url}  />
-                    < Dropdown props = {units_menu} url= {url}  />
-                    < Dropdown props = {products_menu} url= {url} />
-                    < Dropdown props = {events_menu} url= {url} />
-
+                    <Dropdown
+                      props={{ menu_name: "Home", to: "/", items: {} }}
+                      url={url}
+                    />
+                    <Dropdown
+                      props={{ menu_name: "About", to: "/about", items: {} }}
+                      url={url}
+                    />
+                    <Dropdown props={units_menu} url={url} />
+                    <Dropdown props={products_menu} url={url} />
+                    <Dropdown props={events_menu} url={url} />
                   </Stack>
                   <Link href="/contact" className="navbar-contact">
                     Contact
                   </Link>
                 </Stack>
                 {/* {url!=="/products"?<Search query=""/>:null} */}
-                
               </Stack>
             </>
           )}
@@ -288,8 +293,7 @@ const Navbar = () => {
                     fontWeight: "500",
                   }}
                 >
-                  < DrawerItem props = {units_menu} onclick = {toggleDrawer} />
-
+                  <DrawerItem props={units_menu} onclick={toggleDrawer} />
                 </Collapse>
 
                 <ListItem onClick={handleProductsChange}>
@@ -321,8 +325,7 @@ const Navbar = () => {
                     fontWeight: "500",
                   }}
                 >
-                  < DrawerItem props = {products_menu} onclick = {toggleDrawer}/>
-
+                  <DrawerItem props={products_menu} onclick={toggleDrawer} />
                 </Collapse>
 
                 <ListItem onClick={handleEventsChange}>
@@ -354,13 +357,13 @@ const Navbar = () => {
                     fontWeight: "500",
                   }}
                 >
-                  < DrawerItem props = {events_menu} onclick = {toggleDrawer} />
-
+                  <DrawerItem props={events_menu} onclick={toggleDrawer} />
                 </Collapse>
 
                 <ListItem>
                   <Link
                     href={"/contact"}
+                    onClick={toggleDrawer}
                     className={`navbar-links ${
                       url === "/contact" ? "active-link" : ""
                     }`}
