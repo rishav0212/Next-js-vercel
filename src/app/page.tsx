@@ -8,10 +8,8 @@ import "../fonts/fonts.css";
 export default function Home() {
   return (
     <div>
-      <AppThemeProvider>
         <Banner />
         <HomeContent />
-      </AppThemeProvider>
     </div>
   );
 }

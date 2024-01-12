@@ -1,6 +1,6 @@
 "use client";
 import React, { use, useCallback, useEffect, useRef, useState } from "react";
-import DisplayList from "@/components/QueryResponse/Pagination/DisplayList";
+import DisplayList from "@/components/SearchResponse/Pagination/DisplayList";
 import Autocomplete from "@mui/material/Autocomplete";
 import { TextField } from "@mui/material";
 import items from "@/product_details/names";
@@ -8,8 +8,9 @@ import { Typography } from "@mui/material";
 import { useTheme } from "@emotion/react";
 import { Grid, Button } from "@mui/material";
 import { text } from "stream/consumers";
+import Banner from "../Banner";
 
-function QueryResponse({ q = "" }) {
+function SearchResponse({ q = "" }) {
   const theme = useTheme();
 
   //////////////
@@ -254,22 +255,11 @@ function QueryResponse({ q = "" }) {
           </Grid>
         </Grid>
 
-        <Grid
-          container
-          item
-          xs={12}
-          sm={12}
-          md={10}
-          sx={{
-            width: { md: "80vw", sm: "80vw" },
-            fontSize: { md: 15, sm: "1.7vw", xs: "2.5vw" },
-          }}
-        >
+  
           <DisplayList list={filtered} />
-        </Grid>
       </Grid>
     </>
   );
 }
 
-export default QueryResponse;
+export default SearchResponse;

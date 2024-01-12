@@ -36,7 +36,7 @@ export default function RHFTextField({ name, label, helperText, ...other }) {
           helperText={error ? error?.message : helperText}
           InputLabelProps={{
             style: {
-              color: isFocused ? theme.palette.action.active : "#b8b8b8", // Label color when focused
+              color: isFocused ? theme.palette.primary.main : "#b8b8b8", // Label color when focused
             },
           }}
           onFocus={() => setIsFocused(true)}
