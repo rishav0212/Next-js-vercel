@@ -1,66 +1,66 @@
-name: saar-biotech-next-cicd-pipeline
-run-name: ${{ github.actor }} is executing the pipeline. This is a custom name.
+# name: saar-biotech-next-cicd-pipeline
+# run-name: ${{ github.actor }} is executing the pipeline. This is a custom name.
 
-on:   
-  push: 
-  workflow_dispatch: {}    
+# on:   
+#   push: 
+#   workflow_dispatch: {}    
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
     
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+#     steps:
+#     - name: Checkout code
+#       uses: actions/checkout@v4
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '20'
+#     - name: Set up Node.js
+#       uses: actions/setup-node@v3
+#       with:
+#         node-version: '20'
 
-    - name: Cache NPM dependencies
-      uses: actions/cache@v3
-      env:
-        cache-name: cache-node-modules
-      with:
-        path: ~/.npm        
-        key: ${{ runner.os }}-npm-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-npm-build-${{ env.cache-name }}-
+#     - name: Cache NPM dependencies
+#       uses: actions/cache@v3
+#       env:
+#         cache-name: cache-node-modules
+#       with:
+#         path: ~/.npm        
+#         key: ${{ runner.os }}-npm-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+#         restore-keys: |
+#           ${{ runner.os }}-npm-build-${{ env.cache-name }}-
 
-    - name: Install dependencies
-      run: npm install    
+#     - name: Install dependencies
+#       run: npm install    
 
-    - name: Build Website
-      run: npm run build
+#     - name: Build Website
+#       run: npm run build
 
-    - name: Upload Artificts
-      uses: actions/upload-artifact@master
-      with:
-        name: my-artifact
-        path: out
+#     - name: Upload Artificts
+#       uses: actions/upload-artifact@master
+#       with:
+#         name: my-artifact
+#         path: out
       
 
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
+#   deploy:
+#     needs: build
+#     runs-on: ubuntu-latest
 
-    steps:
-    - name: Maunal Trigger For GoDaddy
-      id: manual_deploy
-      run: echo "Deploy is manual step. Use the 'workflow_dispatch' event to trigger it."
+#     steps:
+#     - name: Maunal Trigger For GoDaddy
+#       id: manual_deploy
+#       run: echo "Deploy is manual step. Use the 'workflow_dispatch' event to trigger it."
 
-    - name: Download Artificats      
-      uses: actions/checkout@v3
+#     - name: Download Artificats      
+#       uses: actions/checkout@v3
       
-    - uses: actions/download-artifact@v3
-      with:
-        name: my-artifact
-        path: out
+#     - uses: actions/download-artifact@v3
+#       with:
+#         name: my-artifact
+#         path: out
         
-    - name: Display structure of downloaded files
-      run: ls -R
+#     - name: Display structure of downloaded files
+#       run: ls -R
 
     # - name: Deploy to GoDaddy
     #   env:
