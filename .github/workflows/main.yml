@@ -32,7 +32,7 @@ jobs:
       run: npm install    
 
     - name: Build Website
-      run: npm run export
+      run: npm run build
 
     - name: Upload Artificts
       uses: actions/upload-artifact@master
