@@ -9,7 +9,7 @@
   "indications": "Indications:- Antibiotic/Antibacterial.",
   "approved_name": "  Azithromycin Dihydrate\n ",
   "suspension presentation" : ["Eq. to Azithromycin 100mg/200mg"],
-  "description" : {"Azithromycin" : "Azithromycin is macrolide antibiotic used to treat or prevent certain bacterial infections, most often those causing middle ear infections, strep throat, pneumonia, typhoid, bronchitis. Azithromycin Superior activity against gram+ve,Gram-ve organism. It prevents bacteria from growing by interfering with their protein synthesis."},
+  "description" : [{"Azithromycin" : "Azithromycin is macrolide antibiotic used to treat or prevent certain bacterial infections, most often those causing middle ear infections, strep throat, pneumonia, typhoid, bronchitis. Azithromycin Superior activity against gram+ve,Gram-ve organism. It prevents bacteria from growing by interfering with their protein synthesis."}],
   "indications_" : ["Otitis Media","Upper Respiratory Tract Infection","Upper Respiratory Tract Infection","Pneumonia","Pharyngitis","Sinusitis","Skin or Soft Tissue Infection","Gonococcal Infection - Uncomplicated"],
   "mechanism" : "Azithromycin binds to the 50S subunit of the 70S bacterial ribosomes, and therefore inhibits RNA-dependent protein synthesis in bacterial cells"
 
