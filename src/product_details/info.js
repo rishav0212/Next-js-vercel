@@ -103,8 +103,8 @@ import * as CHOLECALCIFEROL6 from './data/Miscellaneous Products/CHOLECALCIFEROL
 
 
 const info = {
-    'multivitamin-oral-spray': multiVitaminOralSpray,
-    'iron-oral-spray': ironOralSpray,
+    // 'multivitaminOralSpray': multiVitaminOralSpray,
+    // 'ironOralSpray': ironOralSpray,
     "AZITHROMYCIN": AZITHROMYCIN,
     "OFLOXACIN": OFLOXACIN,
     "OFLOXACIN0": OFLOXACIN0,

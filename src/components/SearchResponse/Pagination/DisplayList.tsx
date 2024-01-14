@@ -62,7 +62,8 @@ const MakeRows = ({ paginatedList }) => {
             {product.mainCategory !== prevMain ? (
               <td
                 rowSpan={numberOfProductsMain[prevMainIndex]}
-                className="align-top"
+                className="align-top "
+                style={{ backgroundColor: "#cfe4f8" }}
               >
                 {product.mainCategory}
               </td>
@@ -70,13 +71,16 @@ const MakeRows = ({ paginatedList }) => {
             {product.subCategory !== prevSub ? (
               <td
                 rowSpan={numberOfProductsSub[prevSubIndex]}
-                className="align-top"
+                className="align-top "
+                style={{ backgroundColor: "#cfe4f8" }}
               >
                 {product.subCategory}
               </td>
             ) : null}
-            <td>{product.name}</td>
-            <td>
+            <td style={{ backgroundColor: "#cfe4f8", width: "30vw" }}>
+              {product.name}
+            </td>
+            <td style={{ backgroundColor: "#cfe4f8", width: "30vw" }}>
               <Link
                 href={
                   product.link.includes("dmpharma")
@@ -86,7 +90,8 @@ const MakeRows = ({ paginatedList }) => {
               >
                 {product.name}
               </Link>
-            </td>
+            </td>{" "}
+            <td style={{ backgroundColor: "#cfe4f8" }}>15 ml</td>
           </tr>
         );
       })}
@@ -138,7 +143,7 @@ const DisplayList = ({ list, initialPage = 1 }) => {
         margin={1}
         sx={{
           fontSize: { md: 17, sm: 15, xs: 14 },
-          width: { md: "800px", sm:"800px", xs:"350px"},
+          width: { md: "800px", sm: "800px", xs: "350px" },
         }}
       >
         {!isSmallerScreen ? (
@@ -222,18 +227,52 @@ const DisplayList = ({ list, initialPage = 1 }) => {
         </Grid>
       </Grid>
 
-      <Grid container margin={2} sx={{width:"85vw", overflow:"auto"}} >
-        <table className="table table-light table-bordered align-middle ">
+      <Grid container margin={2} sx={{ width: "85vw", overflow: "auto" }}>
+        <table className="table table-bordered align-middle">
           <caption>Products</caption>
-          <thead className="table-primary">
+          <thead>
             <tr>
-              <th className="p-3">Main Category</th>
-              <th className="p-3">Sub Category</th>
-              <th className="p-3">Composition</th>
-              <th className="p-3">Link</th>
+              <th
+                className="p-3"
+                style={{
+                  backgroundColor: "#3498db",
+                  color: "#fff",
+                  width: "13%",
+                }}
+              >
+                MAIN CATEGORY
+              </th>
+              <th
+                className="p-3"
+                style={{
+                  backgroundColor: "#3498db",
+                  color: "#fff",
+                  width: "13%",
+                }}
+              >
+                SUB CATEGORY
+              </th>
+              <th
+                className="p-3"
+                style={{ backgroundColor: "#3498db", color: "#fff" }}
+              >
+                COMPOSITION
+              </th>
+              <th
+                className="p-3"
+                style={{ backgroundColor: "#3498db", color: "#fff" }}
+              >
+                LINK
+              </th>{" "}
+              <th
+                className="p-3"
+                style={{ backgroundColor: "#3498db", color: "#fff" }}
+              >
+                PACKING
+              </th>
             </tr>
           </thead>
-          <tbody>
+          <tbody style={{ borderWidth: "1px", borderColor: "#3498db" }}>
             {paginatedList.length ? (
               <MakeRows paginatedList={paginatedList} />
             ) : (

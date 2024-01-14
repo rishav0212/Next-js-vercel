@@ -22,7 +22,7 @@ export default function AboutContent() {
       <Container>
         <Grid container spacing={8}>
           <Grid item xs={12} sm={12} md={7} lg={7}>
-            <Typography>
+            <Typography textAlign={"justify"}>
               Saar Biotech is one of the leading pharmaceuticals manufacturing
               company in India. We use latest techniques and technologies for
               performing test. We are engaged in third party manufacturing of

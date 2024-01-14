@@ -14,7 +14,7 @@ export default function PharmacContent() {
             <Container>
                 <Grid container spacing={16}>
                     <Grid item xs={12} sm={12} md={8} lg={8}>
-                        <Typography className="d-flex align-self-center lh-lg">
+                        <Typography className="d-flex align-self-center lh-lg" textAlign={"justify"}>
 
                             Saar Biotech had participated in PHARMAC SOUTH 2014 held on 18- 19 July,2014 that was an International Exhibition jointly organized by the Indian Drug Manufacturers Association (IDMA-TNPSB) and Orbit Exhibitions Pvt. Ltd. For Contract Manufacturers, Pharmaceuticals, Nutraceuticals Formulations etc. in the Medical & Pharmaceutical industry.                            <br /><br />
                             The factory is operating with experienced and hard working employees. It is equipped with sophisticated, modern and vquality control equipments.

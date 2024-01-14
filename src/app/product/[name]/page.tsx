@@ -17,13 +17,12 @@ import Search from "@/components/Navbar/Search";
 
 export default async function ProductTemplate({ params }) {
 
-  const product = params.name
-  console.log(product)
+  const productInfo = await info[params.name]
   return (
     <>
       <Toolbar />
       <Typography variant="h4" className="text-center color-primary">
-        {info[product].name}
+        {productInfo.name}
       </Typography>
       <Toolbar />
 
@@ -32,32 +31,32 @@ export default async function ProductTemplate({ params }) {
       <Container maxWidth="md">
 
         <Typography variant="subtitle1" className="fw-600 mb-2 mt-5">
-          Indications:- {info[product].indications}
+          Indications:- {productInfo.indications}
         </Typography>
         <Typography
           variant="h6"
           className="color-primary mb--25 mt-4 text-uppercase"
         >
           Approved Name -{" "}
-          <span style={{ color: "black" }}>{info[product].approved_name}</span>
+          <span style={{ color: "black" }}>{productInfo.approved_name}</span>
         </Typography>
         {
 
-          info[product].sprayPresentation ?
+          productInfo.sprayPresentation ?
             <>
               <Typography variant="button" className="font--size-1125">
                 Spray Presentation:
               </Typography>
 
               <div className="font--size-1125">
-                {(info[product].sprayPresentation).map((dataitem) => {
+                {(productInfo.sprayPresentation).map((dataitem) => {
                   return <Typography key={dataitem.id} >{dataitem}</Typography>
                 })}
               </div>
             </> : null
         }
 
-        {info[product].description ? <>
+        {productInfo.description ? <>
           <Typography
             variant="h6"
             className="color-primary mb--25 mt-4 text-uppercase"
@@ -66,20 +65,20 @@ export default async function ProductTemplate({ params }) {
           </Typography>
 
           <Typography className="my-3">
-            {info[product].description}
+            {productInfo.description}
           </Typography>
         </> : null
 
         }
 
         {
-          info[product].indicationsList ? <>
+          productInfo.indicationsList ? <>
             <Typography variant="h6" className="color-primary mt-4 text-uppercase">
               Indications
             </Typography>
 
             <ul>
-              {info[product].indicationsList.map((dataitem) => {
+              {productInfo.indicationsList.map((dataitem) => {
                 return (
                   <ListItem key={dataitem.id} >
                     <ListItemIcon>
@@ -97,7 +96,7 @@ export default async function ProductTemplate({ params }) {
         </Typography>
 
         {/* <ul>
-          {info[product].sideEffects.map((dataitem)=>{
+          {productInfo.sideEffects.map((dataitem)=>{
             return (
               <ListItem>
                 <ListItemIcon>

@@ -17,7 +17,10 @@ export default function DmPharmaContent() {
       <Container>
         <Grid container spacing={8}>
           <Grid item xs={12} sm={12} md={8} lg={8}>
-            <Typography className="d-flex align-self-center lh-lg">
+            <Typography
+              className="d-flex align-self-center lh-lg"
+              textAlign={"justify"}
+            >
               The facilities and location of the factory have created an extra
               edge for manufacturing and distributing the products. The factory
               consists of Production department, R&D department, Accounts
@@ -95,15 +98,13 @@ export default function DmPharmaContent() {
         </Grid>
 
         <Toolbar />
-        <Toolbar />
-
         <Typography variant="h4" className="text-center color-primary">
           Our Strengths
         </Typography>
 
         <Toolbar />
 
-        <Grid container spacing={8} className="text-center">
+        <Grid container spacing={3}>
           <Grid item xs={12} sm={12} md={6} lg={6}>
             <Typography variant="h6" className="font--size-1125">
               <li>Timely Delivery of Product</li>

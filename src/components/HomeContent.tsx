@@ -163,7 +163,7 @@ export default function HomeContent() {
             sx={isSmallerScreen ? { width: "100%" } : { flex: 1 }}
           >
             <h2 className="text-center">Welcome to Saar Biotech</h2>
-            <Typography variant="body1">
+            <Typography variant="body1" textAlign={"justify"}>
               Saar Biotech is one of the most respected GMP certified
               pharmaceutical company established with a vision towards
               empowering life . We are committed to deliver better health
