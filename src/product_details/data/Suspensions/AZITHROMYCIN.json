@@ -1,1 +1,16 @@
-{"title": "Saar Biotech - Azithromycin Suspension|Third party Medicine Contract Manufacturing", "meta": ["text/html; charset=utf-8", "Saar biotech Contract manufacturer of pharmaceuticals located in baddi( Excise free Zone) maufacturing  Azithromycin  Tablet/Suspension which is used to treat or prevent certain bacterial infections, most often those causing middle ear infections, strep throat, pneumonia, typhoid, and sinusitis.It is also effective against certain sexually transmitted infections, such as nongonococcal urethritis, chlamydia, and cervicitis.", "Azithromycin dihydrate IP, azithromycin suspension, azithromycin side effects, azithromycin dosage, azithromycin uses, azithromycin indication, skin infection, ear infection, Gonococcal Infection, 100mg, 200mg, mg, antibiotic drugs, antibacterial drugs "], "name": " Azithromycin \n", "indications": "Indications:- Antibiotic/Antibacterial.", "approved_name": "  Azithromycin Dihydrate\n "}
+{
+  "title": "Saar Biotech - Azithromycin Suspension|Third party Medicine Contract Manufacturing",
+  "meta": [
+    "text/html; charset=utf-8",
+    "Saar biotech Contract manufacturer of pharmaceuticals located in baddi( Excise free Zone) maufacturing  Azithromycin  Tablet/Suspension which is used to treat or prevent certain bacterial infections, most often those causing middle ear infections, strep throat, pneumonia, typhoid, and sinusitis.It is also effective against certain sexually transmitted infections, such as nongonococcal urethritis, chlamydia, and cervicitis.",
+    "Azithromycin dihydrate IP, azithromycin suspension, azithromycin side effects, azithromycin dosage, azithromycin uses, azithromycin indication, skin infection, ear infection, Gonococcal Infection, 100mg, 200mg, mg, antibiotic drugs, antibacterial drugs "
+  ],
+  "name": " Azithromycin \n",
+  "indications": "Indications:- Antibiotic/Antibacterial.",
+  "approved_name": "  Azithromycin Dihydrate\n ",
+  "suspension presentation" : ["Eq. to Azithromycin 100mg/200mg"],
+  "description" : {"Azithromycin" : "Azithromycin is macrolide antibiotic used to treat or prevent certain bacterial infections, most often those causing middle ear infections, strep throat, pneumonia, typhoid, bronchitis. Azithromycin Superior activity against gram+ve,Gram-ve organism. It prevents bacteria from growing by interfering with their protein synthesis."},
+  "indications_" : ["Otitis Media","Upper Respiratory Tract Infection","Upper Respiratory Tract Infection","Pneumonia","Pharyngitis","Sinusitis","Skin or Soft Tissue Infection","Gonococcal Infection - Uncomplicated"],
+  "mechanism" : "Azithromycin binds to the 50S subunit of the 70S bacterial ribosomes, and therefore inhibits RNA-dependent protein synthesis in bacterial cells"
+
+}

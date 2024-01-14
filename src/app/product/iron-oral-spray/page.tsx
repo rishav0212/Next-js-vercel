@@ -1,3 +1,5 @@
+"use client"
+
 import {
   Container,
   List,
@@ -20,7 +22,7 @@ export default function IronSpray() {
 
       <Container maxWidth="md">
         <img
-          src="/images/iron-oral-spray.jpg"
+          src="/public/images/iron-oral-spray.jpg"
           alt="Saar Biotech"
           style={{ width: "100%" }}
         />

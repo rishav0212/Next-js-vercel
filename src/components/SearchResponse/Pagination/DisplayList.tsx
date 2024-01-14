@@ -63,7 +63,7 @@ const MakeRows = ({ paginatedList }) => {
               <td
                 rowSpan={numberOfProductsMain[prevMainIndex]}
                 className="align-top "
-                style={{ backgroundColor: "#cfe4f8" }}
+                style={{ backgroundColor: "#FEE5D0" }}
               >
                 {product.mainCategory}
               </td>
@@ -72,15 +72,15 @@ const MakeRows = ({ paginatedList }) => {
               <td
                 rowSpan={numberOfProductsSub[prevSubIndex]}
                 className="align-top "
-                style={{ backgroundColor: "#cfe4f8" }}
+                style={{ backgroundColor: "#FEE5D0" }}
               >
                 {product.subCategory}
               </td>
             ) : null}
-            <td style={{ backgroundColor: "#cfe4f8", width: "30vw" }}>
+            <td style={{ backgroundColor: "#FEE5D0", width: "30vw" }}>
               {product.name}
             </td>
-            <td style={{ backgroundColor: "#cfe4f8", width: "30vw" }}>
+            <td style={{ backgroundColor: "#FEE5D0", width: "30vw" }}>
               <Link
                 href={
                   product.link.includes("dmpharma")
@@ -91,7 +91,7 @@ const MakeRows = ({ paginatedList }) => {
                 {product.name}
               </Link>
             </td>{" "}
-            <td style={{ backgroundColor: "#cfe4f8" }}>15 ml</td>
+            <td style={{ backgroundColor: "#FEE5D0" }}>15 ml</td>
           </tr>
         );
       })}
@@ -235,7 +235,7 @@ const DisplayList = ({ list, initialPage = 1 }) => {
               <th
                 className="p-3"
                 style={{
-                  backgroundColor: "#3498db",
+                  backgroundColor: "#EF3E00",
                   color: "#fff",
                   width: "13%",
                 }}
@@ -245,7 +245,7 @@ const DisplayList = ({ list, initialPage = 1 }) => {
               <th
                 className="p-3"
                 style={{
-                  backgroundColor: "#3498db",
+                  backgroundColor: "#EF3E00",
                   color: "#fff",
                   width: "13%",
                 }}
@@ -254,25 +254,25 @@ const DisplayList = ({ list, initialPage = 1 }) => {
               </th>
               <th
                 className="p-3"
-                style={{ backgroundColor: "#3498db", color: "#fff" }}
+                style={{ backgroundColor: "#EF3E00", color: "#fff" }}
               >
                 COMPOSITION
               </th>
               <th
                 className="p-3"
-                style={{ backgroundColor: "#3498db", color: "#fff" }}
+                style={{ backgroundColor: "#EF3E00", color: "#fff" }}
               >
                 LINK
               </th>{" "}
               <th
                 className="p-3"
-                style={{ backgroundColor: "#3498db", color: "#fff" }}
+                style={{ backgroundColor: "#EF3E00", color: "#fff" }}
               >
                 PACKING
               </th>
             </tr>
           </thead>
-          <tbody style={{ borderWidth: "1px", borderColor: "#3498db" }}>
+          <tbody style={{ borderWidth: "1px", borderColor: "#EF3E00" }}>
             {paginatedList.length ? (
               <MakeRows paginatedList={paginatedList} />
             ) : (
