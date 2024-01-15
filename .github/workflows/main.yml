@@ -38,7 +38,7 @@ jobs:
       uses: actions/upload-artifact@master
       with:
         name: my-artifact
-        path: out
+        path: build
       
 
 
@@ -57,22 +57,22 @@ jobs:
     - uses: actions/download-artifact@v3
       with:
         name: my-artifact
-        path: out
+        path: build
         
     - name: Display structure of downloaded files
       run: ls -R
 
     - name: Deploy to GoDaddy
       env:
-        FTP_USERNAME_UAT: ${{ secrets.GODADDY_HOST_USER_UAT }}
-        FTP_PASSWORD_UAT: ${{ secrets.GODADDY_HOST_PASSWORD_UAT }}              
+        FTP_USERNAME_UAT: ${{ secrets.GODADDY_FTP_NODE_UAT_USER }}
+        FTP_PASSWORD_UAT: ${{ secrets.GODADDY_FTP_NODE_UAT_PASSWORD }}              
       run: |
         echo $FTP_USERNAME_UAT        
         echo $FTP_USERNAME_UAT | sed -e 's/\(.\)/\1 /g'
         
         branch_name=$(echo $GITHUB_REF | awk -F'/' '{print $NF}')
         echo "Branch Name is: $branch_name"
-        if [ "$branch_name" = "main" ]; then
+        if [ "$branch_name" = "Next-App" ]; then
           FTP_USERNAME=$FTP_USERNAME_UAT
           FTP_PASSWORD=$FTP_PASSWORD_UAT
           echo "Using FTP User from main as $FTP_USERNAME"
