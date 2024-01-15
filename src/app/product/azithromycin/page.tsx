@@ -8,6 +8,7 @@ import {
   Toolbar,
   Typography,
   Grid,
+  Paper, Box
 } from "@mui/material";
 import { FiberManualRecord } from "@mui/icons-material";
 
@@ -31,9 +32,9 @@ export default function IronSpray() {
       spacing={1}
     >
       <Grid item md={12}>
-        <Typography variant="h4" className="text-center color-primary">
-          AZITHROMYCIN
-        </Typography>
+          <Typography variant="h4" className="text-center color-primary">
+            AZITHROMYCIN
+          </Typography>
       </Grid>
 
       <Grid

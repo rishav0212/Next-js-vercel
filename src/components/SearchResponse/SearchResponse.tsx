@@ -6,9 +6,7 @@ import { TextField } from "@mui/material";
 import items from "@/product_details/names";
 import { Typography } from "@mui/material";
 import { useTheme } from "@emotion/react";
-import { Grid, Button } from "@mui/material";
-import { text } from "stream/consumers";
-import Banner from "../Banner";
+import { Grid, Button, Paper } from "@mui/material";
 
 function SearchResponse({ q = "" }) {
   const theme = useTheme();
@@ -191,9 +189,28 @@ function SearchResponse({ q = "" }) {
               disablePortal
               id="Composition"
               options={all_products}
-              // sx={{ width: 200 }}
-              // isOptionEqualToValue={isOptionEqualToValue}
-
+              sx={{
+                "& .MuiInputBase-root": {
+                  backgroundColor: "#f5f5f5",
+                  borderRadius: "8px",
+                  border: "1px solid #ddd",
+                },
+                "& .MuiInputLabel-root": {
+                  color: "#333",
+                },
+                "& .MuiAutocomplete-inputRoot": {
+                  borderRadius: "8px",
+                  padding: "8px",
+                },
+                "& .MuiAutocomplete-popupIndicator": {
+                  color: "#EF3E00",
+                },
+                "& .MuiMenuItem-root": {
+                  "&:hover": {
+                    backgroundColor: "#f0f0f0",
+                  },
+                },
+              }}
               renderInput={(params) => (
                 <TextField
                   {...params}
@@ -202,7 +219,6 @@ function SearchResponse({ q = "" }) {
                   inputRef={inputRef}
                 />
               )}
-              // value={query}
               onInputChange={(e, value) => setTextinProduct(value)}
               value={textinProduct === "" ? null : textinProduct}
               onChange={handleSelection}
@@ -213,7 +229,28 @@ function SearchResponse({ q = "" }) {
               disablePortal
               id="mainCategory"
               options={Object.keys(categories)}
-              // sx={{ width: 200 }}
+              sx={{
+                "& .MuiInputBase-root": {
+                  backgroundColor: "#f5f5f5",
+                  borderRadius: "8px",
+                  border: "1px solid #ddd",
+                },
+                "& .MuiInputLabel-root": {
+                  color: "#333",
+                },
+                "& .MuiAutocomplete-inputRoot": {
+                  borderRadius: "8px",
+                  padding: "8px",
+                },
+                "& .MuiAutocomplete-popupIndicator": {
+                  color: "#EF3E00",
+                },
+                "& .MuiMenuItem-root": {
+                  "&:hover": {
+                    backgroundColor: "#f0f0f0",
+                  },
+                },
+              }}
               renderInput={(params) => (
                 <TextField
                   {...params}
@@ -230,7 +267,28 @@ function SearchResponse({ q = "" }) {
               disablePortal
               id="subCategory"
               options={subCateOptions}
-              // sx={{ width: 200 }}
+              sx={{
+                "& .MuiInputBase-root": {
+                  backgroundColor: "#f5f5f5",
+                  borderRadius: "8px",
+                  border: "1px solid #ddd",
+                },
+                "& .MuiInputLabel-root": {
+                  color: "#333",
+                },
+                "& .MuiAutocomplete-inputRoot": {
+                  borderRadius: "8px",
+                  padding: "8px",
+                },
+                "& .MuiAutocomplete-popupIndicator": {
+                  color: "#EF3E00",
+                },
+                "& .MuiMenuItem-root": {
+                  "&:hover": {
+                    backgroundColor: "#f0f0f0",
+                  },
+                },
+              }}
               renderInput={(params) => (
                 <TextField
                   {...params}
@@ -255,8 +313,7 @@ function SearchResponse({ q = "" }) {
           </Grid>
         </Grid>
 
-  
-          <DisplayList list={filtered} />
+        <DisplayList list={filtered} />
       </Grid>
     </>
   );

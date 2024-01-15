@@ -58,35 +58,35 @@ export default function DmPharmaContent() {
               justifyContent={"center"}
               className="w-100 h-100"
             >
-              <Image
+              <img
                 className="manufacturing-unit-images"
                 width={250}
                 height={100}
                 src={"/images/dm-image1.jpg"}
                 alt={"Saar Biotech"}
               />
-              <Image
+              <img
                 className="manufacturing-unit-images"
                 width={250}
                 height={100}
                 src={"/images/dm-image2.jpg"}
                 alt={"Saar Biotech"}
               />
-              <Image
+              <img
                 className="manufacturing-unit-images"
                 width={250}
                 height={100}
                 src={"/images/dm-image3.jpg"}
                 alt={"Saar Biotech"}
               />
-              <Image
+              <img
                 className="manufacturing-unit-images"
                 width={250}
                 height={100}
                 src={"/images/dm-image4.jpg"}
                 alt={"Saar Biotech"}
               />
-              <Image
+              <img
                 className="manufacturing-unit-images"
                 width={250}
                 height={100}

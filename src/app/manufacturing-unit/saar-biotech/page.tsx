@@ -53,28 +53,28 @@ export default function SaarBiotechContent() {
               justifyContent={"center"}
               className="w-100 h-100"
             >
-              <Image
+              <img
                 className="manufacturing-unit-images"
                 width={250}
                 height={100}
                 src={"/images/saar-image1.jpg"}
                 alt={"Saar Biotech"}
               />
-              <Image
+              <img
                 className="manufacturing-unit-images"
                 width={250}
                 height={100}
                 src={"/images/saar-image2.jpg"}
                 alt={"Saar Biotech"}
               />
-              <Image
+              <img
                 className="manufacturing-unit-images"
                 width={250}
                 height={100}
                 src={"/images/saar-image3.jpg"}
                 alt={"Saar Biotech"}
               />
-              <Image
+              <img
                 className="manufacturing-unit-images"
                 width={250}
                 height={100}
