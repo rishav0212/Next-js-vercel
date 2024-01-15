@@ -85,7 +85,7 @@ const MakeRows = ({ paginatedList }) => {
                 href={
                   product.link.includes("dmpharma")
                     ? product.link
-                    : "/product/" + product.link
+                    : "/product/" + (product.link).toLowerCase()
                 }
               >
                 {product.name}
@@ -101,7 +101,7 @@ const MakeRows = ({ paginatedList }) => {
 
 const DisplayList = ({ list, initialPage = 1 }) => {
   const theme = useTheme();
-  const isSmallerScreen = useMediaQuery(theme.breakpoints.down("sm"));
+  const isSmallerScreen = useMediaQuery(theme.breakpoints.down("md"));
   console.log(isSmallerScreen);
 
   const all_products = [];
@@ -143,26 +143,37 @@ const DisplayList = ({ list, initialPage = 1 }) => {
         margin={1}
         sx={{
           fontSize: { md: 17, sm: 15, xs: 14 },
-          width: { md: "800px", sm: "800px", xs: "350px" },
+          width: { md: "800px", sm: "500", xs: "430px" },
         }}
       >
-        {!isSmallerScreen ? (
-          <Grid item xs={2.4} sm={1.3} md={1.3}>
+        <Grid item xs={1.3} sm={1.3} md={1.3}>
+          {!isSmallerScreen ? (
             <button
               className={`btn ${styles.prev} ${
                 currentPage === 1 ? `disabled ${styles.disabled}` : ""
               }`}
               onClick={() => handlePageChange(currentPage - 1)}
               aria-label="Previous"
+
             >
               <span aria-hidden="true">&laquo;</span>
               <span>Prev</span>
             </button>
-          </Grid>
-        ) : null}
+          ) : (
+            <button
+              className={`btn ${styles["button-des"]} ${
+                currentPage === 1 ? `disabled ${styles.disabled}` : ""
+              }`}
+              onClick={() => handlePageChange(currentPage - 1)}
+              aria-label="Previous"
+            >
+              <span>{"<<"}</span>
+            </button>
+          )}
+        </Grid>
 
         {array.map((value, index) => (
-          <Grid item key={index} xs={1.7} sm={0.7} md={0.7}>
+          <Grid item key={index} xs={1.3} sm={1.3} md={0.7}>
             {value === "..." || value === "... " ? (
               <button className={"disabled " + styles["button-des"]}>
                 {value}
@@ -180,37 +191,36 @@ const DisplayList = ({ list, initialPage = 1 }) => {
           </Grid>
         ))}
 
-        {isSmallerScreen ? (
-          <Grid item xs={2.4}>
+        <Grid item xs={1.3} sm={1.3} md={1.3}>
+          {!isSmallerScreen ? (
             <button
               className={`btn ${styles.prev} ${
-                currentPage === 1 ? `disabled ${styles.disabled}` : ""
+                currentPage === Math.ceil(all_products.length / limit)
+                  ? `disabled ${styles.disabled}`
+                  : ""
               }`}
-              onClick={() => handlePageChange(currentPage - 1)}
-              aria-label="Previous"
+              onClick={() => handlePageChange(currentPage + 1)}
+              aria-label="Next"
             >
-              <span aria-hidden="true">&laquo;</span>
-              <span>Prev</span>
+              <span>Next</span>
+              <span aria-hidden="true">&raquo;</span>
             </button>
-          </Grid>
-        ) : null}
-
-        <Grid item xs={2.4} sm={1.3} md={1.3}>
-          <button
-            className={`btn ${styles.prev} ${
-              currentPage === Math.ceil(all_products.length / limit)
-                ? `disabled ${styles.disabled}`
-                : ""
-            }`}
-            onClick={() => handlePageChange(currentPage + 1)}
-            aria-label="Next"
-          >
-            <span>Next</span>
-            <span aria-hidden="true">&raquo;</span>
-          </button>
+          ) : (
+            <button
+              className={`btn ${styles["button-des"]} ${
+                currentPage === Math.ceil(all_products.length / limit)
+                  ? `disabled ${styles.disabled}`
+                  : ""
+              }`}
+              onClick={() => handlePageChange(currentPage + 1)}
+              aria-label="Next"
+            >
+              <span>{">>"}</span>
+            </button>
+          )}
         </Grid>
 
-        <Grid item className={styles.entries} xs={7} sm={4} md={4}>
+        <Grid marginTop={1} item className={styles.entries} xs={12} sm={12} md={4} textAlign={"right"}>
           <span className="p-2">Show</span>
           <select
             className="p-1"
@@ -227,7 +237,7 @@ const DisplayList = ({ list, initialPage = 1 }) => {
         </Grid>
       </Grid>
 
-      <Grid container margin={2} sx={{ width: "85vw", overflow: "auto" }}>
+      <Grid container sx={{ width: "85vw", overflow: "auto", fontSize:{xs:"3vw", sm:"2vw", md:"17px"}}}>
         <table className="table table-bordered align-middle">
           <caption>Products</caption>
           <thead>

@@ -25,7 +25,7 @@ const items = {
       {
         id: 4,
         name: "OFLOXACIN + ORNIDAZOLE",
-        link: "OFLOXACIN1",
+        link: "ofloxacin-ornidazole",
         mainCategory: "Suspensions",
         subCategory: "Antibiotic",
       },

@@ -22,7 +22,7 @@ export default function IronSpray() {
 
       <Container maxWidth="md">
         <img
-          src="/public/images/iron-oral-spray.jpg"
+          src="/images/iron-oral-spray.jpg"
           alt="Saar Biotech"
           style={{ width: "100%" }}
         />

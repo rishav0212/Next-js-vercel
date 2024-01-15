@@ -179,14 +179,14 @@ function SearchResponse({ q = "" }) {
           spacing={1}
           alignItems="center"
           justifyContent="center"
-          sx={{ width: { md: "80vw", sm: "80vw", xs: "90vw" } }}
+          sx={{ width: { md: "80vw", sm: "80vw", xs: "85vw" } }}
         >
-          <Grid item xs={12} sm={6} md={12} justifyContent={"center"}>
+          <Grid item xs={12} sm={12} md={12} justifyContent={"center"}>
             <Typography variant="h4" className="color-primary text-center">
               PRODUCTS
             </Typography>
           </Grid>
-          <Grid item xs={11} sm={6} md={3} sx={{ fontSize: "1vh" }}>
+          <Grid item xs={11} sm={12} md={3} sx={{ fontSize: "1vh" }}>
             <Autocomplete
               disablePortal
               id="Composition"
