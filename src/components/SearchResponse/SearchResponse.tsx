@@ -14,11 +14,11 @@ function SearchResponse({ q = "" }) {
   //////////////
 
   /////////////
-  const all_products = [];
+  const allProducts = [];
   Object.keys(items).map((main) => {
     Object.keys(items[main]).map((sub) => {
       items[main][sub].map((product) => {
-        all_products.push(product.name);
+        allProducts.push(product.name);
       });
     });
   });
@@ -163,160 +163,119 @@ function SearchResponse({ q = "" }) {
   //////////
 
   return (
-    <>
+    <Grid
+      container
+      spacing={2}
+      margin={1}
+      alignItems="center"
+      justifyContent="center"
+    >
       <Grid
         container
-        spacing={2}
-        margin={1}
-        alignItems={"center"}
-        justifyContent={"center"}
+        item
+        spacing={1}
+        alignItems="center"
+        justifyContent="center"
+        sx={{ width: { md: "80vw", sm: "80vw", xs: "85vw" } }}
       >
-        <Grid
-          container
-          item
-          spacing={1}
-          alignItems="center"
-          justifyContent="center"
-          sx={{ width: { md: "80vw", sm: "80vw", xs: "85vw" } }}
-        >
-          <Grid item xs={12} sm={12} md={12} justifyContent={"center"}>
-            <Typography variant="h4" className="color-primary text-center">
-              PRODUCTS
-            </Typography>
-          </Grid>
-          <Grid item xs={11} sm={12} md={3} sx={{ fontSize: "1vh" }}>
-            <Autocomplete
-              disablePortal
-              id="Composition"
-              options={all_products}
-              sx={{
-                "& .MuiInputBase-root": {
-                  backgroundColor: "#f5f5f5",
-                  borderRadius: "8px",
-                  border: "1px solid #ddd",
-                },
-                "& .MuiInputLabel-root": {
-                  color: "#333",
-                },
-                "& .MuiAutocomplete-inputRoot": {
-                  borderRadius: "8px",
-                  padding: "8px",
-                },
-                "& .MuiAutocomplete-popupIndicator": {
-                  color: "#EF3E00",
-                },
-                "& .MuiMenuItem-root": {
-                  "&:hover": {
-                    backgroundColor: "#f0f0f0",
-                  },
-                },
-              }}
-              renderInput={(params) => (
-                <TextField
-                  {...params}
-                  label="Search by Composition"
-                  onKeyPress={handleEnterPressed}
-                  inputRef={inputRef}
-                />
-              )}
-              onInputChange={(e, value) => setTextinProduct(value)}
-              value={textinProduct === "" ? null : textinProduct}
-              onChange={handleSelection}
-            />
-          </Grid>
-          <Grid item xs={11} sm={6} md={3}>
-            <Autocomplete
-              disablePortal
-              id="mainCategory"
-              options={Object.keys(categories)}
-              sx={{
-                "& .MuiInputBase-root": {
-                  backgroundColor: "#f5f5f5",
-                  borderRadius: "8px",
-                  border: "1px solid #ddd",
-                },
-                "& .MuiInputLabel-root": {
-                  color: "#333",
-                },
-                "& .MuiAutocomplete-inputRoot": {
-                  borderRadius: "8px",
-                  padding: "8px",
-                },
-                "& .MuiAutocomplete-popupIndicator": {
-                  color: "#EF3E00",
-                },
-                "& .MuiMenuItem-root": {
-                  "&:hover": {
-                    backgroundColor: "#f0f0f0",
-                  },
-                },
-              }}
-              renderInput={(params) => (
-                <TextField
-                  {...params}
-                  label="Search by Main Category"
-                  inputRef={inputMainRef}
-                />
-              )}
-              onChange={handleSelectionMain}
-              value={mainCategory === "" ? null : mainCategory}
-            />
-          </Grid>
-          <Grid item xs={11} sm={6} md={3}>
-            <Autocomplete
-              disablePortal
-              id="subCategory"
-              options={subCateOptions}
-              sx={{
-                "& .MuiInputBase-root": {
-                  backgroundColor: "#f5f5f5",
-                  borderRadius: "8px",
-                  border: "1px solid #ddd",
-                },
-                "& .MuiInputLabel-root": {
-                  color: "#333",
-                },
-                "& .MuiAutocomplete-inputRoot": {
-                  borderRadius: "8px",
-                  padding: "8px",
-                },
-                "& .MuiAutocomplete-popupIndicator": {
-                  color: "#EF3E00",
-                },
-                "& .MuiMenuItem-root": {
-                  "&:hover": {
-                    backgroundColor: "#f0f0f0",
-                  },
-                },
-              }}
-              renderInput={(params) => (
-                <TextField
-                  {...params}
-                  label="Search by Sub Category"
-                  inputRef={inputSubRef}
-                />
-              )}
-              onChange={handleSelectionSub}
-              value={subCategory === "" ? null : subCategory}
-            />
-          </Grid>
-          <Grid item margin={0} md={9} sm={12} xs={11} textAlign={"right"}>
-            <Button
-              sx={{}}
-              onClick={() => {
-                setTextinProduct("");
-                setMainCategory("");
-              }}
-            >
-              Reset
-            </Button>
-          </Grid>
+        <Grid item xs={6} md={12} justifyContent="center">
+          <Typography
+            variant="h4"
+            className="color-primary text-center"
+          >
+            PRODUCTS
+          </Typography>
         </Grid>
-
-        <DisplayList list={filtered} />
+        <Grid item xs={12} sm={6} md={3} sx={{ fontSize: "1vh" }}>
+          <Autocomplete
+            disablePortal
+            id="Composition"
+            options={allProducts}
+            sx={{ ...autocompleteStyles }}
+            renderInput={(params) => (
+              <TextField
+                {...params}
+                label="Search by Composition"
+                onKeyPress={handleEnterPressed}
+                inputRef={inputRef}
+              />
+            )}
+            onInputChange={(e, value) => setTextinProduct(value)}
+            value={textinProduct === "" ? null : textinProduct}
+            onChange={handleSelection}
+          />
+        </Grid>
+        <Grid item xs={12} sm={6} md={3}>
+          <Autocomplete
+            disablePortal
+            id="mainCategory"
+            options={Object.keys(categories)}
+            sx={{ ...autocompleteStyles }}
+            renderInput={(params) => (
+              <TextField
+                {...params}
+                label="Search by Main Category"
+                inputRef={inputMainRef}
+              />
+            )}
+            onChange={handleSelectionMain}
+            value={mainCategory === "" ? null : mainCategory}
+          />
+        </Grid>
+        <Grid item xs={12} sm={6} md={3}>
+          <Autocomplete
+            disablePortal
+            id="subCategory"
+            options={subCateOptions}
+            sx={{ ...autocompleteStyles }}
+            renderInput={(params) => (
+              <TextField
+                {...params}
+                label="Search by Sub Category"
+                inputRef={inputSubRef}
+              />
+            )}
+            onChange={handleSelectionSub}
+            value={subCategory === "" ? null : subCategory}
+          />
+        </Grid>
+        <Grid item margin={0} md={9} sm={12} xs={12} textAlign="right">
+          <Button
+            onClick={() => {
+              setTextinProduct("");
+              setMainCategory("");
+            }}
+          >
+            Reset
+          </Button>
+        </Grid>
       </Grid>
-    </>
+      <DisplayList list={filtered} />
+    </Grid>
   );
 }
+
+const autocompleteStyles = {
+  "& .MuiInputBase-root": {
+    backgroundColor: "#f5f5f5",
+    borderRadius: "8px",
+    border: "1px solid #ddd",
+  },
+  "& .MuiInputLabel-root": {
+    color: "#333",
+  },
+  "& .MuiAutocomplete-inputRoot": {
+    borderRadius: "8px",
+    padding: "8px",
+  },
+  "& .MuiAutocomplete-popupIndicator": {
+    color: "#EF3E00",
+  },
+  "& .MuiMenuItem-root": {
+    "&:hover": {
+      backgroundColor: "#f0f0f0",
+    },
+  },
+};
 
 export default SearchResponse;
