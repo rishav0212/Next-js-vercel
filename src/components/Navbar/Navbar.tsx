@@ -39,8 +39,6 @@ const AppBar = styled(MuiAppBar)`
 `;
 
 const Navbar = () => {
-  // const classes = useStyles();
-  // const theme = useTheme();
   const isMobile = useMediaQuery(`(max-width: 950px)`);
   const [openDrawer, setOpenDrawer] = useState(false);
 
@@ -49,8 +47,6 @@ const Navbar = () => {
     0,
     path.indexOf("/", 1) !== -1 ? path.indexOf("/", 1) : path.length
   );
-
-  // console.log(path.indexOf('/', 1))
 
   const toggleDrawer = () => {
     setOpenDrawer(!openDrawer);
@@ -115,6 +111,59 @@ const Navbar = () => {
     },
   };
 
+  const navMenu = {
+    menus: [
+      {
+        menu_name: "Home",
+        to: "/",
+      },
+      {
+        menu_name: "About",
+        to: "/about",
+      },
+      {
+        menu_name: "Manufacturing Unit",
+        to: "/manufacturing-unit",
+        items: {
+          "Saar Biotech": "/saar-biotech",
+          "DM Pharma": "/dm-pharma",
+          Infrastructure: "/dm-pharma",
+          "Factory Video": "/dm-pharma",
+        },
+        onClickMethod: handleManufacturingUnitChange,
+        stateVar: manufacturingUnitOpen,
+      },
+      {
+        menu_name: "Products",
+        to: "/products",
+        items: {
+          Suspensions: "/Suspensions",
+          Syrups: "/Syrups",
+          "External Preparation": "/External Preparations",
+          "Miscellaneous Products": "/Miscellaneous Products",
+          Tablets: "/Tablets",
+          Capsules: "/Capsules",
+          Sachets: "/Sachets",
+        },
+        onClickMethod: handleProductsChange,
+        stateVar: productsOpen,
+      },
+      {
+        menu_name: "Events",
+        to: "/events",
+        items: {
+          B2B: "/b2b",
+          "Pharma South 2014": "/pharma-south-2014",
+          "Indian Pharma Expo 2013": "/indian-pharma-expo-2013",
+          "Indian Pharma Expo 2012": "/indian-pharma-expo-2012",
+          Brochure: "/brochure",
+        },
+        onClickMethod: handleEventsChange,
+        stateVar: eventsOpen,
+      },
+    ],
+  };
+
   return (
     <>
       <AppBar position="relative">
@@ -123,7 +172,7 @@ const Navbar = () => {
             <>
               {" "}
               <IconButton edge="start" onClick={toggleDrawer}>
-                <SegmentSharpIcon fontSize="large" style={{ color: "black"}}  />
+                <SegmentSharpIcon fontSize="large" style={{ color: "black" }} />
               </IconButton>
               <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                 <Link href="/">
@@ -140,6 +189,9 @@ const Navbar = () => {
                   />
                 </Link>
               </Typography>
+              <IconButton edge="end" onClick={toggleDrawer}>
+                <SegmentSharpIcon fontSize="large" style={{ color: "black" }} />
+              </IconButton>
             </>
           ) : (
             <>
@@ -177,23 +229,16 @@ const Navbar = () => {
                     alignItems={"center"}
                     justifyContent={"center"}
                   >
-                    <Dropdown
-                      props={{ menu_name: "Home", to: "/", items: {} }}
-                      url={url}
-                    />
-                    <Dropdown
-                      props={{ menu_name: "About", to: "/about", items: {} }}
-                      url={url}
-                    />
-                    <Dropdown props={units_menu} url={url} />
-                    <Dropdown props={products_menu} url={url} />
-                    <Dropdown props={events_menu} url={url} />
+                    {Object.keys(navMenu.menus).map((key) => (
+                      <React.Fragment key={key}>
+                        <Dropdown props={navMenu.menus[key]} url={url} />
+                      </React.Fragment>
+                    ))}
                   </Stack>
                   <Link href="/contact" className="navbar-contact">
                     Contact
                   </Link>
                 </Stack>
-                {/* {url!=="/products"?<Search query=""/>:null} */}
               </Stack>
             </>
           )}
@@ -226,137 +271,75 @@ const Navbar = () => {
             </Tooltip>
             <Container>
               <List>
-                <ListItem>
-                  <Link
-                    href={"/"}
-                    onClick={toggleDrawer}
-                    className={`navbar-links ${
-                      url === "/" ? "active-link" : ""
-                    }`}
-                  >
-                    <ListItemButton>
-                      <ListItemText
-                        primary={
-                          <span style={{ fontWeight: "500" }}>Home</span>
-                        }
-                      />
-                    </ListItemButton>
-                  </Link>
-                </ListItem>
-                <ListItem>
-                  <Link
-                    href={"/about"}
-                    onClick={toggleDrawer}
-                    className={`navbar-links ${
-                      url === "/about" ? "active-link" : ""
-                    }`}
-                  >
-                    <ListItemButton>
-                      <ListItemText
-                        primary={
-                          <span style={{ fontWeight: "500" }}>About</span>
-                        }
-                      />
-                    </ListItemButton>
-                  </Link>
-                </ListItem>
-                <ListItem onClick={handleManufacturingUnitChange}>
-                  <span
-                    className={`navbar-links d-flex  ${
-                      url === "/manufacturing-unit" ? "active-link" : ""
-                    }`}
-                  >
-                    <ListItemButton>
-                      <ListItemText
-                        primary={
-                          <span style={{ fontWeight: "500" }}>
-                            Manufacturing Unit
+                {Object.keys(navMenu.menus).map((key) => (
+                  <React.Fragment key={key}>
+                    {navMenu.menus[key].items === undefined ? (
+                      <ListItem>
+                        <Link
+                          href={navMenu.menus[key].to}
+                          onClick={toggleDrawer}
+                          className={`navbar-links ${
+                            url === navMenu.menus[key].to ? "active-link" : ""
+                          }`}
+                        >
+                          <ListItemButton>
+                            <ListItemText
+                              primary={
+                                <span style={{ fontWeight: "500" }}>
+                                  {navMenu.menus[key].menu_name}
+                                </span>
+                              }
+                            />
+                          </ListItemButton>
+                        </Link>
+                      </ListItem>
+                    ) : (
+                      <>
+                        <ListItem onClick={navMenu.menus[key].onClickMethod}>
+                          <span
+                            className={`navbar-links d-flex  ${
+                              url === navMenu.menus[key].to ? "active-link" : ""
+                            }`}
+                          >
+                            <ListItemButton>
+                              <ListItemText
+                                primary={
+                                  <span style={{ fontWeight: "500" }}>
+                                    {navMenu.menus[key].menu_name}
+                                  </span>
+                                }
+                              />
+                            </ListItemButton>
+                            <span
+                              style={{ display: "flex", alignItems: "center" }}
+                            >
+                              {navMenu.menus[key].stateVar ? (
+                                <RemoveIcon />
+                              ) : (
+                                <AddIcon />
+                              )}
+                            </span>
                           </span>
-                        }
-                      />
-                    </ListItemButton>
-                    <span style={{ display: "flex", alignItems: "center" }}>
-                      {manufacturingUnitOpen ? <RemoveIcon /> : <AddIcon />}
-                    </span>
-                  </span>
-                </ListItem>
-
-                <Collapse
-                  in={manufacturingUnitOpen}
-                  timeout="auto"
-                  unmountOnExit
-                  sx={{
-                    backgroundColor: "#EF3E00",
-                    color: "white",
-                    fontWeight: "500",
-                  }}
-                >
-                  <DrawerItem props={units_menu} onclick={toggleDrawer} />
-                </Collapse>
-
-                <ListItem onClick={handleProductsChange}>
-                  <span
-                    className={`navbar-links d-flex align-center ${
-                      url === "/products" ? "active-link" : ""
-                    }`}
-                  >
-                    <ListItemButton>
-                      <ListItemText
-                        primary={
-                          <span style={{ fontWeight: "500" }}>Products</span>
-                        }
-                      />
-                    </ListItemButton>
-                    <span style={{ display: "flex", alignItems: "center" }}>
-                      {productsOpen ? <RemoveIcon /> : <AddIcon />}
-                    </span>
-                  </span>
-                </ListItem>
-
-                <Collapse
-                  in={productsOpen}
-                  timeout="auto"
-                  unmountOnExit
-                  sx={{
-                    backgroundColor: "#EF3E00",
-                    color: "white",
-                    fontWeight: "500",
-                  }}
-                >
-                  <DrawerItem props={products_menu} onclick={toggleDrawer} />
-                </Collapse>
-
-                <ListItem onClick={handleEventsChange}>
-                  <span
-                    className={`navbar-links d-flex align-center ${
-                      url === "/events" ? "active-link" : ""
-                    }`}
-                  >
-                    <ListItemButton>
-                      <ListItemText
-                        primary={
-                          <span style={{ fontWeight: "500" }}>Events</span>
-                        }
-                      />
-                    </ListItemButton>
-                    <span style={{ display: "flex", alignItems: "center" }}>
-                      {eventsOpen ? <RemoveIcon /> : <AddIcon />}
-                    </span>
-                  </span>
-                </ListItem>
-
-                <Collapse
-                  in={eventsOpen}
-                  timeout="auto"
-                  unmountOnExit
-                  sx={{
-                    backgroundColor: "#EF3E00",
-                    color: "white",
-                    fontWeight: "500",
-                  }}
-                >
-                  <DrawerItem props={events_menu} onclick={toggleDrawer} />
-                </Collapse>
+                        </ListItem>
+                        <Collapse
+                          in={navMenu.menus[key].stateVar}
+                          timeout={2000}
+                          unmountOnExit
+                          sx={{
+                            backgroundColor: "#EF3E00",
+                            color: "white",
+                            fontWeight: "500",
+                          }}
+                        >
+                          <DrawerItem
+                            props={navMenu.menus[key]}
+                            onclick={toggleDrawer}
+                          />
+                        </Collapse>
+                      </>
+                    )}
+                  </React.Fragment>
+                ))}
 
                 <ListItem>
                   <Link
