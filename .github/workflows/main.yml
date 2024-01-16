@@ -35,7 +35,7 @@ jobs:
         run: npm run build
 
       - name: Upload Artifacts
-        uses: actions/upload-artifact@master
+        uses: actions/upload-artifact@v4
         with:
           name: my-artifact1
           path: out
@@ -46,15 +46,13 @@ jobs:
 
     steps:
       - name: Maunal Trigger For GoDaddy
-        #id: manual_deploy
-        #run: echo "Deploy is manual step. Use the 'workflow_dispatch' event to trigger it."
+        id: manual_deploy
+        run: echo "Deploy is manual step. Use the 'workflow_dispatch' event to trigger it."
 
-        # - name: Download Artifacts
-        #   uses: actions/checkout@v3
-
-        uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v4
         with:
           name: my-artifact1
+          path: myCustomFolder
 
       - name: Display structure of downloaded files
         run: ls -R
@@ -99,6 +97,6 @@ jobs:
           # Use lftp to upload to GoDaddy via SFTP
           lftp -f sftp-config
 
-          cd out
+          cd myCustomFolder
 
           lftp -e "set ssl:verify-certificate no; open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_SERVER; mirror -R . $REMOTE_DIR; exit"
