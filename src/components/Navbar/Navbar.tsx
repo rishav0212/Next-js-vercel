@@ -171,9 +171,6 @@ const Navbar = () => {
           {isMobile ? (
             <>
               {" "}
-              <IconButton edge="start" onClick={toggleDrawer}>
-                <SegmentSharpIcon fontSize="large" style={{ color: "black" }} />
-              </IconButton>
               <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                 <Link href="/">
                   <img
