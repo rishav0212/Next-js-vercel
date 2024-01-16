@@ -49,8 +49,8 @@ jobs:
         id: manual_deploy
         run: echo "Deploy is manual step. Use the 'workflow_dispatch' event to trigger it."
 
-      - name: Download Artificats
-        uses: actions/checkout@v3
+      # - name: Download Artificats
+      #   uses: actions/checkout@v3
 
       - uses: actions/download-artifact@v3
         with:
