@@ -17,7 +17,7 @@ export default function Expo2012Content() {
             <Container>
                 <Grid container spacing={16}>
                     <Grid item xs={12} sm={12} md={8} lg={8}>
-                        <Typography className="d-flex align-self-center lh-lg">
+                        <Typography className="d-flex align-self-center lh-lg" textAlign={"justify"}>
                             The Indian Pharma Expo 2012 took place on 22- 23 sept at Pragati Maidan in New Delhi. It was a unique pharma event, which proved to be the perfect platform flooded with opportunities for pharma entrepreneurs such as Pharmaceutical Manufacturers & Ethical, PCD and Generic companies, eager to explore distributorship, franchisee & Third Party Manufacturing for their brands. Many Pharma students, doctors and consultants also visited the Exhibition and gained good exposure of Indian Pharma Industry.
                             <br /><br />
                             It was a great pleasure to participate in such a good pharma event. UBM Medica, the organizers of Indian Pharma Expo, made appreciable efforts to bring so many pharmaceutical companies and related visitors from all around the nation together at a single place and provide platform for everybody to Explore opportunities for themselves in Pharma Industry.

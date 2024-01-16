@@ -1,7 +1,11 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {"output": "export"}
+const nextConfig = {
+  output: "export",
+  
+  trailingSlash: true,
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
 // module.exports = {
 //     typescript: {
 //       // !! WARN !!

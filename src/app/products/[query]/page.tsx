@@ -1,27 +1,27 @@
-import QueryResponse from "@/components/QueryResponse/QueryResponse";
+import SearchResponse from "@/components/SearchResponse/SearchResponse";
+
 import { redirect } from "next/dist/server/api-utils";
+import Banner from "@/components/Banner";
 
 function Page({ params }) {
-
-
-
   return (
-    <QueryResponse q = {decodeURI(params.query)}/>
+    <>
+      <Banner />
+      <SearchResponse q={decodeURI(params.query)} />
+    </>
   );
 }
 
 export default Page;
 
 export async function generateStaticParams() {
-  return(
-  [
-    { 'query': "Suspensions" },
-    { 'query': "Syrups" }, 
-    { 'query': "External Preparation" }, 
-    { 'query': "Miscellaneous Products" }, 
-    { 'query': "tablets" },
-    { 'query': "capsules" },
-    { 'query': "sachets" }
-  ]
-)
+  return [
+    { query: "Suspensions" },
+    { query: "Syrups" },
+    { query: "External Preparations" },
+    { query: "Miscellaneous Products" },
+    { query: "Tablets" },
+    { query: "Capsules" },
+    { query: "Sachets" },
+  ];
 }

@@ -25,6 +25,7 @@ import LocalDiningIcon from "@mui/icons-material/LocalDining";
 import GavelIcon from "@mui/icons-material/Gavel";
 import ApprovalIcon from "@mui/icons-material/Approval";
 import PropTypes from "prop-types";
+import { LoadingButton } from "@mui/lab";
 
 const Accordion = styled(MuiAccordion)(({ theme }) => ({
   marginBottom: `6px`,
@@ -94,11 +95,7 @@ function TabPanel(props) {
       aria-labelledby={`full-width-tab-${index}`}
       {...other}
     >
-      {value === index && (
-        <Box sx={{ p: 3 }}>
-          {children}
-        </Box>
-      )}
+      {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
     </div>
   );
 }
@@ -163,7 +160,7 @@ export default function HomeContent() {
             sx={isSmallerScreen ? { width: "100%" } : { flex: 1 }}
           >
             <h2 className="text-center">Welcome to Saar Biotech</h2>
-            <Typography variant="body1">
+            <Typography variant="body1" textAlign={"justify"}>
               Saar Biotech is one of the most respected GMP certified
               pharmaceutical company established with a vision towards
               empowering life . We are committed to deliver better health
@@ -194,9 +191,9 @@ export default function HomeContent() {
                 // as={Typography}
                 // sx={{ color: "white" }}
               >
-                <Typography sx={{ color: "white" }}>Vitamin D3 400/800 IU Drops/ 25ml Spray</Typography>
-
-
+                <Typography sx={{ color: "white" }}>
+                  Vitamin D3 400/800 IU Drops/ 25ml Spray
+                </Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Typography>
@@ -287,8 +284,24 @@ export default function HomeContent() {
           </Stack>
         </Stack>
       </Container>
-
       <Toolbar />
+
+
+      <Container>
+        <Link href="/products">
+          <LoadingButton
+            color="primary"
+            size="large"
+            type="submit"
+            variant="contained"
+            loading={false}
+            className="loading-button"
+          >
+            SEE PRODUCTS
+          </LoadingButton>
+        </Link>
+      </Container>
+      
       <Toolbar />
 
       <div className="container">

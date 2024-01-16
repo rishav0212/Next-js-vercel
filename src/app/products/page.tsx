@@ -1,11 +1,13 @@
-import QueryResponse from "@/components/QueryResponse/QueryResponse";
+import SearchResponse from "@/components/SearchResponse/SearchResponse";
 import { Metadata } from "next";
+import Banner from "@/components/Banner";
 
 function Products() {
   return (
-
-    <QueryResponse />
-
+    <>
+      <Banner />
+      <SearchResponse />
+    </>
   );
 }
 
