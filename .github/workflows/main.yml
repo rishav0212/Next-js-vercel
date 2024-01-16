@@ -46,7 +46,7 @@ jobs:
 
     steps:
       - name: Maunal Trigger For GoDaddy
-        id: manual_deploy
+        #id: manual_deploy
         #run: echo "Deploy is manual step. Use the 'workflow_dispatch' event to trigger it."
 
         # - name: Download Artifacts
