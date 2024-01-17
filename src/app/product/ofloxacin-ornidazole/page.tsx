@@ -183,7 +183,7 @@ export default function Page() {
                 }}
               >
                 <img
-                  src={`/images/products/${link}.jpg`}
+                  src={`/images/${link}.jpg`}
                   alt="Ofloxacin Ornidazole Suspension | Saar Biotech Product"
                   style={{
                     height: "100%",
