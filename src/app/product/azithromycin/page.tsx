@@ -180,7 +180,7 @@ export default function Page() {
                 }}
               >
                 <img
-                  src={`/images/${link}.jpg`}
+                  src={`/images/azithromycin.jpg`}
                   alt="Azithromycin | Saar Biotech Product"
                   style={{
                     width: "100%",
