@@ -9,7 +9,6 @@ import {
   Grid,
   Paper,
   Box,
-  Link,
 } from "@mui/material";
 import { FiberManualRecord } from "@mui/icons-material";
 import { Metadata } from "next";
@@ -25,7 +24,6 @@ export default function Page() {
     padding: 1.2,
     boxShadow: "0 4px 6px rgba(0,0,0, 0.8)",
     marginBottom: 0.5,
-    marginTop: 2,
     width: "250px",
     textAlign: "center",
     "&:hover": {
@@ -85,18 +83,10 @@ export default function Page() {
               </Typography>
             </Grid>
             <Grid item md={7} sm={12} xs={12}>
-              <Grid display={"flex"}>
-                <Typography
-                  variant="h6"
-                  sx={{ color: "#EF3E00", display: "inline-block" }}
-                >
-                  <b>Indications:-</b>
-                </Typography>
-                <Typography variant="subtitle1" marginLeft={1}>
-                  Diarrhoea, Dysentery, Pelvic Inflammatory Disease , Gingividis
-                  and Peridontis.
-                </Typography>
-              </Grid>
+              <Typography variant="h6">
+                <b>Indications:-</b> Diarrhoea, Dysentery, Pelvic Inflammatory
+                Disease , Gingividis and Peridontis.{" "}
+              </Typography>
 
               <Grid display={"flex"}>
                 <Typography
@@ -114,57 +104,19 @@ export default function Page() {
                 <b>Spray Presentation :</b>
               </Typography>
 
-              <Typography variant="body1" marginLeft={5}>
-                Ofloxacin 50 mg
-                <br />
-                Ornidazole 125 mg Eq to Azithromycin 100mg/200mg
-                <br />
-                <b>per 30/60 ml in a Amber Bottle</b>
-              </Typography>
-
-              <Link sx={{ color: "black" }} href="#description">
-                <Typography
-                  variant="body2"
-                  sx={{
-                    display: "-webkit-box",
-                    WebkitBoxOrient: "vertical",
-                    overflow: "hidden",
-                    WebkitLineClamp: 2,
-                    textOverflow: "ellipsis",
-                    marginInline: 2,
-                    marginTop: 2,
-                  }}
-                >
-                  <b>Description : </b>Ofloxacin is a quinolone antibiotic used
-                  for treating certain kinds of bacterial infections(ear
-                  infections, urinary tract infections) and also useful in
-                  pelvic inflammatory disease (PID). It belongs to the
-                  fluoroquinolone class of antibiotics. Ofloxacin stops the
-                  multipli
-                </Typography>
-              </Link>
-
-              <Link sx={{ color: "black" }} href="#interactions">
-                <Typography
-                  variant="body2"
-                  sx={{
-                    display: "-webkit-box",
-                    WebkitBoxOrient: "vertical",
-                    overflow: "hidden",
-                    WebkitLineClamp: 2,
-                    textOverflow: "ellipsis",
-                    marginInline: 2,
-                    marginTop: 1,
-                  }}
-                >
-                  <b>Interations : </b> This suspension is the combination of
-                  Ofloxacin and ornidazole and has unique dual mode of action
-                  i.e., in the combination, ofloxacin may increase the
-                  anticoagulant effect of acenocoumarol and anisindione. Calcium
-                  salts such as calcium acetate may decrease the absorption of
-                  quinolon
-                </Typography>
-              </Link>
+              <List dense>
+                {["Ofloxacin 50 mg", "Ornidazole  125 mg"].map(
+                  (item, index) => (
+                    <ListItem key={index}>
+                      <ListItemIcon>
+                        <FiberManualRecord className="color-primary icon-small" />
+                      </ListItemIcon>
+                      <ListItemText>{item}</ListItemText>
+                    </ListItem>
+                  )
+                )}
+                <b> per 30/60 ml in a Amber Bottle</b>
+              </List>
             </Grid>
 
             <Grid item md={5}>
@@ -172,7 +124,6 @@ export default function Page() {
                 elevation={3}
                 sx={{
                   position: "relative",
-                  display: "inline-block",
                   overflow: "hidden",
                   borderRadius: 5,
                   transition: "box-shadow 0.3s ease-in-out",
@@ -186,6 +137,7 @@ export default function Page() {
                   src={`/images/products/${link}.jpg`}
                   alt="Ofloxacin Ornidazole Suspension | Saar Biotech Product"
                   style={{
+                    width: "100%",
                     height: "100%",
                     objectFit: "cover",
                   }}
@@ -204,7 +156,6 @@ export default function Page() {
               borderRadius: 5,
               backgroundColor: "#f0f0f0",
             }}
-            id="description"
           >
             <Typography variant="h6" sx={sectionTitleStyle}>
               DESCRIPTION
@@ -270,6 +221,24 @@ export default function Page() {
               ))}
             </List>
 
+            <Typography variant="h6" sx={sectionTitleStyle}>
+              Indications
+            </Typography>
+            <List dense>
+              <b>Ofloxacin:</b>
+              {[
+                "Trichomoniasis of uro-genital tract and bacterial vaginosis.",
+                "Ornidazole suspension is Used in the treatment and prophylaxis of susceptible anaerobic infections in dental and gastrointestinal surgery.",
+              ].map((item, i) => (
+                <ListItem key={i} sx={listItemStyle}>
+                  <ListItemIcon>
+                    <FiberManualRecord className="color-primary icon-small" />
+                  </ListItemIcon>
+                  <ListItemText>{item}</ListItemText>
+                </ListItem>
+              ))}
+            </List>
+
             {/** Mechanism Section */}
             <Typography variant="h6" sx={sectionTitleStyle}>
               Mechanism
@@ -290,25 +259,8 @@ export default function Page() {
               spp.
             </Typography>
 
-            <Typography variant="h6" sx={sectionTitleStyle}>
-              Action of Antibiotic
-            </Typography>
-            <List dense>
-              {[
-                "Pertaining to the ability to destroy or inhibit other living organisms.",
-                "A substance derived from a mould or bacterium, or produced synthetically, that destroys (bactericidal) or inhibits the growth (bacteriostatic) of other microorganisms and is thus used to treat infections.",
-              ].map((item, i) => (
-                <ListItem key={i} sx={listItemStyle}>
-                  <ListItemIcon>
-                    <FiberManualRecord className="color-primary icon-small" />
-                  </ListItemIcon>
-                  <ListItemText>{item}</ListItemText>
-                </ListItem>
-              ))}
-            </List>
-
             {/** Pharmacokinetics Section */}
-            <Typography variant="h6" sx={sectionTitleStyle} id="interactions">
+            <Typography variant="h6" sx={sectionTitleStyle}>
               Interactions
             </Typography>
             <Typography className="my-3" textAlign="justify">
