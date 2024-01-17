@@ -4,7 +4,7 @@ import React, { useState, useEffect, useCallback, useMemo } from "react";
 import Link from "next/link";
 import styles from "./pagination.module.css";
 import paginationRange from "@/utils/appUtils";
-import { Grid, useMediaQuery } from "@mui/material";
+import { Grid, useMediaQuery, Paper } from "@mui/material";
 import { useTheme } from "@mui/system";
 
 const MakeRows = ({ paginatedList }) => {
@@ -85,7 +85,7 @@ const MakeRows = ({ paginatedList }) => {
                 href={
                   product.link.includes("dmpharma")
                     ? product.link
-                    : "/product/" + (product.link).toLowerCase()
+                    : "/product/" + product.link.toLowerCase()
                 }
               >
                 {product.name}
@@ -135,164 +135,187 @@ const DisplayList = ({ list, initialPage = 1 }) => {
 
   return (
     <>
-      <Grid
-        container
-        item
-        justifyContent="center"
-        alignContent="center"
-        margin={1}
+      <Paper
+        elevation={24}
         sx={{
-          fontSize: { md: 17, sm: 15, xs: 14 },
-          width: { md: "800px", sm: "500", xs: "430px" },
+          backgroundColor: "#f0f0f0",
+          marginTop: 3,
+          justifyContent:"center",
+          alignContent:"center",
+          padding:2
         }}
       >
-        <Grid item xs={1.3} sm={1.3} md={1.3}>
-          {!isSmallerScreen ? (
-            <button
-              className={`btn ${styles.prev} ${
-                currentPage === 1 ? `disabled ${styles.disabled}` : ""
-              }`}
-              onClick={() => handlePageChange(currentPage - 1)}
-              aria-label="Previous"
-
-            >
-              <span aria-hidden="true">&laquo;</span>
-              <span>Prev</span>
-            </button>
-          ) : (
-            <button
-              className={`btn ${styles["button-des"]} ${
-                currentPage === 1 ? `disabled ${styles.disabled}` : ""
-              }`}
-              onClick={() => handlePageChange(currentPage - 1)}
-              aria-label="Previous"
-            >
-              <span>{"<<"}</span>
-            </button>
-          )}
-        </Grid>
-
-        {array.map((value, index) => (
-          <Grid item key={index} xs={1.3} sm={1.3} md={0.7}>
-            {value === "..." || value === "... " ? (
-              <button className={"disabled " + styles["button-des"]}>
-                {value}
+        <Grid
+          container
+          sx={{fontSize: { md: 17, sm: 15, xs: 14 },
+          alignSelf:"center",
+          margin:"auto",
+          width: { md: "800px", sm: "500", xs: "430px" },}}
+        >
+          <Grid item xs={1.3} sm={1.3} md={1.3}>
+            {!isSmallerScreen ? (
+              <button
+                className={`btn ${styles.prev} ${
+                  currentPage === 1 ? `disabled ${styles.disabled}` : ""
+                }`}
+                onClick={() => handlePageChange(currentPage - 1)}
+                aria-label="Previous"
+              >
+                <span aria-hidden="true">&laquo;</span>
+                <span>Prev</span>
               </button>
             ) : (
               <button
-                className={`${styles["button-des"]} ${
-                  currentPage === value ? styles.active : null
-                } btn `}
-                onClick={() => handlePageChange(value)}
+                className={`btn ${styles["button-des"]} ${
+                  currentPage === 1 ? `disabled ${styles.disabled}` : ""
+                }`}
+                onClick={() => handlePageChange(currentPage - 1)}
+                aria-label="Previous"
               >
-                {value}
+                <span>{"<<"}</span>
               </button>
             )}
           </Grid>
-        ))}
 
-        <Grid item xs={1.3} sm={1.3} md={1.3}>
-          {!isSmallerScreen ? (
-            <button
-              className={`btn ${styles.prev} ${
-                currentPage === Math.ceil(all_products.length / limit)
-                  ? `disabled ${styles.disabled}`
-                  : ""
-              }`}
-              onClick={() => handlePageChange(currentPage + 1)}
-              aria-label="Next"
-            >
-              <span>Next</span>
-              <span aria-hidden="true">&raquo;</span>
-            </button>
-          ) : (
-            <button
-              className={`btn ${styles["button-des"]} ${
-                currentPage === Math.ceil(all_products.length / limit)
-                  ? `disabled ${styles.disabled}`
-                  : ""
-              }`}
-              onClick={() => handlePageChange(currentPage + 1)}
-              aria-label="Next"
-            >
-              <span>{">>"}</span>
-            </button>
-          )}
-        </Grid>
+          {array.map((value, index) => (
+            <Grid item key={index} xs={1.3} sm={1.3} md={0.7}>
+              {value === "..." || value === "... " ? (
+                <button className={"disabled " + styles["button-des"]}>
+                  {value}
+                </button>
+              ) : (
+                <button
+                  className={`${styles["button-des"]} ${
+                    currentPage === value ? styles.active : null
+                  } btn `}
+                  onClick={() => handlePageChange(value)}
+                >
+                  {value}
+                </button>
+              )}
+            </Grid>
+          ))}
 
-        <Grid marginTop={1} item className={styles.entries} xs={12} sm={12} md={4} textAlign={"right"}>
-          <span className="p-2">Show</span>
-          <select
-            className="p-1"
-            onChange={(e) => {
-              setLimit(Number(e.target.value));
-            }}
-            value={limit}
-          >
-            <option value="10">10</option>
-            <option value="20">20</option>
-            <option value="30">30</option>
-          </select>
-          <span className="p-2">Products</span>
-        </Grid>
-      </Grid>
-
-      <Grid container sx={{ width: "85vw", overflow: "auto", fontSize:{xs:"3vw", sm:"2vw", md:"17px"}}}>
-        <table className="table table-bordered align-middle">
-          <caption>Products</caption>
-          <thead>
-            <tr>
-              <th
-                className="p-3"
-                style={{
-                  backgroundColor: "#EF3E00",
-                  color: "#fff",
-                  width: "13%",
-                }}
+          <Grid item xs={1.3} sm={1.3} md={1.3}>
+            {!isSmallerScreen ? (
+              <button
+                className={`btn ${styles.prev} ${
+                  currentPage === Math.ceil(all_products.length / limit)
+                    ? `disabled ${styles.disabled}`
+                    : ""
+                }`}
+                onClick={() => handlePageChange(currentPage + 1)}
+                aria-label="Next"
               >
-                MAIN CATEGORY
-              </th>
-              <th
-                className="p-3"
-                style={{
-                  backgroundColor: "#EF3E00",
-                  color: "#fff",
-                  width: "13%",
-                }}
-              >
-                SUB CATEGORY
-              </th>
-              <th
-                className="p-3"
-                style={{ backgroundColor: "#EF3E00", color: "#fff" }}
-              >
-                COMPOSITION
-              </th>
-              <th
-                className="p-3"
-                style={{ backgroundColor: "#EF3E00", color: "#fff" }}
-              >
-                LINK
-              </th>{" "}
-              <th
-                className="p-3"
-                style={{ backgroundColor: "#EF3E00", color: "#fff" }}
-              >
-                PACKING
-              </th>
-            </tr>
-          </thead>
-          <tbody style={{ borderWidth: "1px", borderColor: "#EF3E00" }}>
-            {paginatedList.length ? (
-              <MakeRows paginatedList={paginatedList} />
+                <span>Next</span>
+                <span aria-hidden="true">&raquo;</span>
+              </button>
             ) : (
-              <tr>
-                <td>No Products Found</td>
-              </tr>
+              <button
+                className={`btn ${styles["button-des"]} ${
+                  currentPage === Math.ceil(all_products.length / limit)
+                    ? `disabled ${styles.disabled}`
+                    : ""
+                }`}
+                onClick={() => handlePageChange(currentPage + 1)}
+                aria-label="Next"
+              >
+                <span>{">>"}</span>
+              </button>
             )}
-          </tbody>
-        </table>
-      </Grid>
+          </Grid>
+
+          <Grid
+            marginTop={1}
+            item
+            className={styles.entries}
+            xs={12}
+            sm={12}
+            md={4}
+            textAlign={"right"}
+          >
+            <span className="p-2">Show</span>
+            <select
+              className="p-1"
+              onChange={(e) => {
+                setLimit(Number(e.target.value));
+              }}
+              value={limit}
+            >
+              <option value="10">10</option>
+              <option value="20">20</option>
+              <option value="30">30</option>
+            </select>
+            <span className="p-2">Products</span>
+          </Grid>
+        </Grid>
+
+        <Grid
+          container
+          justifySelf={"center"}
+          margin={"auto"}
+          sx={{
+            width: "85vw",
+            overflow: "auto",
+            fontSize: { xs: "3vw", sm: "2vw", md: "17px" },
+          }}
+        >
+          <table className="table table-bordered">
+            <caption>Products</caption>
+            <thead>
+              <tr>
+                <th
+                  className="p-3"
+                  style={{
+                    backgroundColor: "#EF3E00",
+                    color: "#fff",
+                    width: "13%",
+                  }}
+                >
+                  MAIN CATEGORY
+                </th>
+                <th
+                  className="p-3"
+                  style={{
+                    backgroundColor: "#EF3E00",
+                    color: "#fff",
+                    width: "13%",
+                  }}
+                >
+                  SUB CATEGORY
+                </th>
+                <th
+                  className="p-3"
+                  style={{ backgroundColor: "#EF3E00", color: "#fff" }}
+                >
+                  COMPOSITION
+                </th>
+                <th
+                  className="p-3"
+                  style={{ backgroundColor: "#EF3E00", color: "#fff" }}
+                >
+                  LINK
+                </th>{" "}
+                <th
+                  className="p-3"
+                  style={{ backgroundColor: "#EF3E00", color: "#fff" }}
+                >
+                  PACKING
+                </th>
+              </tr>
+            </thead>
+            <tbody style={{ borderWidth: "1px", borderColor: "#EF3E00" }}>
+              {paginatedList.length ? (
+                <MakeRows paginatedList={paginatedList} />
+              ) : (
+                <tr>
+                  <td>No Products Found</td>
+                </tr>
+              )}
+            </tbody>
+          </table>
+        </Grid>
+      </Paper>
     </>
   );
 };

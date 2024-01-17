@@ -5,7 +5,7 @@ import Banner from "@/components/Banner";
 function Products() {
   return (
     <>
-      <Banner />
+      {/* <Banner /> */}
       <SearchResponse />
     </>
   );

@@ -6,7 +6,6 @@ import Banner from "@/components/Banner";
 function Page({ params }) {
   return (
     <>
-      <Banner />
       <SearchResponse q={decodeURI(params.query)} />
     </>
   );
