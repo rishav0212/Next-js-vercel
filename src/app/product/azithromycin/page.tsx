@@ -184,7 +184,7 @@ export default function Page() {
                   alt="Azithromycin | Saar Biotech Product"
                   style={{
                     width: "100%",
-                    objectFit: "cover",
+                    // objectFit: "cover",
                   }}
                 />
               </Paper>
