@@ -189,7 +189,7 @@ function SearchResponse({ q = "" }) {
           xs={8}
           position={"absolute"}
         >
-          <Grid item xs={12} sm={12}  md={12} justifyContent="center">
+          <Grid item xs={12} sm={12} md={12} justifyContent="center">
             <Typography
               variant="h4"
               className="text-primary"
@@ -206,7 +206,13 @@ function SearchResponse({ q = "" }) {
               PRODUCTS
             </Typography>
           </Grid>
-          <Grid item xs={12} sm={12} md={3} sx={{ fontSize: "1vh",padding:0.5 }}>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={3}
+            sx={{ fontSize: "1vh", padding: 0.5 }}
+          >
             <Autocomplete
               disablePortal
               id="Composition"
@@ -225,7 +231,13 @@ function SearchResponse({ q = "" }) {
               onChange={handleSelection}
             />
           </Grid>
-          <Grid item xs={12} sm={6} md={3}  sx={{ fontSize: "1vh",padding:0.5 }}>
+          <Grid
+            item
+            xs={12}
+            sm={6}
+            md={3}
+            sx={{ fontSize: "1vh", padding: 0.5 }}
+          >
             <Autocomplete
               disablePortal
               id="mainCategory"
@@ -242,7 +254,13 @@ function SearchResponse({ q = "" }) {
               value={mainCategory === "" ? null : mainCategory}
             />
           </Grid>
-          <Grid item xs={12} sm={6} md={3}  sx={{ fontSize: "1vh",padding:0.5 }}>
+          <Grid
+            item
+            xs={12}
+            sm={6}
+            md={3}
+            sx={{ fontSize: "1vh", padding: 0.5 }}
+          >
             <Autocomplete
               disablePortal
               id="subCategory"
@@ -280,13 +298,13 @@ function SearchResponse({ q = "" }) {
 
 const autocompleteStyles = {
   "& .MuiInputBase-root": {
-    backgroundColor: "#ffffff", // White background for contrast
+    backgroundColor: "rgba(255,255,255, 0.8)", // White background for contrast
     borderRadius: "8px",
     border: "1px solid #ddd",
-    boxShadow: "4px 6px 8px rgba(0, 0, 0, 0.6)"
+    boxShadow: "4px 6px 8px rgba(0, 0, 0, 0.6)",
   },
   "& .MuiInputLabel-root": {
-    color: "#555", 
+    color: "#555",
   },
   "& .MuiAutocomplete-inputRoot": {
     borderRadius: "12px",
@@ -298,7 +316,6 @@ const autocompleteStyles = {
   "& .MuiMenuItem-root": {
     "&:hover": {
       backgroundColor: "#f0f0f0",
-
     },
   },
 };

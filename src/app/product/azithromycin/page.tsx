@@ -180,7 +180,7 @@ export default function Page() {
                 }}
               >
                 <img
-                  src="/images/azithromycin.jpg"
+                  src="/images/values.jpg"
                   alt="Azithromycin | Saar Biotech Product"
                   style={{
                     width: "100%",
