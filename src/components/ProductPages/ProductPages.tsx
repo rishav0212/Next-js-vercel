@@ -12,7 +12,7 @@ import { FiberManualRecord } from "@mui/icons-material";
 import info from "@/product_details/info";
 
 export default function ProductPage({ name }) {
-  let productInfo =  info[name];
+  let productInfo =  info[name.toUpperCase()];
 
   return (
     <>
