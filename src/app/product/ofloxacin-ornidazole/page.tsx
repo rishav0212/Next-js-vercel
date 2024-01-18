@@ -183,7 +183,7 @@ export default function Page() {
                 }}
               >
                 <img
-                  src={`/images/multivitamin-oral-spray.jpg`}
+                  src={`/images/ofloxacin-ornidazole.jpg`}
                   alt="Ofloxacin Ornidazole Suspension | Saar Biotech Product"
                   style={{
                     height: "100%",
