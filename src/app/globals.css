@@ -1,21 +1,20 @@
 :root {
-  --primary-color: #EF3E00;
+  --primary-color: #ef3e00;
   --primary-font-family: "Montserrat", sans-serif;
 }
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
 
 .App {
   text-align: center;
@@ -86,11 +85,12 @@ a {
 
 .navbar-links {
   color: #000;
-  transition: .3s;
+  transition: 0.3s;
   font-weight: 600;
   font-size: 16px;
   cursor: pointer;
   border-bottom: 3px solid transparent;
+  text-decoration: none;
 }
 
 .border-bottom-class {
@@ -99,7 +99,7 @@ a {
 
 .navbar-dropdown-links {
   color: #fff;
-  transition: .3s;
+  transition: 0.3s;
   font-weight: 600;
   font-size: 16px;
   cursor: pointer;
@@ -121,7 +121,7 @@ a {
 }
 
 .manufacturing-unit-images {
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .manufacturing-unit-images:hover {
@@ -220,7 +220,6 @@ a {
   color: white !important;
 }
 
-
 /* RHFTextField.css */
 
 .MuiTextField-root {
@@ -245,7 +244,7 @@ a {
 }
 
 .font--size-1125 {
-  font-size: '1.125rem' !important;
+  font-size: "1.125rem" !important;
 }
 
 .stack-contact {
