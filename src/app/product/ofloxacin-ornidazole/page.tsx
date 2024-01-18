@@ -13,31 +13,12 @@ import {
 } from "@mui/material";
 import { FiberManualRecord } from "@mui/icons-material";
 import { Metadata } from "next";
+import * as styles from "@/components/ProductPages/styles.js";
+
 
 export default function Page() {
   const link = "ofloxacin-ornidazole";
 
-  const sectionTitleStyle = {
-    color: "whitesmoke",
-    display: "inline-block",
-    borderRadius: 10,
-    background: `linear-gradient(45deg, #EF3E00 30%, #FF8E53 90%)`,
-    padding: 1.2,
-    boxShadow: "0 4px 6px rgba(0,0,0, 0.8)",
-    marginBottom: 0.5,
-    marginTop: 2,
-    width: "250px",
-    textAlign: "center",
-    "&:hover": {
-      boxShadow: "0 6px 10px rgba(0, 0, 0, 0.9)",
-    },
-  };
-
-  const listItemStyle = {
-    display: "flex",
-    alignItems: "center",
-    // margin: 0,
-  };
 
   return (
     <Grid
@@ -48,38 +29,27 @@ export default function Page() {
       spacing={1}
     >
       <Grid
-        marginTop={2}
         container
         item
-        justifyContent="center"
-        alignContent="center"
         md={8}
         sm={10}
-        xs={11}
+        xs={11}        sx = {styles.pageItemGrid}
+
+
       >
         <Paper
           elevation={8}
-          sx={{
-            width: "100%",
-            padding: 2,
-            borderRadius: 5,
-            backgroundColor: "#f0f0f0",
-          }}
+          sx={styles.upperPaper}
         >
-          <Grid container spacing={2}>
+          <Grid 
+            container
+            spacing={2}
+            justifyContent={"center"}
+            justifyItems={"center"}>
             <Grid item xs={12}>
               <Typography
                 variant="h4"
-                sx={{
-                  color: "#EF3E00",
-                  fontWeight: "bold",
-                  textShadow: "4px 2px 4px rgba(0, 0, 0, 0.3)",
-                  marginBottom: 3,
-                  textAlign: "center",
-                  "&:hover": {
-                    textShadow: "5px 2px 4px rgba(0, 0, 0, 0.4)",
-                  },
-                }}
+                sx={styles.titleStyle}
               >
                 Ofloxacin and Ornidazole suspension
               </Typography>
@@ -88,11 +58,17 @@ export default function Page() {
               <Grid display={"flex"}>
                 <Typography
                   variant="h6"
-                  sx={{ color: "#EF3E00", display: "inline-block" }}
+                  sx={{
+                    color: "#EF3E00",
+                    fontSize: "2.5em",
+                  }}
                 >
                   <b>Indications:-</b>
                 </Typography>
-                <Typography variant="subtitle1" marginLeft={1}>
+                <Typography 
+                  fontSize={"2.5em"}
+                  variant="subtitle1"
+                  marginLeft={1}>
                   Diarrhoea, Dysentery, Pelvic Inflammatory Disease , Gingividis
                   and Peridontis.
                 </Typography>
@@ -101,20 +77,22 @@ export default function Page() {
               <Grid display={"flex"}>
                 <Typography
                   variant="h6"
-                  sx={{ color: "#EF3E00", display: "inline-block" }}
-                >
+                  sx={{
+                    color: "#EF3E00",
+                    fontSize: "2.5em",
+                  }}>
                   <b>Approved Name -</b>
                 </Typography>
-                <Typography variant="h6" marginLeft={1}>
+                <Typography  fontSize={"2.5em"} variant="h6" marginLeft={1}>
                   Ofloxacin Ornidazole Suspension
                 </Typography>
               </Grid>
 
-              <Typography className="my-3">
+              <Typography fontSize={"2.3em"}>
                 <b>Spray Presentation :</b>
               </Typography>
 
-              <Typography variant="body1" marginLeft={5}>
+              <Typography fontSize={"2em"} variant="body1" marginLeft={5}>
                 Ofloxacin 50 mg
                 <br />
                 Ornidazole 125 mg Eq to Azithromycin 100mg/200mg
@@ -125,15 +103,7 @@ export default function Page() {
               <Link sx={{ color: "black" }} href="#description">
                 <Typography
                   variant="body2"
-                  sx={{
-                    display: "-webkit-box",
-                    WebkitBoxOrient: "vertical",
-                    overflow: "hidden",
-                    WebkitLineClamp: 2,
-                    textOverflow: "ellipsis",
-                    marginInline: 2,
-                    marginTop: 2,
-                  }}
+                  sx={styles.readMoreGrid}
                 >
                   <b>Description : </b>Ofloxacin is a quinolone antibiotic used
                   for treating certain kinds of bacterial infections(ear
@@ -147,15 +117,7 @@ export default function Page() {
               <Link sx={{ color: "black" }} href="#interactions">
                 <Typography
                   variant="body2"
-                  sx={{
-                    display: "-webkit-box",
-                    WebkitBoxOrient: "vertical",
-                    overflow: "hidden",
-                    WebkitLineClamp: 2,
-                    textOverflow: "ellipsis",
-                    marginInline: 2,
-                    marginTop: 1,
-                  }}
+                  sx={styles.readMoreGrid}
                 >
                   <b>Interations : </b> This suspension is the combination of
                   Ofloxacin and ornidazole and has unique dual mode of action
@@ -167,27 +129,18 @@ export default function Page() {
               </Link>
             </Grid>
 
-            <Grid item md={5}>
+            <Grid item md={5} sm={7} xs={9} >
               <Paper
                 elevation={3}
-                sx={{
-                  position: "relative",
-                  display: "inline-block",
-                  overflow: "hidden",
-                  borderRadius: 5,
-                  transition: "box-shadow 0.3s ease-in-out",
-                  "&:hover": {
-                    boxShadow: "0 8px 16px rgba(0, 0, 0, 0.6)",
-                    transform: "scale(1.05)",
-                  },
-                }}
+                sx={styles.imgPaper}
               >
                 <img
                   src={`/images/ofloxacin-ornidazole.jpg`}
                   alt="Ofloxacin Ornidazole Suspension | Saar Biotech Product"
                   style={{
+                    // width: "100%",
                     height: "100%",
-                    objectFit: "cover",
+                    objectFit: "contain",
                   }}
                 />
               </Paper>
@@ -198,19 +151,14 @@ export default function Page() {
         <Grid item md={12}>
           <Paper
             elevation={7}
-            sx={{
-              marginTop: 4,
-              padding: 3,
-              borderRadius: 5,
-              backgroundColor: "#f0f0f0",
-            }}
+            sx={styles.lowerPaper}
             id="description"
           >
-            <Typography variant="h6" sx={sectionTitleStyle}>
+            <Typography variant="h6" sx={styles.sectionTitle}>
               DESCRIPTION
             </Typography>
 
-            <Typography className="my-3" textAlign="justify">
+            <Typography fontSize={"1.9em"} textAlign="justify">
               <b>Ofloxacin:</b>
               <br />
               Ofloxacin is a quinolone antibiotic used for treating certain
@@ -239,16 +187,16 @@ export default function Page() {
             </Typography>
 
             {/** Indications Section */}
-            <Typography variant="h6" sx={sectionTitleStyle}>
+            <Typography variant="h6" sx={styles.sectionTitle}>
               Indications
             </Typography>
-            <List dense>
+            <List dense sx = {{fontSize:"1.9em"}}>
               <b>Ofloxacin:</b>
               {[
                 "On therapy for the treatment of patients ofloxacin  suspension help to cure Mild to moderate infection due to susceptible strains of designated microorganisms.",
                 "It is used to treat certain prostate infections and sexually transmitted infections.",
               ].map((item, i) => (
-                <ListItem key={i} sx={listItemStyle}>
+                <ListItem key={i} sx={{}}>
                   <ListItemIcon>
                     <FiberManualRecord className="color-primary icon-small" />
                   </ListItemIcon>
@@ -261,7 +209,7 @@ export default function Page() {
                 "Trichomoniasis of uro-genital tract and bacterial vaginosis.",
                 "Ornidazole suspension is Used in the treatment and prophylaxis of susceptible anaerobic infections in dental and gastrointestinal surgery.",
               ].map((item, i) => (
-                <ListItem key={i} sx={listItemStyle}>
+                <ListItem key={i} sx={{}}>
                   <ListItemIcon>
                     <FiberManualRecord className="color-primary icon-small" />
                   </ListItemIcon>
@@ -271,10 +219,10 @@ export default function Page() {
             </List>
 
             {/** Mechanism Section */}
-            <Typography variant="h6" sx={sectionTitleStyle}>
+            <Typography variant="h6" sx={styles.sectionTitle}>
               Mechanism
             </Typography>
-            <Typography className="my-3" textAlign="justify">
+            <Typography fontSize={"1.9em"} textAlign="justify">
               <b>Ornidazole:</b>
               <br />
               The antimicrobial activity of ornidazole is due to the reduction
@@ -290,15 +238,15 @@ export default function Page() {
               spp.
             </Typography>
 
-            <Typography variant="h6" sx={sectionTitleStyle}>
+            <Typography variant="h6" sx={styles.sectionTitle}>
               Action of Antibiotic
             </Typography>
-            <List dense>
+            <List dense sx = {{fontSize:"1.9em"}}>
               {[
                 "Pertaining to the ability to destroy or inhibit other living organisms.",
                 "A substance derived from a mould or bacterium, or produced synthetically, that destroys (bactericidal) or inhibits the growth (bacteriostatic) of other microorganisms and is thus used to treat infections.",
               ].map((item, i) => (
-                <ListItem key={i} sx={listItemStyle}>
+                <ListItem key={i} sx={{}}>
                   <ListItemIcon>
                     <FiberManualRecord className="color-primary icon-small" />
                   </ListItemIcon>
@@ -308,10 +256,10 @@ export default function Page() {
             </List>
 
             {/** Pharmacokinetics Section */}
-            <Typography variant="h6" sx={sectionTitleStyle} id="interactions">
+            <Typography variant="h6" sx={styles.sectionTitle} id="interactions">
               Interactions
             </Typography>
-            <Typography className="my-3" textAlign="justify">
+            <Typography fontSize={"1.9em"} textAlign="justify">
               Before taking this medicine tell the doctor about any medical
               problems an allergies that child has now or has had.
               <br />
@@ -327,10 +275,10 @@ export default function Page() {
             </Typography>
 
             {/** Side Effects Section */}
-            <Typography variant="h6" sx={sectionTitleStyle}>
+            <Typography variant="h6" sx={styles.sectionTitle}>
               Side Effects
             </Typography>
-            <List dense>
+            <List dense sx = {{fontSize:"1.9em"}}>
               <b>Common side effects include:</b>
               {[
                 "Headache are the commonly reported side effects.",
@@ -338,7 +286,7 @@ export default function Page() {
                 "Abdominal cramps are the most common.",
                 "Occasionally diarrhea an dryness of mouth.",
               ].map((item, i) => (
-                <ListItem key={i} sx={listItemStyle}>
+                <ListItem key={i} sx={{}}>
                   <ListItemIcon>✓</ListItemIcon>
                   <ListItemText>{item}</ListItemText>
                 </ListItem>
@@ -346,26 +294,26 @@ export default function Page() {
             </List>
 
             {/** Contraindication Section */}
-            <Typography variant="h6" sx={sectionTitleStyle}>
+            <Typography variant="h6" sx={styles.sectionTitle}>
               Contraindication
             </Typography>
-            <Typography className="my-3" textAlign="justify">
+            <Typography fontSize={"1.9em"} textAlign="justify">
               Neurological disorders, Blood dyscrasiae, Caution when used during
               pregnancy, Caution when used during lactation.
             </Typography>
 
-            <Typography variant="h6" sx={sectionTitleStyle}>
+            <Typography variant="h6" sx={styles.sectionTitle}>
               Precautions
             </Typography>
-            <Typography className="my-3" textAlign="justify">
+            <Typography fontSize={"1.9em"} textAlign="justify">
               Concomitant use with alcohol should be avoided.
             </Typography>
 
             {/** Conclusion Section */}
-            <Typography variant="h6" sx={sectionTitleStyle}>
+            <Typography variant="h6" sx={styles.sectionTitle}>
               Conclusion
             </Typography>
-            <Typography className="my-3" textAlign="justify">
+            <Typography fontSize={"1.9em"} textAlign="justify">
               {" "}
               From the above discussion it can be conclude that this Ofloxacin &
               Ornidazole suspension could improve the quality of life of

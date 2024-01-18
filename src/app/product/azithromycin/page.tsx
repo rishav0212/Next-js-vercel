@@ -13,6 +13,7 @@ import {
 } from "@mui/material";
 import { FiberManualRecord } from "@mui/icons-material";
 import { Metadata } from "next";
+import * as styles from "@/components/ProductPages/styles.js";
 
 export default function Page() {
   const link = "azithromycin";
@@ -20,31 +21,9 @@ export default function Page() {
   Azithromycin is macrolide antibiotic used to treat or prevent
   certain bacterial infections, most often those causing middle ear
   infections, strep throat, pneumonia, typhoid, bronchitis.
-  Azithromycin Superior activity against gram+ve,Gram-ve organism. It
+  Azithromycin Superior activity against gram+ve, gram-ve organism. It
   prevents bacteria from growing by interfering with their protein
   synthesis.`;
-
-  const sectionTitleStyle = {
-    color: "whitesmoke",
-    display: "inline-block",
-    borderRadius: 10,
-    background: `linear-gradient(45deg, #EF3E00 30%, #FF8E53 90%)`,
-    padding: 1.2,
-    boxShadow: "0 4px 6px rgba(0,0,0, 0.8)",
-    marginBottom: 0.5,
-    marginTop: 2,
-    width: "250px",
-    textAlign: "center",
-    "&:hover": {
-      boxShadow: "0 6px 10px rgba(0, 0, 0, 0.9)",
-    },
-  };
-
-  const listItemStyle = {
-    display: "flex",
-    alignItems: "center",
-    // margin: 0,
-  };
 
   return (
     <Grid
@@ -55,51 +34,41 @@ export default function Page() {
       spacing={1}
     >
       <Grid
-        marginTop={2}
         container
         item
-        justifyContent="center"
-        alignContent="center"
         md={8}
         sm={10}
         xs={11}
+        sx = {styles.pageItemGrid}
       >
-        <Paper
-          elevation={8}
-          sx={{
-            width: "100%",
-            padding: 2,
-            borderRadius: 5,
-            backgroundColor: "#f0f0f0",
-          }}
-        >
-          <Grid container spacing={2}>
+        <Paper elevation={8} sx={styles.upperPaper}>
+          <Grid
+            container
+            spacing={2}
+            justifyContent={"center"}
+            justifyItems={"center"}
+          >
             <Grid item xs={12}>
-              <Typography
-                variant="h4"
-                sx={{
-                  color: "#EF3E00",
-                  fontWeight: "bold",
-                  textShadow: "4px 2px 4px rgba(0, 0, 0, 0.3)",
-                  marginBottom: 3,
-                  textAlign: "center",
-                  "&:hover": {
-                    textShadow: "5px 2px 4px rgba(0, 0, 0, 0.4)",
-                  },
-                }}
-              >
+              <Typography variant="h4" sx={styles.titleStyle}>
                 AZITHROMYCIN
               </Typography>
             </Grid>
-            <Grid item md={7} sm={12} xs={12}>
+            <Grid container item md={7} sm={12} xs={12}>
               <Grid display={"flex"}>
                 <Typography
                   variant="h6"
-                  sx={{ color: "#EF3E00", display: "inline-block" }}
+                  sx={{
+                    color: "#EF3E00",
+                    fontSize: "2.5em",
+                  }}
                 >
                   <b>Indications:-</b>
                 </Typography>
-                <Typography variant="subtitle1" marginLeft={1}>
+                <Typography
+                  fontSize={"2.5em"}
+                  variant="subtitle1"
+                  marginLeft={1}
+                >
                   Antibiotic / Antibacterial
                 </Typography>
               </Grid>
@@ -107,37 +76,31 @@ export default function Page() {
               <Grid display={"flex"}>
                 <Typography
                   variant="h6"
-                  sx={{ color: "#EF3E00", display: "inline-block" }}
+                  sx={{
+                    color: "#EF3E00",
+                    fontSize: "2.5em",
+                  }}
                 >
-                  <b>Approved Name -</b>
+                  <b>Approved Name-</b>
                 </Typography>
-                <Typography variant="h6" marginLeft={1}>
+                <Typography fontSize={"2.5em"} variant="h6" marginLeft={1}>
                   Azithromycin Dihydrate
                 </Typography>
               </Grid>
 
-              <Typography className="my-1" variant="h6">
-                <b>Spray Presentation </b>
-              </Typography>
+              <Grid>
+                <Typography fontSize={"2.3em"} variant="h6">
+                  <b>Spray Presentation </b>
+                </Typography>
 
-              <Typography variant="body1" marginLeft={5}>
-                Each 5 ml contains :<br />
-                Eq to Azithromycin 100mg/200mg
-              </Typography>
+                <Typography fontSize={"2em"} variant="body1" marginLeft={5}>
+                  Each 5 ml contains :<br />
+                  Eq to Azithromycin 100mg/200mg
+                </Typography>
+              </Grid>
 
               <Link sx={{ color: "black" }} href="#description">
-                <Typography
-                  variant="body2"
-                  sx={{
-                    display: "-webkit-box",
-                    WebkitBoxOrient: "vertical",
-                    overflow: "hidden",
-                    WebkitLineClamp: 2,
-                    textOverflow: "ellipsis",
-                    marginInline: 2,
-                    marginTop: 2,
-                  }}
-                >
+                <Typography variant="body2" sx={styles.readMoreGrid}>
                   <b>Description : </b> Azithromycin is macrolide antibiotic
                   used to treat or prevent certain bacterial infections, most
                   often those causing middle ear . . .
@@ -145,19 +108,7 @@ export default function Page() {
               </Link>
 
               <Link sx={{ color: "black" }} href="#pharmacokinetics">
-                <Typography
-                  variant="body2"
-                  margin={2}
-                  sx={{
-                    display: "-webkit-box",
-                    WebkitBoxOrient: "vertical",
-                    overflow: "hidden",
-                    WebkitLineClamp: 2,
-                    textOverflow: "ellipsis",
-                    marginInline: 2,
-                    marginTop: 1,
-                  }}
-                >
+                <Typography variant="body2" margin={2} sx={styles.readMoreGrid}>
                   <b>Pharmacokinetics : </b> Absorption:Following oral
                   administration in humans, azithromycin is widely distributed
                   throughout the body bioavailability is approximate. . .
@@ -165,26 +116,15 @@ export default function Page() {
               </Link>
             </Grid>
 
-            <Grid item md={5}>
-              <Paper
-                elevation={3}
-                sx={{
-                  position: "relative",
-                  overflow: "hidden",
-                  borderRadius: 5,
-                  transition: "box-shadow 0.3s ease-in-out",
-                  "&:hover": {
-                    boxShadow: "0 8px 16px rgba(0, 0, 0, 0.6)",
-                    transform: "scale(1.05)",
-                  },
-                }}
-              >
+            <Grid item md={5} sm={7} xs={9}>
+              <Paper elevation={3} sx={styles.imgPaper}>
                 <img
-                  src="/images/values.jpg"
+                  src="/images/azithromycin.jpg"
                   alt="Azithromycin | Saar Biotech Product"
                   style={{
                     width: "100%",
-                    objectFit: "cover",
+                    height: "100%",
+                    objectFit: "contain",
                   }}
                 />
               </Paper>
@@ -193,26 +133,17 @@ export default function Page() {
         </Paper>
 
         <Grid item md={12}>
-          <Paper
-            elevation={7}
-            sx={{
-              marginTop: 4,
-              padding: 3,
-              borderRadius: 5,
-              backgroundColor: "#f0f0f0",
-            }}
-            id="description"
-          >
-            <Typography variant="h6" sx={sectionTitleStyle}>
+          <Paper elevation={7} sx={styles.lowerPaper} id="description">
+            <Typography variant="h6" sx={styles.sectionTitle}>
               DESCRIPTION
             </Typography>
 
-            <Typography className="my-3" textAlign="justify">
+            <Typography fontSize={"1.9em"} textAlign="justify">
               {description}
             </Typography>
 
             {/** Indications Section */}
-            <Typography variant="h6" sx={sectionTitleStyle}>
+            <Typography variant="h6" sx={styles.sectionTitle}>
               Indications
             </Typography>
             <List dense>
@@ -225,7 +156,7 @@ export default function Page() {
                 "Skin or Soft Tissue Infection",
                 "Gonococcal Infection - Uncomplicated",
               ].map((item, i) => (
-                <ListItem key={i} sx={listItemStyle}>
+                <ListItem key={i} sx={{}}>
                   <ListItemIcon>
                     <FiberManualRecord className="color-primary icon-small" />
                   </ListItemIcon>
@@ -235,10 +166,10 @@ export default function Page() {
             </List>
 
             {/** Mechanism Section */}
-            <Typography variant="h6" sx={sectionTitleStyle}>
+            <Typography variant="h6" sx={styles.sectionTitle}>
               Mechanism
             </Typography>
-            <Typography className="my-3" textAlign="justify">
+            <Typography fontSize={"1.9em"} textAlign="justify">
               Azithromycin binds to the 50S subunit of the 70S bacterial
               ribosomes, inhibiting RNA-dependent protein synthesis in bacterial
               cells.
@@ -247,19 +178,19 @@ export default function Page() {
             {/** Pharmacokinetics Section */}
             <Typography
               variant="h6"
-              sx={sectionTitleStyle}
+              sx={styles.sectionTitle}
               id="pharmacokinetics"
             >
               Pharmacokinetics
             </Typography>
-            <Typography className="my-3" textAlign="justify">
-              <b> Absorption:</b>
+            <Typography textAlign="justify" fontSize={"1.9em"}>
+              <b> Absorption: </b>
               Following oral administration in humans, azithromycin is widely
               distributed throughout the body bioavailability is approximately
               37%. The time taken to peak plasma levels is 2-3 hours.
               <br />
               <br />
-              <b>Distribution:</b>
+              <b>Distribution: </b>
               Pharmacokinetic studies in humans have shown markedly higher
               azithromycin levels in tissue than in plasma (up to 50 times the
               maximum observed concentration in plasma) indicating that the drug
@@ -268,7 +199,7 @@ export default function Page() {
               after a single dose.
               <br />
               <br />
-              <b>Elimination:</b>
+              <b>Elimination: </b>
               Plasma terminal elimination half-life closely reflects the tissue
               depletion half-life of 2 to 4 days. Approximately 12% of an
               intravenously administered dose is excreted in the urine over 3
@@ -284,13 +215,13 @@ export default function Page() {
             </Typography>
 
             {/** Side Effects Section */}
-            <Typography variant="h6" sx={sectionTitleStyle}>
+            <Typography variant="h6" sx={styles.sectionTitle}>
               Side Effects
             </Typography>
             <List dense>
-              <b>Common side effects include:</b>
+              <b style={{ fontSize: "1.9em" }}>Common side effects include:</b>
               {["Abdominal pain", "Rash", "Headache"].map((item, i) => (
-                <ListItem key={i} sx={listItemStyle}>
+                <ListItem key={i} sx={{}}>
                   <ListItemIcon>✓</ListItemIcon>
                   <ListItemText>{item}</ListItemText>
                 </ListItem>
@@ -298,20 +229,20 @@ export default function Page() {
             </List>
 
             {/** Contraindication Section */}
-            <Typography variant="h6" sx={sectionTitleStyle}>
+            <Typography variant="h6" sx={styles.sectionTitle}>
               Contraindication
             </Typography>
-            <Typography className="my-3" textAlign="justify">
+            <Typography fontSize={"1.9em"} textAlign="justify">
               The use of azithromycin is contraindicated in patients with
               hypersensitivity to azithromycin, erythromycin, or any macrolide
               or ketolide antibiotic.
             </Typography>
 
             {/** Conclusion Section */}
-            <Typography variant="h6" sx={sectionTitleStyle}>
+            <Typography variant="h6" sx={styles.sectionTitle}>
               Conclusion
             </Typography>
-            <Typography className="my-3" textAlign="justify">
+            <Typography fontSize={"1.9em"} textAlign="justify">
               <b>
                 From the above discussion, it can be concluded that Azithromycin
                 used to treat Infections of the middle ear, Upper Respiratory
