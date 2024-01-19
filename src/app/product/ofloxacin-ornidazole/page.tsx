@@ -1,5 +1,4 @@
 import {
-  Container,
   List,
   ListItem,
   ListItemIcon,
@@ -7,18 +6,14 @@ import {
   Toolbar,
   Typography,
   Grid,
-  Paper,
-  Box,
-  Link,
+  Paper, Link
 } from "@mui/material";
 import { FiberManualRecord } from "@mui/icons-material";
 import { Metadata } from "next";
 import * as styles from "@/components/ProductPages/styles.js";
 
-
 export default function Page() {
   const link = "ofloxacin-ornidazole";
-
 
   return (
     <Grid
@@ -28,29 +23,16 @@ export default function Page() {
       alignContent="center"
       spacing={1}
     >
-      <Grid
-        container
-        item
-        md={8}
-        sm={10}
-        xs={11}        sx = {styles.pageItemGrid}
-
-
-      >
-        <Paper
-          elevation={8}
-          sx={styles.upperPaper}
-        >
-          <Grid 
+      <Grid container item md={8} sm={10} xs={11} sx={styles.pageItemGrid}>
+        <Paper elevation={8} sx={styles.upperPaper}>
+          <Grid
             container
             spacing={2}
             justifyContent={"center"}
-            justifyItems={"center"}>
+            justifyItems={"center"}
+          >
             <Grid item xs={12}>
-              <Typography
-                variant="h4"
-                sx={styles.titleStyle}
-              >
+              <Typography variant="h4" sx={styles.titleStyle}>
                 Ofloxacin and Ornidazole suspension
               </Typography>
             </Grid>
@@ -65,10 +47,11 @@ export default function Page() {
                 >
                   <b>Indications:-</b>
                 </Typography>
-                <Typography 
+                <Typography
                   fontSize={"2.5em"}
                   variant="subtitle1"
-                  marginLeft={1}>
+                  marginLeft={1}
+                >
                   Diarrhoea, Dysentery, Pelvic Inflammatory Disease , Gingividis
                   and Peridontis.
                 </Typography>
@@ -80,10 +63,11 @@ export default function Page() {
                   sx={{
                     color: "#EF3E00",
                     fontSize: "2.5em",
-                  }}>
+                  }}
+                >
                   <b>Approved Name -</b>
                 </Typography>
-                <Typography  fontSize={"2.5em"} variant="h6" marginLeft={1}>
+                <Typography fontSize={"2.5em"} variant="h6" marginLeft={1}>
                   Ofloxacin Ornidazole Suspension
                 </Typography>
               </Grid>
@@ -101,10 +85,7 @@ export default function Page() {
               </Typography>
 
               <Link sx={{ color: "black" }} href="#description">
-                <Typography
-                  variant="body2"
-                  sx={styles.readMoreGrid}
-                >
+                <Typography variant="body2" sx={styles.readMoreGrid}>
                   <b>Description : </b>Ofloxacin is a quinolone antibiotic used
                   for treating certain kinds of bacterial infections(ear
                   infections, urinary tract infections) and also useful in
@@ -115,10 +96,7 @@ export default function Page() {
               </Link>
 
               <Link sx={{ color: "black" }} href="#interactions">
-                <Typography
-                  variant="body2"
-                  sx={styles.readMoreGrid}
-                >
+                <Typography variant="body2" sx={styles.readMoreGrid}>
                   <b>Interations : </b> This suspension is the combination of
                   Ofloxacin and ornidazole and has unique dual mode of action
                   i.e., in the combination, ofloxacin may increase the
@@ -129,13 +107,10 @@ export default function Page() {
               </Link>
             </Grid>
 
-            <Grid item md={5} sm={7} xs={9} >
-              <Paper
-                elevation={3}
-                sx={styles.imgPaper}
-              >
+            <Grid item md={5} sm={7} xs={9}>
+              <Paper elevation={3} sx={styles.imgPaper}>
                 <img
-                  src={`/images/ofloxacin-ornidazole.jpg`}
+                  src={`/images/ofloxacin-ornidazole1.jpg`}
                   alt="Ofloxacin Ornidazole Suspension | Saar Biotech Product"
                   style={{
                     // width: "100%",
@@ -149,11 +124,7 @@ export default function Page() {
         </Paper>
 
         <Grid item md={12}>
-          <Paper
-            elevation={7}
-            sx={styles.lowerPaper}
-            id="description"
-          >
+          <Paper elevation={7} sx={styles.lowerPaper} id="description">
             <Typography variant="h6" sx={styles.sectionTitle}>
               DESCRIPTION
             </Typography>
@@ -190,17 +161,20 @@ export default function Page() {
             <Typography variant="h6" sx={styles.sectionTitle}>
               Indications
             </Typography>
-            <List dense sx = {{fontSize:"1.9em"}}>
+            <List dense sx={{ fontSize: "1.9em" }}>
               <b>Ofloxacin:</b>
               {[
                 "On therapy for the treatment of patients ofloxacin  suspension help to cure Mild to moderate infection due to susceptible strains of designated microorganisms.",
                 "It is used to treat certain prostate infections and sexually transmitted infections.",
               ].map((item, i) => (
-                <ListItem key={i} >
+                <ListItem key={i}>
                   <ListItemIcon>
                     <FiberManualRecord className="color-primary icon-small" />
                   </ListItemIcon>
-                  <ListItemText primary={item} primaryTypographyProps={{fontSize:"1em"}}/>
+                  <ListItemText
+                    primary={item}
+                    primaryTypographyProps={{ fontSize: "1em" }}
+                  />
                 </ListItem>
               ))}
 
@@ -209,11 +183,13 @@ export default function Page() {
                 "Trichomoniasis of uro-genital tract and bacterial vaginosis.",
                 "Ornidazole suspension is Used in the treatment and prophylaxis of susceptible anaerobic infections in dental and gastrointestinal surgery.",
               ].map((item, i) => (
-                <ListItem key={i} >
+                <ListItem key={i}>
                   <ListItemIcon>
                     <FiberManualRecord className="color-primary icon-small" />
                   </ListItemIcon>
-                  <ListItemText primaryTypographyProps={{fontSize:"1em"}}>{item}</ListItemText>
+                  <ListItemText primaryTypographyProps={{ fontSize: "1em" }}>
+                    {item}
+                  </ListItemText>
                 </ListItem>
               ))}
             </List>
@@ -241,7 +217,7 @@ export default function Page() {
             <Typography variant="h6" sx={styles.sectionTitle}>
               Action of Antibiotic
             </Typography>
-            <List dense sx = {{fontSize:"1.9em"}}>
+            <List dense sx={{ fontSize: "1.9em" }}>
               {[
                 "Pertaining to the ability to destroy or inhibit other living organisms.",
                 "A substance derived from a mould or bacterium, or produced synthetically, that destroys (bactericidal) or inhibits the growth (bacteriostatic) of other microorganisms and is thus used to treat infections.",
@@ -250,7 +226,9 @@ export default function Page() {
                   <ListItemIcon>
                     <FiberManualRecord className="color-primary icon-small" />
                   </ListItemIcon>
-                  <ListItemText primaryTypographyProps={{fontSize:"1em"}}>{item}</ListItemText>
+                  <ListItemText primaryTypographyProps={{ fontSize: "1em" }}>
+                    {item}
+                  </ListItemText>
                 </ListItem>
               ))}
             </List>
@@ -278,7 +256,7 @@ export default function Page() {
             <Typography variant="h6" sx={styles.sectionTitle}>
               Side Effects
             </Typography>
-            <List dense sx = {{fontSize:"1.9em"}}>
+            <List dense sx={{ fontSize: "1.9em" }}>
               <b>Common side effects include:</b>
               {[
                 "Headache are the commonly reported side effects.",
@@ -288,7 +266,9 @@ export default function Page() {
               ].map((item, i) => (
                 <ListItem key={i} sx={{}}>
                   <ListItemIcon>✓</ListItemIcon>
-                  <ListItemText primaryTypographyProps={{fontSize:"1em"}}>{item}</ListItemText>
+                  <ListItemText primaryTypographyProps={{ fontSize: "1em" }}>
+                    {item}
+                  </ListItemText>
                 </ListItem>
               ))}
             </List>

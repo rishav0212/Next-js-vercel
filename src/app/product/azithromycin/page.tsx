@@ -146,7 +146,7 @@ export default function Page() {
             <Typography variant="h6" sx={styles.sectionTitle}>
               Indications
             </Typography>
-            <List dense>
+            <List dense sx= {{fontSize:"1.9em"}}>
               {[
                 "Otitis Media",
                 "Upper Respiratory Tract Infection",
@@ -218,8 +218,8 @@ export default function Page() {
             <Typography variant="h6" sx={styles.sectionTitle}>
               Side Effects
             </Typography>
-            <List dense>
-              <b style={{ fontSize: "1.9em" }}>Common side effects include:</b>
+            <List dense sx= {{fontSize:"1.9em"}}>
+              <b>Common side effects include:</b>
               {["Abdominal pain", "Rash", "Headache"].map((item, i) => (
                 <ListItem key={i} sx={{}}>
                   <ListItemIcon>✓</ListItemIcon>

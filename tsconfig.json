@@ -48,7 +48,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/[name]/page.tsx", "src/components/ProductPages/ProductPages.tsx"  ],
+, "src/app/product/[name]/page.tsx", "src/components/ProductPages/ProductPages.tsx"  ],
   "exclude": [
     "node_modules"
   ]

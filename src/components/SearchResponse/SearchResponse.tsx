@@ -194,8 +194,9 @@ function SearchResponse({ q = "" }) {
               variant="h4"
               className="text-primary"
               sx={{
+                color:"#EF3E00",
                 fontWeight: "bold",
-                textShadow: "2px 4px 3px rgba(0, 0, 0, 0.3)",
+                textShadow: " 2px 0 #2c3e50, -2px 0 #2c3e50, 0 2px #2c3e50, 0 -2px #2c3e50, 1px 1px #2c3e50, -1px -1px #2c3e50, 1px -1px #2c3e50, -1px 1px #2c3e50;",
                 marginBottom: 4,
                 textAlign: "center",
                 "&:hover": {
@@ -298,7 +299,7 @@ function SearchResponse({ q = "" }) {
 
 const autocompleteStyles = {
   "& .MuiInputBase-root": {
-    backgroundColor: "rgba(255,255,255, 0.8)", // White background for contrast
+    backgroundColor: "rgba(255,255,255, 1)", // White background for contrast
     borderRadius: "8px",
     border: "1px solid #ddd",
     boxShadow: "4px 6px 8px rgba(0, 0, 0, 0.6)",

@@ -139,23 +139,23 @@ const DisplayList = ({ list, initialPage = 1 }) => {
         elevation={24}
         sx={{
           backgroundColor: "#f0f0f0",
-          marginTop: 3,
-          justifyContent:"center",
-          alignContent:"center",
-          padding:2
+          marginTop: 1,
+          justifyContent: "center",
+          alignContent: "center",
+          padding: 2,
+          fontSize: "calc(0.5vh+0.35vw)",
         }}
       >
         <Grid
           container
-          sx={{fontSize: { md: 17, sm: 15, xs: 14 },
-          alignSelf:"center",
-          margin:"auto",
-          width: { md: "800px", sm: "500", xs: "430px" },}}
+          spacing={"0.3vh"}
+          justifyContent={"center"}
+          alignContent={"center"}
         >
-          <Grid item xs={1.3} sm={1.3} md={1.3}>
+          <Grid item>
             {!isSmallerScreen ? (
               <button
-                className={`btn ${styles.prev} ${
+                className={`${styles.prev} ${
                   currentPage === 1 ? `disabled ${styles.disabled}` : ""
                 }`}
                 onClick={() => handlePageChange(currentPage - 1)}
@@ -166,7 +166,7 @@ const DisplayList = ({ list, initialPage = 1 }) => {
               </button>
             ) : (
               <button
-                className={`btn ${styles["button-des"]} ${
+                className={` ${styles["button-des"]} ${
                   currentPage === 1 ? `disabled ${styles.disabled}` : ""
                 }`}
                 onClick={() => handlePageChange(currentPage - 1)}
@@ -178,7 +178,7 @@ const DisplayList = ({ list, initialPage = 1 }) => {
           </Grid>
 
           {array.map((value, index) => (
-            <Grid item key={index} xs={1.3} sm={1.3} md={0.7}>
+            <Grid item key={index}>
               {value === "..." || value === "... " ? (
                 <button className={"disabled " + styles["button-des"]}>
                   {value}
@@ -187,7 +187,7 @@ const DisplayList = ({ list, initialPage = 1 }) => {
                 <button
                   className={`${styles["button-des"]} ${
                     currentPage === value ? styles.active : null
-                  } btn `}
+                  } `}
                   onClick={() => handlePageChange(value)}
                 >
                   {value}
@@ -196,10 +196,10 @@ const DisplayList = ({ list, initialPage = 1 }) => {
             </Grid>
           ))}
 
-          <Grid item xs={1.3} sm={1.3} md={1.3}>
+          <Grid item>
             {!isSmallerScreen ? (
               <button
-                className={`btn ${styles.prev} ${
+                className={` ${styles.prev} ${
                   currentPage === Math.ceil(all_products.length / limit)
                     ? `disabled ${styles.disabled}`
                     : ""
@@ -212,7 +212,7 @@ const DisplayList = ({ list, initialPage = 1 }) => {
               </button>
             ) : (
               <button
-                className={`btn ${styles["button-des"]} ${
+                className={` ${styles["button-des"]} ${
                   currentPage === Math.ceil(all_products.length / limit)
                     ? `disabled ${styles.disabled}`
                     : ""
@@ -225,15 +225,7 @@ const DisplayList = ({ list, initialPage = 1 }) => {
             )}
           </Grid>
 
-          <Grid
-            marginTop={1}
-            item
-            className={styles.entries}
-            xs={12}
-            sm={12}
-            md={4}
-            textAlign={"right"}
-          >
+          <Grid item md={5} sm={4.5} xs={11} marginY={1} className={styles.entries} textAlign={"right"} alignSelf={"center"} justifyContent={"right"}>
             <span className="p-2">Show</span>
             <select
               className="p-1"
@@ -257,19 +249,23 @@ const DisplayList = ({ list, initialPage = 1 }) => {
           sx={{
             width: "85vw",
             overflow: "auto",
-            fontSize: { xs: "3vw", sm: "2vw", md: "17px" },
           }}
+
         >
-          <table className="table table-bordered">
+          <table className="table table-bordered" style={{ borderRadius: "10px", overflow: "hidden" }}>
             <caption>Products</caption>
             <thead>
-              <tr>
+              <tr style={{
+                    boxShadow: "0px 2px 10px rgba(239, 62, 0, 0.3)",
+
+              }}>
                 <th
                   className="p-3"
                   style={{
                     backgroundColor: "#EF3E00",
                     color: "#fff",
                     width: "13%",
+
                   }}
                 >
                   MAIN CATEGORY
