@@ -160,7 +160,7 @@ export default function Page() {
                   <ListItemIcon>
                     <FiberManualRecord className="color-primary icon-small" />
                   </ListItemIcon>
-                  <ListItemText>{item}</ListItemText>
+                  <ListItemText primaryTypographyProps={{fontSize:"1em"}}>{item}</ListItemText>
                 </ListItem>
               ))}
             </List>
@@ -223,7 +223,7 @@ export default function Page() {
               {["Abdominal pain", "Rash", "Headache"].map((item, i) => (
                 <ListItem key={i} sx={{}}>
                   <ListItemIcon>✓</ListItemIcon>
-                  <ListItemText>{item}</ListItemText>
+                  <ListItemText primaryTypographyProps={{fontSize:"1em"}}>{item}</ListItemText>
                 </ListItem>
               ))}
             </List>

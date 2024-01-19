@@ -196,11 +196,11 @@ export default function Page() {
                 "On therapy for the treatment of patients ofloxacin  suspension help to cure Mild to moderate infection due to susceptible strains of designated microorganisms.",
                 "It is used to treat certain prostate infections and sexually transmitted infections.",
               ].map((item, i) => (
-                <ListItem key={i} sx={{}}>
+                <ListItem key={i} >
                   <ListItemIcon>
                     <FiberManualRecord className="color-primary icon-small" />
                   </ListItemIcon>
-                  <ListItemText>{item}</ListItemText>
+                  <ListItemText primary={item} primaryTypographyProps={{fontSize:"1em"}}/>
                 </ListItem>
               ))}
 
@@ -209,11 +209,11 @@ export default function Page() {
                 "Trichomoniasis of uro-genital tract and bacterial vaginosis.",
                 "Ornidazole suspension is Used in the treatment and prophylaxis of susceptible anaerobic infections in dental and gastrointestinal surgery.",
               ].map((item, i) => (
-                <ListItem key={i} sx={{}}>
+                <ListItem key={i} >
                   <ListItemIcon>
                     <FiberManualRecord className="color-primary icon-small" />
                   </ListItemIcon>
-                  <ListItemText>{item}</ListItemText>
+                  <ListItemText primaryTypographyProps={{fontSize:"1em"}}>{item}</ListItemText>
                 </ListItem>
               ))}
             </List>
@@ -250,7 +250,7 @@ export default function Page() {
                   <ListItemIcon>
                     <FiberManualRecord className="color-primary icon-small" />
                   </ListItemIcon>
-                  <ListItemText>{item}</ListItemText>
+                  <ListItemText primaryTypographyProps={{fontSize:"1em"}}>{item}</ListItemText>
                 </ListItem>
               ))}
             </List>
@@ -288,7 +288,7 @@ export default function Page() {
               ].map((item, i) => (
                 <ListItem key={i} sx={{}}>
                   <ListItemIcon>✓</ListItemIcon>
-                  <ListItemText>{item}</ListItemText>
+                  <ListItemText primaryTypographyProps={{fontSize:"1em"}}>{item}</ListItemText>
                 </ListItem>
               ))}
             </List>
