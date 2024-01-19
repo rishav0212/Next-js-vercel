@@ -119,7 +119,7 @@ export default function Page() {
             <Grid item md={5} sm={7} xs={9}>
               <Paper elevation={3} sx={styles.imgPaper}>
                 <img
-                  src="/images/azithromycin.jpg"
+                  src="/images/azithromycin1.jpg"
                   alt="Azithromycin | Saar Biotech Product"
                   style={{
                     width: "100%",
