@@ -1,4 +1,3 @@
-
 import {
   Container,
   List,
@@ -10,110 +9,146 @@ import {
   Grid,
   Paper,
   Box,
+  Link,
 } from "@mui/material";
 import { FiberManualRecord } from "@mui/icons-material";
 import { Metadata } from "next";
+import * as styles from "@/components/ProductPages/styles.js";
 
-export default function IronSpray() {
+export default function Page() {
   const link = "azithromycin";
   const description = `
   Azithromycin is macrolide antibiotic used to treat or prevent
   certain bacterial infections, most often those causing middle ear
   infections, strep throat, pneumonia, typhoid, bronchitis.
-  Azithromycin Superior activity against gram+ve,Gram-ve organism. It
+  Azithromycin Superior activity against gram+ve, gram-ve organism. It
   prevents bacteria from growing by interfering with their protein
   synthesis.`;
 
   return (
     <Grid
       container
-      marginTop={4}
+      marginTop={3}
       justifyContent="center"
       alignContent="center"
       spacing={1}
     >
-      <Grid item md={12}>
-        <Typography variant="h4" className="text-center color-primary">
-          AZITHROMYCIN
-        </Typography>
-      </Grid>
-
       <Grid
-        marginTop={4}
         container
         item
-        justifyContent="center"
-        alignContent="center"
-        md={7}
+        md={8}
         sm={10}
         xs={11}
+        sx = {styles.pageItemGrid}
       >
-        <Grid item md={7} sm={12} xs={12}>
-          <Typography variant="subtitle1">
-            Indications:- Antibiotic/Antibacterial
-          </Typography>
-
-          <Typography
-            variant="h6"
-            className="color-primary mb--25 mt-4 text-uppercase"
+        <Paper elevation={8} sx={styles.upperPaper}>
+          <Grid
+            container
+            spacing={2}
+            justifyContent={"center"}
+            justifyItems={"center"}
           >
-            Approved Name -
-            <span style={{ color: "black" }}>
-              <br />
-              Azithromycin Dihydrate
-            </span>
-          </Typography>
+            <Grid item xs={12}>
+              <Typography variant="h4" sx={styles.titleStyle}>
+                AZITHROMYCIN
+              </Typography>
+            </Grid>
+            <Grid container item md={7} sm={12} xs={12}>
+              <Grid display={"flex"}>
+                <Typography
+                  variant="h6"
+                  sx={{
+                    color: "#EF3E00",
+                    fontSize: "2.5em",
+                  }}
+                >
+                  <b>Indications:-</b>
+                </Typography>
+                <Typography
+                  fontSize={"2.5em"}
+                  variant="subtitle1"
+                  marginLeft={1}
+                >
+                  Antibiotic / Antibacterial
+                </Typography>
+              </Grid>
 
-          <Typography variant="button" className="font--size-1125">
-            Spray Presentation:
-          </Typography>
+              <Grid display={"flex"}>
+                <Typography
+                  variant="h6"
+                  sx={{
+                    color: "#EF3E00",
+                    fontSize: "2.5em",
+                  }}
+                >
+                  <b>Approved Name-</b>
+                </Typography>
+                <Typography fontSize={"2.5em"} variant="h6" marginLeft={1}>
+                  Azithromycin Dihydrate
+                </Typography>
+              </Grid>
 
-          <List>
-            <ListItem>
-              <ListItemIcon>
-                <FiberManualRecord className="color-primary icon-small" />
-              </ListItemIcon>
-              <ListItemText>Eq. to Azithromycin 100 mg/200 mg</ListItemText>
-            </ListItem>
-          </List>
-        </Grid>
+              <Grid>
+                <Typography fontSize={"2.3em"} variant="h6">
+                  <b>Spray Presentation </b>
+                </Typography>
 
-        <Grid item md={5}>
-          <Paper elevation={12}>
-            <img
-              src={`/images/products/${link}.jpg`}
-              alt="Saar Biotech"
-              style={{ width: "100%", borderRadius: 10 }}
-            />
-          </Paper>
-        </Grid>
+                <Typography fontSize={"2em"} variant="body1" marginLeft={5}>
+                  Each 5 ml contains :<br />
+                  Eq to Azithromycin 100mg/200mg
+                </Typography>
+              </Grid>
+
+              <Link sx={{ color: "black" }} href="#description">
+                <Typography variant="body2" sx={styles.readMoreGrid}>
+                  <b>Description : </b> Azithromycin is macrolide antibiotic
+                  used to treat or prevent certain bacterial infections, most
+                  often those causing middle ear . . .
+                </Typography>
+              </Link>
+
+              <Link sx={{ color: "black" }} href="#pharmacokinetics">
+                <Typography variant="body2" margin={2} sx={styles.readMoreGrid}>
+                  <b>Pharmacokinetics : </b> Absorption:Following oral
+                  administration in humans, azithromycin is widely distributed
+                  throughout the body bioavailability is approximate. . .
+                </Typography>
+              </Link>
+            </Grid>
+
+            <Grid item md={5} sm={7} xs={9}>
+              <Paper elevation={3} sx={styles.imgPaper}>
+                <img
+                  src="/images/azithromycin1.jpg"
+                  alt="Azithromycin | Saar Biotech Product"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "contain",
+                  }}
+                />
+              </Paper>
+            </Grid>
+          </Grid>
+        </Paper>
+
         <Grid item md={12}>
-          <Paper
-            elevation={7}
-            sx={{ marginTop: 2, padding: 2, borderRadius: 5 }}
-          >
-            <Typography
-              variant="h6"
-              className="color-primary mt-4 text-uppercase"
-            >
-              Description
+          <Paper elevation={7} sx={styles.lowerPaper} id="description">
+            <Typography variant="h6" sx={styles.sectionTitle}>
+              DESCRIPTION
             </Typography>
 
-            <Typography className="my-3" textAlign={"justify"}>
+            <Typography fontSize={"1.9em"} textAlign="justify">
               {description}
             </Typography>
 
-            <Typography
-              variant="h6"
-              className="color-primary mt-4 text-uppercase"
-            >
+            {/** Indications Section */}
+            <Typography variant="h6" sx={styles.sectionTitle}>
               Indications
             </Typography>
-
-            <List>
+            <List dense sx= {{fontSize:"1.9em"}}>
               {[
                 "Otitis Media",
-                "Upper Respiratory Tract Infection",
                 "Upper Respiratory Tract Infection",
                 "Pneumonia",
                 "Pharyngitis",
@@ -121,42 +156,41 @@ export default function IronSpray() {
                 "Skin or Soft Tissue Infection",
                 "Gonococcal Infection - Uncomplicated",
               ].map((item, i) => (
-                <ListItem key={i}>
+                <ListItem key={i} sx={{}}>
                   <ListItemIcon>
                     <FiberManualRecord className="color-primary icon-small" />
                   </ListItemIcon>
-                  <ListItemText>{item}</ListItemText>
+                  <ListItemText primaryTypographyProps={{fontSize:"1em"}}>{item}</ListItemText>
                 </ListItem>
               ))}
             </List>
 
-            <Typography
-              variant="h6"
-              className="color-primary mt-4 text-uppercase"
-            >
+            {/** Mechanism Section */}
+            <Typography variant="h6" sx={styles.sectionTitle}>
               Mechanism
             </Typography>
-
-            <Typography className="my-3" textAlign={"justify"}>
+            <Typography fontSize={"1.9em"} textAlign="justify">
               Azithromycin binds to the 50S subunit of the 70S bacterial
-              ribosomes, and therefore inhibits RNA-dependent protein synthesis
-              in bacterial cells.
+              ribosomes, inhibiting RNA-dependent protein synthesis in bacterial
+              cells.
             </Typography>
 
+            {/** Pharmacokinetics Section */}
             <Typography
               variant="h6"
-              className="color-primary mt-4 text-uppercase"
+              sx={styles.sectionTitle}
+              id="pharmacokinetics"
             >
-              pharmacokinetics
+              Pharmacokinetics
             </Typography>
-
-            <Typography className="my-3" textAlign={"justify"}>
-              <b> Absorption:</b>
+            <Typography textAlign="justify" fontSize={"1.9em"}>
+              <b> Absorption: </b>
               Following oral administration in humans, azithromycin is widely
               distributed throughout the body bioavailability is approximately
               37%. The time taken to peak plasma levels is 2-3 hours.
               <br />
-              <b>Distribution:</b>
+              <br />
+              <b>Distribution: </b>
               Pharmacokinetic studies in humans have shown markedly higher
               azithromycin levels in tissue than in plasma (up to 50 times the
               maximum observed concentration in plasma) indicating that the drug
@@ -164,7 +198,8 @@ export default function IronSpray() {
               lung, tonsil and prostate exceed the MIC90 for likely pathogens
               after a single dose.
               <br />
-              <b>Elimination:</b>
+              <br />
+              <b>Elimination: </b>
               Plasma terminal elimination half-life closely reflects the tissue
               depletion half-life of 2 to 4 days. Approximately 12% of an
               intravenously administered dose is excreted in the urine over 3
@@ -179,45 +214,35 @@ export default function IronSpray() {
               no part in the microbiological activity of azithromycin.
             </Typography>
 
-            <Typography
-              variant="h6"
-              className="color-primary mt-4 text-uppercase"
-            >
-              Side effects
+            {/** Side Effects Section */}
+            <Typography variant="h6" sx={styles.sectionTitle}>
+              Side Effects
             </Typography>
-
-            <List>
-              <b>Side effects of Amoxycillin are most likely to be minor:</b>
+            <List dense sx= {{fontSize:"1.9em"}}>
+              <b>Common side effects include:</b>
               {["Abdominal pain", "Rash", "Headache"].map((item, i) => (
-                <ListItem key={i}>
-                  <ListItemIcon>
-                    <FiberManualRecord className="color-primary icon-small" />
-                  </ListItemIcon>
-                  <ListItemText>{item}</ListItemText>
+                <ListItem key={i} sx={{}}>
+                  <ListItemIcon>✓</ListItemIcon>
+                  <ListItemText primaryTypographyProps={{fontSize:"1em"}}>{item}</ListItemText>
                 </ListItem>
               ))}
             </List>
-            <Typography
-              variant="h6"
-              className="color-primary mt-4 text-uppercase"
-            >
-              CONTRAINDICATION
-            </Typography>
 
-            <Typography className="my-3" textAlign={"justify"}>
+            {/** Contraindication Section */}
+            <Typography variant="h6" sx={styles.sectionTitle}>
+              Contraindication
+            </Typography>
+            <Typography fontSize={"1.9em"} textAlign="justify">
               The use of azithromycin is contraindicated in patients with
-              hypersensitivity to azithromycin, erythromycin, any macrolide or
-              ketolide antibiotic.
+              hypersensitivity to azithromycin, erythromycin, or any macrolide
+              or ketolide antibiotic.
             </Typography>
 
-            <Typography
-              variant="h6"
-              className="color-primary mt-4 text-uppercase"
-            >
+            {/** Conclusion Section */}
+            <Typography variant="h6" sx={styles.sectionTitle}>
               Conclusion
             </Typography>
-
-            <Typography className="my-3" textAlign={"justify"}>
+            <Typography fontSize={"1.9em"} textAlign="justify">
               <b>
                 From the above discussion, it can be concluded that Azithromycin
                 used to treat Infections of the middle ear, Upper Respiratory

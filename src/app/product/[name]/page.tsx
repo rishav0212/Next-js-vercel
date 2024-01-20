@@ -15,7 +15,7 @@ export default async function ProductTemplate({ params }) {
 
 export async function generateStaticParams() {
   return (Object.keys(info).map((key) => ({
-    name: key
+    name: key.toLowerCase()
   })))
 };
 

@@ -320,7 +320,7 @@ const Navbar = () => {
                         </ListItem>
                         <Collapse
                           in={navMenu.menus[key].stateVar}
-                          timeout={2000}
+                          timeout={400}
                           unmountOnExit
                           sx={{
                             backgroundColor: "#EF3E00",

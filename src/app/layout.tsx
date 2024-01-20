@@ -7,6 +7,7 @@ import Footer from "@/components/Footer/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Script from "next/script";
 import AppThemeProvider from "@/theme";
+import '@/fonts/fonts.css';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <AppRouterCacheProvider>
           <AppThemeProvider>
             <Navbar />
