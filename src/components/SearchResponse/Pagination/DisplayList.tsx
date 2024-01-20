@@ -60,27 +60,17 @@ const MakeRows = ({ paginatedList }) => {
         return (
           <tr key={index}>
             {product.mainCategory !== prevMain ? (
-              <td
-                rowSpan={numberOfProductsMain[prevMainIndex]}
-                className="align-top "
-                style={{ backgroundColor: "#FEE5D0" }}
-              >
+              <td rowSpan={numberOfProductsMain[prevMainIndex]}>
                 {product.mainCategory}
               </td>
             ) : null}
             {product.subCategory !== prevSub ? (
-              <td
-                rowSpan={numberOfProductsSub[prevSubIndex]}
-                className="align-top "
-                style={{ backgroundColor: "#FEE5D0" }}
-              >
+              <td rowSpan={numberOfProductsSub[prevSubIndex]}>
                 {product.subCategory}
               </td>
             ) : null}
-            <td style={{ backgroundColor: "#FEE5D0", width: "30vw" }}>
-              {product.name}
-            </td>
-            <td style={{ backgroundColor: "#FEE5D0", width: "30vw" }}>
+            <td className={styles.rowHover}>{product.name}</td>
+            <td className={styles.rowHover}>
               <Link
                 href={
                   product.link.includes("dmpharma")
@@ -90,8 +80,8 @@ const MakeRows = ({ paginatedList }) => {
               >
                 {product.name}
               </Link>
-            </td>{" "}
-            <td style={{ backgroundColor: "#FEE5D0" }}>15 ml</td>
+            </td>
+            <td className={styles.rowHover}> 15 ml</td>
           </tr>
         );
       })}
@@ -119,6 +109,9 @@ const DisplayList = ({ list, initialPage = 1 }) => {
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
+  useEffect(()=>{
+    setCurrentPage(1)
+  },[list])
 
   const totalPages = Math.ceil(all_products.length / limit);
 
@@ -143,7 +136,6 @@ const DisplayList = ({ list, initialPage = 1 }) => {
           justifyContent: "center",
           alignContent: "center",
           padding: 2,
-          fontSize: "calc(0.5vh+0.35vw)",
         }}
       >
         <Grid
@@ -156,7 +148,7 @@ const DisplayList = ({ list, initialPage = 1 }) => {
             {!isSmallerScreen ? (
               <button
                 className={`${styles.prev} ${
-                  currentPage === 1 ? `disabled ${styles.disabled}` : ""
+                  currentPage === 1 ? ` ${styles.disabled}` : ""
                 }`}
                 onClick={() => handlePageChange(currentPage - 1)}
                 aria-label="Previous"
@@ -167,7 +159,7 @@ const DisplayList = ({ list, initialPage = 1 }) => {
             ) : (
               <button
                 className={` ${styles["button-des"]} ${
-                  currentPage === 1 ? `disabled ${styles.disabled}` : ""
+                  currentPage === 1 ? ` ${styles.disabled}` : ""
                 }`}
                 onClick={() => handlePageChange(currentPage - 1)}
                 aria-label="Previous"
@@ -180,9 +172,7 @@ const DisplayList = ({ list, initialPage = 1 }) => {
           {array.map((value, index) => (
             <Grid item key={index}>
               {value === "..." || value === "... " ? (
-                <button className={"disabled " + styles["button-des"]}>
-                  {value}
-                </button>
+                <button className={styles["button-des"]}>{value}</button>
               ) : (
                 <button
                   className={`${styles["button-des"]} ${
@@ -201,7 +191,7 @@ const DisplayList = ({ list, initialPage = 1 }) => {
               <button
                 className={` ${styles.prev} ${
                   currentPage === Math.ceil(all_products.length / limit)
-                    ? `disabled ${styles.disabled}`
+                    ? `${styles.disabled}`
                     : ""
                 }`}
                 onClick={() => handlePageChange(currentPage + 1)}
@@ -214,7 +204,7 @@ const DisplayList = ({ list, initialPage = 1 }) => {
               <button
                 className={` ${styles["button-des"]} ${
                   currentPage === Math.ceil(all_products.length / limit)
-                    ? `disabled ${styles.disabled}`
+                    ? `${styles.disabled}`
                     : ""
                 }`}
                 onClick={() => handlePageChange(currentPage + 1)}
@@ -225,7 +215,17 @@ const DisplayList = ({ list, initialPage = 1 }) => {
             )}
           </Grid>
 
-          <Grid item md={5} sm={4.5} xs={11} marginY={1} className={styles.entries} textAlign={"right"} alignSelf={"center"} justifyContent={"right"}>
+          <Grid
+            item
+            md={5}
+            sm={4.5}
+            xs={11}
+            marginY={1}
+            className={styles.entries}
+            textAlign={"right"}
+            alignSelf={"center"}
+            justifyContent={"right"}
+          >
             <span className="p-2">Show</span>
             <select
               className="p-1"
@@ -233,10 +233,12 @@ const DisplayList = ({ list, initialPage = 1 }) => {
                 setLimit(Number(e.target.value));
               }}
               value={limit}
+              style={{ borderRadius: 5 }}
             >
               <option value="10">10</option>
               <option value="20">20</option>
               <option value="30">30</option>
+              <option value="50">50</option>
             </select>
             <span className="p-2">Products</span>
           </Grid>
@@ -247,65 +249,31 @@ const DisplayList = ({ list, initialPage = 1 }) => {
           justifySelf={"center"}
           margin={"auto"}
           sx={{
+            height: "85vh",
             width: "85vw",
             overflow: "auto",
+            border: "1px solid #ef3e00",
+            borderRadius: "10px",
+            background: "linear-gradient(135deg, #ffdcc0 -10%, #ef3e00 200%)",
           }}
-
         >
-          <table className="table table-bordered" style={{ borderRadius: "10px", overflow: "hidden" }}>
+          <table className={styles.tableStyle}>
             <caption>Products</caption>
             <thead>
-              <tr style={{
-                    boxShadow: "0px 2px 10px rgba(239, 62, 0, 0.3)",
-
-              }}>
-                <th
-                  className="p-3"
-                  style={{
-                    backgroundColor: "#EF3E00",
-                    color: "#fff",
-                    width: "13%",
-
-                  }}
-                >
-                  MAIN CATEGORY
-                </th>
-                <th
-                  className="p-3"
-                  style={{
-                    backgroundColor: "#EF3E00",
-                    color: "#fff",
-                    width: "13%",
-                  }}
-                >
-                  SUB CATEGORY
-                </th>
-                <th
-                  className="p-3"
-                  style={{ backgroundColor: "#EF3E00", color: "#fff" }}
-                >
-                  COMPOSITION
-                </th>
-                <th
-                  className="p-3"
-                  style={{ backgroundColor: "#EF3E00", color: "#fff" }}
-                >
-                  LINK
-                </th>{" "}
-                <th
-                  className="p-3"
-                  style={{ backgroundColor: "#EF3E00", color: "#fff" }}
-                >
-                  PACKING
-                </th>
+              <tr>
+                <th>MAIN CATEGORY</th>
+                <th>SUB CATEGORY</th>
+                <th>COMPOSITION</th>
+                <th>LINK</th>
+                <th>PACKING</th>
               </tr>
             </thead>
-            <tbody style={{ borderWidth: "1px", borderColor: "#EF3E00" }}>
+            <tbody>
               {paginatedList.length ? (
                 <MakeRows paginatedList={paginatedList} />
               ) : (
                 <tr>
-                  <td>No Products Found</td>
+                  <td colSpan={5} rowSpan={10} style={{textAlign:"center"}}>No Products Found</td>
                 </tr>
               )}
             </tbody>

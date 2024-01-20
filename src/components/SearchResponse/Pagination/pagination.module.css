@@ -1,34 +1,48 @@
-.prev {
-  background-color: rgb(251, 229, 200);
-  border-color: #ef3e00;
-  border-width: 0.5px;
-  margin: 3px;
-  height: calc(calc(1vh + 0.4vw) * 3);
-  width: calc(calc(1vh + 0.4vw) * 5.5);
-  font-size: 1.1em;
-  color: rgb(158, 9, 9);
-  border-radius: 7px;
-  text-justify: center;
-  text-align: center;
-}
+.prev,
 .button-des {
   background-color: rgb(251, 229, 200);
-  border-color: #ef3e00;
-  border-width: 0.5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  border: 0.5px solid #e95d2a;
   margin: 3px;
-  border-radius: 50%;
-  font-size: 1.1em;
   height: calc(calc(1vh + 0.4vw) * 3);
-  width: calc(calc(1vh + 0.4vw) * 3);
+  font-size: 1.1em;
   color: rgb(158, 9, 9);
   text-justify: center;
   text-align: center;
-  transition: background-color 0.3 ease;
+
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
+.prev {
+  border-radius: 7px;
+  width: calc(calc(1vh + 0.4vw) * 5.5);
+}
+.button-des {
+  border-radius: 50%;
+  width: calc(calc(1vh + 0.4vw) * 3);
+}
+
 .active {
   color: white;
-  background-color: #ef3e00;
+  background: linear-gradient(to bottom, #ef3e00, #ff7e00);
   transform: scale(1.15);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+@media (hover: hover) {
+  .button-des:hover,
+  .prev:hover {
+    background: linear-gradient(to bottom, #ff7e00, #ef3e00);
+    color: aliceblue;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  pointer-events: none;
 }
 
 .entries {
@@ -36,15 +50,31 @@
   height: calc(calc(1vh + 0.4vw) * 3);
 }
 
+.tableStyle {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.tableStyle th {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  border: 1px solid;
+  background: #ef3e00;
+  color: #fff;
+  text-align: center;
+  padding: 11px 8px;
+  min-width: 13vw;
+  font-size: 1.15em;
+}
+
+.tableStyle tbody td {
+  border: 0.5px solid #ef3e00;
+  vertical-align: top;
+  padding: 10px 10px;
+  min-width: 13vw;
+  font-size: 1.1em;
+}
 @media (hover: hover) {
-  .button-des:hover {
-    background-color: #ef3e00;
-    color: aliceblue;
-    transform: scale(1.1);
-  }
-  .prev:hover {
-    background-color: #ef3e00;
-    color: aliceblue;
-    transform: scale(1.1);
-  }
+    .tableStyle tr:hover .rowHover {
+        background: #ffa07a ;
+    }
 }
