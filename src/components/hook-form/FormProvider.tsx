@@ -6,7 +6,7 @@ const FormProvider = ({ children, onSubmit, methods }) => {
     <Form {...methods}>
       <form
         name="htmlform"
-        action="c3.php"
+        action="testEmail.php"
         method="post"
         onSubmit={onSubmit}
       >
