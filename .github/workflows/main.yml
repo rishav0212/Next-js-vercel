@@ -78,7 +78,7 @@ jobs:
           fi
 
           FTP_SERVER="ftp.alenslim.co.in"        
-          REMOTE_DIR=" "
+          REMOTE_DIR="."
 
           echo "Using $FTP_SERVER $FTP_USERNAME $FTP_PASSWORD"
 
@@ -97,6 +97,6 @@ jobs:
           # Use lftp to upload to GoDaddy via SFTP
           lftp -f sftp-config
 
-          cd myCustomFolder
+          #cd myCustomFolder
 
-          lftp -e "set ssl:verify-certificate no; open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_SERVER; put -O $REMOTE_DIR ./*; exit"
+          lftp -e "set ssl:verify-certificate no; open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_SERVER; put -O $REMOTE_DIR myCustomFolder/*; exit"
