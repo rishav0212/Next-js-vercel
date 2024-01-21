@@ -2,7 +2,6 @@ import {
   Container,
   Grid,
   Stack,
-  Toolbar,
   Typography,
   Paper,
 } from "@mui/material";
@@ -98,13 +97,11 @@ export default function SaarBiotechContent() {
             </Grid>
           </Grid>
         </Paper>
-        <Toolbar />
 
         <div className="text-center color-primary">
           <Typography variant="h4">Our Strengths</Typography>
         </div>
 
-        <Toolbar />
 
         <Grid container spacing={3}>
           <Grid item xs={12} sm={12} md={6} lg={6}>
@@ -135,7 +132,6 @@ export default function SaarBiotechContent() {
           </Grid>
         </Grid>
       </Container>
-      <Toolbar />
     </>
   );
 }
