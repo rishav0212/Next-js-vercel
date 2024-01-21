@@ -1,8 +1,4 @@
-"use client";
-
 import { Container, Grid, Stack, Toolbar, Typography } from "@mui/material";
-import Image from "next/image";
-import * as React from "react";
 
 export default function DmPharmaContent() {
   return (

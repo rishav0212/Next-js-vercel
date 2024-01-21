@@ -1,5 +1,3 @@
-"use client";
-
 import { Container, Grid, Stack, Toolbar, Typography } from "@mui/material";
 import QueryForm from "@/components/Footer/QueryForm";
 
@@ -31,7 +29,7 @@ export default function ContactContent() {
               </Typography>
             </Stack>
           </Grid>
-          <Grid item xs={12} sm={12} md={4} lg={4}>
+          <Grid item xs={11} sm={11} md={4} lg={4}>
             <Stack p={5} className="stack-contact">
               <Typography variant="h5" className="color-primary">
                 Operating Hours
@@ -48,7 +46,7 @@ export default function ContactContent() {
         <Toolbar />
 
         <Grid container spacing={8}>
-          <Grid item xs={12} sm={12} md={6} lg={6}>
+          <Grid item xs={11} sm={11} md={6} lg={6}>
             <Stack>
               <Typography variant="h5">Send Us a Message</Typography>
               <QueryForm props={"contact"} />

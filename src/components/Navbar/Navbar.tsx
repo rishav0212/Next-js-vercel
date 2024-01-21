@@ -1,42 +1,29 @@
 "use client";
-import React from "react";
-import { styled } from "@mui/system";
+import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
+import SegmentSharpIcon from "@mui/icons-material/SegmentSharp";
 import {
-  AppBar as MuiAppBar,
-  Toolbar,
-  IconButton,
+  Collapse,
+  Container,
   Drawer,
+  IconButton,
   List,
   ListItem,
-  ListItemText,
-  /*useTheme, */ useMediaQuery,
-  Stack,
   ListItemButton,
-  Container,
+  ListItemText,
+  AppBar as MuiAppBar,
+  Stack,
+  Toolbar,
   Tooltip,
   Typography,
-  Divider,
-  Collapse,
+  useMediaQuery,
 } from "@mui/material";
-import { useState } from "react";
-import SegmentSharpIcon from "@mui/icons-material/SegmentSharp";
-import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import Link from "next/link";
-// import { makeStyles } from '@mui/styles';
-//import MenuIcon from '@mui/icons-material/Menu';
+import React, { useState } from "react";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
-import Search from "./Search";
-import { useRouter } from "next/router";
 import { usePathname } from "next/navigation";
-import Dropdown from "./dropdown";
 import DrawerItem from "./DrawerItems";
-
-const AppBar = styled(MuiAppBar)`
-  background-color: rgba(255, 255, 255);
-  background-image: none;
-  /* Add your custom styles here */
-`;
+import Dropdown from "./dropdown";
 
 const Navbar = () => {
   const isMobile = useMediaQuery(`(max-width: 950px)`);
@@ -72,43 +59,6 @@ const Navbar = () => {
     setEventsOpen(!eventsOpen);
     setManufacturingUnitOpen(false);
     setProductsOpen(false);
-  };
-
-  const units_menu = {
-    menu_name: "Manufacturing Unit",
-    to: "/manufacturing-unit",
-    items: {
-      "Saar Biotech": "/saar-biotech",
-      "DM Pharma": "/dm-pharma",
-      Infrastructure: "/dm-pharma",
-      "Factory Video": "/dm-pharma",
-    },
-  };
-
-  const products_menu = {
-    menu_name: "Products",
-    to: "/products",
-    items: {
-      Suspensions: "/Suspensions",
-      Syrups: "/Syrups",
-      "External Preparation": "/External Preparations",
-      "Miscellaneous Products": "/Miscellaneous Products",
-      Tablets: "/Tablets",
-      Capsules: "/Capsules",
-      Sachets: "/Sachets",
-    },
-  };
-
-  const events_menu = {
-    menu_name: "Events",
-    to: "/events",
-    items: {
-      B2B: "/b2b",
-      "Pharma South 2014": "/pharma-south-2014",
-      "Indian Pharma Expo 2013": "/indian-pharma-expo-2013",
-      "Indian Pharma Expo 2012": "/indian-pharma-expo-2012",
-      Brochure: "/brochure",
-    },
   };
 
   const navMenu = {
@@ -166,11 +116,16 @@ const Navbar = () => {
 
   return (
     <>
-      <AppBar position="relative">
+      <MuiAppBar
+        sx={{
+          backgroundColor: "rgba(255, 255, 255)",
+          backgroundImage: "none",
+        }}
+        position="relative"
+      >
         <Toolbar>
           {isMobile ? (
             <>
-              {" "}
               <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                 <Link href="/">
                   <img
@@ -240,7 +195,7 @@ const Navbar = () => {
             </>
           )}
         </Toolbar>
-      </AppBar>
+      </MuiAppBar>
       <Drawer
         variant="temporary"
         anchor="left"

@@ -1,4 +1,3 @@
-"use client"
 import {
   Box,
   Container,
@@ -6,14 +5,9 @@ import {
   Stack,
   Toolbar,
   Typography,
-  useMediaQuery,
-  useTheme,
 } from "@mui/material";
 
 export default function AboutContent() {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
-
   return (
     <>
       <Toolbar />
@@ -66,9 +60,10 @@ export default function AboutContent() {
         <Grid
           container
           spacing={8}
-          className={isMobile ? `text-center` : "text-start"}
+          sx={{textAlign:{xs:"center" , md:"left"}}}
+          justifyContent={"center"}
         >
-          <Grid item xs={12} sm={12} md={4} lg={4}>
+          <Grid item xs={11} sm={11} md={4} lg={4}>
             <Typography variant="h5">
               <u>Main Perspective</u>
             </Typography>
@@ -93,7 +88,7 @@ export default function AboutContent() {
               </Typography>
             </Stack>
           </Grid>
-          <Grid item xs={12} sm={12} md={4} lg={4}>
+          <Grid item xs={11} sm={11} md={4} lg={4}>
             <Typography variant="h5">
               <u>Our Values</u>
             </Typography>
@@ -111,7 +106,7 @@ export default function AboutContent() {
               </Typography>
             </Stack>
           </Grid>
-          <Grid item xs={12} sm={12} md={4} lg={4}>
+          <Grid item xs={11} sm={11} md={4} lg={4}>
             <Typography variant="h5">
               <u>Our Strengths</u>
             </Typography>
