@@ -100,4 +100,4 @@ jobs:
           cd myCustomFolder
           
 
-          lftp -d 7 -e "set ftp:use-mdtm yes;set ssl:verify-certificate no; open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_SERVER; mirror -R . $REMOTE_DIR; exit"
+          lftp -d 2 -e "set ftp:use-mdtm yes;set ssl:verify-certificate no; open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_SERVER; mirror -R . $REMOTE_DIR; exit"
