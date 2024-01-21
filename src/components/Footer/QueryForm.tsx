@@ -96,12 +96,12 @@ export default function QueryForm({ props }) {
                     helperText={undefined}
                   />
                   <RHFTextField
-                    name={"phnum"}
+                    name={"phone"}
                     label={"Phone"}
                     helperText={undefined}
                   />
                   <RHFTextField
-                    name={"cname"}
+                    name={"company"}
                     label={"Company Name"}
                     helperText={undefined}
                   />
@@ -115,7 +115,7 @@ export default function QueryForm({ props }) {
                       helperText={undefined}
                     />
                     <RHFTextField
-                      name={"cname"}
+                      name={"company"}
                       label={"Company Name"}
                       helperText={undefined}
                     />
@@ -127,7 +127,7 @@ export default function QueryForm({ props }) {
                       helperText={undefined}
                     />
                     <RHFTextField
-                      name={"phnum"}
+                      name={"phone"}
                       label={"Phone"}
                       helperText={undefined}
                     />
@@ -148,12 +148,12 @@ export default function QueryForm({ props }) {
                 helperText={undefined}
               />
               <RHFTextField
-                name={"phnum"}
+                name={"phone"}
                 label={"Phone"}
                 helperText={undefined}
               />
               <RHFTextField
-                name={"cname"}
+                name={"company"}
                 label={"Company Name"}
                 helperText={undefined}
               />
