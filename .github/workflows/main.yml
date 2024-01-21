@@ -103,4 +103,4 @@ jobs:
           ls -ltr ./myCustomFolder
           echo "put -O $REMOTE_DIR ./myCustomFolder/*"
 
-          lftp -e "set ssl:verify-certificate no; open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_SERVER; put -O $REMOTE_DIR ./myCustomFolder/*; exit"
+          lftp -e "set ssl:verify-certificate no; open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_SERVER; put -O ./myCustomFolder/* $REMOTE_DIR; exit"
