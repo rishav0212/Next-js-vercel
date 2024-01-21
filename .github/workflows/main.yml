@@ -99,4 +99,4 @@ jobs:
 
           cd myCustomFolder
 
-          lftp -e "set ssl:verify-certificate no; open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_SERVER; put -O $REMOTE_DIR .; exit"
+          lftp -e "set ssl:verify-certificate no; open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_SERVER; put -O $REMOTE_DIR ./*; exit"
