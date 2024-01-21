@@ -111,7 +111,7 @@ const DisplayList = ({ list, initialPage = 1 }) => {
   };
   useEffect(()=>{
     setCurrentPage(1)
-  },[list])
+  },[list,limit])
 
   const totalPages = Math.ceil(all_products.length / limit);
 
@@ -254,7 +254,7 @@ const DisplayList = ({ list, initialPage = 1 }) => {
             overflow: "auto",
             border: "1px solid #ef3e00",
             borderRadius: "10px",
-            background: "linear-gradient(135deg, #ffdcc0 -10%, #ef3e00 200%)",
+            background: "linear-gradient(135deg, #ffdcc0 0%, #ef3e00 300%)",
           }}
         >
           <table className={styles.tableStyle}>

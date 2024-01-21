@@ -14,7 +14,6 @@ export default function RHFTextField({ name, label, helperText, ...other }) {
   const [isFocused, setIsFocused] = useState(false);
 
   const theme = useTheme();
-  // console.log(theme)
 
   return (
     <Controller
