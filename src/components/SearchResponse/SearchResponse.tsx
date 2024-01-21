@@ -1,13 +1,11 @@
 "use client";
-import React, { use, useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import DisplayList from "@/components/SearchResponse/Pagination/DisplayList";
 import Autocomplete from "@mui/material/Autocomplete";
 import { TextField } from "@mui/material";
 import items from "@/product_details/names";
 import { Typography } from "@mui/material";
-import { useTheme } from "@emotion/react";
 import { Grid, Button, Paper } from "@mui/material";
-import { setConfig } from "next/config";
 
 function SearchResponse({ q = "" }) {
 
