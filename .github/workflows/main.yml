@@ -97,10 +97,7 @@ jobs:
           # Use lftp to upload to GoDaddy via SFTP
           lftp -f sftp-config
 
-          #cd myCustomFolder
-          ls -ltr
-          ls -ltr myCustomFolder
-          ls -ltr ./myCustomFolder
-          echo "put -O $REMOTE_DIR ./myCustomFolder/*"
+          cd myCustomFolder
+          
 
-          lftp -e "set ssl:verify-certificate no; open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_SERVER; put -O ./myCustomFolder/* $REMOTE_DIR; exit"
+          lftp -d 7 -e "set ftp:use-mdtm yes;set ssl:verify-certificate no; open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_SERVER; mirror -R . $REMOTE_DIR; exit"
