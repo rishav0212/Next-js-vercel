@@ -2,7 +2,6 @@ import {
   Box,
   Container,
   Grid,
-  Stack,
   Toolbar,
   Typography,
 } from "@mui/material";
@@ -63,11 +62,11 @@ export default function AboutContent() {
           sx={{textAlign:{xs:"center" , md:"left"}}}
           justifyContent={"center"}
         >
-          <Grid item xs={11} sm={11} md={4} lg={4}>
+          <Grid container item xs={11} sm={11} md={4} lg={4}>
             <Typography variant="h5">
               <u>Main Perspective</u>
             </Typography>
-            <Stack py={3} spacing={2}>
+            <Grid item py={3} spacing={2}>
               <Typography variant="subtitle1" className="color-primary">
                 Quality Care
               </Typography>
@@ -75,8 +74,8 @@ export default function AboutContent() {
                 We Provide COA(Certificate of Analysis) with each batch and
                 control samples are maintained in laboratories.
               </Typography>
-            </Stack>
-            <Stack spacing={2}>
+            </Grid>
+            <Grid item spacing={2}>
               <Typography variant="subtitle1" className="color-primary">
                 Quality Certifications
               </Typography>
@@ -86,13 +85,13 @@ export default function AboutContent() {
                 ISO Certification <br />
                 GMP Certification
               </Typography>
-            </Stack>
+            </Grid>
           </Grid>
-          <Grid item xs={11} sm={11} md={4} lg={4}>
+          <Grid container item xs={11} sm={11} md={4} lg={4}>
             <Typography variant="h5">
               <u>Our Values</u>
             </Typography>
-            <Stack py={3} spacing={2}>
+            <Grid item py={3} spacing={2}>
               <Typography variant="subtitle1" className="color-primary">
                 Customer Satisfaction
               </Typography>
@@ -104,13 +103,13 @@ export default function AboutContent() {
                 tangible value is to our customers and their stakeholders over
                 long term mutually beneficial relationships.
               </Typography>
-            </Stack>
+            </Grid>
           </Grid>
-          <Grid item xs={11} sm={11} md={4} lg={4}>
+          <Grid container item xs={11} sm={11} md={4} lg={4}>
             <Typography variant="h5">
               <u>Our Strengths</u>
             </Typography>
-            <Stack py={3} spacing={2}>
+            <Grid item py={3} spacing={2}>
               <Typography variant="subtitle1" className="color-primary">
                 Our Team
               </Typography>
@@ -119,8 +118,8 @@ export default function AboutContent() {
                 MBA'S and CA'S from which all are dedicated towards their
                 duties.
               </Typography>
-            </Stack>
-            <Stack spacing={2}>
+            </Grid>
+            <Grid item spacing={2}>
               <Typography variant="subtitle1" className="color-primary">
                 Latest DCGI Approvals
               </Typography>
@@ -129,7 +128,7 @@ export default function AboutContent() {
                 our main aim to bring new DCGI Approved molecules for our
                 customers.
               </Typography>
-            </Stack>
+            </Grid>
           </Grid>
         </Grid>
       </Container>
