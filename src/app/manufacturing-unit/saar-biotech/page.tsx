@@ -22,7 +22,7 @@ export default function SaarBiotechContent() {
           }}
         >
           <Grid container spacing={8} justifyContent={"center"}>
-            <Grid item>
+            <Grid item xs={12}>
               <Typography variant="h4" className="color-primary">
                 Saar Biotech Manufacuring Unit
               </Typography>
@@ -109,12 +109,12 @@ export default function SaarBiotechContent() {
               <li>Timely Delivery of Product</li>
             </Typography>
           </Grid>
-          <Grid item xs={12} sm={12} md={6} lg={6}>
+          <Grid item xs={12} sm={12} md={6}>
             <Typography variant="h6" className="font--size-1125">
               <li>Determined by quality, integrity and core values </li>
             </Typography>
           </Grid>
-          <Grid item xs={12} sm={12} md={6} lg={6}>
+          <Grid item xs={12} sm={12} md={6}>
             <Typography variant="h6" className="font--size-1125">
               <li>
                 Rigid adherence to Good Manufacturing Practises (GMP)
@@ -122,7 +122,7 @@ export default function SaarBiotechContent() {
               </li>
             </Typography>
           </Grid>
-          <Grid item xs={12} sm={12} md={6} lg={6}>
+          <Grid item xs={12} sm={12} md={6}>
             <Typography variant="h6" className="font--size-1125">
               <li>
                 Multidisciplined workforce that is motivated towards the highest
