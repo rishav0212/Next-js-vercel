@@ -1,13 +1,13 @@
-import { Container, Grid, Stack, Typography, Paper } from "@mui/material";
+import { Grid, Stack, Typography, Paper } from "@mui/material";
 
 export default function SaarBiotechContent() {
   return (
     <>
-      <Container>
+      <Grid container alignContent={"center"} justifyContent={"center"}>
         <Paper
           elevation={8}
           sx={{
-            width: "100%",
+            width: "80%",
             padding: 2,
             borderRadius: 5,
             backgroundColor: "#f0f0f0",
@@ -92,11 +92,11 @@ export default function SaarBiotechContent() {
           </Grid>
         </Paper>
 
-        <div className="text-center color-primary">
+        <Grid item xs={12} className="text-center color-primary">
           <Typography variant="h4">Our Strengths</Typography>
-        </div>
+        </Grid>
 
-        <Grid container spacing={3}>
+        <Grid item xs={9} container spacing={3}>
           <Grid item xs={12} sm={12} md={6} lg={6}>
             <Typography variant="h6" className="font--size-1125">
               <li>Timely Delivery of Product</li>
@@ -124,7 +124,7 @@ export default function SaarBiotechContent() {
             </Typography>
           </Grid>
         </Grid>
-      </Container>
+      </Grid>
     </>
   );
 }
