@@ -86,7 +86,6 @@ jobs:
           echo "Using $FTP_SERVER $FTP_USERNAME $FTP_PASSWORD"
           echo "V_FTP_ERVER=$FTP_SERVER" >> $GITHUB_OUTPUT
 
-
       - name: FTP Deploy to Go Daddy using Deploy Action
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
@@ -94,5 +93,4 @@ jobs:
           username: ${{ steps.set-ftp-vars.outputs.V_FTP_USERNAME }}
           password: ${{ steps.set-ftp-vars.outputs.V_FTP_PASSWORD }}
           local-dir: myCustomFolder/
-          log-level: verbose
-
+          log-level: standard

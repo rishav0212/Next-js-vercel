@@ -73,6 +73,10 @@
   min-width: 13vw;
   font-size: 1.1em;
 }
+
+.tableStyle tr:hover .rowHover{
+  transition: background-color 0.3s ease, transform 0.3s ease
+}
 @media (hover: hover) {
     .tableStyle tr:hover .rowHover {
         background: #ffa07a ;

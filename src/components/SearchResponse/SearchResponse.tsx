@@ -7,9 +7,9 @@ import items from "@/product_details/names";
 import { Typography } from "@mui/material";
 import { useTheme } from "@emotion/react";
 import { Grid, Button, Paper } from "@mui/material";
+import { setConfig } from "next/config";
 
 function SearchResponse({ q = "" }) {
-  const theme = useTheme();
 
   //////////////
 
@@ -114,7 +114,7 @@ function SearchResponse({ q = "" }) {
   ///////////////
 
   const handleEnterPressed = (e) => {
-    if (e.key === "Enter") {
+    if (e.key === "Enter"|| e.key === 'Return' || e.keyCode === 13 || e.which === 13) {
       setQuery(textinProduct);
       inputRef.current ? inputRef.current.blur() : null;
     }
@@ -287,6 +287,8 @@ function SearchResponse({ q = "" }) {
             <Button
               onClick={() => {
                 setTextinProduct("");
+                setQuery("");
+                setSubCategory("");
                 setMainCategory("");
               }}
               sx={{ color: "blue" }}
