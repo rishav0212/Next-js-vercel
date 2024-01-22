@@ -52,13 +52,12 @@ export default function SaarBiotechContent() {
                 thoroughly tested to ensure the conformity of quality.
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={12} md={3}>
-              <Stack
+            <Grid item 
                 spacing={2}
                 alignItems="center"
                 justifyContent={"center"}
                 className="w-100 h-100"
-              >
+                xs={12} sm={12} md={3}>
                 <img
                   className="manufacturing-unit-images"
                   width={250}
@@ -87,7 +86,6 @@ export default function SaarBiotechContent() {
                   src={"/images/saar-image4.jpg"}
                   alt={"Saar Biotech"}
                 />
-              </Stack>
             </Grid>
           </Grid>
         </Paper>
