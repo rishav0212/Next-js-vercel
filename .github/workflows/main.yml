@@ -82,28 +82,15 @@ jobs:
             echo "V_FTP_PASSWORD=$FTP_PASSWORD" >> $GITHUB_OUTPUT
           fi
 
-          FTP_SERVER="ftp.alenslim.co.in"        
-          REMOTE_DIR="."
-
+          FTP_SERVER="ftp.alenslim.co.in"
           echo "Using $FTP_SERVER $FTP_USERNAME $FTP_PASSWORD"
           echo "V_FTP_ERVER=$FTP_SERVER" >> $GITHUB_OUTPUT
 
-          sudo apt-get update
-          sudo apt-get install lftp -y
-
-          #lftp -e "open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_SERVER; ls; exit"
-
-          echo "set ssl:verify-certificate no" > sftp-config
-          echo "open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_SERVER" >> sftp-config
-          echo "ls" >> sftp-config
-          echo "exit" >> sftp-config
-
-          cat sftp-config
-
-          # Use lftp to upload to GoDaddy via SFTP
-          lftp -f sftp-config
-
-          cd myCustomFolder
-          
-
-          lftp -d 2 -e "set ftp:use-mdtm yes;set ssl:verify-certificate no; open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_SERVER; mirror -R . $REMOTE_DIR; exit"
+      - name: FTP Deploy to Go Daddy using Deploy Action
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ steps.set-ftp-vars.outputs.V_FTP_ERVER }}
+          username: ${{ steps.set-ftp-vars.outputs.V_FTP_USERNAME }}
+          password: ${{ steps.set-ftp-vars.outputs.V_FTP_PASSWORD }}
+          local-dir: myCustomFolder/
+          log-level: standard

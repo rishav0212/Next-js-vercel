@@ -8,6 +8,7 @@ import RHFTextField from "../hook-form/RHFText.Field";
 import { LoadingButton } from "@mui/lab";
 
 export default function QueryForm({ props }) {
+
   const QuerySchema = Yup.object().shape({
     name: Yup.string().required("Name is required"),
     email: Yup.string().email().required("Email is required"),
@@ -69,6 +70,7 @@ export default function QueryForm({ props }) {
         <>
           <Grid container spacing={1.5}>
             <Grid item xs={12} sm={6}>
+
               <RHFTextField
                 name={"name"}
                 label={"Full Name"}
@@ -153,5 +155,6 @@ export default function QueryForm({ props }) {
         </>
       )}
     </FormProvider>
+
   );
 }
