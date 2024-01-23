@@ -3,13 +3,11 @@ import {
   Box,
   Container,
   Divider,
-  Stack,
-  Typography,
-  useMediaQuery,
+  Grid,
+  Typography
 } from "@mui/material";
-import { useTheme } from "@mui/material/styles";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
 import QueryForm from "./QueryForm";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 const darkTheme = createTheme({
   palette: {
@@ -18,8 +16,6 @@ const darkTheme = createTheme({
 });
 
 export default function Footer() {
-  const theme = useTheme();
-  const isSmallerScreen = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
     <>
@@ -35,17 +31,14 @@ export default function Footer() {
           }}
         >
           <Container>
-            <Stack
-              spacing={4}
-              className="w-100"
-              direction={isSmallerScreen ? "column" : "row"}
-              alignItems={"center"}
-              justifyContent={"space-around"}
-            >
-              <Stack
-                sx={{
-                  color: "white",
-                }}
+            <Grid container spacing={4} justifyContent={"center"}>
+              <Grid
+                item
+                xs={9}
+                sm={7}
+                md={5}
+                color={"white"}
+                alignSelf={"center"}
               >
                 <h4>Contact Us</h4>
                 <ul>
@@ -79,10 +72,12 @@ export default function Footer() {
                     </a>
                   </li>
                 </ul>
-              </Stack>
+              </Grid>
 
-              <QueryForm props={"footer"} />
-            </Stack>
+              <Grid item xs={11} sm={9} md={5}>
+                <QueryForm props={"footer"} />
+              </Grid>
+            </Grid>
             <Divider sx={{ my: 3, borderColor: "#EF3E00" }} />
             <Typography variant="body1" className="text-center text-light">
               © CopyRight by <span className="color-primary">Saar Biotech</span>

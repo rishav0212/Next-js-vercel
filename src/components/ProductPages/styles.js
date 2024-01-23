@@ -1,8 +1,12 @@
 // styles.js
 // Page Title
 
-
-export const pageItemGrid ={fontSize:"calc(0.5vh + 0.3vw)", justifyContent:"center", alignContent:"center", marginTop:2}
+export const pageItemGrid = {
+  fontSize: "calc(0.5vh + 0.3vw)",
+  justifyContent: "center",
+  alignContent: "center",
+  marginTop: 2,
+};
 // Paper Component
 export const upperPaper = {
   width: "100%",
@@ -22,7 +26,6 @@ export const titleStyle = {
     textShadow: "5px 2px 4px rgba(0, 0, 0, 0.4)",
   },
 };
-
 
 export const sectionTitle = {
   color: "whitesmoke",
@@ -44,7 +47,7 @@ export const sectionTitle = {
 export const imgPaper = {
   position: "relative",
   overflow: "hidden",
-  display:"inline-block",
+  display: "inline-block",
   borderRadius: 5,
   transition: "box-shadow 0.3s ease-in-out",
   alignContent: "center",
@@ -72,5 +75,3 @@ export const readMoreGrid = {
   marginTop: 1,
   fontSize: "1.7em",
 };
-
-

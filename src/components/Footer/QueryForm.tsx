@@ -3,20 +3,11 @@ import { useForm } from "react-hook-form";
 import * as Yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import FormProvider from "../hook-form/FormProvider";
-import { Stack, Typography, useMediaQuery, useTheme } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import RHFTextField from "../hook-form/RHFText.Field";
-import { forwardRef } from "react";
 import { LoadingButton } from "@mui/lab";
-import MuiAlert from "@mui/material/Alert";
-
-// const Alert = forwardRef(function Alert(props, ref :<HTMLDivElement> ) {
-//     return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
-// });
 
 export default function QueryForm({ props }) {
-  // return <div>QUERY FORM</div>;
-  const theme = useTheme();
-  const isSmallerMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   const QuerySchema = Yup.object().shape({
     name: Yup.string().required("Name is required"),
@@ -73,92 +64,75 @@ export default function QueryForm({ props }) {
   };
 
   return (
-    <Stack sx={{ width: isSmallerMobile ? "100%" : "auto" }}>
-      <FormProvider methods={methods} onSubmit={handleSubmit(onSubmit)}>
-        <Stack spacing={3} mb={5} mt={3}>
-          {/* {
-                      !!errors.afterSubmit && (
-                          <Alert severity="error">{errors.afterSubmit.message}</Alert>
-                      )
-                  } */}
-          {props === "footer" ? (
-            <>
-              {isSmallerMobile ? (
-                <>
-                  <RHFTextField
-                    name={"name"}
-                    label={"Full Name"}
-                    helperText={undefined}
-                  />
-                  <RHFTextField
-                    name={"email"}
-                    label={"Email"}
-                    helperText={undefined}
-                  />
-                  <RHFTextField
-                    name={"phone"}
-                    label={"Phone"}
-                    helperText={undefined}
-                  />
-                  <RHFTextField
-                    name={"company"}
-                    label={"Company Name"}
-                    helperText={undefined}
-                  />
-                </>
-              ) : (
-                <>
-                  <Stack direction="row" spacing={3}>
-                    <RHFTextField
-                      name={"name"}
-                      label={"Full Name"}
-                      helperText={undefined}
-                    />
-                    <RHFTextField
-                      name={"company"}
-                      label={"Company Name"}
-                      helperText={undefined}
-                    />
-                  </Stack>
-                  <Stack direction="row" spacing={3}>
-                    <RHFTextField
-                      name={"email"}
-                      label={"Email"}
-                      helperText={undefined}
-                    />
-                    <RHFTextField
-                      name={"phone"}
-                      label={"Phone"}
-                      helperText={undefined}
-                    />
-                  </Stack>
-                </>
-              )}
-            </>
-          ) : (
-            <>
+    <FormProvider methods={methods} onSubmit={handleSubmit(onSubmit)}>
+      {props === "footer" ? (
+        <>
+          <Grid container spacing={1.5}>
+            <Grid item xs={12} sm={6}>
+
               <RHFTextField
                 name={"name"}
                 label={"Full Name"}
                 helperText={undefined}
               />
-              <RHFTextField
-                name={"email"}
-                label={"Email"}
-                helperText={undefined}
-              />
-              <RHFTextField
-                name={"phone"}
-                label={"Phone"}
-                helperText={undefined}
-              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
               <RHFTextField
                 name={"company"}
                 label={"Company Name"}
                 helperText={undefined}
               />
-            </>
-          )}
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <RHFTextField
+                name={"email"}
+                label={"Email"}
+                helperText={undefined}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <RHFTextField
+                name={"phone"}
+                label={"Phone"}
+                helperText={undefined}
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <RHFTextField
+                name={"query"}
+                label={"Message"}
+                multiline
+                rows={4}
+                helperText={undefined}
+              />
+              <LoadingButton
+                color="primary"
+                size="medium"
+                type="submit"
+                variant="contained"
+                loading={false}
+                className="loading-button"
+                sx={{ margin: 1.5 }}
+              >
+                <Typography variant="body1">Send Query</Typography>
+              </LoadingButton>
+            </Grid>
+          </Grid>
+        </>
+      ) : (
+        <>
+          <RHFTextField
+            name={"name"}
+            label={"Full Name"}
+            helperText={undefined}
+          />
+          <RHFTextField name={"email"} label={"Email"} helperText={undefined} />
+          <RHFTextField name={"phone"} label={"Phone"} helperText={undefined} />
+          <RHFTextField
+            name={"company"}
+            label={"Company Name"}
+            helperText={undefined}
+          />
           <RHFTextField
             name={"query"}
             label={"Message"}
@@ -166,19 +140,20 @@ export default function QueryForm({ props }) {
             rows={4}
             helperText={undefined}
           />
-        </Stack>
-        <LoadingButton
-          name="submit"
-          color="primary"
-          size="medium"
-          type="submit"
-          variant="contained"
-          loading={false}
-          className="loading-button"
-        >
-          <Typography variant="body1">Send Query</Typography>
-        </LoadingButton>
-      </FormProvider>
-    </Stack>
+          <LoadingButton
+            color="primary"
+            size="medium"
+            type="submit"
+            variant="contained"
+            loading={false}
+            className="loading-button"
+            sx={{ margin: 2 }}
+          >
+            <Typography variant="body1">Send Query</Typography>
+          </LoadingButton>
+        </>
+      )}
+    </FormProvider>
+
   );
 }

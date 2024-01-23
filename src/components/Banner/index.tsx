@@ -1,10 +1,10 @@
 "use client";
+import { LoadingButton } from "@mui/lab";
+import { Paper } from "@mui/material";
+import Link from "next/link";
+import React from "react";
 import Carousel from "react-material-ui-carousel";
 import styles from "./Banner.module.css";
-import React from "react";
-import { Paper, Container } from "@mui/material";
-import { LoadingButton } from "@mui/lab";
-import Link from "next/link";
 
 // Define the prop types for the Item component
 interface ItemProps {

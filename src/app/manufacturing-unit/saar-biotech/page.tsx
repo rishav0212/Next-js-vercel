@@ -1,22 +1,41 @@
-"use client"
-
-import { Container, Grid, Stack, Toolbar, Typography } from "@mui/material";
-import Image from "next/image";
+import { Grid, Paper, Typography } from "@mui/material";
 
 export default function SaarBiotechContent() {
   return (
     <>
-      <Toolbar />
-
-      <div className="text-center color-primary">
-        <Typography variant="h4">Saar Biotech Manufacuring Unit</Typography>
-      </div>
-
-      <Toolbar />
-      <Container>
-        <Grid container spacing={8}>
-          <Grid item xs={12} sm={12} md={8} lg={8}>
-            <Typography className="lh-lg" textAlign={"justify"}>
+      <Grid
+        container
+        alignContent={"center"}
+        justifyContent={"center"}
+        fontSize={"calc(0.7vh+0.3vw)"}
+      >
+        <Grid
+          container
+          xs={11}
+          md={10}
+          item
+          justifyContent={"center"}
+          textAlign={"center"}
+          sx={{
+            padding: 4,
+            borderRadius: 5,
+            backgroundColor: "#f0f0f0",
+            mt: 5,
+            justifySelf: "center",
+            boxShadow: "0px 4px 8px rgb(0,0,0,0.4)",
+          }}
+        >
+          <Grid item xs={12} margin={4}>
+            <Typography
+              fontSize={"2.5em"}
+              variant="h4"
+              className="color-primary"
+            >
+              Saar Biotech Manufacuring Unit
+            </Typography>
+          </Grid>
+          <Grid item xs={12} sm={12} md={8}>
+            <Typography fontSize={"1.1em"} textAlign={"justify"}>
               Our Factory is located in Baddi, District Solan of Himachal
               Pradesh. The facilities and the location of the factory have
               created an extra edge for manufacturing and distributing the
@@ -46,65 +65,73 @@ export default function SaarBiotechContent() {
               thoroughly tested to ensure the conformity of quality.
             </Typography>
           </Grid>
-          <Grid item xs={12} sm={12} md={4} lg={4}>
-            <Stack
-              spacing={2}
-              alignItems="center"
-              justifyContent={"center"}
-              className="w-100 h-100"
-            >
-              <img
-                className="manufacturing-unit-images"
-                width={250}
-                height={100}
-                src={"/images/saar-image1.jpg"}
-                alt={"Saar Biotech"}
-              />
-              <img
-                className="manufacturing-unit-images"
-                width={250}
-                height={100}
-                src={"/images/saar-image2.jpg"}
-                alt={"Saar Biotech"}
-              />
-              <img
-                className="manufacturing-unit-images"
-                width={250}
-                height={100}
-                src={"/images/saar-image3.jpg"}
-                alt={"Saar Biotech"}
-              />
-              <img
-                className="manufacturing-unit-images"
-                width={250}
-                height={100}
-                src={"/images/saar-image4.jpg"}
-                alt={"Saar Biotech"}
-              />
-            </Stack>
+          <Grid
+            item
+            alignItems="center"
+            justifyContent={"center"}
+            xs={12}
+            sm={12}
+            md={4}
+          >
+            <img
+              className="manufacturing-unit-images"
+              width={250}
+              height={100}
+              src={"/images/saar-image1.jpg"}
+              alt={"Saar Biotech"}
+            />
+            <img
+              className="manufacturing-unit-images"
+              width={250}
+              height={100}
+              src={"/images/saar-image2.jpg"}
+              alt={"Saar Biotech"}
+            />
+            <img
+              className="manufacturing-unit-images"
+              width={250}
+              height={100}
+              src={"/images/saar-image3.jpg"}
+              alt={"Saar Biotech"}
+            />
+            <img
+              className="manufacturing-unit-images"
+              width={250}
+              height={100}
+              src={"/images/saar-image4.jpg"}
+              alt={"Saar Biotech"}
+            />
           </Grid>
         </Grid>
+        <Grid
+          container
+          xs={11}
+          md={10}
+          item
+          justifyContent={"center"}
+          sx={{
+            borderRadius: 5,
+            backgroundColor: "#f0f0f0",
+            my: 5,
+            justifySelf: "center",
+            boxShadow: "0px 4px 8px rgb(0,0,0,0.4)",
+          }}
+        >
+          <Grid item xs={12} margin={2} className="text-center color-primary">
+            <Typography variant="h4">Our Strengths</Typography>
+          </Grid>
 
-        <Toolbar />
-
-        <div className="text-center color-primary">
-          <Typography variant="h4">Our Strengths</Typography>
-        </div>
-
-        <Toolbar />
-
-        <Grid container spacing={3}>
-          <Grid item xs={12} sm={12} md={6} lg={6}>
+          <Grid item xs={12} sm={12} md={5} margin={2}>
             <Typography variant="h6" className="font--size-1125">
               <li>Timely Delivery of Product</li>
             </Typography>
           </Grid>
-          <Grid item xs={12} sm={12} md={6} lg={6}>
+          <Grid item xs={12} sm={12} md={5} margin={2}>
             <Typography variant="h6" className="font--size-1125">
               <li>Determined by quality, integrity and core values </li>
             </Typography>
           </Grid>
-          <Grid item xs={12} sm={12} md={6} lg={6}>
+          <Grid item xs={12} sm={12} md={5} margin={2}>
             <Typography variant="h6" className="font--size-1125">
               <li>
                 Rigid adherence to Good Manufacturing Practises (GMP)
@@ -112,7 +139,7 @@ export default function SaarBiotechContent() {
               </li>
             </Typography>
           </Grid>
-          <Grid item xs={12} sm={12} md={6} lg={6}>
+          <Grid item xs={12} sm={12} md={5} margin={2}>
             <Typography variant="h6" className="font--size-1125">
               <li>
                 Multidisciplined workforce that is motivated towards the highest
@@ -121,9 +148,7 @@ export default function SaarBiotechContent() {
             </Typography>
           </Grid>
         </Grid>
-
-        <Toolbar />
-      </Container>
+      </Grid>
     </>
   );
 }

@@ -1,103 +1,165 @@
-"use client"
-import {
-  Box,
-  Container,
-  Grid,
-  Stack,
-  Toolbar,
-  Typography,
-  useMediaQuery,
-  useTheme,
-} from "@mui/material";
+import { Grid, Typography } from "@mui/material";
+import * as styles from "@/components/ProductPages/styles";
 
 export default function AboutContent() {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
-
   return (
-    <>
-      <Toolbar />
-      <h2 className="text-center mb-3">About Saar Biotech</h2>
-      <Toolbar />
-      <Container>
-        <Grid container spacing={8}>
-          <Grid item xs={12} sm={12} md={7} lg={7}>
-            <Typography textAlign={"justify"}>
-              Saar Biotech is one of the leading pharmaceuticals manufacturing
-              company in India. We use latest techniques and technologies for
-              performing test. We are engaged in third party manufacturing of
-              varied pharmaceutical formulations and also manufactured products
-              for domestic and international market. Our product range consists
-              Syrups, Dry syrups, suspensions, Nasal spray, Roll On, Lotions,
-              Drops, Ointment, Glycerine and Shampoo. Our plant is large,
-              well-designed and comply with global requirements. <br />
-              <br />
-              Infrastructure, processes and systems at our plants support a
-              flexible product mix and quick product changeovers. We have wide
-              product range which comprises Anti-Fungal, Anti-Bacterial,
-              Anti-Inflammatory, Antitussive and Dermatological products. At our
-              manufacturing site, the latest analytical instruments and tightly
-              monitored quality assurance and quality control systems ensures
-              consistent quality of our products.
-            </Typography>
-          </Grid>
-          <Grid item xs={12} sm={12} md={5} lg={5}>
-            <img src="/images/about.jpg" alt="Saar Biotech" width={"100%"} />
-          </Grid>
+    <Grid
+      container
+      alignContent={"center"}
+      justifyContent={"center"}
+      fontSize="calc(0.7vh + 0.3vw)"
+    >
+      <Grid
+        container
+        item
+        xs={12}
+        md={10}
+        margin={2}
+        alignContent={"center"}
+        justifyContent={"center"}
+        sx={{
+          backgroundColor: "#fff",
+          boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.6)",
+          padding: "10px 20px",
+          paddingBottom: "40px",
+          borderRadius: "10px",
+          transition: "boxShadow 0.3s ease",
+          "&:hover": {
+            boxShadow: "0px 8px 16px rgba(0, 0, 0, 0.7)",
+          },
+        }}
+      >
+        <Grid
+          item
+          xs={12}
+          sm={12}
+          md={12}
+          textAlign={"center"}
+          sx={styles.titleStyle}
+        >
+          <h2 style={{ fontSize: "1em" }}>About Saar Biotech</h2>
         </Grid>
+        <Grid item xs={12} sm={12} md={7}>
+          <Typography fontSize={"2em"} textAlign={"justify"}>
+            Saar Biotech is one of the leading pharmaceuticals manufacturing
+            company in India. We use latest techniques and technologies for
+            performing test. We are engaged in third party manufacturing of
+            varied pharmaceutical formulations and also manufactured products
+            for domestic and international market. Our product range consists
+            Syrups, Dry syrups, suspensions, Nasal spray, Roll On, Lotions,
+            Drops, Ointment, Glycerine and Shampoo. Our plant is large,
+            well-designed and comply with global requirements. <br />
+            <br />
+            Infrastructure, processes and systems at our plants support a
+            flexible product mix and quick product changeovers. We have wide
+            product range which comprises Anti-Fungal, Anti-Bacterial,
+            Anti-Inflammatory, Antitussive and Dermatological products. At our
+            manufacturing site, the latest analytical instruments and tightly
+            monitored quality assurance and quality control systems ensures
+            consistent quality of our products.
+          </Typography>
+        </Grid>
+        <Grid item xs={12} sm={12} md={5}>
+          <img
+            src="/images/about.jpg"
+            alt="Saar Biotech"
+            width={"100%"}
+            style={{
+              // backgroundColor: "#fff",
+              // boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.3)",
+              padding: 1,
+              margin: 20,
+              borderRadius: "10px",
+            }}
+          />
+        </Grid>
+      </Grid>
 
-        <Toolbar />
-      </Container>
-
-      <Box
+      <Grid
         className="w-100 d-flex align-items-center justify-content-center text-center background-primary"
         sx={{
           height: "15vh",
         }}
       >
-        <h5 className="fst-italic text-light">
+        <h5 className="fst-italic text-light" style={{fontSize:"2.7em"}}>
           "For us Quality Means Doing it Right When No one is Looking."
         </h5>
-      </Box>
+      </Grid>
 
-      <Container>
-        <Toolbar />
-
+      <Grid
+        container
+        item
+        marginTop={3}
+        sx={{
+          textAlign: { xs: "center", md: "left" },
+        }}
+        justifyContent={"center"}
+        alignItems={"center"}
+      >
         <Grid
           container
-          spacing={8}
-          className={isMobile ? `text-center` : "text-start"}
+          item
+          xs={11}
+          sm={8}
+          md={3.5}
+          padding={4}
+          margin={2}
+          borderRadius={3}
+          justifySelf={"center"}
+          sx={{
+            background: "#f0f0f0",
+            boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.5)",
+            "&:hover": {
+              boxShadow: "0px 8px 16px rgba(0,0,0,0.6)",
+            },
+          }}
         >
-          <Grid item xs={12} sm={12} md={4} lg={4}>
-            <Typography variant="h5">
+          <Grid>
+            <Typography variant="h5" >
               <u>Main Perspective</u>
             </Typography>
-            <Stack py={3} spacing={2}>
-              <Typography variant="subtitle1" className="color-primary">
-                Quality Care
-              </Typography>
-              <Typography variant="body2">
-                We Provide COA(Certificate of Analysis) with each batch and
-                control samples are maintained in laboratories.
-              </Typography>
-            </Stack>
-            <Stack spacing={2}>
-              <Typography variant="subtitle1" className="color-primary">
-                Quality Certifications
-              </Typography>
-              <Typography variant="body2">
-                WHO Applied
-                <br />
-                ISO Certification <br />
-                GMP Certification
-              </Typography>
-            </Stack>
+            <Typography variant="subtitle1" className="color-primary">
+              Quality Care
+            </Typography>
+            <Typography variant="body2">
+              We Provide COA(Certificate of Analysis) with each batch and
+              control samples are maintained in laboratories.
+            </Typography>
+            <Typography variant="subtitle1" className="color-primary">
+              Quality Certifications
+            </Typography>
+            <Typography variant="body2">
+              WHO Applied
+              <br />
+              ISO Certification <br />
+              GMP Certification
+            </Typography>
           </Grid>
-          <Grid item xs={12} sm={12} md={4} lg={4}>
+        </Grid>
+        <Grid
+          container
+          item
+          xs={11}
+          sm={8}
+          md={3.5}
+          padding={3}
+          margin={2}
+          borderRadius={3}
+          justifyContent={"center"}
+          alignContent={"center"}
+          sx={{
+            background: "#f0f0f0",
+            boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.5)",
+            "&:hover": {
+              boxShadow: "0px 8px 16px rgba(0,0,0,0.6)",
+            },
+          }}
+        >
+          <Grid>
             <Typography variant="h5">
               <u>Our Values</u>
             </Typography>
-            <Stack py={3} spacing={2}>
+            <Grid>
               <Typography variant="subtitle1" className="color-primary">
                 Customer Satisfaction
               </Typography>
@@ -109,36 +171,48 @@ export default function AboutContent() {
                 tangible value is to our customers and their stakeholders over
                 long term mutually beneficial relationships.
               </Typography>
-            </Stack>
+            </Grid>
           </Grid>
-          <Grid item xs={12} sm={12} md={4} lg={4}>
+        </Grid>
+        <Grid
+          container
+          item
+          xs={11}
+          sm={8}
+          md={3.5}
+          padding={3}
+          margin={2}
+          borderRadius={3}
+          sx={{
+            background: "#f0f0f0",
+            boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.5)",
+            "&:hover": {
+              boxShadow: "0px 8px 16px rgba(0,0,0,0.6)",
+            },
+          }}
+        >
+          <Grid>
             <Typography variant="h5">
               <u>Our Strengths</u>
             </Typography>
-            <Stack py={3} spacing={2}>
-              <Typography variant="subtitle1" className="color-primary">
-                Our Team
-              </Typography>
-              <Typography variant="body2">
-                Our Professional and Highly Qualified Staff includes M pharm,
-                MBA'S and CA'S from which all are dedicated towards their
-                duties.
-              </Typography>
-            </Stack>
-            <Stack spacing={2}>
-              <Typography variant="subtitle1" className="color-primary">
-                Latest DCGI Approvals
-              </Typography>
-              <Typography variant="body2">
-                As we believe in <b>inspiring innovation</b> that's why this is
-                our main aim to bring new DCGI Approved molecules for our
-                customers.
-              </Typography>
-            </Stack>
+            <Typography variant="subtitle1" className="color-primary">
+              Our Team
+            </Typography>
+            <Typography variant="body2">
+              Our Professional and Highly Qualified Staff includes M pharm,
+              MBA'S and CA'S from which all are dedicated towards their duties.
+            </Typography>
+            <Typography variant="subtitle1" className="color-primary">
+              Latest DCGI Approvals
+            </Typography>
+            <Typography variant="body2">
+              As we believe in <b>inspiring innovation</b> that's why this is
+              our main aim to bring new DCGI Approved molecules for our
+              customers.
+            </Typography>
           </Grid>
         </Grid>
-      </Container>
-      <Toolbar />
-    </>
+      </Grid>
+    </Grid>
   );
 }

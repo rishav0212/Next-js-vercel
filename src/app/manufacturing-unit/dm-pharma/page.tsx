@@ -1,26 +1,42 @@
-"use client";
-
-import { Container, Grid, Stack, Toolbar, Typography } from "@mui/material";
-import Image from "next/image";
-import * as React from "react";
+import { Grid, Typography } from "@mui/material";
 
 export default function DmPharmaContent() {
   return (
     <>
-      <Toolbar />
-
-      <Typography variant="h4" className="text-center color-primary">
-        DM Pharma Manufacuring Unit
-      </Typography>
-
-      <Toolbar />
-      <Container>
-        <Grid container spacing={8}>
-          <Grid item xs={12} sm={12} md={8} lg={8}>
+      {" "}
+      <Grid
+        container
+        alignContent={"center"}
+        justifyContent={"center"}
+        fontSize={"calc(0.7vh+0.3vw)"}
+      >
+        <Grid
+          container
+          xs={11}
+          md={10}
+          item
+          justifyContent={"center"}
+          textAlign={"center"}
+          sx={{
+            padding: 4,
+            borderRadius: 5,
+            backgroundColor: "#f0f0f0",
+            mt: 5,
+            justifySelf: "center",
+            boxShadow: "0px 4px 8px rgb(0,0,0,0.4)",
+          }}
+        >
+          <Grid item xs={12} margin={4}>
             <Typography
-              className="d-flex align-self-center lh-lg"
-              textAlign={"justify"}
+              fontSize={"2.5em"}
+              variant="h4"
+              className="color-primary"
             >
+              DM Pharma Manufacuring Unit
+            </Typography>
+          </Grid>
+          <Grid item xs={12} sm={12} md={8}>
+            <Typography fontSize={"1.1em"} textAlign={"justify"}>
               The facilities and location of the factory have created an extra
               edge for manufacturing and distributing the products. The factory
               consists of Production department, R&D department, Accounts
@@ -51,71 +67,73 @@ export default function DmPharmaContent() {
               position in the domestic as well as global market.
             </Typography>
           </Grid>
-          <Grid item xs={12} sm={12} md={4} lg={4}>
-            <Stack
-              spacing={2}
-              alignItems="center"
-              justifyContent={"center"}
-              className="w-100 h-100"
-            >
-              <img
-                className="manufacturing-unit-images"
-                width={250}
-                height={100}
-                src={"/images/dm-image1.jpg"}
-                alt={"Saar Biotech"}
-              />
-              <img
-                className="manufacturing-unit-images"
-                width={250}
-                height={100}
-                src={"/images/dm-image2.jpg"}
-                alt={"Saar Biotech"}
-              />
-              <img
-                className="manufacturing-unit-images"
-                width={250}
-                height={100}
-                src={"/images/dm-image3.jpg"}
-                alt={"Saar Biotech"}
-              />
-              <img
-                className="manufacturing-unit-images"
-                width={250}
-                height={100}
-                src={"/images/dm-image4.jpg"}
-                alt={"Saar Biotech"}
-              />
-              <img
-                className="manufacturing-unit-images"
-                width={250}
-                height={100}
-                src={"/images/dm-image5.jpg"}
-                alt={"Saar Biotech"}
-              />
-            </Stack>
+          <Grid
+            item
+            alignItems="center"
+            justifyContent={"center"}
+            xs={12}
+            sm={12}
+            md={4}
+          >
+            <img
+              className="manufacturing-unit-images"
+              width={250}
+              height={100}
+              src={"/images/dm-image1.jpg"}
+              alt={"Saar Biotech"}
+            />
+            <img
+              className="manufacturing-unit-images"
+              width={250}
+              height={100}
+              src={"/images/dm-image2.jpg"}
+              alt={"Saar Biotech"}
+            />
+            <img
+              className="manufacturing-unit-images"
+              width={250}
+              height={100}
+              src={"/images/dm-image3.jpg"}
+              alt={"Saar Biotech"}
+            />
+            <img
+              className="manufacturing-unit-images"
+              width={250}
+              height={100}
+              src={"/images/dm-image4.jpg"}
+              alt={"Saar Biotech"}
+            />
           </Grid>
         </Grid>
+        <Grid
+          container
+          xs={11}
+          md={10}
+          item
+          justifyContent={"center"}
+          sx={{
+            borderRadius: 5,
+            backgroundColor: "#f0f0f0",
+            my: 5,
+            justifySelf: "center",
+            boxShadow: "0px 4px 8px rgb(0,0,0,0.4)",
+          }}
+        >
+          <Grid item xs={12} margin={2} className="text-center color-primary">
+            <Typography variant="h4">Our Strengths</Typography>
+          </Grid>
 
-        <Toolbar />
-        <Typography variant="h4" className="text-center color-primary">
-          Our Strengths
-        </Typography>
-
-        <Toolbar />
-
-        <Grid container spacing={3}>
-          <Grid item xs={12} sm={12} md={6} lg={6}>
+          <Grid item xs={12} sm={12} md={5} margin={2}>
             <Typography variant="h6" className="font--size-1125">
               <li>Timely Delivery of Product</li>
             </Typography>
           </Grid>
-          <Grid item xs={12} sm={12} md={6} lg={6}>
+          <Grid item xs={12} sm={12} md={5} margin={2}>
             <Typography variant="h6" className="font--size-1125">
               <li>Determined by quality, integrity and core values </li>
             </Typography>
           </Grid>
-          <Grid item xs={12} sm={12} md={6} lg={6}>
+          <Grid item xs={12} sm={12} md={5} margin={2}>
             <Typography variant="h6" className="font--size-1125">
               <li>
                 Rigid adherence to Good Manufacturing Practises (GMP)
@@ -123,7 +141,7 @@ export default function DmPharmaContent() {
               </li>
             </Typography>
           </Grid>
-          <Grid item xs={12} sm={12} md={6} lg={6}>
+          <Grid item xs={12} sm={12} md={5} margin={2}>
             <Typography variant="h6" className="font--size-1125">
               <li>
                 Multidisciplined workforce that is motivated towards the highest
@@ -132,9 +150,7 @@ export default function DmPharmaContent() {
             </Typography>
           </Grid>
         </Grid>
-
-        <Toolbar />
-      </Container>
+      </Grid>
     </>
   );
 }

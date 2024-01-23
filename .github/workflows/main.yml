@@ -82,7 +82,7 @@ jobs:
             echo "V_FTP_PASSWORD=$FTP_PASSWORD" >> $GITHUB_OUTPUT
           fi
 
-          FTP_SERVER="ftp.alenslim.co.in"        
+          FTP_SERVER="ftp.alenslim.co.in"
           echo "Using $FTP_SERVER $FTP_USERNAME $FTP_PASSWORD"
           echo "V_FTP_ERVER=$FTP_SERVER" >> $GITHUB_OUTPUT
 
