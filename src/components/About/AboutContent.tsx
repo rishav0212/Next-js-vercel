@@ -81,7 +81,7 @@ export default function AboutContent() {
           height: "15vh",
         }}
       >
-        <h5 className="fst-italic text-light" style={{fontSize:"2.7em"}}>
+        <h5 className="fst-italic text-light" style={{ fontSize: "2.7em" }}>
           "For us Quality Means Doing it Right When No one is Looking."
         </h5>
       </Grid>
@@ -115,7 +115,7 @@ export default function AboutContent() {
           }}
         >
           <Grid>
-            <Typography variant="h5" >
+            <Typography variant="h5">
               <u>Main Perspective</u>
             </Typography>
             <Typography variant="subtitle1" className="color-primary">

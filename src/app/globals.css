@@ -248,16 +248,6 @@ a {
   font-size: "1.125rem" !important;
 }
 
-.stack-contact {
-  padding: 5px;
-  background-color: rgba(0, 0, 0, 0.06);
-  border-radius: 25px;
-  transition: 0.3s;
-}
-
-.stack-contact:hover {
-  transform: translateY(-5px);
-}
 
 .MuiDivider-root {
   border-color: black !important;
