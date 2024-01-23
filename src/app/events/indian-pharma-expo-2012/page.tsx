@@ -1,22 +1,37 @@
-
-import { Container, Grid, Stack, Toolbar, Typography } from "@mui/material";
-
+import { Grid, Typography } from "@mui/material";
 
 export default function Expo2012Content() {
   return (
     <>
-      <Toolbar />
-
-      <Typography variant="h4" className="color-primary text-center">
-        Indian Pharma Expo 2012
-      </Typography>
-
-      <Toolbar />
-      <Container>
-        <Grid container spacing={16}>
-          <Grid item xs={12} sm={12} md={8} lg={8}>
+      <Grid
+        container
+        justifyContent={"center"}
+        alignContent={"center"}
+        fontSize={"calc(0.7vh+0.3vw)"}
+      >
+        <Grid
+          container
+          item
+          xs={11}
+          sm={11}
+          md={10}
+          margin={5}
+          justifyContent={"center"}
+          alignContent={"center"}
+        >
+          <Grid item xs={12} m={2}>
             <Typography
-              className="d-flex align-self-center lh-lg"
+              fontSize={"2.5em"}
+              variant="h4"
+              className="color-primary text-center"
+            >
+              Indian Pharma Expo 2012
+            </Typography>
+          </Grid>
+          <Grid item xs={12} sm={12} md={7} p={2}>
+            <Typography
+              fontSize={"1em"}
+              className="lh-lg"
               textAlign={"justify"}
             >
               The Indian Pharma Expo 2012 took place on 22- 23 sept at Pragati
@@ -48,30 +63,23 @@ export default function Expo2012Content() {
               Indian Pharma Expo-2012 a success for us.
             </Typography>
           </Grid>
-          <Grid item xs={12} sm={12} md={4} lg={4}>
-            <Stack
-              spacing={2}
-              alignItems="start"
-              justifyContent={"start"}
-              className="w-100 h-100"
-            >
-              <Typography variant="h6" className="color-primary text-start">
-                Exhibition Highlights
-              </Typography>
-              <Typography variant="body1">
-                Pharmaceuticals Products Exhibition
-              </Typography>
-              <Typography variant="body1">
-                Expo based on the theme 'Destination for Innovative and Reliable
-                Healthcare Products'.
-              </Typography>
-              <Typography variant="body1">B2B Exhibition</Typography>
-            </Stack>
+          <Grid item xs={11} sm={11} md={3} p={2}>
+            <Typography variant="h6" className="color-primary text-start">
+              Exhibition Highlights
+            </Typography>
+            <Typography m={2} variant="body1">
+              Pharmaceuticals Products Exhibition
+            </Typography>
+            <Typography m={2} variant="body1">
+              Expo based on the theme 'Destination for Innovative and Reliable
+              Healthcare Products'.
+            </Typography>
+            <Typography m={2} variant="body1">
+              B2B Exhibition
+            </Typography>
           </Grid>
         </Grid>
-
-        <Toolbar />
-      </Container>
+      </Grid>
     </>
   );
 }

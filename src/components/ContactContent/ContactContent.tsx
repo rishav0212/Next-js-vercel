@@ -1,3 +1,4 @@
+"use client";
 import { Container, Grid, Stack, Toolbar, Typography } from "@mui/material";
 import QueryForm from "@/components/Footer/QueryForm";
 

@@ -1,20 +1,27 @@
 import { Grid, Typography } from "@mui/material";
+import * as styles from "@/components/ProductPages/styles";
 
 export default function AboutContent() {
   return (
-    <Grid container alignContent={"center"} justifyContent={"center"}>
+    <Grid
+      container
+      alignContent={"center"}
+      justifyContent={"center"}
+      fontSize="calc(0.7vh + 0.3vw)"
+    >
       <Grid
         container
         item
-        width={"80%"}
-        spacing={8}
-        margin={4}
+        xs={12}
+        md={10}
+        margin={2}
         alignContent={"center"}
         justifyContent={"center"}
         sx={{
           backgroundColor: "#fff",
           boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.6)",
-          padding: "20px",
+          padding: "10px 20px",
+          paddingBottom: "40px",
           borderRadius: "10px",
           transition: "boxShadow 0.3s ease",
           "&:hover": {
@@ -22,11 +29,18 @@ export default function AboutContent() {
           },
         }}
       >
-        <Grid item xs={12} sm={12} md={7} className="color-primary">
-          <h2>About Saar Biotech</h2>
+        <Grid
+          item
+          xs={12}
+          sm={12}
+          md={12}
+          textAlign={"center"}
+          sx={styles.titleStyle}
+        >
+          <h2 style={{ fontSize: "1em" }}>About Saar Biotech</h2>
         </Grid>
         <Grid item xs={12} sm={12} md={7}>
-          <Typography textAlign={"justify"}>
+          <Typography fontSize={"2em"} textAlign={"justify"}>
             Saar Biotech is one of the leading pharmaceuticals manufacturing
             company in India. We use latest techniques and technologies for
             performing test. We are engaged in third party manufacturing of
@@ -51,11 +65,11 @@ export default function AboutContent() {
             alt="Saar Biotech"
             width={"100%"}
             style={{
-              backgroundColor: "#fff",
-              boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.3)",
+              // backgroundColor: "#fff",
+              // boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.3)",
               padding: 1,
+              margin: 20,
               borderRadius: "10px",
-              display: "inline-block",
             }}
           />
         </Grid>
@@ -67,22 +81,43 @@ export default function AboutContent() {
           height: "15vh",
         }}
       >
-        <h5 className="fst-italic text-light">
+        <h5 className="fst-italic text-light" style={{fontSize:"2.7em"}}>
           "For us Quality Means Doing it Right When No one is Looking."
         </h5>
       </Grid>
 
       <Grid
         container
-        spacing={8}
-        sx={{ textAlign: { xs: "center", md: "left" } }}
+        item
+        marginTop={3}
+        sx={{
+          textAlign: { xs: "center", md: "left" },
+        }}
         justifyContent={"center"}
+        alignItems={"center"}
       >
-        <Grid container item xs={11} sm={11} md={4} lg={4}>
-          <Typography variant="h5">
-            <u>Main Perspective</u>
-          </Typography>
-          <Grid item py={3} spacing={2}>
+        <Grid
+          container
+          item
+          xs={11}
+          sm={8}
+          md={3.5}
+          padding={4}
+          margin={2}
+          borderRadius={3}
+          justifySelf={"center"}
+          sx={{
+            background: "#f0f0f0",
+            boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.5)",
+            "&:hover": {
+              boxShadow: "0px 8px 16px rgba(0,0,0,0.6)",
+            },
+          }}
+        >
+          <Grid>
+            <Typography variant="h5" >
+              <u>Main Perspective</u>
+            </Typography>
             <Typography variant="subtitle1" className="color-primary">
               Quality Care
             </Typography>
@@ -90,8 +125,6 @@ export default function AboutContent() {
               We Provide COA(Certificate of Analysis) with each batch and
               control samples are maintained in laboratories.
             </Typography>
-          </Grid>
-          <Grid item spacing={2}>
             <Typography variant="subtitle1" className="color-primary">
               Quality Certifications
             </Typography>
@@ -103,29 +136,65 @@ export default function AboutContent() {
             </Typography>
           </Grid>
         </Grid>
-        <Grid container item xs={11} sm={11} md={4} lg={4}>
-          <Typography variant="h5">
-            <u>Our Values</u>
-          </Typography>
-          <Grid item py={3} spacing={2}>
-            <Typography variant="subtitle1" className="color-primary">
-              Customer Satisfaction
+        <Grid
+          container
+          item
+          xs={11}
+          sm={8}
+          md={3.5}
+          padding={3}
+          margin={2}
+          borderRadius={3}
+          justifyContent={"center"}
+          alignContent={"center"}
+          sx={{
+            background: "#f0f0f0",
+            boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.5)",
+            "&:hover": {
+              boxShadow: "0px 8px 16px rgba(0,0,0,0.6)",
+            },
+          }}
+        >
+          <Grid>
+            <Typography variant="h5">
+              <u>Our Values</u>
             </Typography>
-            <Typography variant="body2">
-              At Saar Biotech we will endeavour to fulfill the requirments of
-              our prestigious clients to ensure the highest levels of customer
-              satisfaction at all times. Our products and related services will
-              exemplify unparalled quality standards to ensure that tangible
-              value is to our customers and their stakeholders over long term
-              mutually beneficial relationships.
-            </Typography>
+            <Grid>
+              <Typography variant="subtitle1" className="color-primary">
+                Customer Satisfaction
+              </Typography>
+              <Typography variant="body2">
+                At Saar Biotech we will endeavour to fulfill the requirments of
+                our prestigious clients to ensure the highest levels of customer
+                satisfaction at all times. Our products and related services
+                will exemplify unparalled quality standards to ensure that
+                tangible value is to our customers and their stakeholders over
+                long term mutually beneficial relationships.
+              </Typography>
+            </Grid>
           </Grid>
         </Grid>
-        <Grid container item xs={11} sm={11} md={4} lg={4}>
-          <Typography variant="h5">
-            <u>Our Strengths</u>
-          </Typography>
-          <Grid item py={3} spacing={2}>
+        <Grid
+          container
+          item
+          xs={11}
+          sm={8}
+          md={3.5}
+          padding={3}
+          margin={2}
+          borderRadius={3}
+          sx={{
+            background: "#f0f0f0",
+            boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.5)",
+            "&:hover": {
+              boxShadow: "0px 8px 16px rgba(0,0,0,0.6)",
+            },
+          }}
+        >
+          <Grid>
+            <Typography variant="h5">
+              <u>Our Strengths</u>
+            </Typography>
             <Typography variant="subtitle1" className="color-primary">
               Our Team
             </Typography>
@@ -133,8 +202,6 @@ export default function AboutContent() {
               Our Professional and Highly Qualified Staff includes M pharm,
               MBA'S and CA'S from which all are dedicated towards their duties.
             </Typography>
-          </Grid>
-          <Grid item spacing={2}>
             <Typography variant="subtitle1" className="color-primary">
               Latest DCGI Approvals
             </Typography>

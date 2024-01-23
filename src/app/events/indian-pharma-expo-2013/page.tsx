@@ -1,20 +1,37 @@
-import { Container, Grid, Stack, Toolbar, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 
 export default function Expo2013Content() {
   return (
     <>
-      <Toolbar />
-
-      <Typography variant="h4" className="color-primary text-center">
-        Indian Pharma Expo 2013
-      </Typography>
-
-      <Toolbar />
-      <Container>
-        <Grid container spacing={16}>
-          <Grid item xs={12} sm={12} md={8} lg={8}>
+      <Grid
+        container
+        justifyContent={"center"}
+        alignContent={"center"}
+        fontSize={"calc(0.7vh+0.3vw)"}
+      >
+        <Grid
+          container
+          item
+          xs={11}
+          sm={11}
+          md={10}
+          margin={5}
+          justifyContent={"center"}
+          alignContent={"center"}
+        >
+          <Grid item xs={12} m={2}>
             <Typography
-              className="d-flex align-self-center lh-lg"
+              fontSize={"2.5em"}
+              variant="h4"
+              className="color-primary text-center"
+            >
+              Indian Pharma Expo 2013
+            </Typography>
+          </Grid>
+          <Grid item xs={12} sm={12} md={7} p={2}>
+            <Typography
+              fontSize={"1em"}
+              className="lh-lg"
               textAlign={"justify"}
             >
               The Indian Pharma Expo 2013 took place on 20- 21 sept at Pragati
@@ -43,37 +60,25 @@ export default function Expo2013Content() {
               <br />
               We want to thank our dedicated Staff, our associated companies who
               played major role in all arrangements and visitors for making
-              Indian Pharma Expo-2012 a success for us. We would again like to
+              Indian Pharma Expo-2013 a success for us. We would again like to
               thank the Team of UBM medica who worked so hard to keep the
               arrangements good for all of us to enjoy this event and take
               maximum benefit out of it.
             </Typography>
           </Grid>
-          <Grid item xs={12} sm={12} md={4} lg={4}>
-            <Stack
-              spacing={2}
-              alignItems="start"
-              justifyContent={"start"}
-              className="w-100 h-100"
-            >
-              <Typography variant="h6" className="color-primary text-start">
-                Exhibition Highlights
-              </Typography>
-              <Typography variant="body1">
-                B2B (Business-to-business) Exhibition
-              </Typography>
-              <Typography variant="body1">
-                Pharmaceuticals Products Exhibition
-              </Typography>
-              <Typography variant="body1">
-                Perfect platform for All Contract & API manufacturers.
-              </Typography>
-            </Stack>
+          <Grid item xs={11} sm={11} md={3} p={2}>
+            <Typography variant="h6" className="color-primary text-start">
+              Exhibition Highlights
+            </Typography>
+            <Typography m={2} variant="body1">B2B (Business-to-business) Exhibition
+            </Typography>
+            <Typography m={2} variant="body1">Pharmaceuticals Products Exhibition
+            </Typography>
+            <Typography m={2} variant="body1">Perfect platform for All Contract & API manufacturers.
+            </Typography>
           </Grid>
         </Grid>
-
-        <Toolbar />
-      </Container>
+      </Grid>
     </>
   );
 }
