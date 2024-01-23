@@ -57,30 +57,36 @@ jobs:
       - name: Display structure of downloaded files
         run: ls -R
 
-      - name: Deploy to GoDaddy
+      - name: Set FTP Variables
         env:
           FTP_USERNAME_UAT: ${{ secrets.GODADDY_FTP_NODE_UAT_USER }}
           FTP_PASSWORD_UAT: ${{ secrets.GODADDY_FTP_NODE_UAT_PASSWORD }}
+        id: set-ftp-vars
         run: |
           echo $FTP_USERNAME_UAT        
           echo $FTP_USERNAME_UAT | sed -e 's/\(.\)/\1 /g'
 
           branch_name=$(echo $GITHUB_REF | awk -F'/' '{print $NF}')
-          echo "Branch Name is: $branch_name"
+          echo "Branch Name is $branch_name"
           if [ "$branch_name" = "Next-App" ]; then
             FTP_USERNAME=$FTP_USERNAME_UAT
             FTP_PASSWORD=$FTP_PASSWORD_UAT
             echo "Using FTP User from main as $FTP_USERNAME"
+            echo "V_FTP_USERNAME=$FTP_USERNAME" >> $GITHUB_OUTPUT
+            echo "V_FTP_PASSWORD=$FTP_PASSWORD" >> $GITHUB_OUTPUT
           else         
             FTP_USERNAME=$FTP_USERNAME_UAT
             FTP_PASSWORD=$FTP_PASSWORD_UAT
             echo "Using FTP User from other as $FTP_USERNAME"
+            echo "V_FTP_USERNAME=$FTP_USERNAME" >> $GITHUB_OUTPUT
+            echo "V_FTP_PASSWORD=$FTP_PASSWORD" >> $GITHUB_OUTPUT
           fi
 
           FTP_SERVER="ftp.alenslim.co.in"        
           REMOTE_DIR="."
 
           echo "Using $FTP_SERVER $FTP_USERNAME $FTP_PASSWORD"
+          echo "V_FTP_ERVER=$FTP_SERVER" >> $GITHUB_OUTPUT
 
           sudo apt-get update
           sudo apt-get install lftp -y
