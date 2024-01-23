@@ -1,22 +1,13 @@
-"use client"
+"use client";
 import { useForm } from "react-hook-form";
 import * as Yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import FormProvider from "../hook-form/FormProvider";
 import { Grid, Typography } from "@mui/material";
 import RHFTextField from "../hook-form/RHFText.Field";
-import { forwardRef } from "react";
 import { LoadingButton } from "@mui/lab";
-import MuiAlert from "@mui/material/Alert";
-
-// const Alert = forwardRef(function Alert(props, ref :<HTMLDivElement> ) {
-//     return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
-// });
 
 export default function QueryForm({ props }) {
-  // return <div>QUERY FORM</div>;
-  //   const theme = useTheme();
-  //   const isSmallerMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   const QuerySchema = Yup.object().shape({
     name: Yup.string().required("Name is required"),
@@ -49,7 +40,6 @@ export default function QueryForm({ props }) {
 
   const onSubmit = async (data) => {
     try {
-        console.log(yupResolver(QuerySchema))
       console.log(data);
       // const response = await fetch('/api/submitForm', {
       //     method : 'Post',
@@ -79,6 +69,7 @@ export default function QueryForm({ props }) {
         <>
           <Grid container spacing={1.5}>
             <Grid item xs={12} sm={6}>
+
               <RHFTextField
                 name={"name"}
                 label={"Full Name"}
@@ -163,5 +154,6 @@ export default function QueryForm({ props }) {
         </>
       )}
     </FormProvider>
+
   );
 }

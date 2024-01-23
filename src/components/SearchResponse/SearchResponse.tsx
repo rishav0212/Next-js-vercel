@@ -6,6 +6,7 @@ import { TextField } from "@mui/material";
 import items from "@/product_details/names";
 import { Typography } from "@mui/material";
 import { Grid, Button, Paper } from "@mui/material";
+import { setConfig } from "next/config";
 
 function SearchResponse({ q = "" }) {
 
