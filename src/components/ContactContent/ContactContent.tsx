@@ -35,8 +35,8 @@ export default function ContactContent() {
           justifyContent={"center"}
           alignContent={"center"}
         >
-          <Grid item xs={12} sm={12} md={3.5} lg={3} sx={contactBoxStyles}>
-            <Typography variant="h5" className="color-primary">
+          <Grid  item xs={12} sm={12} md={3.5} lg={3} sx={contactBoxStyles}>
+            <Typography  variant="h5" className="color-primary">
               Our Location
             </Typography>
             <br />

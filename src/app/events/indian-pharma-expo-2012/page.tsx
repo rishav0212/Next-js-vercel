@@ -3,12 +3,7 @@ import { Grid, Typography } from "@mui/material";
 export default function Expo2012Content() {
   return (
     <>
-      <Grid
-        container
-        justifyContent={"center"}
-        alignContent={"center"}
-        fontSize={"calc(0.7vh+0.3vw)"}
-      >
+      <Grid container justifyContent={"center"} alignContent={"center"}>
         <Grid
           container
           item
@@ -21,7 +16,7 @@ export default function Expo2012Content() {
         >
           <Grid item xs={12} m={2}>
             <Typography
-              fontSize={"2.5em"}
+              fontSize={"4em"}
               variant="h4"
               className="color-primary text-center"
             >
@@ -30,7 +25,7 @@ export default function Expo2012Content() {
           </Grid>
           <Grid item xs={12} sm={12} md={7} p={2}>
             <Typography
-              fontSize={"1em"}
+              fontSize={"1.8em"}
               className="lh-lg"
               textAlign={"justify"}
             >
@@ -64,17 +59,21 @@ export default function Expo2012Content() {
             </Typography>
           </Grid>
           <Grid item xs={11} sm={11} md={3} p={2}>
-            <Typography variant="h6" className="color-primary text-start">
+            <Typography
+              fontSize={"2.2em"}
+              variant="h6"
+              className="color-primary text-start"
+            >
               Exhibition Highlights
             </Typography>
-            <Typography m={2} variant="body1">
+            <Typography m={2} fontSize={"1.6em"} variant="body1">
               Pharmaceuticals Products Exhibition
             </Typography>
-            <Typography m={2} variant="body1">
+            <Typography m={2} fontSize={"1.6em"} variant="body1">
               Expo based on the theme 'Destination for Innovative and Reliable
               Healthcare Products'.
             </Typography>
-            <Typography m={2} variant="body1">
+            <Typography m={2} fontSize={"1.6em"} variant="body1">
               B2B Exhibition
             </Typography>
           </Grid>
