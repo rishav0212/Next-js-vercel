@@ -22,7 +22,7 @@ export default function Page({name}) {
       spacing={1}
     >
       <Grid container item md={8} sm={10} xs={11} sx={styles.pageItemGrid}>
-        <Paper elevation={8} sx={styles.upperPaper}>
+        <Paper elevation={8} sx={styles.upperGrid}>
           <Grid
             container
             spacing={2}
