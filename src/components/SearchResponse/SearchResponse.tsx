@@ -163,7 +163,6 @@ function SearchResponse({ q = "" }) {
   return (
     <Paper
       sx={{
-        fontSize: "calc(0.5vh+0.35vw)",
         position: "relative",
       }}
     >
@@ -200,7 +199,7 @@ function SearchResponse({ q = "" }) {
                 fontWeight: "bold",
                 textShadow: "2px 4px 3px rgba(0, 0, 0, 0.9)",
                 marginBottom: 4,
-                fontSize: "3em",
+                fontSize: "5em",
                 textAlign: "center",
                 "&:hover": {
                   textShadow: "2px 5px 4px rgba(0, 0, 0, 1)",
