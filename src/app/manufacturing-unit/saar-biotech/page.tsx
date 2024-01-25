@@ -26,16 +26,12 @@ export default function SaarBiotechContent() {
           }}
         >
           <Grid item xs={12} margin={4}>
-            <Typography
-              fontSize={"2.5em"}
-              variant="h4"
-              className="color-primary"
-            >
+            <Typography fontSize={"4em"} variant="h4" className="color-primary">
               Saar Biotech Manufacuring Unit
             </Typography>
           </Grid>
           <Grid item xs={12} sm={12} md={8}>
-            <Typography fontSize={"1.1em"} textAlign={"justify"}>
+            <Typography fontSize={"1.8em"} textAlign={"justify"}>
               Our Factory is located in Baddi, District Solan of Himachal
               Pradesh. The facilities and the location of the factory have
               created an extra edge for manufacturing and distributing the
@@ -117,30 +113,48 @@ export default function SaarBiotechContent() {
             boxShadow: "0px 4px 8px rgb(0,0,0,0.4)",
           }}
         >
-          <Grid item xs={12} margin={2} className="text-center color-primary">
-            <Typography variant="h4">Our Strengths</Typography>
+          <Grid item xs={12} margin={1} className="text-center color-primary">
+            <Typography fontSize={"3em"} variant="h4">
+              Our Strengths
+            </Typography>
           </Grid>
 
-          <Grid item xs={12} sm={12} md={5} margin={2}>
-            <Typography variant="h6" className="font--size-1125">
+          <Grid item xs={12} sm={12} md={5} margin={1}>
+            <Typography
+              fontSize={"1.9em"}
+              variant="h6"
+              className="font--size-1125"
+            >
               <li>Timely Delivery of Product</li>
             </Typography>
           </Grid>
-          <Grid item xs={12} sm={12} md={5} margin={2}>
-            <Typography variant="h6" className="font--size-1125">
+          <Grid item xs={12} sm={12} md={5} margin={1}>
+            <Typography
+              fontSize={"1.9em"}
+              variant="h6"
+              className="font--size-1125"
+            >
               <li>Determined by quality, integrity and core values </li>
             </Typography>
           </Grid>
-          <Grid item xs={12} sm={12} md={5} margin={2}>
-            <Typography variant="h6" className="font--size-1125">
+          <Grid item xs={12} sm={12} md={5} margin={1}>
+            <Typography
+              fontSize={"1.9em"}
+              variant="h6"
+              className="font--size-1125"
+            >
               <li>
                 Rigid adherence to Good Manufacturing Practises (GMP)
                 International Organization for Standardization(ISO)
               </li>
             </Typography>
           </Grid>
-          <Grid item xs={12} sm={12} md={5} margin={2}>
-            <Typography variant="h6" className="font--size-1125">
+          <Grid item xs={12} sm={12} md={5} margin={1}>
+            <Typography
+              fontSize={"1.9em"}
+              variant="h6"
+              className="font--size-1125"
+            >
               <li>
                 Multidisciplined workforce that is motivated towards the highest
                 standards of customer satisfaction

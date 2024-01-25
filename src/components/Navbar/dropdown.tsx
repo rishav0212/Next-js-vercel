@@ -5,16 +5,11 @@ import Link from "next/link";
 import { Divider } from "@mui/material";
 
 const StyledLink = styled(Link)({
-  // textDecoration: "none",
-  // color: "black",
-  // fontSize: "16px",
-  // fontWeight: "600",
-  // paddingLeft: "20px",
-  // paddingTop: "5px",
-  // paddingRight: "20px",
-  // textAlign: "center",
-  // justifyContent: "center",
-  // transition: ".3s",
+  textDecoration: "none",
+  color: "black",
+  fontSize: "1.6em",
+  fontWeight: "300",
+  transition: ".3s",
   "&:hover": {
     textDecoration: "underline",
   },

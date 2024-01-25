@@ -1,18 +1,19 @@
 // styles.js
-// Page Title
 
 export const pageItemGrid = {
-  fontSize: "calc(0.5vh + 0.3vw)",
   justifyContent: "center",
   alignContent: "center",
   marginTop: 2,
 };
-// Paper Component
-export const upperPaper = {
+// Upper Grid Component
+export const upperGrid = {
   width: "100%",
   padding: 2,
   borderRadius: 5,
   backgroundColor: "#f0f0f0",
+  boxShadow: "0px 4px 12px rgb(0,0,0,0.5)",
+  justifyContent: "center",
+  justifyItems: "center",
 };
 
 export const titleStyle = {
@@ -20,10 +21,42 @@ export const titleStyle = {
   fontWeight: "bold",
   textShadow: "4px 2px 4px rgba(0, 0, 0, 0.3)",
   marginBottom: 3,
-  fontSize: "5em",
+  fontSize: "4.5em",
   textAlign: "center",
   "&:hover": {
     textShadow: "5px 2px 4px rgba(0, 0, 0, 0.4)",
+  },
+};
+
+export const indications = {
+  title: {
+    color: "#EF3E00",
+    fontSize: "2.3em",
+  },
+  data: {
+    fontSize: "2.3em",
+    marginLeft: "5px",
+  },
+};
+
+export const approved = {
+  title: {
+    color: "#EF3E00",
+    fontSize: "2.3em",
+  },
+  data: {
+    fontSize: "2.3em",
+    marginLeft: "5px",
+  },
+};
+
+export const presentation = {
+  title: {
+    fontSize: "2.1em",
+  },
+  data: {
+    fontSize: "1.8em",
+    marginLeft:"35px",
   },
 };
 
@@ -37,12 +70,21 @@ export const sectionTitle = {
   marginBottom: 2,
   marginTop: 3,
   width: "calc(15vh + 9vw)",
-  fontSize: "2.5em",
+  fontSize: "2.1em",
   textAlign: "center",
   "&:hover": {
     boxShadow: "0 6px 10px rgba(0, 0, 0, 0.9)",
   },
 };
+
+export const sectionData = {
+  fontSize: "1.8em",
+  textAlign:"justify"
+};
+
+export const list={
+  fontSize: "1.8em",
+}
 
 export const imgPaper = {
   position: "relative",
@@ -51,18 +93,20 @@ export const imgPaper = {
   borderRadius: 5,
   transition: "box-shadow 0.3s ease-in-out",
   alignContent: "center",
+  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.9)",
   "&:hover": {
     boxShadow: "0 8px 16px rgba(0, 0, 0, 0.6)",
     transform: "scale(1.05)",
   },
 };
 
-export const lowerPaper = {
+export const lowerGrid = {
   marginTop: 4,
   padding: 3,
   paddingTop: 0,
   borderRadius: 5,
   backgroundColor: "#f0f0f0",
+  boxShadow: "0px 4px 12px rgb(0,0,0,0.5)",
 };
 
 export const readMoreGrid = {
@@ -73,5 +117,5 @@ export const readMoreGrid = {
   textOverflow: "ellipsis",
   marginInline: 2,
   marginTop: 1,
-  fontSize: "1.7em",
+  fontSize: "1.6em",
 };

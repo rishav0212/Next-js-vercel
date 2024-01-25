@@ -39,6 +39,7 @@ export default function Footer() {
                 md={5}
                 color={"white"}
                 alignSelf={"center"}
+                fontSize={"2em"}
               >
                 <h4>Contact Us</h4>
                 <ul>
@@ -54,7 +55,7 @@ export default function Footer() {
                   </li>
                 </ul>
                 <br />
-                <h4>For Product Status Call</h4>
+                <h4 >For Product Status Call</h4>
                 <ul>
                   <li>Mr. Vijay</li>
                   <span>(Marketing Manager)</span>

@@ -1,7 +1,6 @@
 :root {
   --primary-color: #ef3e00;
   --primary-font-family: "Montserrat", sans-serif;
-  
 }
 body {
   margin: 0;
@@ -77,11 +76,12 @@ a {
 }
 
 .navbar-contact {
-  padding: 15px 25px;
+  padding: 10px 20px;
   background-color: var(--primary-color);
   color: #fff;
   border-radius: 25px;
   font-weight: 600;
+  font-size: 1.9em;
 }
 
 .navbar-links {
@@ -247,7 +247,6 @@ a {
 .font--size-1125 {
   font-size: "1.125rem" !important;
 }
-
 
 .MuiDivider-root {
   border-color: black !important;

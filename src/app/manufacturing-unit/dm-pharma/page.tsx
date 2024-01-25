@@ -3,13 +3,7 @@ import { Grid, Typography } from "@mui/material";
 export default function DmPharmaContent() {
   return (
     <>
-      {" "}
-      <Grid
-        container
-        alignContent={"center"}
-        justifyContent={"center"}
-        fontSize={"calc(0.7vh+0.3vw)"}
-      >
+      <Grid container alignContent={"center"} justifyContent={"center"}>
         <Grid
           container
           xs={11}
@@ -28,7 +22,7 @@ export default function DmPharmaContent() {
         >
           <Grid item xs={12} margin={4}>
             <Typography
-              fontSize={"2.5em"}
+              fontSize={"4em"}
               variant="h4"
               className="color-primary"
             >
@@ -36,7 +30,7 @@ export default function DmPharmaContent() {
             </Typography>
           </Grid>
           <Grid item xs={12} sm={12} md={8}>
-            <Typography fontSize={"1.1em"} textAlign={"justify"}>
+            <Typography fontSize={"1.8em"} textAlign={"justify"}>
               The facilities and location of the factory have created an extra
               edge for manufacturing and distributing the products. The factory
               consists of Production department, R&D department, Accounts
@@ -120,20 +114,20 @@ export default function DmPharmaContent() {
           }}
         >
           <Grid item xs={12} margin={2} className="text-center color-primary">
-            <Typography variant="h4">Our Strengths</Typography>
+            <Typography fontSize={"3em"} variant="h4">Our Strengths</Typography>
           </Grid>
 
-          <Grid item xs={12} sm={12} md={5} margin={2}>
-            <Typography variant="h6" className="font--size-1125">
+          <Grid item xs={12} sm={12} md={5} margin={1}>
+            <Typography fontSize={"1.9em"} variant="h6" className="font--size-1125">
               <li>Timely Delivery of Product</li>
             </Typography>
           </Grid>
-          <Grid item xs={12} sm={12} md={5} margin={2}>
-            <Typography variant="h6" className="font--size-1125">
+          <Grid item xs={12} sm={12} md={5} margin={1}>
+            <Typography fontSize={"1.9em"} variant="h6" className="font--size-1125">
               <li>Determined by quality, integrity and core values </li>
             </Typography>
           </Grid>
-          <Grid item xs={12} sm={12} md={5} margin={2}>
+          <Grid item fontSize={"1.9em"} xs={12} sm={12} md={5} margin={1}>
             <Typography variant="h6" className="font--size-1125">
               <li>
                 Rigid adherence to Good Manufacturing Practises (GMP)
@@ -141,8 +135,8 @@ export default function DmPharmaContent() {
               </li>
             </Typography>
           </Grid>
-          <Grid item xs={12} sm={12} md={5} margin={2}>
-            <Typography variant="h6" className="font--size-1125">
+          <Grid item xs={12} sm={12} md={5} margin={1}>
+            <Typography fontSize={"1.9em"} variant="h6" className="font--size-1125">
               <li>
                 Multidisciplined workforce that is motivated towards the highest
                 standards of customer satisfaction

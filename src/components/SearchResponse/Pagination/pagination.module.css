@@ -5,7 +5,7 @@
   border: 0.5px solid #e95d2a;
   margin: 3px;
   height: calc(calc(1vh + 0.4vw) * 3);
-  font-size: 1.1em;
+  font-size: 2em;
   color: rgb(158, 9, 9);
   text-justify: center;
   text-align: center;
@@ -46,7 +46,7 @@
 }
 
 .entries {
-  font-size: 1.1em;
+  font-size: 2em;
   height: calc(calc(1vh + 0.4vw) * 3);
 }
 
@@ -63,7 +63,7 @@
   text-align: center;
   padding: 11px 8px;
   min-width: 13vw;
-  font-size: 1.15em;
+  font-size: 1.9em;
 }
 
 .tableStyle tbody td {
@@ -71,7 +71,7 @@
   vertical-align: top;
   padding: 10px 10px;
   min-width: 13vw;
-  font-size: 1.1em;
+  font-size: 1.8em;
 }
 
 .tableStyle tr:hover .rowHover{
