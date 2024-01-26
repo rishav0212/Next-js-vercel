@@ -8,6 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Script from "next/script";
 import AppThemeProvider from "@/theme";
 import "@/fonts/fonts.css";
+import ScrollToTop from "@/components/ScrollToTop/ScrollToTop";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,6 +33,7 @@ export default function RootLayout({
           <AppThemeProvider>
             <Navbar />
             {children}
+            <ScrollToTop/>
             <Footer />
           </AppThemeProvider>
         </AppRouterCacheProvider>
