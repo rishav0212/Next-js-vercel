@@ -1,6 +1,5 @@
-import React, { useCallback } from "react";
+import React from "react";
 import styled from "@emotion/styled";
-import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { Divider } from "@mui/material";
 

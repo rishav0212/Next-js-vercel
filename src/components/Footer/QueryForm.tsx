@@ -40,18 +40,19 @@ export default function QueryForm({ props }) {
   const onSubmit = async (data) => {
     try {
       console.log(data);
-      // const response = await fetch('/api/submitForm', {
-      //     method : 'Post',
-      //     headers :{
-      //         'Content-Type' : 'application/json'
-      //     },
-      //     body : JSON.stringify(data)
+      const response = await fetch(
+        "https://node.saarbiotech.in/TestEmail.php",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
 
-      // });
-      // });
-
-      // const result = await response.json();
-      // console.log(result)
+      const result = await response.json();
+      console.log(result);
     } catch (error) {
       console.log(error);
       setError("name", {

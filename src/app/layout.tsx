@@ -8,6 +8,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Script from "next/script";
 import AppThemeProvider from "@/theme";
 import "@/fonts/fonts.css";
+import ScrollToTop from "@/components/ScrollToTop/ScrollToTop";
+import QuickEnquiry from "@/components/QuickEnquiry/QuickEnquiry";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,7 +33,9 @@ export default function RootLayout({
         <AppRouterCacheProvider>
           <AppThemeProvider>
             <Navbar />
+            <QuickEnquiry/>
             {children}
+            <ScrollToTop/>
             <Footer />
           </AppThemeProvider>
         </AppRouterCacheProvider>
