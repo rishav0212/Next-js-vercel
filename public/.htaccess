@@ -1,0 +1,7 @@
+RewriteEngine On
+
+# Redirect from /Syrup.html to https://old.saarbiotech.in/Syrup.html with a temporary (302) redirect
+RewriteRule ^Syrup\.html$ https://old.saarbiotech.in/Syrup.html [R=302,L]
+
+# Redirect from /Capsule.html to https://www.saarbiotech.in/Capsule.html with a temporary (302) redirect
+RewriteRule ^Capsule\.html$ https://www.saarbiotech.in/Capsule.html [R=302,L]

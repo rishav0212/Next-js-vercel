@@ -1,7 +1,7 @@
 import SearchResponse from "@/components/SearchResponse/SearchResponse";
 
 import { redirect } from "next/dist/server/api-utils";
-import Banner from "@/components/Banner";
+import Banner from "@/components/HomeContent/Banner";
 
 function Page({ params }) {
   return (
