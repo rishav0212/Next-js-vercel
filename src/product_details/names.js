@@ -7,6 +7,8 @@ const items = {
         link: "azithromycin",
         mainCategory: "Suspensions",
         subCategory: "Antibiotic",
+        packing: "15 ml",
+        linkAvailable: true,
       },
       {
         id: 2,
@@ -14,6 +16,8 @@ const items = {
         link: "ofloxacin",
         mainCategory: "Suspensions",
         subCategory: "Antibiotic",
+        packing: "30 ml",
+        linkAvailable: true,
       },
       {
         id: 3,
@@ -21,6 +25,8 @@ const items = {
         link: "ofloxacin-tinidazole",
         mainCategory: "Suspensions",
         subCategory: "Antibiotic",
+        packing: "30 ml",
+        linkAvailable: true,
       },
       {
         id: 4,
@@ -28,6 +34,8 @@ const items = {
         link: "ofloxacin-ornidazole",
         mainCategory: "Suspensions",
         subCategory: "Antibiotic",
+        packing: "30 ml",
+        linkAvailable: true,
       },
       {
         id: 5,
@@ -35,6 +43,8 @@ const items = {
         link: "roxithromycin",
         mainCategory: "Suspensions",
         subCategory: "Antibiotic",
+        packing: "30 ml",
+        linkAvailable: true,
       },
       {
         id: 6,
@@ -42,6 +52,8 @@ const items = {
         link: "ofloxacin-nitozoxanide",
         mainCategory: "Suspensions",
         subCategory: "Antibiotic",
+        packing: "30 ml",
+        linkAvailable: true,
       },
       {
         id: 7,
@@ -49,6 +61,8 @@ const items = {
         link: "ofloxacin-metronidazole",
         mainCategory: "Suspensions",
         subCategory: "Antibiotic",
+        packing: "30 ml",
+        linkAvailable: true,
       },
     ],
     Anticold: [
@@ -58,6 +72,8 @@ const items = {
         link: "pcm-cpm-phenylephrine-hcl-sodium-citrate-menthol",
         mainCategory: "Suspensions",
         subCategory: "Anticold",
+        packing: "60 ml",
+        linkAvailable: true,
       },
       {
         id: 9,
@@ -65,6 +81,8 @@ const items = {
         link: "cpm-pcm-phenylepherine-hcl",
         mainCategory: "Suspensions",
         subCategory: "Anticold",
+        packing: "60 ml",
+        linkAvailable: true,
       },
       {
         id: 10,
@@ -72,6 +90,8 @@ const items = {
         link: "cetirizine-hcl-pcm-phenylepherine-hcl",
         mainCategory: "Suspensions",
         subCategory: "Anticold",
+        packing: "60 ml",
+        linkAvailable: true,
       },
       {
         id: 11,
@@ -79,6 +99,8 @@ const items = {
         link: "cetirizine-dihcl",
         mainCategory: "Suspensions",
         subCategory: "Anticold",
+        packing: "60 ml",
+        linkAvailable: true,
       },
       {
         id: 12,
@@ -86,6 +108,8 @@ const items = {
         link: "levocetirizine-dihcl",
         mainCategory: "Suspensions",
         subCategory: "Anticold",
+        packing: "60 ml",
+        linkAvailable: true,
       },
       {
         id: 13,
@@ -93,6 +117,8 @@ const items = {
         link: "dicyclomine-hcl-pcm",
         mainCategory: "Suspensions",
         subCategory: "Anticold",
+        packing: "60 ml",
+        linkAvailable: true,
       },
       {
         id: 14,
@@ -100,6 +126,8 @@ const items = {
         link: "fexofenadine-hcl",
         mainCategory: "Suspensions",
         subCategory: "Anticold",
+        packing: "60 ml",
+        linkAvailable: true,
       },
       {
         id: 15,
@@ -107,6 +135,8 @@ const items = {
         link: "dextromethorphan-hydrobromide-chlorpheniramine-maleate",
         mainCategory: "Suspensions",
         subCategory: "Anticold",
+        packing: "100 ml",
+        linkAvailable: true,
       },
     ],
     "Analgesic & Anti-Inflammatory": [
@@ -116,6 +146,8 @@ const items = {
         link: "deflazacort",
         mainCategory: "Suspensions",
         subCategory: "Analgesic & Anti-Inflammatory",
+        packing: "30 ml",
+        linkAvailable: true,
       },
       {
         id: 17,
@@ -123,6 +155,8 @@ const items = {
         link: "promethazine-hcl",
         mainCategory: "Suspensions",
         subCategory: "Analgesic & Anti-Inflammatory",
+        packing: "60 ml",
+        linkAvailable: true,
       },
       {
         id: 18,
@@ -130,6 +164,8 @@ const items = {
         link: "pcm-promethazine-hcl",
         mainCategory: "Suspensions",
         subCategory: "Analgesic & Anti-Inflammatory",
+        packing: "60 ml",
+        linkAvailable: true,
       },
     ],
     Antacid: [
@@ -139,6 +175,8 @@ const items = {
         link: "megaldrate-simethicon",
         mainCategory: "Suspensions",
         subCategory: "Antacid",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 20,
@@ -146,6 +184,8 @@ const items = {
         link: "oxetacaine-aluminium-hydrixide-magnesium-hydroxide",
         mainCategory: "Suspensions",
         subCategory: "Antacid",
+        packing: "200 ml",
+        linkAvailable: true,
       },
       {
         id: 21,
@@ -153,6 +193,8 @@ const items = {
         link: "activated-dimethicon-magnesium-hydro-dried-aliminium-hydro",
         mainCategory: "Suspensions",
         subCategory: "Antacid",
+        packing: "175 ml",
+        linkAvailable: true,
       },
     ],
   },
@@ -164,6 +206,8 @@ const items = {
         link: "amoxycillin",
         mainCategory: "Syrups",
         subCategory: "Dry Syrup",
+        packing: "30 ml",
+        linkAvailable: true,
       },
       {
         id: 23,
@@ -171,6 +215,8 @@ const items = {
         link: "cefixime",
         mainCategory: "Syrups",
         subCategory: "Dry Syrup",
+        packing: "30 ml",
+        linkAvailable: true,
       },
       {
         id: 24,
@@ -178,6 +224,8 @@ const items = {
         link: "cefpodoxime",
         mainCategory: "Syrups",
         subCategory: "Dry Syrup",
+        packing: "30 ml",
+        linkAvailable: true,
       },
       {
         id: 25,
@@ -185,6 +233,8 @@ const items = {
         link: "cefixime-ofloxacin",
         mainCategory: "Syrups",
         subCategory: "Dry Syrup",
+        packing: "30 ml",
+        linkAvailable: true,
       },
     ],
     "Tonic Syrup": [
@@ -194,6 +244,8 @@ const items = {
         link: "iron-iii-hydroxide-polymaltose-complex-folic-acid",
         mainCategory: "Syrups",
         subCategory: "Tonic Syrup",
+        packing: "200 ml",
+        linkAvailable: true,
       },
       {
         id: 27,
@@ -201,6 +253,8 @@ const items = {
         link: "ferric-ammonium-citrate-cyanocobalamin-folic-acid-cupric-sulphate-manganese-sulphate",
         mainCategory: "Syrups",
         subCategory: "Tonic Syrup",
+        packing: "200 ml",
+        linkAvailable: false,
       },
       {
         id: 28,
@@ -208,6 +262,8 @@ const items = {
         link: "multiformula(food)",
         mainCategory: "Syrups",
         subCategory: "Tonic Syrup",
+        packing: "200 ml",
+        linkAvailable: false,
       },
       {
         id: 29,
@@ -215,6 +271,8 @@ const items = {
         link: "ferrous-ascorbate-folic-acid",
         mainCategory: "Syrups",
         subCategory: "Tonic Syrup",
+        packing: "200 ml",
+        linkAvailable: true,
       },
       {
         id: 30,
@@ -222,6 +280,8 @@ const items = {
         link: "ferric-ammonium-citrate-folic-acid-cyanocobalamine-sorbitol-sol-70-qs",
         mainCategory: "Syrups",
         subCategory: "Tonic Syrup",
+        packing: "200 ml",
+        linkAvailable: true,
       },
       {
         id: 31,
@@ -229,6 +289,8 @@ const items = {
         link: "iron-iii-hydroxide-polymaltose",
         mainCategory: "Syrups",
         subCategory: "Tonic Syrup",
+        packing: "200 ml",
+        linkAvailable: false,
       },
       {
         id: 32,
@@ -236,6 +298,8 @@ const items = {
         link: "enzyme-formula-in-food",
         mainCategory: "Syrups",
         subCategory: "Tonic Syrup",
+        packing: "200 ml",
+        linkAvailable: true,
       },
       {
         id: 33,
@@ -243,6 +307,8 @@ const items = {
         link: "calcium-d3-b12",
         mainCategory: "Syrups",
         subCategory: "Tonic Syrup",
+        packing: "200 ml",
+        linkAvailable: false,
       },
       {
         id: 34,
@@ -250,6 +316,8 @@ const items = {
         link: "calcium-carbonate-(eq-to-elemental-calcium)-d3",
         mainCategory: "Syrups",
         subCategory: "Tonic Syrup",
+        packing: "200 ml",
+        linkAvailable: true,
       },
       {
         id: 35,
@@ -257,6 +325,8 @@ const items = {
         link: "ferric-ammonium-citrate-(eq-to-elemental-iron-)-folic-acid-cyanocobalamin",
         mainCategory: "Syrups",
         subCategory: "Tonic Syrup",
+        packing: "200 ml",
+        linkAvailable: true,
       },
       {
         id: 36,
@@ -264,6 +334,8 @@ const items = {
         link: "ferric-amm-cit-(eq-to-elemental-iron-)-cyanoco-folic-acid-zinc-sul-pyridoxine-hcl-sorbitol",
         mainCategory: "Syrups",
         subCategory: "Tonic Syrup",
+        packing: "200 ml",
+        linkAvailable: false,
       },
       {
         id: 37,
@@ -271,6 +343,8 @@ const items = {
         link: "pyridoxine-hcl-nicotinamide-cyanocobalamin-lysine-hcl",
         mainCategory: "Syrups",
         subCategory: "Tonic Syrup",
+        packing: "200 ml",
+        linkAvailable: false,
       },
       {
         id: 38,
@@ -278,6 +352,8 @@ const items = {
         link: "lycopene-formula",
         mainCategory: "Syrups",
         subCategory: "Tonic Syrup",
+        packing: "200 ml",
+        linkAvailable: false,
       },
       {
         id: 39,
@@ -285,6 +361,8 @@ const items = {
         link: "alpha-amyalase-bacterial-papain",
         mainCategory: "Syrups",
         subCategory: "Tonic Syrup",
+        packing: "60 ml",
+        linkAvailable: true,
       },
       {
         id: 40,
@@ -292,6 +370,8 @@ const items = {
         link: "l-lysine-nicotinamide-d-panthenol-ribo-sod-phos-thiamine-hcl-pyridoxine-hcl-cyanoc-(in-food)",
         mainCategory: "Syrups",
         subCategory: "Tonic Syrup",
+        packing: "200 ml",
+        linkAvailable: false,
       },
       {
         id: 41,
@@ -299,6 +379,8 @@ const items = {
         link: "cyproheptadine-hcl-tricholine-citrate",
         mainCategory: "Syrups",
         subCategory: "Tonic Syrup",
+        packing: "200 ml",
+        linkAvailable: true,
       },
       {
         id: 42,
@@ -306,6 +388,8 @@ const items = {
         link: "tricholine-citrate-sorbitol-solution-70-qs",
         mainCategory: "Syrups",
         subCategory: "Tonic Syrup",
+        packing: "200 ml",
+        linkAvailable: true,
       },
       {
         id: 43,
@@ -313,6 +397,8 @@ const items = {
         link: "ferrous-gluconate-(eq-to-elemental-iron)-folic-acid-b12-calcium-lactate",
         mainCategory: "Syrups",
         subCategory: "Tonic Syrup",
+        packing: "200 ml",
+        linkAvailable: false,
       },
       {
         id: 44,
@@ -320,6 +406,8 @@ const items = {
         link: "protein-formula-in-drug",
         mainCategory: "Syrups",
         subCategory: "Tonic Syrup",
+        packing: "200 ml",
+        linkAvailable: false,
       },
     ],
     Drops: [
@@ -329,6 +417,8 @@ const items = {
         link: "domperidone",
         mainCategory: "Syrups",
         subCategory: "Drops",
+        packing: "30 ml",
+        linkAvailable: true,
       },
       {
         id: 46,
@@ -336,6 +426,8 @@ const items = {
         link: "ondansetron",
         mainCategory: "Syrups",
         subCategory: "Drops",
+        packing: "30 ml",
+        linkAvailable: true,
       },
     ],
     "Cough Syrup": [
@@ -345,6 +437,8 @@ const items = {
         link: "diphenhydramine-amonium-chloride-sodium-citrate-menthol",
         mainCategory: "Syrups",
         subCategory: "Cough Syrup",
+        packing: "100 ml",
+        linkAvailable: true,
       },
       {
         id: 48,
@@ -352,6 +446,8 @@ const items = {
         link: "terbutaline-sulphate-guaiphenesin-bromhexine-hcl-menthol",
         mainCategory: "Syrups",
         subCategory: "Cough Syrup",
+        packing: "100 ml",
+        linkAvailable: true,
       },
       {
         id: 49,
@@ -359,6 +455,8 @@ const items = {
         link: "terbutaline-sulphate-guaiphenesin-ambroxol-hcl-menthol",
         mainCategory: "Syrups",
         subCategory: "Cough Syrup",
+        packing: "100 ml",
+        linkAvailable: true,
       },
       {
         id: 50,
@@ -366,6 +464,8 @@ const items = {
         link: "diphenhydramine-hcl-terpine-hydrate-ammonium-chloride-sodium-citrate-menthol",
         mainCategory: "Syrups",
         subCategory: "Cough Syrup",
+        packing: "100 ml",
+        linkAvailable: false,
       },
       {
         id: 51,
@@ -373,6 +473,8 @@ const items = {
         link: "dextromethorphan-hbr-phenylephrine-hcl-cpm",
         mainCategory: "Syrups",
         subCategory: "Cough Syrup",
+        packing: "100 ml",
+        linkAvailable: false,
       },
       {
         id: 52,
@@ -380,6 +482,8 @@ const items = {
         link: "dextromethorphan-hbr-phenylephrine-hcl-cpm-pcm",
         mainCategory: "Syrups",
         subCategory: "Cough Syrup",
+        packing: "100 ml",
+        linkAvailable: false,
       },
       {
         id: 53,
@@ -387,6 +491,8 @@ const items = {
         link: "dextromethorphan-hbr-cpm",
         mainCategory: "Syrups",
         subCategory: "Cough Syrup",
+        packing: "100 ml",
+        linkAvailable: false,
       },
       {
         id: 54,
@@ -394,6 +500,8 @@ const items = {
         link: "cetirizine-dihcl-ambroxol-hcl",
         mainCategory: "Syrups",
         subCategory: "Cough Syrup",
+        packing: "100 ml",
+        linkAvailable: true,
       },
       {
         id: 55,
@@ -401,6 +509,8 @@ const items = {
         link: "ambroxol-hcl-guaiphenesin-phenylepherine-hcl-cpm-menthol",
         mainCategory: "Syrups",
         subCategory: "Cough Syrup",
+        packing: "100 ml",
+        linkAvailable: false,
       },
       {
         id: 56,
@@ -408,6 +518,8 @@ const items = {
         link: "cpm-sodium-citrate-ammonium-chloride",
         mainCategory: "Syrups",
         subCategory: "Cough Syrup",
+        packing: "100 ml",
+        linkAvailable: false,
       },
       {
         id: 57,
@@ -415,6 +527,8 @@ const items = {
         link: "dextromethorphen-hbr-cpm-guaiphenesin-ammonium-chloride",
         mainCategory: "Syrups",
         subCategory: "Cough Syrup",
+        packing: "100 ml",
+        linkAvailable: false,
       },
       {
         id: 58,
@@ -422,6 +536,8 @@ const items = {
         link: "dextromethorphan-hbr-cetirizine-hcl-phenylephrine-hcl-menthol",
         mainCategory: "Syrups",
         subCategory: "Cough Syrup",
+        packing: "100 ml",
+        linkAvailable: true,
       },
       {
         id: 59,
@@ -429,6 +545,8 @@ const items = {
         link: "ambroxol-hcl-levocetirizine-hcl-guaiphenesin-phenylephrine-hcl",
         mainCategory: "Syrups",
         subCategory: "Cough Syrup",
+        packing: "100 ml",
+        linkAvailable: false,
       },
       {
         id: 60,
@@ -436,6 +554,8 @@ const items = {
         link: "dmr-ammonium-bromhexine-menthol",
         mainCategory: "Syrups",
         subCategory: "Cough Syrup",
+        packing: "100 ml",
+        linkAvailable: false,
       },
     ],
   },
@@ -447,6 +567,8 @@ const items = {
         link: "sodium-chloride-benzolekonium-phenylmercuric-acetate",
         mainCategory: "External Preparations",
         subCategory: "Nasal Sprays",
+        packing: "20 ml",
+        linkAvailable: false,
       },
       {
         id: 62,
@@ -454,6 +576,8 @@ const items = {
         link: "xylometazoline-hcl-nasal-drops-spray",
         mainCategory: "External Preparations",
         subCategory: "Nasal Sprays",
+        packing: "10 ml",
+        linkAvailable: false,
       },
     ],
     Ointments: [
@@ -463,6 +587,8 @@ const items = {
         link: "potassium-nitrate-sodium-fluoride",
         mainCategory: "External Preparations",
         subCategory: "Ointments",
+        packing: "50 gm",
+        linkAvailable: true,
       },
       {
         id: 64,
@@ -470,6 +596,8 @@ const items = {
         link: "potassium-nitrate",
         mainCategory: "External Preparations",
         subCategory: "Ointments",
+        packing: "50 gm",
+        linkAvailable: false,
       },
       {
         id: 65,
@@ -477,6 +605,8 @@ const items = {
         link: "diclofenac-diethylamine-eq-dicofenac-sodium",
         mainCategory: "External Preparations",
         subCategory: "Ointments",
+        packing: "30 gm",
+        linkAvailable: true,
       },
       {
         id: 66,
@@ -484,6 +614,8 @@ const items = {
         link: "adapalene-clindamycin-phosphate",
         mainCategory: "External Preparations",
         subCategory: "Ointments",
+        packing: "15 gm",
+        linkAvailable: true,
       },
       {
         id: 67,
@@ -491,6 +623,8 @@ const items = {
         link: "clindamycin-phosphate-nicotinamide",
         mainCategory: "External Preparations",
         subCategory: "Ointments",
+        packing: "20 gm",
+        linkAvailable: true,
       },
       {
         id: 68,
@@ -498,6 +632,8 @@ const items = {
         link: "mometasone-furoate",
         mainCategory: "External Preparations",
         subCategory: "Ointments",
+        packing: "10 gm",
+        linkAvailable: true,
       },
       {
         id: 69,
@@ -505,6 +641,8 @@ const items = {
         link: "diclofenac-diethylamine-methyl-salicylate-menthol-linseed-oil-benzyl-alcohol",
         mainCategory: "External Preparations",
         subCategory: "Ointments",
+        packing: "30 gm",
+        linkAvailable: false,
       },
       {
         id: 70,
@@ -512,6 +650,8 @@ const items = {
         link: "clobetasol-propionate-neomycin-sulphate-miconazole-nitrate-chlorocresol",
         mainCategory: "External Preparations",
         subCategory: "Ointments",
+        packing: "10 gm",
+        linkAvailable: true,
       },
       {
         id: 71,
@@ -519,6 +659,8 @@ const items = {
         link: "fluticasone-propionate-imidurea",
         mainCategory: "External Preparations",
         subCategory: "Ointments",
+        packing: "10 gm",
+        linkAvailable: false,
       },
       {
         id: 72,
@@ -526,6 +668,8 @@ const items = {
         link: "fluticasone-propionate",
         mainCategory: "External Preparations",
         subCategory: "Ointments",
+        packing: "10 gm",
+        linkAvailable: false,
       },
       {
         id: 73,
@@ -533,6 +677,8 @@ const items = {
         link: "urea-lactic-acid-propylene-glycol-liquid-paraffin-methyl-paraben-propyparaben",
         mainCategory: "External Preparations",
         subCategory: "Ointments",
+        packing: "25 gm",
+        linkAvailable: false,
       },
       {
         id: 74,
@@ -540,6 +686,8 @@ const items = {
         link: "beclomethasone-dipropionate-salicylic-acid",
         mainCategory: "External Preparations",
         subCategory: "Ointments",
+        packing: "20 gm",
+        linkAvailable: false,
       },
       {
         id: 75,
@@ -547,6 +695,8 @@ const items = {
         link: "beclomethasone-dipropionate-clotrimazole-neomycin-sulphate-chlorocresol",
         mainCategory: "External Preparations",
         subCategory: "Ointments",
+        packing: "10 gm",
+        linkAvailable: false,
       },
       {
         id: 76,
@@ -554,6 +704,8 @@ const items = {
         link: "clotrimazole-beclomethasone-dipropionate",
         mainCategory: "External Preparations",
         subCategory: "Ointments",
+        packing: "15 gm",
+        linkAvailable: false,
       },
       {
         id: 77,
@@ -561,6 +713,8 @@ const items = {
         link: "ofloxacin-ornidazole-terbinafine-hcl-clobetasol-propionate-methylparaben-propylparaben",
         mainCategory: "External Preparations",
         subCategory: "Ointments",
+        packing: "15 gm",
+        linkAvailable: false,
       },
       {
         id: 78,
@@ -568,6 +722,8 @@ const items = {
         link: "ofloxacin-fluocinolone-acetonide-clotrimazole-chlorocresol",
         mainCategory: "External Preparations",
         subCategory: "Ointments",
+        packing: "15 gm",
+        linkAvailable: false,
       },
       {
         id: 79,
@@ -575,6 +731,8 @@ const items = {
         link: "acriflavine-thymol-cetrimide",
         mainCategory: "External Preparations",
         subCategory: "Ointments",
+        packing: "20 gm",
+        linkAvailable: false,
       },
       {
         id: 80,
@@ -582,6 +740,8 @@ const items = {
         link: "clobetasol-propionate-salicylic-acid",
         mainCategory: "External Preparations",
         subCategory: "Ointments",
+        packing: "30 gm",
+        linkAvailable: false,
       },
       {
         id: 81,
@@ -589,6 +749,8 @@ const items = {
         link: "beclomethasone-dipropionate-ketoconazole",
         mainCategory: "External Preparations",
         subCategory: "Ointments",
+        packing: "10 gm",
+        linkAvailable: false,
       },
       {
         id: 82,
@@ -596,6 +758,8 @@ const items = {
         link: "papain-urea",
         mainCategory: "External Preparations",
         subCategory: "Ointments",
+        packing: "15 gm",
+        linkAvailable: false,
       },
       {
         id: 83,
@@ -603,6 +767,8 @@ const items = {
         link: "sodium-hyaluronate",
         mainCategory: "External Preparations",
         subCategory: "Ointments",
+        packing: "15 gm",
+        linkAvailable: false,
       },
       {
         id: 84,
@@ -610,6 +776,8 @@ const items = {
         link: "hydroquinone-tertinoin-mometasone-furoate",
         mainCategory: "External Preparations",
         subCategory: "Ointments",
+        packing: "10 gm",
+        linkAvailable: false,
       },
       {
         id: 85,
@@ -617,6 +785,8 @@ const items = {
         link: "hydroquinone-tertinoin-fluocinolone",
         mainCategory: "External Preparations",
         subCategory: "Ointments",
+        packing: "15 gm",
+        linkAvailable: false,
       },
       {
         id: 86,
@@ -624,6 +794,8 @@ const items = {
         link: "lignocaine-hcl-gel",
         mainCategory: "External Preparations",
         subCategory: "Ointments",
+        packing: "30 gm",
+        linkAvailable: false,
       },
     ],
     Shampoo: [
@@ -633,6 +805,8 @@ const items = {
         link: "ketoconazole",
         mainCategory: "External Preparations",
         subCategory: "Shampoo",
+        packing: "15ml",
+        linkAvailable: true,
       },
     ],
     Lotions: [
@@ -642,6 +816,8 @@ const items = {
         link: "permethrin-lotion",
         mainCategory: "External Preparations",
         subCategory: "Lotions",
+        packing: "100 ml",
+        linkAvailable: false,
       },
       {
         id: 89,
@@ -649,6 +825,8 @@ const items = {
         link: "gamabenzene-lotion",
         mainCategory: "External Preparations",
         subCategory: "Lotions",
+        packing: "100 ml",
+        linkAvailable: false,
       },
     ],
     "Roll On": [
@@ -658,6 +836,8 @@ const items = {
         link: "diclofenac-diethylamine-methyl-salicylate-menthol-linseed-oil-benzyl-alcohol",
         mainCategory: "External Preparations",
         subCategory: "Roll On",
+        packing: "50 gm",
+        linkAvailable: true,
       },
     ],
   },
@@ -669,6 +849,8 @@ const items = {
         link: "disodium-hydrogen-citrate",
         mainCategory: "Miscellaneous Products",
         subCategory: "",
+        packing: "100 ml",
+        linkAvailable: true,
       },
       {
         id: 92,
@@ -676,6 +858,8 @@ const items = {
         link: "chlorhexidine-gluconate",
         mainCategory: "Miscellaneous Products",
         subCategory: "",
+        packing: "100 ml",
+        linkAvailable: true,
       },
       {
         id: 93,
@@ -683,6 +867,8 @@ const items = {
         link: "glycerin",
         mainCategory: "Miscellaneous Products",
         subCategory: "",
+        packing: "50 gm",
+        linkAvailable: false,
       },
       {
         id: 94,
@@ -690,6 +876,8 @@ const items = {
         link: "sucralfate-oxetacaine",
         mainCategory: "Miscellaneous Products",
         subCategory: "",
+        packing: "100 ml",
+        linkAvailable: true,
       },
       {
         id: 95,
@@ -697,6 +885,8 @@ const items = {
         link: "milk-of-magnesia-liquid-paraffin",
         mainCategory: "Miscellaneous Products",
         subCategory: "",
+        packing: "170 ml",
+        linkAvailable: true,
       },
       {
         id: 96,
@@ -704,6 +894,8 @@ const items = {
         link: "sucralfate",
         mainCategory: "Miscellaneous Products",
         subCategory: "",
+        packing: "100 ml",
+        linkAvailable: true,
       },
       {
         id: 97,
@@ -711,6 +903,8 @@ const items = {
         link: "sodium-picosulfate",
         mainCategory: "Miscellaneous Products",
         subCategory: "",
+        packing: "100 ml",
+        linkAvailable: true,
       },
       {
         id: 98,
@@ -718,6 +912,8 @@ const items = {
         link: "diclofenac-diethylamine-methyl-salicylate-menthol-linseed-oil-benzyl-alcohol",
         mainCategory: "Miscellaneous Products",
         subCategory: "",
+        packing: "40 gm",
+        linkAvailable: true,
       },
       {
         id: 99,
@@ -725,10 +921,12 @@ const items = {
         link: "cholecalciferol(vitamin-d3)-shots",
         mainCategory: "Miscellaneous Products",
         subCategory: "",
+        packing: "5 ml",
+        linkAvailable: true,
       },
     ],
   },
-  Tablets: {
+  "Tablets": {
     "": [
       {
         id: 100,
@@ -736,6 +934,8 @@ const items = {
         link: "http://dmpharma.co.in/Etoricoxibthiocolchicoside.html",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 101,
@@ -743,6 +943,8 @@ const items = {
         link: "http://dmpharma.co.in/Arthemeter%20+%20Lumefentrine.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 102,
@@ -750,6 +952,8 @@ const items = {
         link: "http://dmpharma.co.in/diclothio.html",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 103,
@@ -757,6 +961,8 @@ const items = {
         link: "http://dmpharma.co.in/Cefixime.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 104,
@@ -764,6 +970,8 @@ const items = {
         link: "http://dmpharma.co.in/Cefixime%20+Ofloxacin.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 105,
@@ -771,6 +979,8 @@ const items = {
         link: "http://dmpharma.co.in/Cefixime%20+%20Dicloxacillin(ER).html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 106,
@@ -778,6 +988,8 @@ const items = {
         link: "http://dmpharma.co.in/Cefpodoxime%20+%20Dicloxacillin.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 107,
@@ -785,6 +997,8 @@ const items = {
         link: "http://dmpharma.co.in/Cefpodoxime%20+%20Ofloxacin.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 108,
@@ -792,6 +1006,8 @@ const items = {
         link: "http://dmpharma.co.in/Cefpodoxime.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 109,
@@ -799,6 +1015,8 @@ const items = {
         link: "http://dmpharma.co.in/Lornoxicam.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 110,
@@ -806,6 +1024,8 @@ const items = {
         link: "http://dmpharma.co.in/Lornoxicam(SR).html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 111,
@@ -813,6 +1033,8 @@ const items = {
         link: "http://dmpharma.co.in/Lornoxicam%20+Paracetamol.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 112,
@@ -820,6 +1042,8 @@ const items = {
         link: "http://dmpharma.co.in/Thiocholchicoside.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 113,
@@ -827,6 +1051,8 @@ const items = {
         link: "http://dmpharma.co.in/Aceclofenac+Thiocholchicoside.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 114,
@@ -834,6 +1060,8 @@ const items = {
         link: "http://dmpharma.co.in/etodolac.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 115,
@@ -841,6 +1069,8 @@ const items = {
         link: "http://dmpharma.co.in/olmesartan.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 116,
@@ -848,6 +1078,8 @@ const items = {
         link: "http://dmpharma.co.in/deflazacort.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 117,
@@ -855,6 +1087,8 @@ const items = {
         link: "http://dmpharma.co.in/Rosuvastatin.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 118,
@@ -862,6 +1096,8 @@ const items = {
         link: "http://dmpharma.co.in/fexotab.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 119,
@@ -869,6 +1105,8 @@ const items = {
         link: "http://dmpharma.co.in/levotab.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 120,
@@ -876,6 +1114,8 @@ const items = {
         link: "http://dmpharma.co.in/ursodeoxycholic.html",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 121,
@@ -883,6 +1123,8 @@ const items = {
         link: "http://dmpharma.co.in/ome.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 122,
@@ -890,6 +1132,8 @@ const items = {
         link: "http://dmpharma.co.in/cefuroxime.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 123,
@@ -897,6 +1141,8 @@ const items = {
         link: "http://dmpharma.co.in/Voglibose.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 124,
@@ -904,6 +1150,8 @@ const items = {
         link: "http://dmpharma.co.in/Voglibose%20+%20Metformin.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 125,
@@ -911,6 +1159,8 @@ const items = {
         link: "http://dmpharma.co.in/Methylcobalamingabapentin.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 126,
@@ -918,6 +1168,8 @@ const items = {
         link: "http://dmpharma.co.in/tranxemicmefnamic.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 127,
@@ -925,6 +1177,8 @@ const items = {
         link: "http://dmpharma.co.in/Levosulpride.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 128,
@@ -932,6 +1186,8 @@ const items = {
         link: "http://dmpharma.co.in/Lansoprazole.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 129,
@@ -939,6 +1195,8 @@ const items = {
         link: "http://dmpharma.co.in/TelmisartanHydrochlorothiazide.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 130,
@@ -946,6 +1204,8 @@ const items = {
         link: "http://dmpharma.co.in/Silymarin.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 131,
@@ -953,6 +1213,8 @@ const items = {
         link: "http://dmpharma.co.in/Nettleleaf.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 132,
@@ -960,6 +1222,8 @@ const items = {
         link: "http://dmpharma.co.in/revitalwomen.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 133,
@@ -967,6 +1231,8 @@ const items = {
         link: "http://dmpharma.co.in/glucosaminechondroitin.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 134,
@@ -974,6 +1240,8 @@ const items = {
         link: "http://dmpharma.co.in/olmesartanamlodipine.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 135,
@@ -981,6 +1249,8 @@ const items = {
         link: "http://dmpharma.co.in/methylprednisolone.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 136,
@@ -988,6 +1258,8 @@ const items = {
         link: "http://dmpharma.co.in/Citicoline.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 137,
@@ -995,6 +1267,8 @@ const items = {
         link: "http://dmpharma.co.in/t3.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 138,
@@ -1002,6 +1276,8 @@ const items = {
         link: "http://dmpharma.co.in/t4.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 139,
@@ -1009,6 +1285,8 @@ const items = {
         link: "http://dmpharma.co.in/t7.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 140,
@@ -1016,6 +1294,8 @@ const items = {
         link: "http://dmpharma.co.in/t6.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 141,
@@ -1023,6 +1303,8 @@ const items = {
         link: "http://dmpharma.co.in/L-glutathione,alpha-lipoic acid, vitamin C,vitamin E, grape seed extract.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 142,
@@ -1030,6 +1312,8 @@ const items = {
         link: "http://dmpharma.co.in/Cranberry%20and%20D-Mannose%20tablet.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 143,
@@ -1037,6 +1321,8 @@ const items = {
         link: "http://dmpharma.co.in/L-Carnitine%20and%20Combination%20tablet.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 144,
@@ -1044,6 +1330,8 @@ const items = {
         link: "http://dmpharma.co.in/Glucosamine-Chondroitin-Collagen-Ginger%20Extract%20Tablets.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 145,
@@ -1051,6 +1339,8 @@ const items = {
         link: "http://dmpharma.co.in/t18.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 146,
@@ -1058,6 +1348,8 @@ const items = {
         link: "http://dmpharma.co.in/ferrousfolic.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 147,
@@ -1065,6 +1357,8 @@ const items = {
         link: "http://dmpharma.co.in/t19.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 148,
@@ -1072,6 +1366,8 @@ const items = {
         link: "http://dmpharma.co.in/Ipriflavone,Alfacalcidol%20with%20Calcium%20Carbonate%20Tablets.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 149,
@@ -1079,6 +1375,8 @@ const items = {
         link: "http://dmpharma.co.in/L-Methyl%20Folate%20and%20its%20Combination%20Tablet.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 150,
@@ -1086,6 +1384,8 @@ const items = {
         link: "http://dmpharma.co.in/Lycopene,Antioxidants,DHA%20&%20Multivitamin%20with%20Multimineral%20Tablets.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 151,
@@ -1093,6 +1393,8 @@ const items = {
         link: "http://dmpharma.co.in/Cefixime%20+%20Azithromycin.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 152,
@@ -1100,6 +1402,8 @@ const items = {
         link: "http://dmpharma.co.in/AtorvastatinEzetimibe.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 153,
@@ -1107,6 +1411,8 @@ const items = {
         link: "http://dmpharma.co.in/t17.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 154,
@@ -1114,6 +1420,8 @@ const items = {
         link: "http://dmpharma.co.in/Cefixime%20+%20Ornidazole.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 155,
@@ -1121,6 +1429,8 @@ const items = {
         link: "http://dmpharma.co.in/t5.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 156,
@@ -1128,6 +1438,8 @@ const items = {
         link: "http://dmpharma.co.in/Cholecalciferol%20tablet.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 157,
@@ -1135,6 +1447,8 @@ const items = {
         link: "http://dmpharma.co.in/Grape%20Seed%20,%20Green%20Tea%20,%20Gamma%20Linolenic%20Tablets.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 158,
@@ -1142,6 +1456,8 @@ const items = {
         link: "http://dmpharma.co.in/folicaciddha.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 159,
@@ -1149,6 +1465,8 @@ const items = {
         link: "http://dmpharma.co.in/t10.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 160,
@@ -1156,6 +1474,8 @@ const items = {
         link: "http://dmpharma.co.in/Vitamins%20+%20Minerals%20+%20Natural%20Extracts%20+%20Biotin%20&%20Amino%20Acid%20Tablet%20Advanced%20Formula%20For%20Healthy%20Hair.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 161,
@@ -1163,6 +1483,8 @@ const items = {
         link: "http://dmpharma.co.in/Cranberry%20%20and%20Vitamin%20C%20Tablet.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 162,
@@ -1170,6 +1492,8 @@ const items = {
         link: "http://dmpharma.co.in/MTP%20%28Medical%20Termination%20of%20Pregnancy%29.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 163,
@@ -1177,6 +1501,8 @@ const items = {
         link: "http://dmpharma.co.in/Myo-inositol,L-methyl%20Folate%20Calcium%20and%20Vitamin%20D3%20Tablets.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 164,
@@ -1184,6 +1510,8 @@ const items = {
         link: "http://dmpharma.co.in/Myo-inositol%20+%20D-chiro-Inositol%20+%20Vitamin%20D3%20+%20Chromium%20Tablet.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 165,
@@ -1191,6 +1519,8 @@ const items = {
         link: "http://dmpharma.co.in/THYROXINE%20SODIUM%20TABLET.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 166,
@@ -1198,6 +1528,8 @@ const items = {
         link: "http://dmpharma.co.in/Dutasteride%20Tablet.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 167,
@@ -1205,6 +1537,8 @@ const items = {
         link: "http://dmpharma.co.in/Diclofenac%20+%20Metaxalone%20Tablet.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 168,
@@ -1212,6 +1546,8 @@ const items = {
         link: "http://dmpharma.co.in/Isoxsuprine%20Tablet.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 169,
@@ -1219,6 +1555,8 @@ const items = {
         link: "http://dmpharma.co.in/norfloxacin%20and%20tinidazole%20tablet.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 170,
@@ -1226,6 +1564,8 @@ const items = {
         link: "http://dmpharma.co.in/Methylcobalamin,%20l-methylfolate%20and%20pyridoxal-5-phosphate%20tablets.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 171,
@@ -1233,6 +1573,8 @@ const items = {
         link: "http://dmpharma.co.in/Levonorgestrel.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 172,
@@ -1240,6 +1582,8 @@ const items = {
         link: "http://dmpharma.co.in/Green%20Tea%20+%20Combination%20Tablet.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 173,
@@ -1247,6 +1591,8 @@ const items = {
         link: "http://dmpharma.co.in/Tamsulosin%20Hydrochloride%20Tablet.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 174,
@@ -1254,6 +1600,8 @@ const items = {
         link: "http://dmpharma.co.in/Tamsulosin%20and%20Dutasteride%20Tablet.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 175,
@@ -1261,6 +1609,8 @@ const items = {
         link: "http://dmpharma.co.in/Artesunate, Sulfadoxine & Pyrimethamine Tablet.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 176,
@@ -1268,6 +1618,8 @@ const items = {
         link: "http://dmpharma.co.in/Collagen,%20Natural%20Extracts,%20Amino%20Acids,%20Vitamins%20&%20Minerals%20Tablet.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 177,
@@ -1275,6 +1627,8 @@ const items = {
         link: "http://dmpharma.co.in/Voriconazole%20Tablet.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 178,
@@ -1282,6 +1636,8 @@ const items = {
         link: "http://dmpharma.co.in/Etodolac%20and%20Paracetamol%20Tablet.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 179,
@@ -1289,6 +1645,8 @@ const items = {
         link: "http://dmpharma.co.in/Calcium%20Citrate,Magnesium,zinc%20and%20Vitamin%20D3%20Tablet.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 180,
@@ -1296,6 +1654,8 @@ const items = {
         link: "http://dmpharma.co.in/S-Adenosyl%20L-Methionine%20%28SAMe%29%20+%20Methylcobalamin%20+%20L-5%20Methyltetrahydrofolate%20Calcium.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 181,
@@ -1303,6 +1663,8 @@ const items = {
         link: "http://dmpharma.co.in/Blend%20of%20Extract%20of%20Scutellaria%20Baicalensis%20&%20Acacia%20Catechu%20Tablets.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 182,
@@ -1310,6 +1672,8 @@ const items = {
         link: "http://dmpharma.co.in/Natural%20Extracts,%20Omega%203%20Fatty%20Acids,%20Lactic%20Acid%20Bacillus,%20Vitamin,%20Mineral%20and%20Trace%20Element%20Tablet.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 183,
@@ -1317,6 +1681,8 @@ const items = {
         link: "http://dmpharma.co.in/Acebrophylline%20Sustained%20Release%20Tablets.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 184,
@@ -1324,6 +1690,8 @@ const items = {
         link: "http://dmpharma.co.in/Methylcobalamin,%20L-Methylfolate,%20Pyridoxal-5-phosphate,%20Vitamin%20D3%20Tablet.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 185,
@@ -1331,6 +1699,8 @@ const items = {
         link: "http://dmpharma.co.in/Green tea Extract, Isoflavones, Vitamin C, Coenzyme Q10, Pine Bark Extract, Lycopene, Alpha Lipoic Acid and Mecobalamin Tablet.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 186,
@@ -1338,6 +1708,8 @@ const items = {
         link: "http://dmpharma.co.in/vitamin.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 187,
@@ -1345,6 +1717,8 @@ const items = {
         link: "http://dmpharma.co.in/Vitamin%20K2-7,%20Methylcobalamin,%20Cholecalciferol%20&%20Calcium%20Citrate%20Tablet.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 188,
@@ -1352,6 +1726,8 @@ const items = {
         link: "http://dmpharma.co.in/Vitamin%20K2%207,Cholecalciferol+Combination%20Tablet.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 189,
@@ -1359,6 +1735,8 @@ const items = {
         link: "http://dmpharma.co.in/D-Ribose,%20L-Carnitine,%20Ubiquinol%20and%20Magnesium%20Tablets.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 190,
@@ -1366,6 +1744,8 @@ const items = {
         link: "http://dmpharma.co.in/L-Methyl%20Folate%20and%20its%20Combination%20Tablet.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 191,
@@ -1373,6 +1753,8 @@ const items = {
         link: "http://dmpharma.co.in/Dutasteride%20Tablet.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 192,
@@ -1380,6 +1762,8 @@ const items = {
         link: "http://dmpharma.co.in/Lornoxicam%20+Thiocolchicoside.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 193,
@@ -1387,6 +1771,8 @@ const items = {
         link: "http://dmpharma.co.in/Fenofibrate%20Tablets.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 194,
@@ -1394,6 +1780,8 @@ const items = {
         link: "http://dmpharma.co.in/Berberine,%20Purslane,%20Gymnema%20sylvestre%20and%20Banaba%20leaves%20extract,%20Multivitamins%20and%20Minerals%20Tablet.html\n",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 195,
@@ -1401,6 +1789,8 @@ const items = {
         link: "http://dmpharma.co.in/Calcium%20Aspartate%20Tablets.html",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 196,
@@ -1408,6 +1798,8 @@ const items = {
         link: "http://dmpharma.co.in/Duloxetine%20Hydrochloride%20Tablets.html",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 197,
@@ -1415,6 +1807,8 @@ const items = {
         link: "http://dmpharma.co.in/Calcitriol,Vitamin%20K2-7,L-Methylfolate,Mecobalamin%20&%20Combination%20Tablet.html",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 198,
@@ -1422,6 +1816,8 @@ const items = {
         link: "http://dmpharma.co.in/Milk Calcium, Magnesium, Vitamin C, Vitamin D3 and Menaquinone Tablet.html",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 199,
@@ -1429,6 +1825,8 @@ const items = {
         link: "http://dmpharma.co.in/Cinnarizine%20tablets.html",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 200,
@@ -1436,6 +1834,8 @@ const items = {
         link: "http://dmpharma.co.in/Silymarin%20Tablet.html",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 201,
@@ -1443,6 +1843,8 @@ const items = {
         link: "http://dmpharma.co.in/PARADIN-650.html",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 202,
@@ -1450,6 +1852,8 @@ const items = {
         link: "http://dmpharma.co.in/L%E2%80%93GlutathioneandVitamin%20C%20Tablet.html",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 203,
@@ -1457,6 +1861,8 @@ const items = {
         link: "http://dmpharma.co.in/Misoprostol%20Tablet_200%20mcg.html",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 204,
@@ -1464,6 +1870,8 @@ const items = {
         link: "http://dmpharma.co.in/Ferrous%20Asparto%20Glycinate,%20L-Methylfolate%20Calcium,%20Methylcobalamin,%20Pyridoxal-5-Phosphate%20and%20Cholecalciferol%20Tablet.html",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 205,
@@ -1471,6 +1879,8 @@ const items = {
         link: "http://dmpharma.co.in/Grape%20Seed%20Extracts,%20Vitamins,%20Minerals%20Tablet.html",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 206,
@@ -1478,6 +1888,8 @@ const items = {
         link: "http://dmpharma.co.in/Calcium%20Citrate%20&%20Vitamin%20D3%20Tablets.html",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 207,
@@ -1485,6 +1897,8 @@ const items = {
         link: "http://dmpharma.co.in/Methylcobalamin_alpha%20lipoic%20acid_Myo-Inositol_Benfotiamine,%20pyridoxal-5-phosphate_l-methylfolateandchromium%20picolinate%20Tablets.html",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 208,
@@ -1492,6 +1906,8 @@ const items = {
         link: "http://dmpharma.co.in/Ginseng%20Extract%20Powder_Ginkgo%20biloba%20powder_Garcinia%20Cambogia_Citrus%20bioflavonoids_Green%20tea%20extract_Ginger_Garlic%20powder_Lycopene_Vegetarian_Formula_Tablet_and_Combination_Tablet.html",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 209,
@@ -1499,6 +1915,8 @@ const items = {
         link: "http://dmpharma.co.in/Rosuvastatin_and_Fenofibrate_%20Tablet.html",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 210,
@@ -1506,6 +1924,8 @@ const items = {
         link: "http://dmpharma.co.in/Calcium%20Asparto%20Glycinate%20%20&%20Vitamin%20D3%20Tablets.html",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 211,
@@ -1513,6 +1933,8 @@ const items = {
         link: "http://dmpharma.co.in/Superoxide%20Dismutase%20Tablet.html",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 212,
@@ -1520,6 +1942,8 @@ const items = {
         link: "http://dmpharma.co.in/Magnesium%20Bisglycinate%20and%20L-carnitine%20L-tartrate%20Tablet.html",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 213,
@@ -1527,6 +1951,8 @@ const items = {
         link: "http://dmpharma.co.in/Repaglinide_0.5mg_Tablet.html",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 214,
@@ -1534,6 +1960,8 @@ const items = {
         link: "http://dmpharma.co.in/Ginkgo%20Biloba_%20Vitamin%20E%20_Tablet.html",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 215,
@@ -1541,6 +1969,8 @@ const items = {
         link: "http://dmpharma.co.in/Ferrous%20Asparto%20Glycinate,%20L-Methylfolate%20Calcium,%20Methylcobalamin%20Tablet.html",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 216,
@@ -1548,6 +1978,8 @@ const items = {
         link: "http://dmpharma.co.in/Co-Enzyme%20Q10,%20Lycopene%20Powder%20and%20Amino%20Acid%20Tablet.html",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 217,
@@ -1555,6 +1987,8 @@ const items = {
         link: "http://dmpharma.co.in/Ferrous%20Bisglycinate,%20Manganese,%20Vitamin%20B2,%20Vitamin%20B12%20with%20Copper%20and%20Folic%20Acid%20Tablet.html",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 218,
@@ -1562,6 +1996,8 @@ const items = {
         link: "http://dmpharma.co.in/Ferrous%20Gluconate,%20Astaxanthin,%20Zinc,%20L%20%E2%80%93%20Arginine,%20Pyridoxine%20HCl,%20Lycopene,%20Folic%20Acid,%20Selenium%20and%20Vitamin%20B12%20Tablets.html",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 219,
@@ -1569,6 +2005,8 @@ const items = {
         link: "http://dmpharma.co.in/Ferrous%20Ascorbate,%20L%20%E2%80%93%20Lysine,%20Lycopene,%20Folic%20Acid,%20Methylcobalamin,%20Vitamin%20D3,%20Zinc%20and%20Selenium%20Tablets.html",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 220,
@@ -1576,6 +2014,8 @@ const items = {
         link: "http://dmpharma.co.in/Fexofenadine%20Tablet.html",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 221,
@@ -1583,6 +2023,8 @@ const items = {
         link: "http://dmpharma.co.in/Ferrous%20Gluconate,%20Astaxanthin,%20Zinc,%20L%20%E2%80%93%20Arginine,%20Pyridoxine%20HCl,%20Lycopene,%20Folic%20Acid,%20Selenium%20and%20Vitamin%20B12%20Tablets.html",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 222,
@@ -1590,6 +2032,8 @@ const items = {
         link: "http://dmpharma.co.in/L-Cystine,%20L-Methionine,%20PABA,%20Biotin,%20Vitamins%20and%20Zinc%20Tablet.html",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 223,
@@ -1597,6 +2041,8 @@ const items = {
         link: "http://dmpharma.co.in/Rose%20Hip%20Extract,%20Glucosamine%20Sulphate%20Sodium,%20Chondroitin%20Sulphate,%20Collagen%20Peptide%20Type%20II,%20Vitamin%20C%20and%20Sodium%20Hyaluronate%20Tablet.html",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 224,
@@ -1604,6 +2050,8 @@ const items = {
         link: "http://dmpharma.co.in/L-Carnitine%20L-Tartarate,%20%20Co%20Enzyme%20Q10,%20%20Zinc,%20Piperine%20tablet.html",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 225,
@@ -1611,6 +2059,8 @@ const items = {
         link: "http://dmpharma.co.in/Methylcobalamin,%20Vitamin%20B1,%20Alphalipoic%20Acid,%20Folic%20Acid%20and%20Vitamin%20D3%20Tablet.html",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 226,
@@ -1618,10 +2068,12 @@ const items = {
         link: "http://dmpharma.co.in/Burdock%20Extract,%20Astaxanthin,%20Betacarotene,%20Grape%20Seed%20Extract,%20Vitamins,%20Minerals%20and%20L%20%E2%80%93%20Cystine%20Tablets.html",
         mainCategory: "Tablets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
     ],
   },
-  Capsules: {
+  "Capsules": {
     "": [
       {
         id: 227,
@@ -1629,6 +2081,8 @@ const items = {
         link: "http://dmpharma.co.in/c2.html",
         mainCategory: "Capsules",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 228,
@@ -1636,6 +2090,8 @@ const items = {
         link: "http://dmpharma.co.in/Levosulpride.html",
         mainCategory: "Capsules",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 229,
@@ -1643,6 +2099,8 @@ const items = {
         link: "http://dmpharma.co.in/RabeprazoleDomperidone.html",
         mainCategory: "Capsules",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 230,
@@ -1650,6 +2108,8 @@ const items = {
         link: "http://dmpharma.co.in/Pre-Pro%20Biotic.html",
         mainCategory: "Capsules",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 231,
@@ -1657,6 +2117,8 @@ const items = {
         link: "http://dmpharma.co.in/orlistat.html",
         mainCategory: "Capsules",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 232,
@@ -1664,6 +2126,8 @@ const items = {
         link: "http://dmpharma.co.in/DiclofenacThicolchicoside.html",
         mainCategory: "Capsules",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 233,
@@ -1671,6 +2135,8 @@ const items = {
         link: "http://dmpharma.co.in/meco1000.html",
         mainCategory: "Capsules",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 234,
@@ -1678,6 +2144,8 @@ const items = {
         link: "http://dmpharma.co.in/aminoacidandvitamins.html",
         mainCategory: "Capsules",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 235,
@@ -1685,6 +2153,8 @@ const items = {
         link: "",
         mainCategory: "Capsules",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 236,
@@ -1692,6 +2162,8 @@ const items = {
         link: "http://dmpharma.co.in/Lycopene.html",
         mainCategory: "Capsules",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 237,
@@ -1699,6 +2171,8 @@ const items = {
         link: "http://dmpharma.co.in/Ginseng.html",
         mainCategory: "Capsules",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 238,
@@ -1706,6 +2180,8 @@ const items = {
         link: "http://dmpharma.co.in/mecofood.html",
         mainCategory: "Capsules",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 239,
@@ -1713,6 +2189,8 @@ const items = {
         link: "http://dmpharma.co.in/ferrous.html",
         mainCategory: "Capsules",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 240,
@@ -1720,6 +2198,8 @@ const items = {
         link: "http://dmpharma.co.in/acebrophylline.html",
         mainCategory: "Capsules",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 241,
@@ -1727,6 +2207,8 @@ const items = {
         link: "http://dmpharma.co.in/Esomeprazoledomperidone.html",
         mainCategory: "Capsules",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 242,
@@ -1734,6 +2216,8 @@ const items = {
         link: "http://dmpharma.co.in/green.html",
         mainCategory: "Capsules",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 243,
@@ -1741,6 +2225,8 @@ const items = {
         link: "http://dmpharma.co.in/Carbonyl%20Iron%20.html",
         mainCategory: "Capsules",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 244,
@@ -1748,6 +2234,8 @@ const items = {
         link: "http://dmpharma.co.in/Pregablin.html",
         mainCategory: "Capsules",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 245,
@@ -1755,6 +2243,8 @@ const items = {
         link: "http://dmpharma.co.in/Pregablin.html",
         mainCategory: "Capsules",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 246,
@@ -1762,6 +2252,8 @@ const items = {
         link: "http://dmpharma.co.in/c1.html",
         mainCategory: "Capsules",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 247,
@@ -1769,6 +2261,8 @@ const items = {
         link: "http://dmpharma.co.in/Thiocholchicoside.html",
         mainCategory: "Capsules",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 248,
@@ -1776,6 +2270,8 @@ const items = {
         link: "http://dmpharma.co.in/Vitamin%20B%20Complex%20with%20Mineral%20Capsules.html",
         mainCategory: "Capsules",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 249,
@@ -1783,6 +2279,8 @@ const items = {
         link: "http://dmpharma.co.in/Cissus%20Quadrangularis%20Extract%20Capsule.html",
         mainCategory: "Capsules",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 250,
@@ -1790,6 +2288,8 @@ const items = {
         link: "http://dmpharma.co.in/Green%20Tea,Lycopene%20and%20Combination%20Capsule.html",
         mainCategory: "Capsules",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 251,
@@ -1797,6 +2297,8 @@ const items = {
         link: "http://dmpharma.co.in/Ginseng,vitamin%20&%20Mineral%20Capsule.html",
         mainCategory: "Capsules",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 252,
@@ -1804,6 +2306,8 @@ const items = {
         link: "http://dmpharma.co.in/Lycopene,Methylcobalamin,Carotenoids%20&%20Multivitamin%20Capsule.html",
         mainCategory: "Capsules",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 253,
@@ -1811,6 +2315,8 @@ const items = {
         link: "http://dmpharma.co.in/Pre%20Biotic%20and%20Pro%20Biotic%20with%20B-Complex%20Vitamins%20Capsule.html",
         mainCategory: "Capsules",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 254,
@@ -1818,6 +2324,8 @@ const items = {
         link: "http://dmpharma.co.in/L-Carnitine,%20Co-enzyme%20Q10,%20Astaxanthin,%20Zinc%20sulphate%20monohydrate%20and%20Lycopene%20Capsule.html",
         mainCategory: "Capsules",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 255,
@@ -1825,6 +2333,8 @@ const items = {
         link: "http://dmpharma.co.in/Cranberry%20Extract,%20D-Mannose%20and%20Hibiscus%20Extract%20Capsule.html",
         mainCategory: "Capsules",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 256,
@@ -1832,6 +2342,8 @@ const items = {
         link: "http://dmpharma.co.in/Lycopene,%20Vitamins,%20Mineral%20and%20Ginseng%20Capsule.html",
         mainCategory: "Capsules",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 257,
@@ -1839,6 +2351,8 @@ const items = {
         link: "http://dmpharma.co.in/Pancreatin%20Minimicrospheres%20Capsule.html",
         mainCategory: "Capsules",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 258,
@@ -1846,6 +2360,8 @@ const items = {
         link: "http://dmpharma.co.in/Green%20Tea%20Extract,%20Lycopene,%20Vitamins%20and%20Minerals%20Capsule.html",
         mainCategory: "Capsules",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 259,
@@ -1853,6 +2369,8 @@ const items = {
         link: "http://dmpharma.co.in/Natural%20Extracts,%20Vitamins,%20Minerals%20with%20Amino%20Acids%20Capsules.html",
         mainCategory: "Capsules",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 260,
@@ -1860,6 +2378,8 @@ const items = {
         link: "http://dmpharma.co.in/Resveratrol%20and%20L%20%E2%80%93%20Arginine%20Capsules.html",
         mainCategory: "Capsules",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 261,
@@ -1867,10 +2387,12 @@ const items = {
         link: "http://dmpharma.co.in/Clindamycin_Capsule_300mg.html",
         mainCategory: "Capsules",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
     ],
   },
-  Sachets: {
+  "Sachets": {
     "": [
       {
         id: 262,
@@ -1878,6 +2400,8 @@ const items = {
         link: "http://dmpharma.co.in/preprobioticsachet.html",
         mainCategory: "Sachets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 263,
@@ -1885,6 +2409,8 @@ const items = {
         link: "http://dmpharma.co.in/Cholecalciferol.html",
         mainCategory: "Sachets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 264,
@@ -1892,6 +2418,8 @@ const items = {
         link: "http://dmpharma.co.in/Collagenpeptides.html",
         mainCategory: "Sachets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 265,
@@ -1899,6 +2427,8 @@ const items = {
         link: "http://dmpharma.co.in/s1.html",
         mainCategory: "Sachets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 266,
@@ -1906,6 +2436,8 @@ const items = {
         link: "http://dmpharma.co.in/L-Arginine%20sachet.html",
         mainCategory: "Sachets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 267,
@@ -1913,6 +2445,8 @@ const items = {
         link: "http://dmpharma.co.in/L-Arginine,%20Proanthocyanidin,%20Vitamins%20with%20Docosahexaenoic%20Acid%20%28DHA%29%20Sachets.html",
         mainCategory: "Sachets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 268,
@@ -1920,6 +2454,8 @@ const items = {
         link: "http://dmpharma.co.in/Cranberry%20and%20D-Mannose%20Sachet.html",
         mainCategory: "Sachets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 269,
@@ -1927,6 +2463,8 @@ const items = {
         link: "http://dmpharma.co.in/t16.html",
         mainCategory: "Sachets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 270,
@@ -1934,6 +2472,8 @@ const items = {
         link: "http://dmpharma.co.in/L-Arginine%20and%20Grape%20seed%20extract%20Sachet.html",
         mainCategory: "Sachets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 271,
@@ -1941,6 +2481,8 @@ const items = {
         link: "http://dmpharma.co.in/Probiotic%20With%20Isabgol%20Husk.html",
         mainCategory: "Sachets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 272,
@@ -1948,6 +2490,8 @@ const items = {
         link: "http://dmpharma.co.in/Green%20Tea,%20Garcinia%20Cambogia,%20Ginger%20Extract%20&%20Piperine%20Sachet.html",
         mainCategory: "Sachets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 273,
@@ -1955,6 +2499,8 @@ const items = {
         link: "http://dmpharma.co.in/Collagen%20+%20Glucosamine%20+%20Boswellia%20Serrata%20+%20Vitamins.html",
         mainCategory: "Sachets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 274,
@@ -1962,6 +2508,8 @@ const items = {
         link: "http://dmpharma.co.in/Collagen%20and%20Rosehip%20Extract%20Sachet.html",
         mainCategory: "Sachets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 275,
@@ -1969,6 +2517,8 @@ const items = {
         link: "http://dmpharma.co.in/L-Ornithine%20L-Aspartate%20Sachet.html",
         mainCategory: "Sachets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 276,
@@ -1976,6 +2526,8 @@ const items = {
         link: "http://dmpharma.co.in/L-Arginine,%20Zinc%20and%20Folic%20Acid%20Sachet.html",
         mainCategory: "Sachets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 277,
@@ -1983,6 +2535,8 @@ const items = {
         link: "http://dmpharma.co.in/Lyophilized_Saccharomyces_Boulardii_Sachet.html",
         mainCategory: "Sachets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 278,
@@ -1990,6 +2544,8 @@ const items = {
         link: "http://dmpharma.co.in/Alesmin-P%20Weight%20Loss%20Formula%20Sachet.html",
         mainCategory: "Sachets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 279,
@@ -1997,6 +2553,8 @@ const items = {
         link: "http://dmpharma.co.in/Collagen%20and%20Rosehip%20Extract%20Sachet.html",
         mainCategory: "Sachets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 280,
@@ -2004,6 +2562,8 @@ const items = {
         link: "http://dmpharma.co.in/Sodium_%20Chloride_Powder_for_Nasal_Solution.html",
         mainCategory: "Sachets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 281,
@@ -2011,6 +2571,8 @@ const items = {
         link: "http://dmpharma.co.in/Lactitol%20Monohydrate_Ispaghula%20Husk.html",
         mainCategory: "Sachets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 282,
@@ -2018,6 +2580,8 @@ const items = {
         link: "http://dmpharma.co.in/Pre-Pro%20Biotic%28Streptococcus%20faecalis,Clostridium%20butyricum,Bacillus%20mesentericus%20and%20Lactobacillus%20sporogenes%29.html",
         mainCategory: "Sachets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
       {
         id: 283,
@@ -2025,6 +2589,8 @@ const items = {
         link: "http://dmpharma.co.in/L-Glutamine,%20Calcium,%20Phosphorus,%20L-Arginine,%20L-Alanine,%20L-Lysine,%20Magnesium,%20Vitamin%20C,%20Niacinamide,%20Vitamin%20E,%20Zinc,%20Manganese,%20Vitamin%20B6,%20Copper,%20Vitamin%20A,%20Selenium,%20Chromium%20and%20Vitamin%20D3%20Sachet.html",
         mainCategory: "Sachets",
         subCategory: "",
+        packing: "15ml",
+        linkAvailable: true,
       },
     ],
   },

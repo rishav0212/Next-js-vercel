@@ -85,8 +85,7 @@ const MakeRows = ({ paginatedList }) => {
                 index % 2 === 0 ? styles.evenRow : ""
               }`}
             >
-              {" "}
-              15 ml
+              {product["packing"]}
             </td>
             {product.subCategory !== prevSub ? (
               <td
