@@ -219,7 +219,7 @@ const items = {
       {
         id: 30,
         name: 'FERRIC AMMONIUM CITRATE    +  FOLIC ACID    +   CYANOCOBALAMINE   +  SORBITOL SOL (70%)  Q.S.',
-        link: 'ferric-ammonium-citrate-folic-acid-cyanocobalamine-sorbitol-sol-(70%)-qs',
+        link: 'ferric-ammonium-citrate-folic-acid-cyanocobalamine-sorbitol-sol-70-qs',
         mainCategory: 'Syrups',
         subCategory: 'Tonic Syrup'
       },
@@ -304,7 +304,7 @@ const items = {
       {
         id: 42,
         name: 'TRICHOLINE CITRATE    SORBITOL SOLUTION (70%)  Q.S',
-        link: 'tricholine-citrate-sorbitol-solution-(70%)-qs',
+        link: 'tricholine-citrate-sorbitol-solution-70-qs',
         mainCategory: 'Syrups',
         subCategory: 'Tonic Syrup'
       },
