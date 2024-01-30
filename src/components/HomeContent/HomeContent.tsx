@@ -1,7 +1,6 @@
 "use client";
 
 import ApprovalIcon from "@mui/icons-material/Approval";
-import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 import GavelIcon from "@mui/icons-material/Gavel";
 import LocalDiningIcon from "@mui/icons-material/LocalDining";
 import SecurityIcon from "@mui/icons-material/Security";
@@ -18,68 +17,13 @@ import {
   Typography,
   useMediaQuery,
 } from "@mui/material";
-import MuiAccordion from "@mui/material/Accordion";
-import MuiAccordionDetails from "@mui/material/AccordionDetails";
-import MuiAccordionSummary from "@mui/material/AccordionSummary";
+
 import { styled, useTheme } from "@mui/material/styles";
 import Link from "next/link";
 import PropTypes from "prop-types";
 import React, { useEffect, useState } from "react";
-
-const Accordion = styled(MuiAccordion)(({ theme }) => ({
-  marginBottom: `6px`,
-  border: `1px solid ${theme.palette.divider}`,
-  "&:not(:last-child)": {
-    borderBottom: 0,
-  },
-  "&:before": {
-    display: "none",
-  },
-}));
-
-Accordion.defaultProps = {
-  disableGutters: true,
-  elevation: 2,
-  square: true,
-};
-
-interface AccordionSummaryProps {
-  "aria-controls": string;
-  id: string;
-  children: React.ReactNode;
-}
-
-const AccordionSummary = styled(
-  ({
-    children,
-    "aria-controls": ariaControls,
-    id,
-    ...props
-  }: AccordionSummaryProps) => (
-    <MuiAccordionSummary
-      expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
-      aria-controls={ariaControls}
-      id={id}
-      {...props}
-    >
-      {children}
-    </MuiAccordionSummary>
-  )
-)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === "dark" ? "#EF3E00" : "#EF3E00",
-  flexDirection: "row-reverse",
-  "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
-    transform: "rotate(90deg)",
-  },
-  "& .MuiAccordionSummary-content": {
-    marginLeft: theme.spacing(1),
-  },
-}));
-
-const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
-  padding: theme.spacing(2),
-  borderTop: "1px solid rgba(0, 0, 0, .125)",
-}));
+import NewProducts from "../NewProducts/NewProducts";
+import NumberCounter from "./NumberCounter/NumberCounter";
 
 const tabs = ["Our Vision", "Our Mission", "Our Values"];
 
@@ -106,40 +50,14 @@ TabPanel.propTypes = {
 };
 
 export default function HomeContent() {
-  const [expanded, setExpanded] = useState("panel1");
   const [value, setValue] = useState(0);
 
   const handleTabChange = (event, newValue) => {
     setValue(newValue);
   };
 
-  const handleChange = (panel) => (event, newExpanded) => {
-    setExpanded(newExpanded ? panel : false);
-  };
-
   const theme = useTheme();
   const isSmallerScreen = useMediaQuery(theme.breakpoints.down("md"));
-
-  useEffect(() => {
-    const counters = document.querySelectorAll(".count");
-    const speed = 300;
-
-    counters.forEach((counter) => {
-      const updateCount = () => {
-        const target = parseInt(counter.getAttribute("data-target"));
-        const count = parseInt(counter.innerHTML);
-        const increment = Math.trunc(target / speed);
-
-        if (count < target) {
-          counter.innerHTML = (count + increment).toString();
-          setTimeout(updateCount, 1);
-        } else {
-          counter.innerHTML = target.toString(); // Update the element's innerText
-        }
-      };
-      updateCount();
-    });
-  }, []);
 
   return (
     <>
@@ -177,114 +95,13 @@ export default function HomeContent() {
               We offer new formulated drugs approved by DCGI.
             </Typography>
           </Stack>
-
-          <Stack style={{ width: isSmallerScreen ? "100%" : "30%" }}>
-            <Typography variant="h6">Latest Products</Typography>
-            <Accordion
-              expanded={expanded === "panel1"}
-              onChange={handleChange("panel1")}
-            >
-              <AccordionSummary
-                aria-controls="panel1d-content"
-                id="panel1d-header"
-                // as={Typography}
-                // sx={{ color: "white" }}
-              >
-                <Typography sx={{ color: "white" }}>
-                  Vitamin D3 400/800 IU Drops/ 25ml Spray
-                </Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                <Typography>
-                  This drops of vitamin D3 helps to get rid of bone disorders
-                  such as rickets and osteomalacia in children.
-                  <br />
-                  <br />
-                  <Link href={"/product/vitamin-d3-drops"} className="active">
-                    Read more...
-                  </Link>
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
-            <Accordion
-              expanded={expanded === "panel2"}
-              onChange={handleChange("panel2")}
-            >
-              <AccordionSummary
-                aria-controls="panel2d-content"
-                id="panel2d-header"
-              >
-                <Typography sx={{ color: "white" }}>Immunity Spray</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                <Typography>
-                  Our Immunity spray is mainly designed to boost up immunity and
-                  prevent damage from free radicals
-                  <br />
-                  <br />
-                  <Link
-                    href={"/product/immunity-booster-spray"}
-                    className="active"
-                  >
-                    Read more...
-                  </Link>
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
-            <Accordion
-              expanded={expanded === "panel3"}
-              onChange={handleChange("panel3")}
-            >
-              <AccordionSummary
-                aria-controls="panel3d-content"
-                id="panel3d-header"
-              >
-                <Typography sx={{ color: "white" }}>Iron Spray</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                <Typography>
-                  Iron oral spray is an effective intra-spray technology
-                  formulated to directly deliver iron into the bloodstream.
-                  <br />
-                  <br />
-                  <Link href={"/product/iron-oral-spray"} className="active">
-                    Read more...
-                  </Link>
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
-            <Accordion
-              expanded={expanded === "panel4"}
-              onChange={handleChange("panel4")}
-            >
-              <AccordionSummary
-                aria-controls="panel3d-content"
-                id="panel3d-header"
-              >
-                <Typography sx={{ color: "white" }}>
-                  Multivitamin Spray
-                </Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                <Typography>
-                  A multivitamin is a preparation intended to serve as a dietary
-                  supplement.
-                  <br />
-                  <br />
-                  <Link
-                    href={"/product/multivitamin-oral-spray"}
-                    className="active"
-                  >
-                    Read more...
-                  </Link>
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
-          </Stack>
         </Stack>
       </Container>
       <Toolbar />
-
+      <NumberCounter />
+      <Toolbar />
+      <NewProducts />
+      <Toolbar />
 
       <Container>
         <Link href="/products">
@@ -296,35 +113,12 @@ export default function HomeContent() {
             loading={false}
             className="loading-button"
           >
-            SEE PRODUCTS
+            ALL PRODUCTS
           </LoadingButton>
         </Link>
       </Container>
-      
-      <Toolbar />
 
-      <div className="container">
-        <div className="row g-3">
-          <div className="col-md-4 counter">
-            <h3 data-target="9936" className="count">
-              0
-            </h3>
-            <h4>Management</h4>
-          </div>
-          <div className="col-md-4 counter">
-            <h3 data-target="4532" className="count">
-              0
-            </h3>
-            <h4>Age Care </h4>
-          </div>
-          <div className="col-md-4 counter">
-            <h3 data-target="6326" className="count">
-              0
-            </h3>
-            <h4>Healthcare </h4>
-          </div>
-        </div>
-      </div>
+      <Toolbar />
 
       <Toolbar />
       <Toolbar />
@@ -357,7 +151,7 @@ export default function HomeContent() {
               >
                 <ApprovalIcon sx={{ fontSize: "4rem" }} />
                 <br />
-                <h6 className="text-center">WHO Applied</h6>
+                <h6 className="text-center">WHO Certified</h6>
               </Box>
             </Paper>
           </Grid>

@@ -1,6 +1,6 @@
 import SearchResponse from "@/components/SearchResponse/SearchResponse";
 import { Metadata } from "next";
-import Banner from "@/components/Banner";
+import Banner from "@/components/HomeContent/Banner";
 
 function Products() {
   return (
