@@ -41,7 +41,7 @@ export default function NewProducts() {
         <div className="container">
           <div className={`row`}>
             <div className="col-md-12">
-              <h2 className="text-center">Featured Products</h2>
+              <h2 className="text-center color-primary">Featured Products</h2>
             </div>
           </div>
           <div className={`row`}>
@@ -56,9 +56,9 @@ export default function NewProducts() {
                         alt={newProductsData[e].imageAlt}
                       />
                     </div>
-                    <div className={`${styles.cardImgOverlay} ${styles.ctr}`}>
-                      <h5 className="card-title">{e}</h5>
-                      <p className="card-text">
+                    <div className={`${styles.cardImgOverlay}`}>
+                      <h5 className="card-title" style={{fontSize:"2.3em"}}>{e}</h5>
+                      <p className="card-text text-justify" style={{fontSize:"1.3em"}}>
                         {newProductsData[e].description}
                       </p>
                       <div className="overlay ctr">

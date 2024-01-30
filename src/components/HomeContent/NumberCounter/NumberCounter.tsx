@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./NumberCounter.module.css";
+import styles from "./NumberCounter.module.css";
 
 export default function NumberCounter() {
   const counterData = {
@@ -55,13 +55,13 @@ export default function NumberCounter() {
         <div className="row g-3">
           {Object.keys(counterData).map((e, i) => (
             <React.Fragment key={e}>
-              <div className="col-md-4 counter">
+              <div className={`col-md-4 ${styles['counter']}`}>
                 <h3
                   data-target={counterData[e].target}
                   data-increment={counterData[e].increment}
                   data-timeout-in-ms={counterData[e].timeout_in_ms}
                   data-suffix={counterData[e].suffix}
-                  className="customCount"
+                  className="color-primary customCount"
                 >
                   0
                 </h3>
