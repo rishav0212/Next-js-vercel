@@ -3,730 +3,731 @@ const items = {
     Antibiotic: [
       {
         id: 1,
-        name: "AZITHROMYCIN",
-        link: "AZITHROMYCIN",
-        mainCategory: "Suspensions",
-        subCategory: "Antibiotic",
+        name: 'AZITHROMYCIN',
+        link: 'azithromycin',
+        mainCategory: 'Suspensions',
+        subCategory: 'Antibiotic'
       },
       {
         id: 2,
-        name: "OFLOXACIN",
-        link: "OFLOXACIN",
-        mainCategory: "Suspensions",
-        subCategory: "Antibiotic",
+        name: 'OFLOXACIN',
+        link: 'ofloxacin',
+        mainCategory: 'Suspensions',
+        subCategory: 'Antibiotic'
       },
       {
         id: 3,
-        name: "OFLOXACIN + TINIDAZOLE",
-        link: "OFLOXACIN0",
-        mainCategory: "Suspensions",
-        subCategory: "Antibiotic",
+        name: 'OFLOXACIN + TINIDAZOLE',
+        link: 'ofloxacin-tinidazole',
+        mainCategory: 'Suspensions',
+        subCategory: 'Antibiotic'
       },
       {
         id: 4,
-        name: "OFLOXACIN + ORNIDAZOLE",
-        link: "ofloxacin-ornidazole",
-        mainCategory: "Suspensions",
-        subCategory: "Antibiotic",
+        name: 'OFLOXACIN + ORNIDAZOLE',
+        link: 'ofloxacin-ornidazole',
+        mainCategory: 'Suspensions',
+        subCategory: 'Antibiotic'
       },
       {
         id: 5,
-        name: "ROXITHROMYCIN",
-        link: "ROXITHROMYCIN",
-        mainCategory: "Suspensions",
-        subCategory: "Antibiotic",
+        name: 'ROXITHROMYCIN',
+        link: 'roxithromycin',
+        mainCategory: 'Suspensions',
+        subCategory: 'Antibiotic'
       },
       {
         id: 6,
-        name: "OFLOXACIN +  NITOZOXANIDE",
-        link: "OFLOXACIN2",
-        mainCategory: "Suspensions",
-        subCategory: "Antibiotic",
+        name: 'OFLOXACIN +  NITOZOXANIDE',
+        link: 'ofloxacin-nitozoxanide',
+        mainCategory: 'Suspensions',
+        subCategory: 'Antibiotic'
       },
       {
         id: 7,
-        name: "OFLOXACIN +  METRONIDAZOLE",
-        link: "OFLOXACIN3",
-        mainCategory: "Suspensions",
-        subCategory: "Antibiotic",
-      },
+        name: 'OFLOXACIN +  METRONIDAZOLE',
+        link: 'ofloxacin-metronidazole',
+        mainCategory: 'Suspensions',
+        subCategory: 'Antibiotic'
+      }
     ],
     Anticold: [
       {
         id: 8,
-        name: "PCM    +   CPM    +   PHENYLEPHRINE HCL     +   SODIUM CITRATE     +   MENTHOL",
-        link: "PCM4",
-        mainCategory: "Suspensions",
-        subCategory: "Anticold",
+        name: 'PCM    +   CPM    +   PHENYLEPHRINE HCL     +   SODIUM CITRATE     +   MENTHOL',
+        link: 'pcm-cpm-phenylephrine-hcl-sodium-citrate-menthol',
+        mainCategory: 'Suspensions',
+        subCategory: 'Anticold'
       },
       {
         id: 9,
-        name: "CPM    +   PCM   +   PHENYLEPHERINE HCL",
-        link: "CPM5",
-        mainCategory: "Suspensions",
-        subCategory: "Anticold",
+        name: 'CPM    +   PCM   +   PHENYLEPHERINE HCL',
+        link: 'cpm-pcm-phenylepherine-hcl',
+        mainCategory: 'Suspensions',
+        subCategory: 'Anticold'
       },
       {
         id: 10,
-        name: "CETIRIZINE HCL    +   PCM     +   PHENYLEPHERINE HCL",
-        link: "CETIRIZINE6",
-        mainCategory: "Suspensions",
-        subCategory: "Anticold",
+        name: 'CETIRIZINE HCL    +   PCM     +   PHENYLEPHERINE HCL',
+        link: 'cetirizine-hcl-pcm-phenylepherine-hcl',
+        mainCategory: 'Suspensions',
+        subCategory: 'Anticold'
       },
       {
         id: 11,
-        name: "CETIRIZINE DIHCL",
-        link: "CETIRIZINE7",
-        mainCategory: "Suspensions",
-        subCategory: "Anticold",
+        name: 'CETIRIZINE DIHCL',
+        link: 'cetirizine-dihcl',
+        mainCategory: 'Suspensions',
+        subCategory: 'Anticold'
       },
       {
         id: 12,
-        name: "LEVOCETIRIZINE DIHCL",
-        link: "LEVOCETIRIZINE8",
-        mainCategory: "Suspensions",
-        subCategory: "Anticold",
+        name: 'LEVOCETIRIZINE DIHCL',
+        link: 'levocetirizine-dihcl',
+        mainCategory: 'Suspensions',
+        subCategory: 'Anticold'
       },
       {
         id: 13,
-        name: "DICYCLOMINE HCL + PCM",
-        link: "DICYCLOMINE9",
-        mainCategory: "Suspensions",
-        subCategory: "Anticold",
+        name: 'DICYCLOMINE HCL + PCM',
+        link: 'dicyclomine-hcl-pcm',
+        mainCategory: 'Suspensions',
+        subCategory: 'Anticold'
       },
       {
         id: 14,
-        name: "FEXOFENADINE HCL",
-        link: "FEXOFENADINE10",
-        mainCategory: "Suspensions",
-        subCategory: "Anticold",
+        name: 'FEXOFENADINE HCL',
+        link: 'fexofenadine-hcl',
+        mainCategory: 'Suspensions',
+        subCategory: 'Anticold'
       },
       {
         id: 15,
-        name: "DEXTROMETHORPHAN HYDROBROMIDE + CHLORPHENIRAMINE MALEATE",
-        link: "DEXTROMETHORPHAN11",
-        mainCategory: "Suspensions",
-        subCategory: "Anticold",
-      },
+        name: 'DEXTROMETHORPHAN HYDROBROMIDE + CHLORPHENIRAMINE MALEATE',
+        link: 'dextromethorphan-hydrobromide-chlorpheniramine-maleate',
+        mainCategory: 'Suspensions',
+        subCategory: 'Anticold'
+      }
     ],
-    "Analgesic & Anti-Inflammatory": [
+    'Analgesic & Anti-Inflammatory': [
       {
         id: 16,
-        name: "DEFLAZACORT",
-        link: "DEFLAZACORT",
-        mainCategory: "Suspensions",
-        subCategory: "Analgesic & Anti-Inflammatory",
+        name: 'DEFLAZACORT',
+        link: 'deflazacort',
+        mainCategory: 'Suspensions',
+        subCategory: 'Analgesic & Anti-Inflammatory'
       },
       {
         id: 17,
-        name: "PROMETHAZINE HCL",
-        link: "PROMETHAZINE12",
-        mainCategory: "Suspensions",
-        subCategory: "Analgesic & Anti-Inflammatory",
+        name: 'PROMETHAZINE HCL',
+        link: 'promethazine-hcl',
+        mainCategory: 'Suspensions',
+        subCategory: 'Analgesic & Anti-Inflammatory'
       },
       {
         id: 18,
-        name: "PCM     +   PROMETHAZINE HCL",
-        link: "PCM13",
-        mainCategory: "Suspensions",
-        subCategory: "Analgesic & Anti-Inflammatory",
-      },
+        name: 'PCM     +   PROMETHAZINE HCL',
+        link: 'pcm-promethazine-hcl',
+        mainCategory: 'Suspensions',
+        subCategory: 'Analgesic & Anti-Inflammatory'
+      }
     ],
     Antacid: [
       {
         id: 19,
-        name: "MEGALDRATE   +   SIMETHICON",
-        link: "MEGALDRATE14",
-        mainCategory: "Suspensions",
-        subCategory: "Antacid",
+        name: 'MEGALDRATE   +   SIMETHICON',
+        link: 'megaldrate-simethicon',
+        mainCategory: 'Suspensions',
+        subCategory: 'Antacid'
       },
       {
         id: 20,
-        name: "OXETACAINE    +   ALUMINIUM HYDRIXIDE   +   MAGNESIUM HYDROXIDE",
-        link: "OXETACAINE15",
-        mainCategory: "Suspensions",
-        subCategory: "Antacid",
+        name: 'OXETACAINE    +   ALUMINIUM HYDRIXIDE   +   MAGNESIUM HYDROXIDE',
+        link: 'oxetacaine-aluminium-hydrixide-magnesium-hydroxide',
+        mainCategory: 'Suspensions',
+        subCategory: 'Antacid'
       },
       {
         id: 21,
-        name: "ACTIVATED DIMETHICON    +   MAGNESIUM HYDRO    +   DRIED ALIMINIUM HYDRO",
-        link: "ACTIVATED16",
-        mainCategory: "Suspensions",
-        subCategory: "Antacid",
-      },
-    ],
+        name: 'ACTIVATED DIMETHICON    +   MAGNESIUM HYDRO    +   DRIED ALIMINIUM HYDRO',
+        link: 'activated-dimethicon-magnesium-hydro-dried-aliminium-hydro',
+        mainCategory: 'Suspensions',
+        subCategory: 'Antacid'
+      }
+    ]
   },
   Syrups: {
-    "Dry Syrup": [
+    'Dry Syrup': [
       {
         id: 22,
-        name: "AMOXYCILLIN",
-        link: "AMOXYCILLIN",
-        mainCategory: "Syrups",
-        subCategory: "Dry Syrup",
+        name: 'AMOXYCILLIN',
+        link: 'amoxycillin',
+        mainCategory: 'Syrups',
+        subCategory: 'Dry Syrup'
       },
       {
         id: 23,
-        name: "CEFIXIME",
-        link: "CEFIXIME",
-        mainCategory: "Syrups",
-        subCategory: "Dry Syrup",
+        name: 'CEFIXIME',
+        link: 'cefixime',
+        mainCategory: 'Syrups',
+        subCategory: 'Dry Syrup'
       },
       {
         id: 24,
-        name: "CEFPODOXIME",
-        link: "CEFPODOXIME",
-        mainCategory: "Syrups",
-        subCategory: "Dry Syrup",
+        name: 'CEFPODOXIME',
+        link: 'cefpodoxime',
+        mainCategory: 'Syrups',
+        subCategory: 'Dry Syrup'
       },
       {
         id: 25,
-        name: "CEFIXIME + OFLOXACIN",
-        link: "CEFIXIME0",
-        mainCategory: "Syrups",
-        subCategory: "Dry Syrup",
-      },
+        name: 'CEFIXIME + OFLOXACIN',
+        link: 'cefixime-ofloxacin',
+        mainCategory: 'Syrups',
+        subCategory: 'Dry Syrup'
+      }
     ],
-    "Tonic Syrup": [
+    'Tonic Syrup': [
       {
         id: 26,
-        name: "IRON(III)HYDROXIDE POLYMALTOSE COMPLEX  +  FOLIC ACID",
-        link: "IRON(III)HYDROXIDE1",
-        mainCategory: "Syrups",
-        subCategory: "Tonic Syrup",
+        name: 'IRON(III)HYDROXIDE POLYMALTOSE COMPLEX  +  FOLIC ACID',
+        link: 'iron-iii-hydroxide-polymaltose-complex-folic-acid',
+        mainCategory: 'Syrups',
+        subCategory: 'Tonic Syrup'
       },
       {
         id: 27,
-        name: "FERRIC AMMONIUM CITRATE    +  CYANOCOBALAMIN    +  FOLIC ACID    +  CUPRIC SULPHATE   +  MANGANESE SULPHATE",
-        link: "FERRIC2",
-        mainCategory: "Syrups",
-        subCategory: "Tonic Syrup",
+        name: 'FERRIC AMMONIUM CITRATE    +  CYANOCOBALAMIN    +  FOLIC ACID    +  CUPRIC SULPHATE   +  MANGANESE SULPHATE',
+        link: 'ferric-ammonium-citrate-cyanocobalamin-folic-acid-cupric-sulphate-manganese-sulphate',
+        mainCategory: 'Syrups',
+        subCategory: 'Tonic Syrup'
       },
       {
         id: 28,
-        name: "MULTIFORMULA \u2026\u2026\u2026. (FOOD)",
-        link: "MULTIFORMULA3",
-        mainCategory: "Syrups",
-        subCategory: "Tonic Syrup",
+        name: 'MULTIFORMULA ………. (FOOD)',
+        link: 'multiformula(food)',
+        mainCategory: 'Syrups',
+        subCategory: 'Tonic Syrup'
       },
       {
         id: 29,
-        name: "FERROUS ASCORBATE   +  FOLIC ACID",
-        link: "FERROUS4",
-        mainCategory: "Syrups",
-        subCategory: "Tonic Syrup",
+        name: 'FERROUS ASCORBATE   +  FOLIC ACID',
+        link: 'ferrous-ascorbate-folic-acid',
+        mainCategory: 'Syrups',
+        subCategory: 'Tonic Syrup'
       },
       {
         id: 30,
-        name: "FERRIC AMMONIUM CITRATE    +  FOLIC ACID    +   CYANOCOBALAMINE   +  SORBITOL SOL (70%)  Q.S.",
-        link: "FERRIC5",
-        mainCategory: "Syrups",
-        subCategory: "Tonic Syrup",
+        name: 'FERRIC AMMONIUM CITRATE    +  FOLIC ACID    +   CYANOCOBALAMINE   +  SORBITOL SOL (70%)  Q.S.',
+        link: 'ferric-ammonium-citrate-folic-acid-cyanocobalamine-sorbitol-sol-(70%)-qs',
+        mainCategory: 'Syrups',
+        subCategory: 'Tonic Syrup'
       },
       {
         id: 31,
-        name: "IRON (III) HYDROXIDE POLYMALTOSE",
-        link: "IRON6",
-        mainCategory: "Syrups",
-        subCategory: "Tonic Syrup",
+        name: 'IRON (III) HYDROXIDE POLYMALTOSE',
+        link: 'iron-iii-hydroxide-polymaltose',
+        mainCategory: 'Syrups',
+        subCategory: 'Tonic Syrup'
       },
       {
         id: 32,
-        name: "ENZYME FORMULA (IN FOOD)",
-        link: "ENZYME7",
-        mainCategory: "Syrups",
-        subCategory: "Tonic Syrup",
+        name: 'ENZYME FORMULA (IN FOOD)',
+        link: 'enzyme-formula-in-food',
+        mainCategory: 'Syrups',
+        subCategory: 'Tonic Syrup'
       },
       {
         id: 33,
-        name: "CALCIUM  +  D3   +   B12",
-        link: "CALCIUM8",
-        mainCategory: "Syrups",
-        subCategory: "Tonic Syrup",
+        name: 'CALCIUM  +  D3   +   B12',
+        link: 'calcium-d3-b12',
+        mainCategory: 'Syrups',
+        subCategory: 'Tonic Syrup'
       },
       {
         id: 34,
-        name: "CALCIUM CARBONATE  (EQ. TO ELEMENTAL CALCIUM)   +    D3",
-        link: "CALCIUM9",
-        mainCategory: "Syrups",
-        subCategory: "Tonic Syrup",
+        name: 'CALCIUM CARBONATE  (EQ. TO ELEMENTAL CALCIUM)   +    D3',
+        link: 'calcium-carbonate-(eq-to-elemental-calcium)-d3',
+        mainCategory: 'Syrups',
+        subCategory: 'Tonic Syrup'
       },
       {
         id: 35,
-        name: "FERRIC AMMONIUM CITRATE  (EQ TO ELEMENTAL IRON )  +   FOLIC ACID    +  CYANOCOBALAMIN",
-        link: "FERRIC10",
-        mainCategory: "Syrups",
-        subCategory: "Tonic Syrup",
+        name: 'FERRIC AMMONIUM CITRATE  (EQ TO ELEMENTAL IRON )  +   FOLIC ACID    +  CYANOCOBALAMIN',
+        link: 'ferric-ammonium-citrate-(eq-to-elemental-iron-)-folic-acid-cyanocobalamin',
+        mainCategory: 'Syrups',
+        subCategory: 'Tonic Syrup'
       },
       {
         id: 36,
-        name: "FERRIC AMM. CIT.  (EQ. TO ELEMENTAL IRON )  +  CYANOCO.    +  FOLIC ACID   + ZINC SUL.  +  PYRIDOXINE HCL   +  SORBITOL (70%)",
-        link: "FERRIC11",
-        mainCategory: "Syrups",
-        subCategory: "Tonic Syrup",
+        name: 'FERRIC AMM. CIT.  (EQ. TO ELEMENTAL IRON )  +  CYANOCO.    +  FOLIC ACID   + ZINC SUL.  +  PYRIDOXINE HCL   +  SORBITOL (70%)'
+  ,
+        link: 'ferric-amm-cit-(eq-to-elemental-iron-)-cyanoco-folic-acid-zinc-sul-pyridoxine-hcl-sorbitol',
+        mainCategory: 'Syrups',
+        subCategory: 'Tonic Syrup'
       },
       {
         id: 37,
-        name: "PYRIDOXINE HCL   +  NICOTINAMIDE   +  CYANOCOBALAMIN   +   LYSINE HCL",
-        link: "PYRIDOXINE12",
-        mainCategory: "Syrups",
-        subCategory: "Tonic Syrup",
+        name: 'PYRIDOXINE HCL   +  NICOTINAMIDE   +  CYANOCOBALAMIN   +   LYSINE HCL',
+        link: 'pyridoxine-hcl-nicotinamide-cyanocobalamin-lysine-hcl',
+        mainCategory: 'Syrups',
+        subCategory: 'Tonic Syrup'
       },
       {
         id: 38,
-        name: "LYCOPENE FORMULA \u2026\u2026\u2026\u2026\u2026\u2026.(IN FOOD)",
-        link: "LYCOPENE13",
-        mainCategory: "Syrups",
-        subCategory: "Tonic Syrup",
+        name: 'LYCOPENE FORMULA ……………….(IN FOOD)',
+        link: 'lycopene-formula',
+        mainCategory: 'Syrups',
+        subCategory: 'Tonic Syrup'
       },
-      // {
-      //     "id": 39,
-      //     "name": "ALPHA AMYLASE   ( BACTERIAL 1:800)  +   PAPAIN",
-      //     "link": "ALPHA14",
-      //     "mainCategory": "Syrups",
-      //     "subCategory": "Tonic Syrup"
-      // },
+      {
+        id: 39,
+        name: 'ALPHA AMYLASE BACTERIAL(1:800) + PAPAIN',
+        link: 'alpha-amyalase-bacterial-papain',
+        mainCategory: 'Syrups',
+        subCategory: 'Tonic Syrup'
+      },
       {
         id: 40,
-        name: "L-LYSINE   + NICOTINAMIDE     +  D-PANTHENOL   +   RIBO. SOD. PHOS.   +  THIAMINE HCL   + PYRIDOXINE HCL    +  CYANOC. (IN FOOD)",
-        link: "L-LYSINE15",
-        mainCategory: "Syrups",
-        subCategory: "Tonic Syrup",
+        name: 'L-LYSINE   + NICOTINAMIDE     +  D-PANTHENOL   +   RIBO. SOD. PHOS.   +  THIAMINE HCL   + PYRIDOXINE HCL    +  CYANOC. (IN FOOD)',
+        link: 'l-lysine-nicotinamide-d-panthenol-ribo-sod-phos-thiamine-hcl-pyridoxine-hcl-cyanoc-(in-food)',
+        mainCategory: 'Syrups',
+        subCategory: 'Tonic Syrup'
       },
       {
         id: 41,
-        name: "CYPROHEPTADINE HCL    +   TRICHOLINE CITRATE",
-        link: "CYPROHEPTADINE16",
-        mainCategory: "Syrups",
-        subCategory: "Tonic Syrup",
+        name: 'CYPROHEPTADINE HCL    +   TRICHOLINE CITRATE',
+        link: 'cyproheptadine-hcl-tricholine-citrate',
+        mainCategory: 'Syrups',
+        subCategory: 'Tonic Syrup'
       },
       {
         id: 42,
-        name: "TRICHOLINE CITRATE    SORBITOL SOLUTION (70%)  Q.S",
-        link: "TRICHOLINE17",
-        mainCategory: "Syrups",
-        subCategory: "Tonic Syrup",
+        name: 'TRICHOLINE CITRATE    SORBITOL SOLUTION (70%)  Q.S',
+        link: 'tricholine-citrate-sorbitol-solution-(70%)-qs',
+        mainCategory: 'Syrups',
+        subCategory: 'Tonic Syrup'
       },
       {
         id: 43,
-        name: "FERROUS GLUCONATE   (EQ. TO  ELEMENTAL IRON)  +   FOLIC ACID   +  B12     +   CALCIUM LACTATE",
-        link: "FERROUS18",
-        mainCategory: "Syrups",
-        subCategory: "Tonic Syrup",
+        name: 'FERROUS GLUCONATE   (EQ. TO  ELEMENTAL IRON)  +   FOLIC ACID   +  B12     +   CALCIUM LACTATE',
+        link: 'ferrous-gluconate-(eq-to-elemental-iron)-folic-acid-b12-calcium-lactate',
+        mainCategory: 'Syrups',
+        subCategory: 'Tonic Syrup'
       },
       {
         id: 44,
-        name: "PROTEIN FORMULA\u2026\u2026\u2026\u2026\u2026\u2026\u2026(IN DRUG)",
-        link: "PROTEIN19",
-        mainCategory: "Syrups",
-        subCategory: "Tonic Syrup",
-      },
+        name: 'PROTEIN FORMULA…………………(IN DRUG)',
+        link: 'protein-formula-in-drug',
+        mainCategory: 'Syrups',
+        subCategory: 'Tonic Syrup'
+      }
     ],
     Drops: [
       {
         id: 45,
-        name: "DOMPERIDONE",
-        link: "DOMPERIDONE",
-        mainCategory: "Syrups",
-        subCategory: "Drops",
+        name: 'DOMPERIDONE',
+        link: 'domperidone',
+        mainCategory: 'Syrups',
+        subCategory: 'Drops'
       },
       {
         id: 46,
-        name: "ONDANSETRON",
-        link: "ONDANSETRON",
-        mainCategory: "Syrups",
-        subCategory: "Drops",
-      },
+        name: 'ONDANSETRON',
+        link: 'ondansetron',
+        mainCategory: 'Syrups',
+        subCategory: 'Drops'
+      }
     ],
-    "Cough Syrup": [
+    'Cough Syrup': [
       {
         id: 47,
-        name: "DIPHENHYDRAMINE + AMONIUM CHLORIDE + SODIUM CITRATE + MENTHOL",
-        link: "DIPHENHYDRAMINE20",
-        mainCategory: "Syrups",
-        subCategory: "Cough Syrup",
+        name: 'DIPHENHYDRAMINE + AMONIUM CHLORIDE + SODIUM CITRATE + MENTHOL',
+        link: 'diphenhydramine-amonium-chloride-sodium-citrate-menthol',
+        mainCategory: 'Syrups',
+        subCategory: 'Cough Syrup'
       },
       {
         id: 48,
-        name: "TERBUTALINE SULPHATE  +  GUAIPHENESIN  +   BROMHEXINE HCL      +  MENTHOL",
-        link: "TERBUTALINE21",
-        mainCategory: "Syrups",
-        subCategory: "Cough Syrup",
+        name: 'TERBUTALINE SULPHATE  +  GUAIPHENESIN  +   BROMHEXINE HCL      +  MENTHOL',
+        link: 'terbutaline-sulphate-guaiphenesin-bromhexine-hcl-menthol',
+        mainCategory: 'Syrups',
+        subCategory: 'Cough Syrup'
       },
       {
         id: 49,
-        name: "TERBUTALINE SULPHATE      +  GUAIPHENESIN    +  AMBROXOL HCL     +  MENTHOL",
-        link: "TERBUTALINE22",
-        mainCategory: "Syrups",
-        subCategory: "Cough Syrup",
+        name: 'TERBUTALINE SULPHATE      +  GUAIPHENESIN    +  AMBROXOL HCL     +  MENTHOL',
+        link: 'terbutaline-sulphate-guaiphenesin-ambroxol-hcl-menthol',
+        mainCategory: 'Syrups',
+        subCategory: 'Cough Syrup'
       },
       {
         id: 50,
-        name: "DIPHENHYDRAMINE HCL  +  TERPINE HYDRATE  +   AMMONIUM CHLORIDE  +  SODIUM CITRATE +   MENTHOL",
-        link: "DIPHENHYDRAMINE23",
-        mainCategory: "Syrups",
-        subCategory: "Cough Syrup",
+        name: 'DIPHENHYDRAMINE HCL  +  TERPINE HYDRATE  +   AMMONIUM CHLORIDE  +  SODIUM CITRATE +   MENTHOL',
+        link: 'diphenhydramine-hcl-terpine-hydrate-ammonium-chloride-sodium-citrate-menthol',
+        mainCategory: 'Syrups',
+        subCategory: 'Cough Syrup'
       },
       {
         id: 51,
-        name: "DEXTROMETHORPHAN HBR  +  PHENYLEPHRINE HCL  +  CPM",
-        link: "DEXTROMETHORPHAN24",
-        mainCategory: "Syrups",
-        subCategory: "Cough Syrup",
+        name: 'DEXTROMETHORPHAN HBR  +  PHENYLEPHRINE HCL  +  CPM',
+        link: 'dextromethorphan-hbr-phenylephrine-hcl-cpm',
+        mainCategory: 'Syrups',
+        subCategory: 'Cough Syrup'
       },
       {
         id: 52,
-        name: "DEXTROMETHORPHAN HBR    +  PHENYLEPHRINE HCL    +  CPM    +  PCM",
-        link: "DEXTROMETHORPHAN25",
-        mainCategory: "Syrups",
-        subCategory: "Cough Syrup",
+        name: 'DEXTROMETHORPHAN HBR    +  PHENYLEPHRINE HCL    +  CPM    +  PCM',
+        link: 'dextromethorphan-hbr-phenylephrine-hcl-cpm-pcm',
+        mainCategory: 'Syrups',
+        subCategory: 'Cough Syrup'
       },
       {
         id: 53,
-        name: "DEXTROMETHORPHAN HBR  +   CPM",
-        link: "DEXTROMETHORPHAN26",
-        mainCategory: "Syrups",
-        subCategory: "Cough Syrup",
+        name: 'DEXTROMETHORPHAN HBR  +   CPM',
+        link: 'dextromethorphan-hbr-cpm',
+        mainCategory: 'Syrups',
+        subCategory: 'Cough Syrup'
       },
       {
         id: 54,
-        name: "CETIRIZINE DIHCL      +   AMBROXOL HCL",
-        link: "CETIRIZINE27",
-        mainCategory: "Syrups",
-        subCategory: "Cough Syrup",
+        name: 'CETIRIZINE DIHCL      +   AMBROXOL HCL',
+        link: 'cetirizine-dihcl-ambroxol-hcl',
+        mainCategory: 'Syrups',
+        subCategory: 'Cough Syrup'
       },
       {
         id: 55,
-        name: "AMBROXOL HCL   +  GUAIPHENESIN   +  PHENYLEPHERINE HCL   +  CPM  +  MENTHOL",
-        link: "AMBROXOL28",
-        mainCategory: "Syrups",
-        subCategory: "Cough Syrup",
+        name: 'AMBROXOL HCL   +  GUAIPHENESIN   +  PHENYLEPHERINE HCL   +  CPM  +  MENTHOL',
+        link: 'ambroxol-hcl-guaiphenesin-phenylepherine-hcl-cpm-menthol',
+        mainCategory: 'Syrups',
+        subCategory: 'Cough Syrup'
       },
       {
         id: 56,
-        name: "CPM    +  SODIUM CITRATE  +  AMMONIUM CHLORIDE",
-        link: "CPM29",
-        mainCategory: "Syrups",
-        subCategory: "Cough Syrup",
+        name: 'CPM    +  SODIUM CITRATE  +  AMMONIUM CHLORIDE',
+        link: 'cpm-sodium-citrate-ammonium-chloride',
+        mainCategory: 'Syrups',
+        subCategory: 'Cough Syrup'
       },
       {
         id: 57,
-        name: "DEXTROMETHORPHEN HBR    +  CPM     +   GUAIPHENESIN     +  AMMONIUM CHLORIDE",
-        link: "DEXTROMETHORPHEN30",
-        mainCategory: "Syrups",
-        subCategory: "Cough Syrup",
+        name: 'DEXTROMETHORPHEN HBR    +  CPM     +   GUAIPHENESIN     +  AMMONIUM CHLORIDE',
+        link: 'dextromethorphen-hbr-cpm-guaiphenesin-ammonium-chloride',
+        mainCategory: 'Syrups',
+        subCategory: 'Cough Syrup'
       },
       {
         id: 58,
-        name: "DEXTROMETHORPHAN HBR   +  CETIRIZINE HCL     +  PHENYLEPHRINE HCL      +  MENTHOL",
-        link: "DEXTROMETHORPHAN31",
-        mainCategory: "Syrups",
-        subCategory: "Cough Syrup",
+        name: 'DEXTROMETHORPHAN HBR   +  CETIRIZINE HCL     +  PHENYLEPHRINE HCL      +  MENTHOL',
+        link: 'dextromethorphan-hbr-cetirizine-hcl-phenylephrine-hcl-menthol',
+        mainCategory: 'Syrups',
+        subCategory: 'Cough Syrup'
       },
       {
         id: 59,
-        name: "AMBROXOL HCL   +  LEVOCETIRIZINE HCL   +  GUAIPHENESIN    +  PHENYLEPHRINE HCL",
-        link: "AMBROXOL32",
-        mainCategory: "Syrups",
-        subCategory: "Cough Syrup",
+        name: 'AMBROXOL HCL   +  LEVOCETIRIZINE HCL   +  GUAIPHENESIN    +  PHENYLEPHRINE HCL',
+        link: 'ambroxol-hcl-levocetirizine-hcl-guaiphenesin-phenylephrine-hcl',
+        mainCategory: 'Syrups',
+        subCategory: 'Cough Syrup'
       },
       {
         id: 60,
-        name: "DMR    +  AMMONIUM  +  BROMHEXINE   +  MENTHOL",
-        link: "DMR33",
-        mainCategory: "Syrups",
-        subCategory: "Cough Syrup",
-      },
-    ],
+        name: 'DMR    +  AMMONIUM  +  BROMHEXINE   +  MENTHOL',
+        link: 'dmr-ammonium-bromhexine-menthol',
+        mainCategory: 'Syrups',
+        subCategory: 'Cough Syrup'
+      }
+    ]
   },
   "External Preparations": {
-    "Nasal Sprays": [
+    'Nasal Sprays': [
       {
         id: 61,
-        name: "SODIUM CHLORIDE + BENZOLEKONIUM + PHENYLMERCURIC ACETATE",
-        link: "SODIUM0",
-        mainCategory: "External Preparations",
-        subCategory: "Nasal Sprays",
+        name: 'SODIUM CHLORIDE + BENZOLEKONIUM + PHENYLMERCURIC ACETATE',
+        link: 'sodium-chloride-benzolekonium-phenylmercuric-acetate',
+        mainCategory: 'External Preparations',
+        subCategory: 'Nasal Sprays'
       },
       {
         id: 62,
-        name: "XYLOMETAZOLINE HCL NASAL DROPS & SPRAY",
-        link: "XYLOMETAZOLINE1",
-        mainCategory: "External Preparations",
-        subCategory: "Nasal Sprays",
-      },
+        name: 'XYLOMETAZOLINE HCL NASAL DROPS & SPRAY',
+        link: 'xylometazoline-hcl-nasal-drops-spray',
+        mainCategory: 'External Preparations',
+        subCategory: 'Nasal Sprays'
+      }
     ],
     Ointments: [
       {
         id: 63,
-        name: "POTASSIUM  NITRATE    +  SODIUM FLUORIDE",
-        link: "POTASSIUM2",
-        mainCategory: "External Preparations",
-        subCategory: "Ointments",
+        name: 'POTASSIUM  NITRATE    +  SODIUM FLUORIDE',
+        link: 'potassium-nitrate-sodium-fluoride',
+        mainCategory: 'External Preparations',
+        subCategory: 'Ointments'
       },
       {
         id: 64,
-        name: "POTASSIUM  NITRATE",
-        link: "POTASSIUM3",
-        mainCategory: "External Preparations",
-        subCategory: "Ointments",
+        name: 'POTASSIUM  NITRATE',
+        link: 'potassium-nitrate',
+        mainCategory: 'External Preparations',
+        subCategory: 'Ointments'
       },
       {
         id: 65,
-        name: "DICLOFENAC DIETHYLAMINE  EQ. DICOFENAC SODIUM",
-        link: "DICLOFENAC4",
-        mainCategory: "External Preparations",
-        subCategory: "Ointments",
+        name: 'DICLOFENAC DIETHYLAMINE  EQ. DICOFENAC SODIUM',
+        link: 'diclofenac-diethylamine-eq-dicofenac-sodium',
+        mainCategory: 'External Preparations',
+        subCategory: 'Ointments'
       },
       {
         id: 66,
-        name: "ADAPALENE    +  CLINDAMYCIN PHOSPHATE",
-        link: "ADAPALENE5",
-        mainCategory: "External Preparations",
-        subCategory: "Ointments",
+        name: 'ADAPALENE    +  CLINDAMYCIN PHOSPHATE',
+        link: 'adapalene-clindamycin-phosphate',
+        mainCategory: 'External Preparations',
+        subCategory: 'Ointments'
       },
       {
         id: 67,
-        name: "CLINDAMYCIN PHOSPHATE  +  NICOTINAMIDE",
-        link: "CLINDAMYCIN6",
-        mainCategory: "External Preparations",
-        subCategory: "Ointments",
+        name: 'CLINDAMYCIN PHOSPHATE  +  NICOTINAMIDE',
+        link: 'clindamycin-phosphate-nicotinamide',
+        mainCategory: 'External Preparations',
+        subCategory: 'Ointments'
       },
       {
         id: 68,
-        name: "MOMETASONE FUROATE",
-        link: "MOMETASONE7",
-        mainCategory: "External Preparations",
-        subCategory: "Ointments",
+        name: 'MOMETASONE FUROATE',
+        link: 'mometasone-furoate',
+        mainCategory: 'External Preparations',
+        subCategory: 'Ointments'
       },
       {
         id: 69,
-        name: "DICLOFENAC DIETHYLAMINE   +  METHYL SALICYLATE    +  MENTHOL   +  LINSEED OIL    +  BENZYL ALCOHOL",
-        link: "DICLOFENAC8",
-        mainCategory: "External Preparations",
-        subCategory: "Ointments",
+        name: 'DICLOFENAC DIETHYLAMINE   +  METHYL SALICYLATE    +  MENTHOL   +  LINSEED OIL    +  BENZYL ALCOHOL',
+        link: 'diclofenac-diethylamine-methyl-salicylate-menthol-linseed-oil-benzyl-alcohol',
+        mainCategory: 'External Preparations',
+        subCategory: 'Ointments'
       },
       {
         id: 70,
-        name: "CLOBETASOL PROPIONATE    +  NEOMYCIN SULPHATE     +  MICONAZOLE NITRATE    +  CHLOROCRESOL",
-        link: "CLOBETASOL9",
-        mainCategory: "External Preparations",
-        subCategory: "Ointments",
+        name: 'CLOBETASOL PROPIONATE    +  NEOMYCIN SULPHATE     +  MICONAZOLE NITRATE    +  CHLOROCRESOL',
+        link: 'clobetasol-propionate-neomycin-sulphate-miconazole-nitrate-chlorocresol',
+        mainCategory: 'External Preparations',
+        subCategory: 'Ointments'
       },
       {
         id: 71,
-        name: "FLUTICASONE  PROPIONATE    +   IMIDUREA",
-        link: "FLUTICASONE10",
-        mainCategory: "External Preparations",
-        subCategory: "Ointments",
+        name: 'FLUTICASONE  PROPIONATE    +   IMIDUREA',
+        link: 'fluticasone-propionate-imidurea',
+        mainCategory: 'External Preparations',
+        subCategory: 'Ointments'
       },
       {
         id: 72,
-        name: "FLUTICASONE  PROPIONATE",
-        link: "FLUTICASONE11",
-        mainCategory: "External Preparations",
-        subCategory: "Ointments",
+        name: 'FLUTICASONE  PROPIONATE',
+        link: 'fluticasone-propionate',
+        mainCategory: 'External Preparations',
+        subCategory: 'Ointments'
       },
       {
         id: 73,
-        name: "UREA    +  LACTIC ACID   +  PROPYLENE GLYCOL    +  LIQUID PARAFFIN   +  METHYL PARABEN  +  PROPYPARABEN",
-        link: "UREA12",
-        mainCategory: "External Preparations",
-        subCategory: "Ointments",
+        name: 'UREA    +  LACTIC ACID   +  PROPYLENE GLYCOL    +  LIQUID PARAFFIN   +  METHYL PARABEN  +  PROPYPARABEN',
+        link: 'urea-lactic-acid-propylene-glycol-liquid-paraffin-methyl-paraben-propyparaben',
+        mainCategory: 'External Preparations',
+        subCategory: 'Ointments'
       },
       {
         id: 74,
-        name: "BECLOMETHASONE DIPROPIONATE   +  SALICYLIC ACID",
-        link: "BECLOMETHASONE13",
-        mainCategory: "External Preparations",
-        subCategory: "Ointments",
+        name: 'BECLOMETHASONE DIPROPIONATE   +  SALICYLIC ACID',
+        link: 'beclomethasone-dipropionate-salicylic-acid',
+        mainCategory: 'External Preparations',
+        subCategory: 'Ointments'
       },
       {
         id: 75,
-        name: "BECLOMETHASONE DIPROPIONATE    +  CLOTRIMAZOLE    +  NEOMYCIN SULPHATE    +  CHLOROCRESOL",
-        link: "BECLOMETHASONE14",
-        mainCategory: "External Preparations",
-        subCategory: "Ointments",
+        name: 'BECLOMETHASONE DIPROPIONATE    +  CLOTRIMAZOLE    +  NEOMYCIN SULPHATE    +  CHLOROCRESOL',
+        link: 'beclomethasone-dipropionate-clotrimazole-neomycin-sulphate-chlorocresol',
+        mainCategory: 'External Preparations',
+        subCategory: 'Ointments'
       },
       {
         id: 76,
-        name: "CLOTRIMAZOLE   +  BECLOMETHASONE DIPROPIONATE",
-        link: "CLOTRIMAZOLE15",
-        mainCategory: "External Preparations",
-        subCategory: "Ointments",
+        name: 'CLOTRIMAZOLE   +  BECLOMETHASONE DIPROPIONATE',
+        link: 'clotrimazole-beclomethasone-dipropionate',
+        mainCategory: 'External Preparations',
+        subCategory: 'Ointments'
       },
       {
         id: 77,
-        name: "OFLOXACIN    +  ORNIDAZOLE   +  TERBINAFINE HCL   +  CLOBETASOL PROPIONATE   +  METHYLPARABEN   +  PROPYLPARABEN",
-        link: "OFLOXACIN16",
-        mainCategory: "External Preparations",
-        subCategory: "Ointments",
+        name: 'OFLOXACIN    +  ORNIDAZOLE   +  TERBINAFINE HCL   +  CLOBETASOL PROPIONATE   +  METHYLPARABEN   +  PROPYLPARABEN',
+        link: 'ofloxacin-ornidazole-terbinafine-hcl-clobetasol-propionate-methylparaben-propylparaben',
+        mainCategory: 'External Preparations',
+        subCategory: 'Ointments'
       },
       {
         id: 78,
-        name: "OFLOXACIN +  FLUOCINOLONE ACETONIDE   +  CLOTRIMAZOLE    +  CHLOROCRESOL",
-        link: "OFLOXACIN17",
-        mainCategory: "External Preparations",
-        subCategory: "Ointments",
+        name: 'OFLOXACIN +  FLUOCINOLONE ACETONIDE   +  CLOTRIMAZOLE    +  CHLOROCRESOL',
+        link: 'ofloxacin-fluocinolone-acetonide-clotrimazole-chlorocresol',
+        mainCategory: 'External Preparations',
+        subCategory: 'Ointments'
       },
       {
         id: 79,
-        name: "ACRIFLAVINE    +  THYMOL   +  CETRIMIDE",
-        link: "ACRIFLAVINE18",
-        mainCategory: "External Preparations",
-        subCategory: "Ointments",
+        name: 'ACRIFLAVINE    +  THYMOL   +  CETRIMIDE',
+        link: 'acriflavine-thymol-cetrimide',
+        mainCategory: 'External Preparations',
+        subCategory: 'Ointments'
       },
       {
         id: 80,
-        name: "CLOBETASOL PROPIONATE    +  SALICYLIC ACID",
-        link: "CLOBETASOL19",
-        mainCategory: "External Preparations",
-        subCategory: "Ointments",
+        name: 'CLOBETASOL PROPIONATE    +  SALICYLIC ACID',
+        link: 'clobetasol-propionate-salicylic-acid',
+        mainCategory: 'External Preparations',
+        subCategory: 'Ointments'
       },
       {
         id: 81,
-        name: "BECLOMETHASONE DIPROPIONATE   +  KETOCONAZOLE",
-        link: "BECLOMETHASONE20",
-        mainCategory: "External Preparations",
-        subCategory: "Ointments",
+        name: 'BECLOMETHASONE DIPROPIONATE   +  KETOCONAZOLE',
+        link: 'beclomethasone-dipropionate-ketoconazole',
+        mainCategory: 'External Preparations',
+        subCategory: 'Ointments'
       },
       {
         id: 82,
-        name: "PAPAIN    +  UREA",
-        link: "PAPAIN21",
-        mainCategory: "External Preparations",
-        subCategory: "Ointments",
+        name: 'PAPAIN    +  UREA',
+        link: 'papain-urea',
+        mainCategory: 'External Preparations',
+        subCategory: 'Ointments'
       },
       {
         id: 83,
-        name: "SODIUM HYALURONATE",
-        link: "SODIUM22",
-        mainCategory: "External Preparations",
-        subCategory: "Ointments",
+        name: 'SODIUM HYALURONATE',
+        link: 'sodium-hyaluronate',
+        mainCategory: 'External Preparations',
+        subCategory: 'Ointments'
       },
       {
         id: 84,
-        name: "HYDROQUINONE+  TERTINOIN +  MOMETASONE FUROATE",
-        link: "HYDROQUINONE23",
-        mainCategory: "External Preparations",
-        subCategory: "Ointments",
+        name: 'HYDROQUINONE+  TERTINOIN +  MOMETASONE FUROATE',
+        link: 'hydroquinone-tertinoin-mometasone-furoate',
+        mainCategory: 'External Preparations',
+        subCategory: 'Ointments'
       },
       {
         id: 85,
-        name: "HYDROQUINONE+  TERTINOIN + FLUOCINOLONE",
-        link: "HYDROQUINONE24",
-        mainCategory: "External Preparations",
-        subCategory: "Ointments",
+        name: 'HYDROQUINONE+  TERTINOIN + FLUOCINOLONE',
+        link: 'hydroquinone-tertinoin-fluocinolone',
+        mainCategory: 'External Preparations',
+        subCategory: 'Ointments'
       },
       {
         id: 86,
-        name: "LIGNOCAINE HCL GEL",
-        link: "LIGNOCAINE25",
-        mainCategory: "External Preparations",
-        subCategory: "Ointments",
-      },
+        name: 'LIGNOCAINE HCL GEL',
+        link: 'lignocaine-hcl-gel',
+        mainCategory: 'External Preparations',
+        subCategory: 'Ointments'
+      }
     ],
     Shampoo: [
       {
         id: 87,
-        name: "KETOCONAZOLE",
-        link: "KETOCONAZOLE",
-        mainCategory: "External Preparations",
-        subCategory: "Shampoo",
-      },
+        name: 'KETOCONAZOLE',
+        link: 'ketoconazole',
+        mainCategory: 'External Preparations',
+        subCategory: 'Shampoo'
+      }
     ],
     Lotions: [
       {
         id: 88,
-        name: "PERMETHRIN LOTION",
-        link: "PERMETHRIN26",
-        mainCategory: "External Preparations",
-        subCategory: "Lotions",
+        name: 'PERMETHRIN LOTION',
+        link: 'permethrin-lotion',
+        mainCategory: 'External Preparations',
+        subCategory: 'Lotions'
       },
       {
         id: 89,
-        name: "GAMABENZENE LOTION",
-        link: "GAMABENZENE27",
-        mainCategory: "External Preparations",
-        subCategory: "Lotions",
-      },
+        name: 'GAMABENZENE LOTION',
+        link: 'gamabenzene-lotion',
+        mainCategory: 'External Preparations',
+        subCategory: 'Lotions'
+      }
     ],
-    "Roll On": [
+    'Roll On': [
       {
         id: 90,
-        name: "DICLOFENAC DIETHYLAMINE   +  METHYL SALICYLATE    +  MENTHOL   +  LINSEED OIL    +  BENZYL ALCOHOL",
-        link: "DICLOFENAC28",
-        mainCategory: "External Preparations",
-        subCategory: "Roll On",
-      },
-    ],
+        name: 'DICLOFENAC DIETHYLAMINE   +  METHYL SALICYLATE    +  MENTHOL   +  LINSEED OIL    +  BENZYL ALCOHOL',
+        link: 'diclofenac-diethylamine-methyl-salicylate-menthol-linseed-oil-benzyl-alcohol',
+        mainCategory: 'External Preparations',
+        subCategory: 'Roll On'
+      }
+    ]
   },
   "Miscellaneous Products": {
-    "": [
+    '': [
       {
         id: 91,
-        name: "DISODIUM HYDROGEN CITRATE",
-        link: "DISODIUM0",
-        mainCategory: "Miscellaneous Products",
-        subCategory: "",
+        name: 'DISODIUM HYDROGEN CITRATE',
+        link: 'disodium-hydrogen-citrate',
+        mainCategory: 'Miscellaneous Products',
+        subCategory: ''
       },
       {
         id: 92,
-        name: "CHLORHEXIDINE GLUCONATE",
-        link: "CHLORHEXIDINE1",
-        mainCategory: "Miscellaneous Products",
-        subCategory: "",
+        name: 'CHLORHEXIDINE GLUCONATE',
+        link: 'chlorhexidine-gluconate',
+        mainCategory: 'Miscellaneous Products',
+        subCategory: ''
       },
       {
         id: 93,
-        name: "GLYCERIN",
-        link: "GLYCERIN",
-        mainCategory: "Miscellaneous Products",
-        subCategory: "",
+        name: 'GLYCERIN',
+        link: 'glycerin',
+        mainCategory: 'Miscellaneous Products',
+        subCategory: ''
       },
       {
         id: 94,
-        name: "SUCRALFATE  +  OXETACAINE",
-        link: "SUCRALFATE2",
-        mainCategory: "Miscellaneous Products",
-        subCategory: "",
+        name: 'SUCRALFATE  +  OXETACAINE',
+        link: 'sucralfate-oxetacaine',
+        mainCategory: 'Miscellaneous Products',
+        subCategory: ''
       },
       {
         id: 95,
-        name: "MILK OF MAGNESIA    +  LIQUID PARAFFIN",
-        link: "MILK3",
-        mainCategory: "Miscellaneous Products",
-        subCategory: "",
+        name: 'MILK OF MAGNESIA    +  LIQUID PARAFFIN',
+        link: 'milk-of-magnesia-liquid-paraffin',
+        mainCategory: 'Miscellaneous Products',
+        subCategory: ''
       },
       {
         id: 96,
-        name: "SUCRALFATE",
-        link: "SUCRALFATE",
-        mainCategory: "Miscellaneous Products",
-        subCategory: "",
+        name: 'SUCRALFATE',
+        link: 'sucralfate',
+        mainCategory: 'Miscellaneous Products',
+        subCategory: ''
       },
       {
         id: 97,
-        name: "SODIUM PICOSULFATE",
-        link: "SODIUM4",
-        mainCategory: "Miscellaneous Products",
-        subCategory: "",
+        name: 'SODIUM PICOSULFATE',
+        link: 'sodium-picosulfate',
+        mainCategory: 'Miscellaneous Products',
+        subCategory: ''
       },
       {
         id: 98,
-        name: "DICLOFENAC DIETHYLAMINE   +  METHYL SALICYLATE    +   MENTHOL +  LINSEED OIL  +  BENZYL ALCOHOL",
-        link: "DICLOFENAC5",
-        mainCategory: "Miscellaneous Products",
-        subCategory: "",
+        name: 'DICLOFENAC DIETHYLAMINE   +  METHYL SALICYLATE    +   MENTHOL +  LINSEED OIL  +  BENZYL ALCOHOL',
+        link: 'diclofenac-diethylamine-methyl-salicylate-menthol-linseed-oil-benzyl-alcohol',
+        mainCategory: 'Miscellaneous Products',
+        subCategory: ''
       },
       {
         id: 99,
-        name: "CHOLECALCIFEROL(VITAMIN D3) SHOTS",
-        link: "CHOLECALCIFEROL(VITAMIN6",
-        mainCategory: "Miscellaneous Products",
-        subCategory: "",
-      },
-    ],
+        name: 'CHOLECALCIFEROL(VITAMIN D3) SHOTS',
+        link: 'cholecalciferol(vitamin-d3)-shots',
+        mainCategory: 'Miscellaneous Products',
+        subCategory: ''
+      }
+    ]
   },
   Tablets: {
     "": [
