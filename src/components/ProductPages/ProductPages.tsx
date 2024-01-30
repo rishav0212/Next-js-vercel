@@ -4,9 +4,7 @@ import * as styles from "@/components/ProductPages/styles.js";
 import info from "@/product_details/info";
 
 export default function Page({ name }) {
-  const product_info = info[name.toUpperCase()]
-    ? info[name.toUpperCase()]
-    : null;
+  const product_info = info[name] ? info[name] : null;
   console.log(product_info.name);
   if (!product_info) return <div>NA</div>;
 
