@@ -120,8 +120,11 @@ const Navbar = () => {
         sx={{
           backgroundColor: "rgba(255, 255, 255)",
           backgroundImage: "none",
+          // position: "-webkit-sticky",
+          position: "sticky",
+          height:{xs:"6vh",sm:"9vh" , md:"9vh"} ,
+          top: 0
         }}
-        position="relative"
       >
         <Toolbar>
           {isMobile ? (

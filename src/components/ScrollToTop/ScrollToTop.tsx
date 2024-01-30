@@ -37,7 +37,6 @@ const StyledButton = styled("button")({
     },
   },
 });
-
 function ScrollToTop() {
   const onClick = () => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });

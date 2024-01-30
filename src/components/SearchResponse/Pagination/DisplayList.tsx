@@ -5,7 +5,7 @@ import Link from "next/link";
 import styles from "./pagination.module.css";
 import paginationRange from "@/utils/appUtils";
 import { Grid, useMediaQuery, Paper } from "@mui/material";
-import { useTheme } from "@mui/system";
+import { color, fontSize, useTheme } from "@mui/system";
 
 const MakeRows = ({ paginatedList }) => {
   //FUNCTION TO MAKE ROWS CATEGORY BY COUNTING PRODUCTS IN MAIN CATEGORY AND SUB CATEGORY
@@ -59,29 +59,51 @@ const MakeRows = ({ paginatedList }) => {
         }
         return (
           <tr key={index}>
-            {product.mainCategory !== prevMain ? (
-              <td rowSpan={numberOfProductsMain[prevMainIndex]}>
-                {product.mainCategory}
-              </td>
-            ) : null}
-            {product.subCategory !== prevSub ? (
-              <td rowSpan={numberOfProductsSub[prevSubIndex]}>
-                {product.subCategory}
-              </td>
-            ) : null}
-            <td className={styles.rowHover}>{product.name}</td>
-            <td className={styles.rowHover}>
+            <td
+              className={`${styles.rowHover} ${
+                index % 2 === 0 ? styles.evenRow : ""
+              }`}
+            >
               <Link
                 href={
                   product.link.includes("dmpharma")
                     ? product.link
                     : "/product/" + product.link.toLowerCase()
                 }
+                style={{ color: "black", textDecoration: "none" }}
               >
                 {product.name}
+                <span
+                  style={{ color: "blue", fontSize: "0.8em", float: "right" }}
+                >
+                  Read More
+                </span>
               </Link>
             </td>
-            <td className={styles.rowHover}> 15 ml</td>
+            <td
+              className={`${styles.rowHover} ${
+                index % 2 === 0 ? styles.evenRow : ""
+              }`}
+            >
+              {" "}
+              15 ml
+            </td>
+            {product.subCategory !== prevSub ? (
+              <td
+                rowSpan={numberOfProductsSub[prevSubIndex]}
+                className={styles.category}
+              >
+                {product.subCategory}
+              </td>
+            ) : null}
+            {product.mainCategory !== prevMain ? (
+              <td
+                rowSpan={numberOfProductsMain[prevMainIndex]}
+                className={styles.category}
+              >
+                {product.mainCategory}
+              </td>
+            ) : null}
           </tr>
         );
       })}
@@ -109,9 +131,9 @@ const DisplayList = ({ list, initialPage = 1 }) => {
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
-  useEffect(()=>{
-    setCurrentPage(1)
-  },[list,limit])
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [list, limit]);
 
   const totalPages = Math.ceil(all_products.length / limit);
 
@@ -143,6 +165,12 @@ const DisplayList = ({ list, initialPage = 1 }) => {
           spacing={"0.3vh"}
           justifyContent={"center"}
           alignContent={"center"}
+          position={"sticky"}
+          zIndex={1}
+          sx={{
+            background: "#f0f0f0",
+            top: { md: "9.3vh", sm: "9.3vh", xs: "6.3vh" },
+          }}
         >
           <Grid item>
             {!isSmallerScreen ? (
@@ -249,23 +277,22 @@ const DisplayList = ({ list, initialPage = 1 }) => {
           justifySelf={"center"}
           margin={"auto"}
           sx={{
-            height: "85vh",
+            // height: "100%",
             width: "85vw",
             overflow: "auto",
             border: "1px solid #ef3e00",
             borderRadius: "10px",
-            background: "linear-gradient(135deg, #ffdcc0 0%, #ef3e00 300%)",
+            background: "linear-gradient(90deg, #ffdcc0 0%, #ef3e00 350%)",
           }}
         >
           <table className={styles.tableStyle}>
             <caption>Products</caption>
             <thead>
               <tr>
-                <th>MAIN CATEGORY</th>
-                <th>SUB CATEGORY</th>
-                <th>COMPOSITION</th>
-                <th>LINK</th>
-                <th>PACKING</th>
+                <th style={{ width: "66vw" }}>COMPOSITION</th>
+                <th style={{ width: "10vw" }}>PACKING</th>
+                <th style={{ width: "12vw" }}>SUB CATEGORY</th>
+                <th style={{ width: "12vw" }}>MAIN CATEGORY</th>
               </tr>
             </thead>
             <tbody>
@@ -273,7 +300,9 @@ const DisplayList = ({ list, initialPage = 1 }) => {
                 <MakeRows paginatedList={paginatedList} />
               ) : (
                 <tr>
-                  <td colSpan={5} rowSpan={10} style={{textAlign:"center"}}>No Products Found</td>
+                  <td colSpan={5} rowSpan={10} style={{ textAlign: "center" }}>
+                    No Products Found
+                  </td>
                 </tr>
               )}
             </tbody>
