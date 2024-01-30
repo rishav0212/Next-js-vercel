@@ -64,21 +64,25 @@ const MakeRows = ({ paginatedList }) => {
                 index % 2 === 0 ? styles.evenRow : ""
               }`}
             >
-              <Link
-                href={
-                  product.link.includes("dmpharma")
-                    ? product.link
-                    : "/product/" + product.link.toLowerCase()
-                }
-                style={{ color: "black", textDecoration: "none" }}
-              >
-                {product.name}
-                <span
-                  style={{ color: "blue", fontSize: "0.8em", float: "right" }}
+              {product.linkAvailable ? (
+                <Link
+                  href={
+                    product.link.includes("dmpharma")
+                      ? product.link
+                      : "/product/" + product.link.toLowerCase()
+                  }
+                  style={{ color: "black", textDecoration: "none" }}
                 >
-                  Read More
-                </span>
-              </Link>
+                  {product.name}
+                  <span
+                    style={{ color: "blue", fontSize: "0.8em", float: "right" }}
+                  >
+                    Read More
+                  </span>
+                </Link>
+              ) : (
+                product["name"]
+              )}
             </td>
             <td
               className={`${styles.rowHover} ${
