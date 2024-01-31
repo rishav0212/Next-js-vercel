@@ -42,7 +42,7 @@ export default function HomeContent() {
             spacing={3}
             alignItems={"center"}
             justifyContent={"center"}
-            sx={isSmallerScreen ? { width: "100%" } : { flex: 1 }}
+            sx={isSmallerScreen ? { width: "100%" } : { flex: 0.9 }}
           >
             <h2 className="text-center">Welcome to Saar Biotech</h2>
             <Typography variant="body1" textAlign={"justify"}>
@@ -84,9 +84,6 @@ export default function HomeContent() {
         </Link>
       </Container>
 
-      <Toolbar />
-
-      <Toolbar />
       <Toolbar />
 
       <Container maxWidth="md">

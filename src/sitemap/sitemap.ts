@@ -14,7 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
 
   const products = Object.keys(info).map((key) => ({
-    url: `${url}/products/${key}`,
+    url: `${url}/product/${key}`,
     lastModified: new Date(),
     // changeFrequency: "monthly",
     priority: 0.9,

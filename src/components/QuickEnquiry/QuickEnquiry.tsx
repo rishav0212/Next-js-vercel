@@ -99,7 +99,7 @@ function QuickEnquiry() {
               top: "50%",
               left: "50%",
               transform: "translate(-50%, -50%)",
-              width: { md: "600px", xs: "400px" },
+              width: { md: "600px", xs: "85%" },
               background: "black",
               boxShadow: "24",
               padding: "10px 50px 30px 30px",

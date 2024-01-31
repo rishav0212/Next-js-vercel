@@ -1,8 +1,14 @@
 .customCard {
   position: relative;
   overflow: hidden;
-  border-radius: 1em;
-  transition: all 0.7s;
+  border-radius: 1.5em;
+  margin: 5px;
+  box-shadow: 2px 4px 8px rgb(0, 0, 0, 0.5);
+  transition: all 0.5s;
+}
+.customCard:hover {
+  box-shadow: 4px 12px 24px rgb(0, 0, 0, 0.7);
+  transform: scale(1.1);
 }
 .cardImgOverlay {
   position: absolute;
@@ -12,6 +18,10 @@
   right: 0;
   height: 100%;
   width: 100%;
+  text-align: center;
+  padding-top: 25%;
+  padding-inline: 10px;
+  color: #fff;
   opacity: 0;
   transition: 0.5s ease;
   background: color-mix(in srgb, var(--primary-color) 70%, transparent);
@@ -45,10 +55,4 @@
 
 .cardImgOverlay:hover {
   opacity: 1;
-}
-
-.ctr {
-  text-align: center;
-  padding-top: 27%;
-  color: #fff;
 }

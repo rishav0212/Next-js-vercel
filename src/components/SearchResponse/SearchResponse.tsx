@@ -31,7 +31,7 @@ function SearchResponse({ q = "" }) {
     "Drops",
     "Cough Syrup",
     "Asal Sprays",
-    "Intments",
+    "Ointments",
     "Shampoo",
     "Lotions",
     "Roll On",

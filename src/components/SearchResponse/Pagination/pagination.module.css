@@ -53,6 +53,8 @@
 .tableStyle {
   border-radius: 10px;
   overflow: hidden;
+  border-collapse: collapse;
+  width: 100%;
 }
 
 .tableStyle th {
@@ -62,7 +64,6 @@
   color: #fff;
   text-align: center;
   padding: 11px 8px;
-  min-width: 13vw;
   font-size: 1.9em;
 }
 
@@ -70,15 +71,26 @@
   border: 0.5px solid #ef3e00;
   vertical-align: top;
   padding: 10px 10px;
-  min-width: 13vw;
   font-size: 1.8em;
 }
+.tableStyle .evenRow { 
+   background: #ffeac6
 
-.tableStyle tr:hover .rowHover{
-  transition: background-color 0.3s ease, transform 0.3s ease
+}
+
+.tableStyle .oddRow {
+  background:  #ffdab5; 
+}
+
+.tableStyle .category {
+  background: #fde5bd;
+}
+
+.tableStyle tr:hover .rowHover {
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 @media (hover: hover) {
-    .tableStyle tr:hover .rowHover {
-        background: #ffa07a ;
-    }
+  .tableStyle tr:hover .rowHover {
+    background: rgb(255, 194, 128) ;
+  }
 }
