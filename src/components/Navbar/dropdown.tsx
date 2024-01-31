@@ -21,16 +21,17 @@ export default function Dropdown({ props, url }) {
     <div>
       <div className="dropdown1">
         <Link
-          href={props.to}
+          href={to}
           className={`navbar-links border-bottom-class ${
             url ===
             to.slice(
               0,
-              props.to.indexOf("/", 1) !== -1 ? to.indexOf("/", 1) : to.length
+              to.indexOf("/", 1) !== -1 ? to.indexOf("/", 1) : to.length
             )
-              ? "active-link"
-              : ""
-          }`}
+              ? "active-link "
+              : " "
+
+          } ${props.menu_name==="Products" && url==="/product"?"active-link":""}`}
         >
           {props.menu_name}
         </Link>
@@ -39,9 +40,7 @@ export default function Dropdown({ props, url }) {
           {props.items &&
             Object.keys(props.items).map((key) => (
               <React.Fragment key={key}>
-                <StyledLink href={props.to + props.items[key]}>
-                  {key}
-                </StyledLink>
+                <StyledLink href={to + props.items[key]}>{key}</StyledLink>
                 <Divider />
               </React.Fragment>
             ))}

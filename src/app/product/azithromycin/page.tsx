@@ -6,15 +6,24 @@ import {
   Toolbar,
   Typography,
   Grid,
-  Paper,
   Link,
 } from "@mui/material";
 import { FiberManualRecord } from "@mui/icons-material";
 import { Metadata } from "next";
 import * as styles from "@/components/ProductPages/styles.js";
+import ScrollToSection from "@/components/ProductPages/ScrollToSection/ScrollToSrction";
 
 export default function Page() {
   const link = "azithromycin";
+  const Sections = [
+    "description",
+    "indications",
+    "mechanism",
+    "pharmacokinetics",
+    "side effects",
+    "contraindication",
+    "conclusion"
+  ];
   const description = `
   Azithromycin is macrolide antibiotic used to treat or prevent
   certain bacterial infections, most often those causing middle ear
@@ -98,8 +107,10 @@ export default function Page() {
           </Grid>
         </Grid>
 
-        <Grid item md={12} sx={styles.lowerGrid} id="description">
-          <Typography variant="h6" sx={styles.sectionTitle}>
+        <Grid item md={12} sx={styles.lowerGrid}>
+          <ScrollToSection Sections={Sections} />
+
+          <Typography variant="h6" id="description" sx={styles.sectionTitle}>
             DESCRIPTION
           </Typography>
 
@@ -108,7 +119,7 @@ export default function Page() {
           </Typography>
 
           {/** Indications Section */}
-          <Typography variant="h6" sx={styles.sectionTitle}>
+          <Typography variant="h6" id="indications" sx={styles.sectionTitle}>
             Indications
           </Typography>
           <List dense sx={styles.list}>
@@ -133,7 +144,7 @@ export default function Page() {
           </List>
 
           {/** Mechanism Section */}
-          <Typography variant="h6" sx={styles.sectionTitle}>
+          <Typography variant="h6" id="mechanism" sx={styles.sectionTitle}>
             Mechanism
           </Typography>
           <Typography sx={styles.sectionData} textAlign="justify">
@@ -182,7 +193,7 @@ export default function Page() {
           </Typography>
 
           {/** Side Effects Section */}
-          <Typography variant="h6" sx={styles.sectionTitle}>
+          <Typography variant="h6" id="side effects" sx={styles.sectionTitle}>
             Side Effects
           </Typography>
           <List dense sx={styles.list}>
@@ -198,7 +209,11 @@ export default function Page() {
           </List>
 
           {/** Contraindication Section */}
-          <Typography variant="h6" sx={styles.sectionTitle}>
+          <Typography
+            variant="h6"
+            id="contraindication"
+            sx={styles.sectionTitle}
+          >
             Contraindication
           </Typography>
           <Typography sx={styles.sectionData} textAlign="justify">
@@ -208,7 +223,7 @@ export default function Page() {
           </Typography>
 
           {/** Conclusion Section */}
-          <Typography variant="h6" sx={styles.sectionTitle}>
+          <Typography variant="h6" id="conclusion" sx={styles.sectionTitle}>
             Conclusion
           </Typography>
           <Typography sx={styles.sectionData} textAlign="justify">
