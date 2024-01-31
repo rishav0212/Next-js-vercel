@@ -4,7 +4,7 @@ export default async function myAction(data) {
   try {
     console.log(data);
     const response = await fetch(
-      "https://node.saarbiotech.in/TestEmail.php",
+      "https://node.saarbiotech.in/EmailClient.php",
       {
         method: "POST",
         headers: {

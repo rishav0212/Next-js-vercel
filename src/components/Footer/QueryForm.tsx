@@ -41,7 +41,7 @@ export default function QueryForm({ props }) {
     try {
       console.log(data);
       const response = await fetch(
-        "https://node.saarbiotech.in/TestEmail.php",
+        "https://node.saarbiotech.in/EmailClient.php",
         {
           method: "POST",
           headers: {
