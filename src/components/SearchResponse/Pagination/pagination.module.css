@@ -73,12 +73,17 @@
   padding: 10px 10px;
   font-size: 1.8em;
 }
-.tableStyle .evenRow {
-  background: rgba(199, 145, 78, 0.25);
+.tableStyle .evenRow { 
+   background: #ffeac6
+
+}
+
+.tableStyle .oddRow {
+  background:  #ffdab5; 
 }
 
 .tableStyle .category {
-  background: rgba(199, 145, 78, 0.1);
+  background: #fde5bd;
 }
 
 .tableStyle tr:hover .rowHover {
@@ -86,6 +91,6 @@
 }
 @media (hover: hover) {
   .tableStyle tr:hover .rowHover {
-    background: #ffa07a;
+    background: rgb(255, 194, 128) ;
   }
 }

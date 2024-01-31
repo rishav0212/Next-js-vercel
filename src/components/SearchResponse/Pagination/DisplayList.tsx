@@ -61,7 +61,7 @@ const MakeRows = ({ paginatedList }) => {
           <tr key={index}>
             <td
               className={`${styles.rowHover} ${
-                index % 2 === 0 ? styles.evenRow : ""
+                index % 2 === 0 ? styles.evenRow : styles.oddRow
               }`}
             >
               {product.linkAvailable ? (
@@ -86,7 +86,7 @@ const MakeRows = ({ paginatedList }) => {
             </td>
             <td
               className={`${styles.rowHover} ${
-                index % 2 === 0 ? styles.evenRow : ""
+                index % 2 === 0 ? styles.evenRow : styles.oddRow
               }`}
             >
               {product["packing"]}
@@ -285,7 +285,6 @@ const DisplayList = ({ list, initialPage = 1 }) => {
             overflow: "auto",
             border: "1px solid #ef3e00",
             borderRadius: "10px",
-            background: "linear-gradient(90deg, #ffdcc0 0%, #ef3e00 350%)",
           }}
         >
           <table className={styles.tableStyle}>
