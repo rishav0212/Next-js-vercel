@@ -1,11 +1,12 @@
+"use client";
 import React, { useEffect, useState } from "react";
 import "./NumberCounter.module.css";
 
 export default function NumberCounter() {
   const counterData = {
     Established: {
-      target: 2007,
-      increment: 8,
+      target: 2005,
+      increment: 6,
       timeout_in_ms: 1,
       suffix: "",
     },
@@ -18,7 +19,13 @@ export default function NumberCounter() {
     Products: {
       target: 68,
       increment: 1,
-      timeout_in_ms: 40,
+      timeout_in_ms: 30,
+      suffix: "+",
+    },
+    Clients: {
+      target: 1700,
+      increment: 3,
+      timeout_in_ms: 1,
       suffix: "+",
     },
   };
@@ -55,7 +62,7 @@ export default function NumberCounter() {
         <div className="row g-3">
           {Object.keys(counterData).map((e, i) => (
             <React.Fragment key={e}>
-              <div className="col-md-4 counter">
+              <div className="col-md-3 counter">
                 <h3
                   data-target={counterData[e].target}
                   data-increment={counterData[e].increment}

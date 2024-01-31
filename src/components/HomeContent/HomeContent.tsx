@@ -1,5 +1,4 @@
 "use client";
-
 import ApprovalIcon from "@mui/icons-material/Approval";
 import GavelIcon from "@mui/icons-material/Gavel";
 import LocalDiningIcon from "@mui/icons-material/LocalDining";
@@ -11,51 +10,20 @@ import {
   Grid,
   Paper,
   Stack,
-  Tab,
-  Tabs,
   Toolbar,
   Typography,
   useMediaQuery,
 } from "@mui/material";
 
-import { styled, useTheme } from "@mui/material/styles";
+import { useTheme } from "@mui/material/styles";
 import Link from "next/link";
-import PropTypes from "prop-types";
-import React, { useEffect, useState } from "react";
+
 import NewProducts from "../NewProducts/NewProducts";
 import NumberCounter from "./NumberCounter/NumberCounter";
 
 const tabs = ["Our Vision", "Our Mission", "Our Values"];
 
-function TabPanel(props) {
-  const { children, value, index, ...other } = props;
-
-  return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`full-width-tabpanel-${index}`}
-      aria-labelledby={`full-width-tab-${index}`}
-      {...other}
-    >
-      {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
-    </div>
-  );
-}
-
-TabPanel.propTypes = {
-  children: PropTypes.node,
-  index: PropTypes.number.isRequired,
-  value: PropTypes.number.isRequired,
-};
-
 export default function HomeContent() {
-  const [value, setValue] = useState(0);
-
-  const handleTabChange = (event, newValue) => {
-    setValue(newValue);
-  };
-
   const theme = useTheme();
   const isSmallerScreen = useMediaQuery(theme.breakpoints.down("md"));
 
@@ -78,21 +46,19 @@ export default function HomeContent() {
           >
             <h2 className="text-center">Welcome to Saar Biotech</h2>
             <Typography variant="body1" textAlign={"justify"}>
-              Saar Biotech is one of the most respected GMP certified
-              pharmaceutical company established with a vision towards
-              empowering life . We are committed to deliver better health
-              through superior products. The company has taken several important
-              steps in critical area of pharmaceutical research. The company
-              focuses on providing high quality, appropriately priced products
-              to its customers and supports all these with dedicated customer
-              service. We, at Saar Biotech, understand the various concerns
-              connected with hygiene and safety in the healthcare sector and
-              hence have come with a comprehensive range of new drugs. Our team
-              comprises of skilled medical expert professionals, their hard work
-              has helped us to become one of the leading Pharmaceutical
-              manufacturing company. It has always been our endeavour to create
-              an environment where innovation of the highest order can blossom.
-              We offer new formulated drugs approved by DCGI.
+              Saar Biotech Pvt. Ltd., a distinguished and WHO-GMP certified
+              third-party pharmaceutical manufacturing company. Since our
+              establishment in 2005, we have been operating from our
+              state-of-the-art manufacturing unit in Baddi, complemented by our
+              centrally located head office in Chandigarh. With a track record
+              of serving a diverse clientele comprising over 1700 companies, we
+              have firmly established ourselves as a trusted and quality-driven
+              partner in the pharmaceutical industry. At Saar Biotech, we
+              specialize in the manufacturing of a wide range of pharmaceutical
+              products, including Oral Liquids, Ointments, Sprays, Mouthwash,
+              and Paste. We have wide product range which comprises Anti-Fungal,
+              Anti-Bacterial, Anti-Inflammatory, Antitussive and Dermatological
+              products.
             </Typography>
           </Stack>
         </Stack>
@@ -264,196 +230,58 @@ export default function HomeContent() {
         </h5>
       </Box>
 
-      <Toolbar />
+      {/* <Toolbar /> */}
 
-      {isSmallerScreen ? (
-        <>
-          <Container maxWidth="xs" sx={{ backgroundColor: "#F8F8F8" }}>
-            <Grid container>
-              <Grid item sm={12} xs={12}>
-                <Stack
-                  spacing={4}
-                  mt={2}
-                  direction={"column"}
-                  alignItems={"center"}
-                  justifyContent={"center"}
-                  sx={{ width: "100%" }}
-                >
-                  <Typography variant="h5">Our Vision</Typography>
-                  <img
-                    src="/images/vision.jpg"
-                    alt="Saar Biotech"
-                    style={{ width: "100%", height: "50vh" }}
-                  />
-                  <Typography variant="body1" sx={{ lineHeight: "2" }}>
-                    To become a leading Pharmaceutical Company in India in
-                    sphere of excellence manufacturing, innovation, formulation,
-                    marketing and to escalate the business from threshold of
-                    country and to become a forerunner in overseas.
-                  </Typography>
-                </Stack>
-              </Grid>
-              <Grid item sm={12} xs={12}>
-                <Stack
-                  spacing={4}
-                  direction={"column"}
-                  alignItems={"center"}
-                  justifyContent={"center"}
-                  sx={{ width: "100%" }}
-                >
-                  <Toolbar />
-                  <Typography variant="h5">Our Mission</Typography>
-                  <img
-                    src="/images/mission.jpg"
-                    alt="Saar Biotech"
-                    style={{ width: "100%", height: "50vh" }}
-                  />
-                  <Typography variant="body1" sx={{ lineHeight: "2" }}>
-                    Saar Biotech commits itself to endeavour to satisfy our
-                    customers’ needs in every manner possible: through excellent
-                    service, by developing and marketing an effective, safe,
-                    quality product and by offering our product at a price
-                    affordable to all patients.
-                  </Typography>
-                </Stack>
-              </Grid>
-              <Grid item sm={12} xs={12}>
-                <Stack
-                  spacing={4}
-                  direction={"column"}
-                  alignItems={"center"}
-                  justifyContent={"center"}
-                  sx={{ width: "100%" }}
-                >
-                  <Toolbar />
-                  <Typography variant="h5">Our Values</Typography>
-                  <img
-                    src="/images/values.jpg"
-                    alt="Saar Biotech"
-                    style={{ width: "100%", height: "50vh" }}
-                  />
-                  <Typography variant="body1" sx={{ lineHeight: "2" }}>
-                    We deliver what we promise. We go the extra distance in all
-                    that we do to earn our customers’ trust. We embrace our
-                    social responsibility as a global company and to being
-                    environmentally responsible.
-                  </Typography>
-                </Stack>
-              </Grid>
-            </Grid>
-          </Container>
-        </>
-      ) : (
-        <>
-          <Container maxWidth="md" sx={{ backgroundColor: "#F8F8F8" }}>
-            <Tabs
-              value={value}
-              onChange={handleTabChange}
-              variant="fullWidth"
-              scrollButtons
-              allowScrollButtonsMobile
-              aria-label="scrollable force tabs example"
-              sx={{
-                "& .MuiTabs-indicator": {
-                  backgroundColor: "#EF3E00",
-                  width: "auto", // Set the indicator width to auto to match the tab content length
-                },
-              }}
-            >
-              {tabs.map((tab, index) => (
-                <Tab
-                  key={index}
-                  label={
-                    <Typography
-                      variant={value === index ? "h5" : "h6"}
-                      sx={{ color: value === index ? "#EF3E00" : "black" }}
-                    >
-                      {tab}
-                    </Typography>
-                  }
-                  sx={{
-                    padding: "10px 20px", // Add padding to the tabs to create space between them
-                  }}
-                />
-              ))}
-            </Tabs>
+      <div className="p-5 m-5">
+        <div className="row row-cols-1 row-cols-md-3  text-center">
+          <div className="col">
+            <div className="card mb-4 rounded-3 shadow-sm">
+              <div className="card-header py-3">
+                <h4 className="my-0 fw-normal">Our Vision</h4>
+              </div>
+              <div className="card-body">
+                <h6 className="text-start card-title">
+                  To become a leading Pharmaceutical Company in India in sphere
+                  of excellence manufacturing, innovation, formulation,
+                  marketing and to escalate the business from threshold of
+                  country and to become a forerunner in overseas.
+                </h6>
+              </div>
+            </div>
+          </div>
+          <div className="col">
+            <div className="card mb-4 rounded-3 shadow-sm">
+              <div className="card-header py-3">
+                <h4 className="my-0 fw-normal">Our Mission</h4>
+              </div>
+              <div className="card-body">
+                <h6 className="card-title">
+                  To become a leading Pharmaceutical Company in India in sphere
+                  of excellence manufacturing, innovation, formulation,
+                  marketing and to escalate the business from threshold of
+                  country and to become a forerunner in overseas.
+                </h6>
+              </div>
+            </div>
+          </div>
+          <div className="col">
+            <div className="card mb-4 rounded-3 shadow-sm">
+              <div className="card-header py-3">
+                <h4 className="my-0 fw-normal">Our Values</h4>
+              </div>
+              <div className="card-body">
+                <h6 className="card-title">
+                  We deliver what we promise. We go the extra distance in all
+                  that we do to earn our customers’ trust. We embrace our social
+                  responsibility as a global company and to being
+                  environmentally responsible.
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-            <TabPanel value={value} index={0}>
-              <Stack
-                p={2}
-                spacing={4}
-                direction={"row"}
-                alignItems={"center"}
-                justifyContent={"center"}
-                sx={{ width: "100%" }}
-              >
-                <img
-                  src="/images/vision.jpg"
-                  alt="Saar Biotech"
-                  style={{ width: "100%", height: "60vh" }}
-                />
-                <Container>
-                  <Typography variant="body1" sx={{ lineHeight: "2.5" }}>
-                    To become a leading Pharmaceutical Company in India in
-                    sphere of excellence manufacturing, innovation, formulation,
-                    marketing and to escalate the business from threshold of
-                    country and to become a forerunner in overseas.
-                  </Typography>
-                </Container>
-              </Stack>
-            </TabPanel>
-            <TabPanel value={value} index={1}>
-              <Stack
-                p={2}
-                spacing={4}
-                direction={"row"}
-                alignItems={"center"}
-                justifyContent={"center"}
-                sx={{ width: "100%" }}
-              >
-                <img
-                  src="/images/mission.jpg"
-                  alt="Saar Biotech"
-                  style={{ width: "100%", height: "60vh" }}
-                />
-                <Container>
-                  <Typography variant="body1" sx={{ lineHeight: "2.5" }}>
-                    Saar Biotech commits itself to endeavour to satisfy our
-                    customers’ needs in every manner possible: through excellent
-                    service, by developing and marketing an effective, safe,
-                    quality product and by offering our product at a price
-                    affordable to all patients.
-                  </Typography>
-                </Container>
-              </Stack>
-            </TabPanel>
-            <TabPanel value={value} index={2}>
-              <Stack
-                p={2}
-                spacing={4}
-                direction={"row"}
-                alignItems={"center"}
-                justifyContent={"center"}
-                sx={{ width: "100%" }}
-              >
-                <img
-                  src="/images/values.jpg"
-                  alt="Saar Biotech"
-                  style={{ width: "100%", height: "60vh" }}
-                />
-                <Container>
-                  <Typography variant="body1" sx={{ lineHeight: "2.5" }}>
-                    We deliver what we promise. We go the extra distance in all
-                    that we do to earn our customers’ trust. We embrace our
-                    social responsibility as a global company and to being
-                    environmentally responsible.
-                  </Typography>
-                </Container>
-              </Stack>
-            </TabPanel>
-          </Container>
-        </>
-      )}
       <Toolbar />
     </>
   );
