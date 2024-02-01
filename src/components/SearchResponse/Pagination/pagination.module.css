@@ -94,3 +94,10 @@
     transform: scale(1.01);
   }
 }
+
+.customPopover{
+  font-size: 0.9em;
+  opacity: 0.6;
+  margin-left: 10%;
+  color:rgb(0, 123, 255)
+}

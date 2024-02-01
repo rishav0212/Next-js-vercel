@@ -8,7 +8,6 @@ import { Typography } from "@mui/material";
 import { Grid, Button, Paper } from "@mui/material";
 
 function SearchResponse({ q = "" }) {
-
   //////////////
 
   /////////////
@@ -112,7 +111,12 @@ function SearchResponse({ q = "" }) {
   ///////////////
 
   const handleEnterPressed = (e) => {
-    if (e.key === "Enter"|| e.key === 'Return' || e.keyCode === 13 || e.which === 13) {
+    if (
+      e.key === "Enter" ||
+      e.key === "Return" ||
+      e.keyCode === 13 ||
+      e.which === 13
+    ) {
       setQuery(textinProduct);
       inputRef.current ? inputRef.current.blur() : null;
     }
@@ -307,6 +311,9 @@ const autocompleteStyles = {
     borderRadius: "12px",
     border: "1px solid #000",
     boxShadow: "6px 8px 8px rgba(0, 0, 0, 0.7)",
+    "&:hover": {
+      border: "none",
+    },
   },
   "& .MuiInputLabel-root": {
     color: "#555",
@@ -314,6 +321,7 @@ const autocompleteStyles = {
   "& .MuiAutocomplete-inputRoot": {
     borderRadius: "12px",
     padding: "8px",
+    border: "none",
   },
   "& .MuiAutocomplete-popupIndicator": {
     color: "#EF3E00",
