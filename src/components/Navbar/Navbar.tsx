@@ -122,7 +122,7 @@ const Navbar = () => {
           backgroundImage: "none",
           // position: "-webkit-sticky",
           position: "sticky",
-          height:{xs:"6vh",sm:"9vh" , md:"9vh"} ,
+          // height:{xs:"6vh",sm:"9vh" , md:"9vh"} ,
           top: 0
         }}
       >
