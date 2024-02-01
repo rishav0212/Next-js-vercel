@@ -107,7 +107,7 @@ const ScrollToSection = ({ Sections }) => {
   }, [containerRef]);
 
   return (
-    <Grid
+    <Grid 
       ref={containerRef}
       position={"sticky"}
       zIndex={10}
