@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 const StyledButton = styled(Button)({
   marginInline: "5px",
   color: "rgb(230,230,230,1)",
-  width: "10.7em",
+  width: "11.5em",
   backgroundColor: "rgb(150,150,165)",
   border: "none",
   zIndex: 12,
@@ -74,8 +74,17 @@ const ScrollToSection = ({ Sections }) => {
         const containerWidth = containerRef.current.clientWidth;
         const buttonWidth =
           (window.innerHeight * 0.007 + window.innerWidth * 0.003) * 12;
+        const nextPrevWidth =
+          (document.getElementById("prev")
+            ? document.getElementById("prev").clientWidth
+            : 0) +
+          (document.getElementById("next")
+            ? document.getElementById("next").clientWidth
+            : 0);
 
-        const maxButtons = Math.floor(containerWidth / buttonWidth);
+        const maxButtons = Math.floor(
+          (containerWidth - nextPrevWidth-10) / buttonWidth
+        );
 
         setVisibleButtons(
           Sections.slice(startIndex, startIndex + maxButtons - 1)
@@ -115,7 +124,9 @@ const ScrollToSection = ({ Sections }) => {
       }}
     >
       {startIndex !== 0 ? (
-        <StyledNaviButton onClick={handlePrev}>{"<"}</StyledNaviButton>
+        <StyledNaviButton id="prev" onClick={handlePrev}>
+          {"<"}
+        </StyledNaviButton>
       ) : null}
       {visibleButtons.map((item, index) => (
         <StyledButton
@@ -127,7 +138,9 @@ const ScrollToSection = ({ Sections }) => {
         </StyledButton>
       ))}
       {startIndex + visibleButtons.length < Sections.length ? (
-        <StyledNaviButton onClick={handleNext}>{">"}</StyledNaviButton>
+        <StyledNaviButton id="next" onClick={handleNext}>
+          {">"}
+        </StyledNaviButton>
       ) : null}
     </Grid>
   );

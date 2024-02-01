@@ -90,6 +90,7 @@
 }
 @media (hover: hover) {
   .tableStyle tr:hover .rowHover {
-    background: rgb(255, 194, 128);
+    background: rgb(255, 194, 128, 0.8);
+    transform: scale(1.01);
   }
 }
