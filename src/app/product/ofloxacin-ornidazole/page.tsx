@@ -114,7 +114,7 @@ export default function Page() {
           </Grid>
         </Grid>
 
-        <Grid container item md={12} sx={styles.lowerGrid}>
+        <Grid  item md={12} sx={styles.lowerGrid}>
           <ScrollToSection Sections={Sections}/>
           <Typography variant="h6" sx={styles.sectionTitle} id="description">
             DESCRIPTION
