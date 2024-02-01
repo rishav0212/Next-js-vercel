@@ -69,7 +69,7 @@ export default function HomeContent() {
       <NewProducts />
       <Toolbar />
 
-      <Container>
+      {/* <Container>
         <Link href="/products">
           <LoadingButton
             color="primary"
@@ -84,7 +84,7 @@ export default function HomeContent() {
         </Link>
       </Container>
 
-      <Toolbar />
+      <Toolbar /> */}
 
       <Container maxWidth="md">
         <h3 className="text-center mb-4">Our Certifications</h3>
