@@ -1,5 +1,5 @@
 name: saar-biotech-next-cicd-pipeline
-run-name: ${{ github.actor }} is executing the pipeline. This is a custom name.
+run-name: ${{ github.actor }} is executing the pipeline.
 
 on:
   push:
@@ -10,6 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Print Branch Name
+        run: echo "The branch name running is_ GitHub Ref - ${{ github.ref }}"
+        
       - name: Checkout code
         uses: actions/checkout@v4
 
