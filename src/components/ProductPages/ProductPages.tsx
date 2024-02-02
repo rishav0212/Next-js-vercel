@@ -28,7 +28,7 @@ export default function Page({ name }) {
               <Typography
                 variant="h6"
                 sx={{
-                  color: "#EF3E00",
+                  color: "#8fae2d",
                   fontSize: "2.5em",
                 }}
               >
@@ -43,7 +43,7 @@ export default function Page({ name }) {
               <Typography
                 variant="h6"
                 sx={{
-                  color: "#EF3E00",
+                  color: "#8fae2d",
                   fontSize: "2.5em",
                 }}
               >

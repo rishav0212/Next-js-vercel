@@ -13,7 +13,7 @@ export default function AppThemeProvider({
         mode: "light" as const, // Use 'light' or 'dark'
       },
       primary: {
-        main: "#EF3E00", // Updated property name to 'main'
+        main: "#8fae2d", // Updated property name to 'main'
       },
     }),
     []

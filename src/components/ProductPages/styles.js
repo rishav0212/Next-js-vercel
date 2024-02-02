@@ -17,7 +17,7 @@ export const upperGrid = {
 };
 
 export const titleStyle = {
-  color: "#EF3E00",
+  color: "#8fae2d",
   fontWeight: "bold",
   textShadow: "4px 2px 4px rgba(0, 0, 0, 0.3)",
   marginBottom: 3,
@@ -30,7 +30,7 @@ export const titleStyle = {
 
 export const indications = {
   title: {
-    color: "#EF3E00",
+    color: "#8fae2d",
     fontSize: "2.3em",
   },
   data: {
@@ -41,7 +41,7 @@ export const indications = {
 
 export const approved = {
   title: {
-    color: "#EF3E00",
+    color: "#8fae2d",
     fontSize: "2.3em",
   },
   data: {
@@ -56,7 +56,7 @@ export const presentation = {
   },
   data: {
     fontSize: "1.8em",
-    marginLeft:"35px",
+    marginLeft: "35px",
   },
 };
 
@@ -64,7 +64,7 @@ export const sectionTitle = {
   color: "whitesmoke",
   display: "inline-block",
   borderRadius: 10,
-  background: `linear-gradient(45deg, #EF3E00 30%, #FF8E53 90%)`,
+  background: `linear-gradient(45deg, #8fae2d 30%, #FF8E53 90%)`,
   padding: 1.2,
   boxShadow: "0 4px 6px rgba(0,0,0, 0.8)",
   marginBottom: 2,
@@ -79,13 +79,13 @@ export const sectionTitle = {
 
 export const sectionData = {
   fontSize: "1.8em",
-  textAlign:"justify"
+  textAlign: "justify",
 };
 
-export const list={
-  width:"100%",
+export const list = {
+  width: "100%",
   fontSize: "1.8em",
-}
+};
 
 export const imgPaper = {
   position: "relative",
