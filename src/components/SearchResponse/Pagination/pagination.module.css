@@ -24,7 +24,7 @@
 
 .active {
   color: white;
-  background: linear-gradient(to bottom, #8fae2d, #ff7e00);
+  background: linear-gradient(to bottom, var(--primary-color), #ff7e00);
   transform: scale(1.15);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
@@ -32,7 +32,7 @@
 @media (hover: hover) {
   .button-des:hover,
   .prev:hover {
-    background: linear-gradient(to bottom, #ff7e00, #8fae2d);
+    background: linear-gradient(to bottom, #ff7e00, var(--primary-color));
     color: aliceblue;
     transform: scale(1.1);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -60,7 +60,7 @@
 .tableStyle th {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   border: 1px solid;
-  background: #8fae2d;
+  background: var(--primary-color);
   color: #fff;
   text-align: center;
   padding: 11px 8px;
@@ -68,7 +68,7 @@
 }
 
 .tableStyle tbody td {
-  border: 0.5px solid #8fae2d;
+  border: 0.5px solid var(--primary-color);
   vertical-align: top;
   padding: 10px 10px;
   font-size: 1.8em;

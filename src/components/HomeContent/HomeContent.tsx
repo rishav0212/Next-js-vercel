@@ -107,7 +107,7 @@ export default function HomeContent() {
                   transition: ".5s",
                   borderRadius: "15px",
                   "&:hover": {
-                    backgroundColor: "#8fae2d",
+                    backgroundColor: "var(--primary-color)",
                     boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)",
                   },
                 }}
@@ -136,7 +136,7 @@ export default function HomeContent() {
                   transition: ".5s",
                   borderRadius: "15px",
                   "&:hover": {
-                    backgroundColor: "#8fae2d",
+                    backgroundColor: "var(--primary-color)",
                     boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)",
                   },
                 }}
@@ -165,7 +165,7 @@ export default function HomeContent() {
                   transition: ".5s",
                   borderRadius: "15px",
                   "&:hover": {
-                    backgroundColor: "#8fae2d",
+                    backgroundColor: "var(--primary-color)",
                     boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)",
                   },
                 }}
@@ -194,7 +194,7 @@ export default function HomeContent() {
                   transition: ".5s",
                   borderRadius: "15px",
                   "&:hover": {
-                    backgroundColor: "#8fae2d",
+                    backgroundColor: "var(--primary-color)",
                     boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)",
                   },
                 }}
@@ -214,7 +214,7 @@ export default function HomeContent() {
         sx={{
           width: "100%",
           height: "15vh",
-          backgroundColor: "#8fae2d",
+          backgroundColor: "var(--primary-color)",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
