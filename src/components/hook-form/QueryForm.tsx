@@ -3,10 +3,10 @@ import { useForm } from "react-hook-form";
 import { FormProvider as Form } from "react-hook-form";
 import * as Yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import FormProvider from "./FormProvider";
 import { Grid, Typography } from "@mui/material";
 import RHFTextField from "./RHFText.Field";
 import { LoadingButton } from "@mui/lab";
+import { useState } from "react";
 
 export default function QueryForm({ props }) {
   const QuerySchema = Yup.object().shape({
@@ -38,9 +38,13 @@ export default function QueryForm({ props }) {
     formState: { errors },
   } = methods;
 
+  const [loading, setLoading] = useState(false);
+  const [successMessage, setSuccessMessage] = useState("");
+
   const onSubmit = async (data) => {
     try {
       console.log(data);
+      setLoading(true);
       const response = await fetch(
         "https://node.saarbiotech.in/EmailClient.php",
         {
@@ -54,6 +58,14 @@ export default function QueryForm({ props }) {
 
       const result = await response.json();
       console.log(result);
+
+      if (result.success) {
+        setSuccessMessage("Query submitted successfully!");
+        setTimeout(() => setSuccessMessage(""), 5000);
+      } else {
+        setSuccessMessage("pls try again after some time!");
+        setTimeout(() => setSuccessMessage(""), 5000);
+      }
     } catch (error) {
       console.log(error);
       setError("name", {
@@ -61,6 +73,7 @@ export default function QueryForm({ props }) {
         message: error.message,
       });
     } finally {
+      setLoading(false);
       reset();
     }
   };
@@ -107,6 +120,19 @@ export default function QueryForm({ props }) {
                   rows={4}
                   helperText={undefined}
                 />
+                <div>
+                  {
+                    <Typography variant="body1" color="green">
+                      {successMessage}
+                    </Typography>
+                  }
+                  {loading ? (
+                    <Typography variant="body1" color="blue">
+                      Sending Query . . .
+                    </Typography>
+                  ) : null}
+                </div>
+
                 <LoadingButton
                   color="primary"
                   size="medium"
@@ -150,6 +176,18 @@ export default function QueryForm({ props }) {
               rows={4}
               helperText={undefined}
             />
+            <div>
+              {
+                <Typography variant="body1" color="green">
+                  {successMessage}
+                </Typography>
+              }
+              {loading ? (
+                <Typography variant="body1" color="blue">
+                  Sending Query . . .
+                </Typography>
+              ) : null}
+            </div>
             <LoadingButton
               color="primary"
               size="medium"
