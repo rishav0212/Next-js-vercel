@@ -72,7 +72,7 @@ export default function Footer() {
                 <QueryForm props={"footer"} />
               </Grid>
             </Grid>
-            <Divider sx={{ my: 3, borderColor: "#8fae2d" }} />
+            <Divider sx={{ my: 3, borderColor: "var(--primary-color)" }} />
             <Typography variant="body1" className="text-center text-light">
               © CopyRight by <span className="color-primary">Saar Biotech</span>
               . All Rights Reserved.

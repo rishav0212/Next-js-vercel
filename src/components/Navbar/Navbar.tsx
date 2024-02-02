@@ -123,28 +123,26 @@ const Navbar = () => {
           backgroundImage: "none",
           // position: "-webkit-sticky",
           position: "sticky",
-          //height: { xs: "6vh", sm: "9vh", md: "9vh" },
+          height: { xs: "6.3vh", sm: "9vh", md: "9vh" },
           top: 0,
         }}
       >
         <Toolbar>
           {isMobile ? (
             <>
-              <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                <Link href="/">
-                  <img
-                    src="/images/logo.jpg"
-                    alt="Recode7"
-                    width="150"
-                    height="70"
-                    style={{
-                      display: "flex",
-                      marginLeft: "auto",
-                      marginRight: "auto",
-                    }}
-                  />
-                </Link>
-              </Typography>
+              <Link href="/" style={{ flexGrow: 1 }}>
+                <img
+                  src="/images/Logo.jpg"
+                  alt="Recode7"
+                  style={{
+                    height: "6vh",
+                    objectFit: "contain",
+                    display: "flex",
+                    marginLeft: "auto",
+                    marginRight: "auto",
+                  }}
+                />
+              </Link>
               <Link href="/products">
                 <IconButton title="See Products">
                   <SearchIcon fontSize="medium" style={{ color: "black" }} />
@@ -165,19 +163,17 @@ const Navbar = () => {
                   width: "100%",
                 }}
               >
-                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                  <Link href="/">
-                    <img
-                      src="/images/logo.jpg"
-                      alt="Recode7"
-                      width="150"
-                      height="70"
-                      style={{
-                        marginLeft: "40px",
-                      }}
-                    />
-                  </Link>
-                </Typography>
+                <Link href="/">
+                  <img
+                    src="/images/Logo.jpg"
+                    alt="Recode7"
+                    height="60"
+                    style={{
+                      objectFit: "contain",
+                      marginLeft: "40px",
+                    }}
+                  />
+                </Link>
 
                 <Stack
                   spacing={2}
@@ -287,7 +283,7 @@ const Navbar = () => {
                           timeout={400}
                           unmountOnExit
                           sx={{
-                            backgroundColor: "#8fae2d",
+                            backgroundColor: "var(--primary-color)",
                             color: "white",
                             fontWeight: "500",
                           }}

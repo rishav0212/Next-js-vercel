@@ -17,7 +17,7 @@ export const upperGrid = {
 };
 
 export const titleStyle = {
-  color: "#8fae2d",
+  color: "var(--primary-color)",
   fontWeight: "bold",
   textShadow: "4px 2px 4px rgba(0, 0, 0, 0.3)",
   marginBottom: 3,
@@ -30,7 +30,7 @@ export const titleStyle = {
 
 export const indications = {
   title: {
-    color: "#8fae2d",
+    color: "var(--primary-color)",
     fontSize: "2.3em",
   },
   data: {
@@ -41,7 +41,7 @@ export const indications = {
 
 export const approved = {
   title: {
-    color: "#8fae2d",
+    color: "var(--primary-color)",
     fontSize: "2.3em",
   },
   data: {
@@ -64,7 +64,7 @@ export const sectionTitle = {
   color: "whitesmoke",
   display: "inline-block",
   borderRadius: 10,
-  background: `linear-gradient(45deg, #8fae2d 30%, #FF8E53 90%)`,
+  background: `linear-gradient(45deg, var(--primary-color) 30%, #FF8E53 90%)`,
   padding: 1.2,
   boxShadow: "0 4px 6px rgba(0,0,0, 0.8)",
   marginBottom: 2,

@@ -88,7 +88,7 @@ a {
 
 .navbar-links {
   color: #000;
-  transition: 0.3s;
+  transition: 0.3s ease-out;
   font-weight: 600;
   font-size: 16px;
   cursor: pointer;
@@ -119,6 +119,29 @@ a {
   font-weight: 500;
 }
 
+.dropdown1 {
+  padding: 0px 0px 4px 0px;
+  position: relative;
+  text-align: center;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 92%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  background-color: var(--primary-color);
+  min-width: 200px;
+  box-shadow: 2px 8px 16px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  padding: 0px 10px;
+}
+.dropdown1:hover .dropdown-content {
+  display: block;
+}
+
 .title-logo {
   font-weight: 700;
 }
@@ -133,70 +156,6 @@ a {
 
 .MuiListItemIcon-root {
   min-width: 25px !important;
-}
-
-.dropdown1 {
-  position: relative;
-  text-align: center;
-}
-
-.dropdown1 span,
-.dropdown1 a {
-  padding: 21px 16px;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 190%;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  background-color: var(--primary-color);
-  min-width: 200px;
-  box-shadow: 2px 8px 16px 5px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-  padding: 0px 10px;
-}
-
-.dropdown-content a {
-  color: white;
-  padding: 12px 5px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content div {
-  color: white;
-  padding: 5px 10px;
-  text-decoration: none;
-}
-
-.dropdown1:hover .dropdown-content {
-  display: block;
-}
-
-.counter-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.counter {
-  text-align: center;
-}
-
-.counter h3 {
-  padding: 0.5rem 0;
-  font-weight: 800;
-}
-
-.counter h6 {
-  padding-bottom: 1rem;
-}
-
-.count {
-  color: var(--primary-color);
 }
 
 .color-primary {

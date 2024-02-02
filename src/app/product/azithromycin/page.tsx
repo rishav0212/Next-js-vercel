@@ -22,7 +22,7 @@ export default function Page() {
     "pharmacokinetics",
     "side effects",
     "contraindication",
-    "conclusion"
+    "conclusion",
   ];
   const description = `
   Azithromycin is macrolide antibiotic used to treat or prevent
