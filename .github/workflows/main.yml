@@ -4,6 +4,10 @@ run-name: ${{ github.actor }} is executing the pipeline. Branch Name is ${{ gith
 on:
   push:
   workflow_dispatch: {}
+  workflow_run:
+    workflows: ["ftp-deploy-workflow"]
+    types:
+      - manual
 
 jobs:
   build:
@@ -48,6 +52,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
+      - name: Manual Approval Step
+        if: |
+          github.event_name == 'workflow_run' &&
+          github.event.workflow == 'ftp-deploy-workflow' &&
+          github.event.workflow_run.conclusion == 'success' &&
+          startsWith(github.event.workflow_run.head_branch, 'release/')
+        run: echo "This step requires manual approval for release branches"
+
+      - name: FTP Deploy
+        if: |
+          github.event.workflow_run.conclusion == 'success' &&
+          !startsWith(github.event.workflow_run.head_branch, 'release/')
+        run: |          
+          echo "FTP deployment logic..."
+        
       - name: Manual Trigger For GoDaddy
         id: manual_deploy
         run: echo "Deploy is a manual step. Use the 'workflow_dispatch' event to trigger it."
