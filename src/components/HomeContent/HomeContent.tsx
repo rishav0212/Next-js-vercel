@@ -16,8 +16,6 @@ import {
 } from "@mui/material";
 
 import { useTheme } from "@mui/material/styles";
-import Link from "next/link";
-
 import NewProducts from "../NewProducts/NewProducts";
 import NumberCounter from "./NumberCounter/NumberCounter";
 

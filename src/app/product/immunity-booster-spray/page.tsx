@@ -14,7 +14,7 @@ import { Metadata } from "next";
 import * as styles from "@/components/ProductPages/styles.js";
 
 export default function Page() {
-  const link = "ofloxacin-ornidazole";
+  const link = "immunity-booster-spray";
 
   return (
     <Grid
