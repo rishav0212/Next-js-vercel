@@ -286,7 +286,7 @@ const DisplayList = ({ list, initialPage = 1 }) => {
             // height: "100%",
             width: "85vw",
             overflow: "auto",
-            border: "1px solid #ef3e00",
+            border: "1px solid #8fae2d",
             borderRadius: "10px",
           }}
         >

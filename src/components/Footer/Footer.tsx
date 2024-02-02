@@ -1,11 +1,5 @@
 "use client";
-import {
-  Box,
-  Container,
-  Divider,
-  Grid,
-  Typography
-} from "@mui/material";
+import { Box, Container, Divider, Grid, Typography } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import QueryForm from "./QueryForm";
 
@@ -16,7 +10,6 @@ const darkTheme = createTheme({
 });
 
 export default function Footer() {
-
   return (
     <>
       <ThemeProvider theme={darkTheme}>
@@ -55,7 +48,7 @@ export default function Footer() {
                   </li>
                 </ul>
                 <br />
-                <h4 >For Product Status Call</h4>
+                <h4>For Product Status Call</h4>
                 <ul>
                   <li>Mr. Vijay</li>
                   <span>(Marketing Manager)</span>
@@ -79,7 +72,7 @@ export default function Footer() {
                 <QueryForm props={"footer"} />
               </Grid>
             </Grid>
-            <Divider sx={{ my: 3, borderColor: "#EF3E00" }} />
+            <Divider sx={{ my: 3, borderColor: "#8fae2d" }} />
             <Typography variant="body1" className="text-center text-light">
               © CopyRight by <span className="color-primary">Saar Biotech</span>
               . All Rights Reserved.

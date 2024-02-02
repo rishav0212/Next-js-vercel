@@ -123,7 +123,7 @@ const Navbar = () => {
           backgroundImage: "none",
           // position: "-webkit-sticky",
           position: "sticky",
-          // height:{xs:"6vh",sm:"9vh" , md:"9vh"} ,
+          //height: { xs: "6vh", sm: "9vh", md: "9vh" },
           top: 0,
         }}
       >
@@ -133,10 +133,10 @@ const Navbar = () => {
               <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                 <Link href="/">
                   <img
-                    src="/images/logo.png"
+                    src="/images/logo.jpg"
                     alt="Recode7"
-                    width="200"
-                    height="20"
+                    width="150"
+                    height="70"
                     style={{
                       display: "flex",
                       marginLeft: "auto",
@@ -168,10 +168,10 @@ const Navbar = () => {
                 <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                   <Link href="/">
                     <img
-                      src="/images/logo.png"
+                      src="/images/logo.jpg"
                       alt="Recode7"
-                      width="220"
-                      height="22"
+                      width="150"
+                      height="70"
                       style={{
                         marginLeft: "40px",
                       }}
@@ -287,7 +287,7 @@ const Navbar = () => {
                           timeout={400}
                           unmountOnExit
                           sx={{
-                            backgroundColor: "#EF3E00",
+                            backgroundColor: "#8fae2d",
                             color: "white",
                             fontWeight: "500",
                           }}

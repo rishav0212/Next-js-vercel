@@ -1,6 +1,7 @@
 :root {
-  --primary-color: #ef3e00;
+  --primary-color: #8fae2d;
   /*Other Color being considered: 089abb*/
+  /*Other Color being considered: ef3e00 (Orange)*/
   --primary-font-family: "Montserrat", sans-serif;
 }
 body {

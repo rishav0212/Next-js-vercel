@@ -15,7 +15,7 @@ const darkTheme = createTheme({
 const buttonStyles = {
   position: "fixed",
   zIndex: "999",
-  background: "#ef3e00",
+  background: "#8fae2d",
   color: "white",
   borderRadius: "40px",
   width: "4em",
@@ -28,7 +28,7 @@ const buttonStyles = {
     "backgroundColor 0.3s ease, transform 0.3s ease,boxShadow 0.3s ease, width 1s ease",
   "&:hover": {
     opacity: "1",
-    background: "#ef3e00",
+    background: "#8fae2d",
     transform: "scale(1.1)",
     boxShadow: "2px 6px 12px rgb(0,0,0,0.7)",
     width: "10.5em",

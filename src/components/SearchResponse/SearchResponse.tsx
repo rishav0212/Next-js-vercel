@@ -199,7 +199,7 @@ function SearchResponse({ q = "" }) {
             <Typography
               variant="h3"
               sx={{
-                color: "#EF3E00",
+                color: "#8fae2d",
                 fontWeight: "bold",
                 textShadow: "2px 4px 3px rgba(0, 0, 0, 0.9)",
                 marginBottom: 4,
@@ -324,7 +324,7 @@ const autocompleteStyles = {
     border: "none",
   },
   "& .MuiAutocomplete-popupIndicator": {
-    color: "#EF3E00",
+    color: "#8fae2d",
   },
   "& .MuiMenuItem-root": {
     "&:hover": {
