@@ -33,7 +33,7 @@ RewriteRule ^Sachets\.html$ https://node.saarbiotech.in/products/Sachets/ [R=302
 
 RewriteRule ^Event\.html$ https://node.saarbiotech.in/events/ [R=302,L]
 
-RewriteRule ^Indian\ pharma\ Expo\ 2012\.html$ https://node.saarbiotech.in/events/pharma-south-2014/ [R=302,L]
+RewriteRule ^pharmac\ south\ 2014\.html$ https://node.saarbiotech.in/events/pharma-south-2014/ [R=302,L]
 
 RewriteRule ^Indian\ pharma\ Expo\ 2013\.html$ https://node.saarbiotech.in/events/indian-pharma-expo-2013/ [R=302,L]
 
@@ -81,7 +81,7 @@ RewriteRule ^sac5\.html$ https://node.saarbiotech.in/product/dextromethorphen-hb
 
 RewriteRule ^sac4\.html$ https://node.saarbiotech.in/product/cetirizine-hcl-pcm-phenylepherine-hcl/ [R=302,L]
 
-RewriteRule ^Dicyclomine%2BPCM\.html$ https://node.saarbiotech.in/product/dicyclomine-hcl-pcm/ [R=302,L]
+RewriteRule ^Dicyclomine\+PCM\.html$ https://node.saarbiotech.in/product/dicyclomine-hcl-pcm/ [R=302,L]
 
 RewriteRule ^sac2\.html$ https://node.saarbiotech.in/product/fexofenadine-hcl/ [R=302,L]
 
@@ -91,7 +91,7 @@ RewriteRule ^Deflazacort\.html$ https://node.saarbiotech.in/product/deflazacort/
 
 RewriteRule ^saa6\.html$ https://node.saarbiotech.in/product/promethazine-hcl/ [R=302,L]
 
-RewriteRule ^PCM%2BPromethazine\.html$ https://node.saarbiotech.in/product/pcm-promethazine-hcl/ [R=302,L]
+RewriteRule ^PCM\+Promethazine\.html$ https://node.saarbiotech.in/product/pcm-promethazine-hcl/ [R=302,L]
 
 RewriteRule ^d2\.html$ https://node.saarbiotech.in/product/ondansetron/ [R=302,L]
 
@@ -224,7 +224,7 @@ RewriteRule ^Diclofenac\ diethylamine,\ Methyl\ salicylate,\ Linseed\ oil,\ Ment
 RewriteRule ^3\.html$ http://old.saarbiotech.in/3.html [L,R=302]
 RewriteRule ^Diclofenac\ diethylamine,\ Methyl\ salicylate,\ Linseed\ oil,\ Menthol\ Topical\ Spray\.html$ http://old.saarbiotech.in/Diclofenac\ diethylamine,\ Methyl\ salicylate,\ Linseed\ oil,\ Menthol\ Topical\ Spray.html [L,R=302]
 RewriteRule ^Tacrolimus\ Cream\.html$ http://old.saarbiotech.in/Tacrolimus\ Cream.html [L,R=302]
-RewriteRule ^Ketoconazole,Methyl\ Paraben,\ \ Propyl\ Paraben\ (20\ gm)\.html$ http://old.saarbiotech.in/Ketoconazole,Methyl\ Paraben,\ \ Propyl\ Paraben\ (20\ gm).html [L,R=302]
+RewriteRule ^Ketoconazole,Methyl\ Paraben,\ \ Propyl\ Paraben\ \(20\ gm\)\.html$ http://old.saarbiotech.in/Ketoconazole,Methyl\ Paraben,\ \ Propyl\ Paraben\ (20\ gm).html [L,R=302]
 RewriteRule ^Terbinafine\ Cream\.html$ http://old.saarbiotech.in/Terbinafine\ Cream.html [L,R=302]
 RewriteRule ^premethrin\ Lotion\.html$ http://old.saarbiotech.in/premethrin\ Lotion.html [L,R=302]
 RewriteRule ^Ofloxacin,\ Ornidazole,\ Itraconazole\ and\ Clobetasol\ Propionate\ Cream\.html$ http://old.saarbiotech.in/Ofloxacin,\ Ornidazole,\ Itraconazole\ and\ Clobetasol\ Propionate\ Cream.html [L,R=302]
