@@ -33,7 +33,27 @@ RewriteRule ^Sachets\.html$ https://node.saarbiotech.in/products/Sachets/ [R=302
 
 RewriteRule ^Event\.html$ https://node.saarbiotech.in/events/ [R=302,L]
 
+RewriteRule ^Indian%20pharma%20Expo%202012\.html$ https://node.saarbiotech.in/events/pharma-south-2014/ [R=302,L]
+
+RewriteRule ^Indian%20pharma%20Expo%202013\.html$ https://node.saarbiotech.in/events/indian-pharma-expo-2013/ [R=302,L]
+
+RewriteRule ^Indian%20pharma%20Expo%202012\.html$ https://node.saarbiotech.in/events/indian-pharma-expo-2012/ [R=302,L]
+
+
 RewriteRule ^contact-us\.html$ https://node.saarbiotech.in/contact/ [R=302,L]
+
+
+# PRoducts Pages
+RewriteRule ^Vitamin%20D3%20Drops\.html$ https://node.saarbiotech.in/product/vitamin-d3-drops/ [R=302,L]
+
+RewriteRule ^Multivitamin%20Oral%20Spray\.html$ https://node.saarbiotech.in/product/multivitamin-oral-spray/ [R=302,L]
+
+RewriteRule ^Immunity%20Booster%20Spray\.html$ https://node.saarbiotech.in/product/immunity-booster-spray/ [R=302,L]
+
+RewriteRule ^Iron%20Oral%20Spray\.html$ https://node.saarbiotech.in/product/iron-oral-spray/ [R=302,L]
+
+RewriteRule ^Ketaconazole\.html$ https://node.saarbiotech.in/product/ketoconazole/ [R=302,L]
+
 
 RewriteRule ^sac3\.html$ https://node.saarbiotech.in/product/cpm-pcm-phenylepherine-hcl/ [R=302,L]
 
@@ -86,7 +106,6 @@ RewriteRule ^Oxetacaine%20\+%20Aluminum%20hydroxide%20\+%20Magnesium%20hydroxide
 RewriteRule ^Activated%20Dimethicone%20\+%20Magnesium%20hydro%20\+%20dried%20Aluminum%20hydro\.html$ https://node.saarbiotech.in/product/activated-dimethicon-magnesium-hydro-dried-aliminium-hydro/ [R=302,L]
 
 RewriteRule ^ds2\.html$ https://node.saarbiotech.in/product/amoxycillin/ [R=302,L]
-
 
 RewriteRule ^ds3\.html$ https://node.saarbiotech.in/product/cefixime/ [R=302,L]
 
@@ -152,3 +171,102 @@ RewriteRule ^Pune%20Expo%202023\.html$ https://old.saarbiotech.in/Pune%20Expo%20
 RewriteRule ^Srinagar%20Expo%202023\.html$ https://old.saarbiotech.in/Srinagar%20Expo%202023.html [R=302,L]
 RewriteRule ^infrastructure\.html$ https://old.saarbiotech.in/infrastructure.html [R=302,L]
 RewriteRule ^video\.html$ https://old.saarbiotech.in/video.html [R=302,L]
+
+
+
+
+
+# Products pages redirected to old that are needed to added later
+
+RewriteRule ^Sucralflate%20and%20Oxethazaine%20Suspension\.html$ https://old.saarbiotech.in/Sucralflate-and-Oxethazaine-Suspension.html [R=302,L]
+RewriteRule ^Magaldrate%20and%20Simethicone%20Suspension\.html$ https://old.saarbiotech.in/Magaldrate-and-Simethicone-Suspension.html [R=302,L]
+RewriteRule ^Elemental%20iron,%20Mecobalamin,%20and%20Folic%20acid%20Suspension\.html$ https://old.saarbiotech.in/Elemental-iron-Mecobalamin-and-Folic-acid-Suspension.html [R=302,L]
+RewriteRule ^Dicylomine%20and%20Dimethicone%20Drops\.html$ https://old.saarbiotech.in/Dicylomine-and-Dimethicone-Drops.html [R=302,L]
+RewriteRule ^Sucralfate%20and%20Oxetacaine\.html$ https://old.saarbiotech.in/Sucralfate-and-Oxetacaine.html [R=302,L]
+RewriteRule ^Oxetacaine%20\+%20Aluminum%20hydroxide%20\+%20Magnesium%20hydroxide\.html$ https://old.saarbiotech.in/Oxetacaine-Aluminum-hydroxide-Magnesium-hydroxide.html [R=302,L]
+RewriteRule ^Dill%20oil,%20Fennel%20oil,%20Simethicon%20-%20Oral%20Drop\.html$ https://old.saarbiotech.in/Dill-oil-Fennel-oil-Simethicon-Oral-Drop.html [R=302,L]
+RewriteRule ^sa7\.html$ https://old.saarbiotech.in/sa7.html [R=302,L]
+RewriteRule ^saa5\.html$ https://old.saarbiotech.in/saa5.html [R=302,L]
+RewriteRule ^saa4\.html$ https://old.saarbiotech.in/saa4.html [R=302,L]
+RewriteRule ^Sucralfate%20Suspension\.html$ https://old.saarbiotech.in/Sucralfate-Suspension.html [R=302,L]
+RewriteRule ^saa3\.html$ https://old.saarbiotech.in/saa3.html [R=302,L]
+RewriteRule ^saa2\.html$ https://old.saarbiotech.in/saa2.html [R=302,L]
+RewriteRule ^saa1\.html$ https://old.saarbiotech.in/saa1.html [R=302,L]
+RewriteRule ^Ibuprofen%20and%20Paracetamol%20Suspension\.html$ https://old.saarbiotech.in/Ibuprofen-and-Paracetamol-Suspension.html [R=302,L]
+RewriteRule ^Ranitidine%20Syrup\.html$ https://old.saarbiotech.in/Ranitidine-Syrup.html [R=302,L]
+RewriteRule ^Levosalbutamol%20Syrup\.html$ https://old.saarbiotech.in/Levosalbutamol-Syrup.html [R=302,L]
+RewriteRule ^Levosalbutamol%20Sulphate%20,%20Ambroxol%20Hcl%20&%20Guaiphenesin%20Oral%20Drops\.html$ https://old.saarbiotech.in/Levosalbutamol-Sulphate-Ambroxol-Hcl-Guaiphenesin-Oral-Drops.html [R=302,L]
+RewriteRule ^dsd1\.html$ https://old.saarbiotech.in/dsd1.html [R=302,L]
+RewriteRule ^sap1\.html$ https://old.saarbiotech.in/sap1.html [R=302,L]
+RewriteRule ^d3\.html$ https://old.saarbiotech.in/d3.html [R=302,L]
+RewriteRule ^sap2\.html$ https://old.saarbiotech.in/sap2.html [R=302,L]
+RewriteRule ^ds6\.html$ https://old.saarbiotech.in/ds6.html [R=302,L]
+RewriteRule ^Levodropropizine%20%20\+%20Chlorpheniramine%20%20syrup\.html$ https://old.saarbiotech.in/Levodropropizine-Chlorpheniramine-syrup.html [R=302,L]
+RewriteRule ^Paracetamol%20Drops\.html$ https://old.saarbiotech.in/Paracetamol-Drops.html [R=302,L]
+RewriteRule ^ds5\.html$ https://old.saarbiotech.in/ds5.html [R=302,L]
+RewriteRule ^ds1\.html$ https://old.saarbiotech.in/ds1.html [R=302,L]
+RewriteRule ^Zinc%20Gluconate%20Oral%20Solution\.html$ https://old.saarbiotech.in/Zinc-Gluconate-Oral-Solution.html [R=302,L]
+RewriteRule ^Loratadine,%20Guaifenesin%20&%20Ambroxol%20Syrup\.html$ https://old.saarbiotech.in/Loratadine-Guaifenesin-Ambroxol-Syrup.html [R=302,L]
+RewriteRule ^Dextromethorphan,%20Phenylephrine%20hcl%20and%20CPM%20syrup\.html$ https://old.saarbiotech.in/Dextromethorphan-Phenylephrine-hcl-CPM-syrup.html [R=302,L]
+RewriteRule ^Hydroxyzine%20Oral%20Solution\.html$ https://old.saarbiotech.in/Hydroxyzine-Oral-Solution.html [R=302,L]
+RewriteRule ^Ambroxol%20Hydrochloride,Levocetirizine%20Hydrochloride,Guaiphenesin,Phenylephrine%20Hydrochloride%20Syrup\.html$ https://old.saarbiotech.in/Ambroxol-Hydrochloride-Levocetirizine-Hydrochloride-Guaiphenesin-Phenylephrine-Hydrochloride-Syrup.html [R=302,L]
+RewriteRule ^1\.html$ https://old.saarbiotech.in/1.html [R=302,L]
+RewriteRule ^Ferric%20Ammonium%20Citrate,%20Folic%20Acid%20and%20Cyanocobalamin%20Syrup\.html$ https://old.saarbiotech.in/Ferric-Ammonium-Citrate-Folic-Acid-Cyanocobalamin-Syrup.html [R=302,L]
+RewriteRule ^Halobetasol%20Propionate%20&%20Salicylic%20Acid%20Ointment\.html$ https://old.saarbiotech.in/Halobetasol-Propionate-Salicylic-Acid-Ointment.html [R=302,L]
+RewriteRule ^Povidone%20Iodine%20Ointment\.html$ https://old.saarbiotech.in/Povidone-Iodine-Ointment.html [R=302,L]
+RewriteRule ^Diclofenac%20diethylamine,%20Methyl%20salicylate,%20Linseed%20oil,%20Menthol%20and%20Benzyl%20alcohol%20Gel\.html$ https://old.saarbiotech.in/Diclofenac-diethylamine-Methyl-salicylate-Linseed-oil-Menthol-and-Benzyl-alcohol-Gel.html [R=302,L]
+RewriteRule ^Gentamicin%20Cream\.html$ https://old.saarbiotech.in/Gentamicin-Cream.html [R=302,L]
+RewriteRule ^Fluticasone%20Propionate%20and%20Imidurea%20Ointment\.html$ https://old.saarbiotech.in/Fluticasone-Propionate-Imidurea-Ointment.html [R=302,L]
+RewriteRule ^Fluocinolone%20Acetonide%20Cream\.html$ https://old.saarbiotech.in/Fluocinolone-Acetonide-Cream.html [R=302,L]
+RewriteRule ^Fusidic%20Acid%20Cream\.html$ https://old.saarbiotech.in/Fusidic-Acid-Cream.html [R=302,L]
+RewriteRule ^Hydroquinone,%20Tretinoin%20and%20Fluocinolone%20Cream\.html$ https://old.saarbiotech.in/Hydroquinone-Tretinoin-Fluocinolone-Cream.html [R=302,L]
+RewriteRule ^Diclofenac%20diethylamine,%20Methyl%20salicylate,%20Linseed%20oil,%20Menthol%20and%20Thiocolchicoside%20Gel\.html$ https://old.saarbiotech.in/Diclofenac-diethylamine-Methyl-salicylate-Linseed-oil-Menthol-Thiocolchicoside-Gel.html [R=302,L]
+RewriteRule ^3\.html$ https://old.saarbiotech.in/3.html [R=302,L]
+RewriteRule ^Diclofenac%20diethylamine,%20Methyl%20salicylate,%20Linseed%20oil,%20Menthol%20Topical%20Spray\.html$ https://old.saarbiotech.in/Diclofenac-diethylamine-Methyl-salicylate-Linseed-oil-Menthol-Topical-Spray.html [R=302,L]
+RewriteRule ^Tacrolimus%20Cream\.html$ https://old.saarbiotech.in/Tacrolimus-Cream.html [R=302,L]
+RewriteRule ^Ketoconazole,Methyl%20Paraben,%20%20Propyl%20Paraben%20\(20%20gm\)\.html$ https://old.saarbiotech.in/Ketoconazole-Methyl-Paraben-Propyl-Paraben-20-gm.html [R=302,L]
+RewriteRule ^Terbinafine%20Cream\.html$ https://old.saarbiotech.in/Terbinafine-Cream.html [R=302,L]
+RewriteRule ^premethrin%20Lotion\.html$ https://old.saarbiotech.in/premethrin-Lotion.html [R=302,L]
+RewriteRule ^Ofloxacin,%20Ornidazole,%20Itraconazole%20and%20Clobetasol%20Propionate%20Cream\.html$ https://old.saarbiotech.in/Ofloxacin-Ornidazole-Itraconazole-Clobetasol-Propionate-Cream.html [R=302,L]
+RewriteRule ^Luliconazole%20Cream\.html$ https://old.saarbiotech.in/Luliconazole-Cream.html [R=302,L]
+RewriteRule ^Clobetasol%20Propionate%20&%20Salicylic%20Acid%20Lotion\.html$ https://old.saarbiotech.in/Clobetasol-Propionate-Salicylic-Acid-Lotion.html [R=302,L]
+RewriteRule ^premethrin%20Cream\.html$ https://old.saarbiotech.in/premethrin-Cream.html [R=302,L]
+RewriteRule ^Mometasone%20Furoate%20Cream\.html$ https://old.saarbiotech.in/Mometasone-Furoate-Cream.html [R=302,L]
+RewriteRule ^Clobetasol,%20Neomycin,%20Miconazole%20and%20Chlorocresol\.html$ https://old.saarbiotech.in/Clobetasol-Neomycin-Miconazole-Chlorocresol.html [R=302,L]
+RewriteRule ^Sucralfate,%20Metronidazole%20with%20Lignocaine%20Hydrochloride%20Cream\.html$ https://old.saarbiotech.in/Sucralfate-Metronidazole-with-Lignocaine-Hydrochloride-Cream.html [R=302,L]
+RewriteRule ^Sodium%20Picosulfate%20Oral%20Solution\.html$ https://old.saarbiotech.in/Sodium-Picosulfate-Oral-Solution.html [R=302,L]
+RewriteRule ^Cholecalciferol%20Nano%20Shots\.html$ https://old.saarbiotech.in/Cholecalciferol-Nano-Shots.html [R=302,L]
+RewriteRule ^Chlorhexidine%20Gluconate,%20Metronidazole%20Benzoate,%20Lignocaine%20Gel\.html$ https://old.saarbiotech.in/Chlorhexidine-Gluconate-Metronidazole-Benzoate-Lignocaine-Gel.html [R=302,L]
+RewriteRule ^Gum%20PAint%20Oral%20Solution\.html$ https://old.saarbiotech.in/Gum-PAint-Oral-Solution.html [R=302,L]
+RewriteRule ^Alkalizer_Disodium%20Hydrogen%20Citrate\.html$ https://old.saarbiotech.in/Alkalizer-Disodium-Hydrogen-Citrate.html [R=302,L]
+RewriteRule ^Lignocaine%20Hydrochloride%20Gel\.html$ https://old.saarbiotech.in/Lignocaine-Hydrochloride-Gel.html [R=302,L]
+RewriteRule ^Sodium%20Picosulfate%20Oral%20Solution\.html$ https://old.saarbiotech.in/Sodium-Picosulfate-Oral-Solution.html [R=302,L]
+RewriteRule ^Hand%20Sanitizer\.html$ https://old.saarbiotech.in/Hand-Sanitizer.html [R=302,L]
+RewriteRule ^Permethrin%20Lotion\.html$ https://old.saarbiotech.in/Permethrin-Lotion.html [R=302,L]
+RewriteRule ^Ketoconazole%20and%20Zinc%20Pyrithione%20Lotion\.html$ https://old.saarbiotech.in/Ketoconazole-and-Zinc-Pyrithione-Lotion.html [R=302,L]
+RewriteRule ^Beclomethasone%20Dipropionate%20and%20Clotrimazole%20Cream\.html$ https://old.saarbiotech.in/Beclomethasone-Dipropionate-and-Clotrimazole-Cream.html [R=302,L]
+RewriteRule ^Paradichlorobenzene,%20%20Benzocaine,%20Chlorbutol%20&%20Turpentine%20Oil%20Ear%20Drops\.html$ https://old.saarbiotech.in/Paradichlorobenzene-Benzocaine-Chlorbutol-Turpentine-Oil-Ear-Drops.html [R=302,L]
+RewriteRule ^sertaconazole%20cream\.html$ https://old.saarbiotech.in/sertaconazole-cream.html [R=302,L]
+RewriteRule ^Beclomethasone%20dipropionate,%20clotrimazole%20&%20neomycin%20sulphate\.html$ https://old.saarbiotech.in/Beclomethasone-dipropionate-clotrimazole-neomycin-sulphate.html [R=302,L]
+RewriteRule ^Clotrimazole%20and%20Lignocaine%20Hydrochloriode%20Ear%20Drops\.html$ https://old.saarbiotech.in/Clotrimazole-and-Lignocaine-Hydrochloride-Ear-Drops.html [R=302,L]
+RewriteRule ^Beclomethasone%20Dipropionate%20,%20Phenylephrine%20Hydrochloride%20and%20Lignocaine%20Hydrochloride%20Cream\.html$ https://old.saarbiotech.in/Beclomethasone-Dipropionate-Phenylephrine-Hydrochloride-Lignocaine-Hydrochloride-Cream.html [R=302,L]
+RewriteRule ^Foot%20Care%20Cream%20-%20Urea,%20Lactic%20Acid,%20Propylene%20Glycol%20&%20Liquid%20Paraffin\.html$ https://old.saarbiotech.in/Foot-Care-Cream-Urea-Lactic-Acid-Propylene-Glycol-Liquid-Paraffin.html [R=302,L]
+RewriteRule ^Povidone%20-%20iodine%20Gargle\.html$ https://old.saarbiotech.in/Povidone-iodine-Gargle.html [R=302,L]
+RewriteRule ^Minoxidil%20and%20Finasteride%20Topical%20Solution\.html$ https://old.saarbiotech.in/Minoxidil-and-Finasteride-Topical-Solution.html [R=302,L]
+RewriteRule ^Minoxidil%20Topical%20Solution\.html$ https://old.saarbiotech.in/Minoxidil-Topical-Solution.html [R=302,L]
+RewriteRule ^Vitamin%20D3%20Spray\.html$ https://old.saarbiotech.in/Vitamin-D3-Spray.html [R=302,L]
+RewriteRule ^Octinoxate,%20Kojic%20Acid,%20Arbutin,%20Mulberry%20extract%20&%20Vitamin%20E%20Gel\.html$ https://old.saarbiotech.in/Octinoxate-Kojic-Acid-Arbutin-Mulberry-extract-Vitamin-E-Gel.html [R=302,L]
+RewriteRule ^Mupirocin%20Cream\.html$ https://old.saarbiotech.in/Mupirocin-Cream.html [R=302,L]
+RewriteRule ^Fluticasone%20Nasal%20Spray\.html$ https://old.saarbiotech.in/Fluticasone-Nasal-Spray.html [R=302,L]
+RewriteRule ^Povidone%20Iodine%20and%20Ornidazole%20Ointment\.html$ https://old.saarbiotech.in/Povidone-Iodine-and-Ornidazole-Ointment.html [R=302,L]
+RewriteRule ^Gammabenzene%20and%20Citrimide%20Lotion\.html$ https://old.saarbiotech.in/Gammabenzene-and-Citrimide-Lotion.html [R=302,L]
+RewriteRule ^Clotrimazole%20Mouth%20Paint\.html$ https://old.saarbiotech.in/Clotrimazole-Mouth-Paint.html [R=302,L]
+RewriteRule ^Calamine,%20Allantoin%20&%20Vitamin%20E%20Lotion\.html$ https://old.saarbiotech.in/Calamine-Allantoin-Vitamin-E-Lotion.html [R=302,L]
+RewriteRule ^Sodium%20Chloride%20Nasal%20Solution\.html$ https://old.saarbiotech.in/Sodium-Chloride-Nasal-Solution.html [R=302,L]
+RewriteRule ^Permethrin%20Cream\.html$ https://old.saarbiotech.in/Permethrin-Cream.html [R=302,L]
+RewriteRule ^Eberaconazole%20Cream\.html$ https://old.saarbiotech.in/Eberaconazole-Cream.html [R=302,L]
+RewriteRule ^Clobetasol%20Propionate%20and%20Gentamicin%20Cream\.html$ https://old.saarbiotech.in/Clobetasol-Propionate-and-Gentamicin-Cream.html [R=302,L]
+RewriteRule ^Desonide%20Ointment\.html$ https://old.saarbiotech.in/Desonide-Ointment.html [R=302,L]
+RewriteRule ^Diclofenac%20diethylamine,%20Methyl%20salicylate,%20Linseed%20oil,%20Menthol%20and%20Benzyl%20alcohol%20roll%20on\.html$ https://old.saarbiotech.in/Diclofenac-diethylamine-Methyl-salicylate-Linseed-oil-Menthol-and-Benzyl-alcohol-roll-on.html [R=302,L]
+RewriteRule ^Milk%20of%20magnesia,%20Sodium%20Picosulfate%20&%20Liquid%20paraffin%20suspension\.html$ https://old.saarbiotech.in/Milk-of-magnesia-Sodium-Picosulfate-Liquid-paraffin-suspension.html [R=302,L]
+RewriteRule ^thumb/Levosulpride\.html$ https://old.saarbiotech.in/thumb/Levosulpride.html [R=302,L]
