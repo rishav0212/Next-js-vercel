@@ -58,13 +58,13 @@ jobs:
           github.event_name == 'workflow_run' &&
           github.event.workflow == 'ftp-deploy-workflow' &&
           github.event.workflow_run.conclusion == 'success' &&
-          startsWith(github.event.workflow_run.head_branch, 'release/')
+          startsWith(github.event.workflow_run.head_branch, 'sandeepsaar/')
         run: echo "This step requires manual approval for release branches"
 
       - name: FTP Deploy
         if: |
           github.event.workflow_run.conclusion == 'success' &&
-          !startsWith(github.event.workflow_run.head_branch, 'release/')
+          !startsWith(github.event.workflow_run.head_branch, 'sandeepsaar/')
         run: |          
           echo "FTP deployment logic..."
         
