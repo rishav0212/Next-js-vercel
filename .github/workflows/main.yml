@@ -1,5 +1,5 @@
 name: saar-biotech-next-cicd-pipeline
-run-name: ${{ github.actor }} is executing the pipeline.
+run-name: ${{ github.actor }} is executing the pipeline. Branch Name is ${{ github.ref }}
 
 on:
   push:
@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Print Branch Name
-        run: echo "The branch name running is_ GitHub Ref - ${{ github.ref }}"
+        run: echo "The branch name running is_ GitHub Ref - ${{ github.ref }}  ${{github.event.workflow_run.head_branch}}"
         
       - name: Checkout code
         uses: actions/checkout@v4
@@ -48,9 +48,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Maunal Trigger For GoDaddy
+      - name: Manual Trigger For GoDaddy
         id: manual_deploy
-        run: echo "Deploy is manual step. Use the 'workflow_dispatch' event to trigger it."
+        run: echo "Deploy is a manual step. Use the 'workflow_dispatch' event to trigger it."
 
       - uses: actions/download-artifact@v4
         with:
