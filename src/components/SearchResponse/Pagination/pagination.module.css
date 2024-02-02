@@ -4,7 +4,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   border: 0.5px solid #e95d2a;
   margin: 3px;
-  height: calc(calc(1vh + 0.4vw) * 3);
+  height: 2em;
   font-size: 2em;
   color: rgb(158, 9, 9);
   text-justify: center;
@@ -15,11 +15,11 @@
 }
 .prev {
   border-radius: 7px;
-  width: calc(calc(1vh + 0.4vw) * 5.5);
+  width: 3.5em;
 }
 .button-des {
   border-radius: 50%;
-  width: calc(calc(1vh + 0.4vw) * 3);
+  width: 2em;
 }
 
 .active {
@@ -47,7 +47,7 @@
 
 .entries {
   font-size: 2em;
-  height: calc(calc(1vh + 0.4vw) * 3);
+  height: 2em;
 }
 
 .tableStyle {
@@ -73,13 +73,12 @@
   padding: 10px 10px;
   font-size: 1.8em;
 }
-.tableStyle .evenRow { 
-   background: #ffeac6
-
+.tableStyle .evenRow {
+  background: #ffeac6;
 }
 
 .tableStyle .oddRow {
-  background:  #ffdab5; 
+  background: #ffdab5;
 }
 
 .tableStyle .category {
@@ -91,6 +90,14 @@
 }
 @media (hover: hover) {
   .tableStyle tr:hover .rowHover {
-    background: rgb(255, 194, 128) ;
+    background: rgb(255, 194, 128, 0.8);
+    transform: scale(1.01);
   }
+}
+
+.customPopover{
+  font-size: 0.9em;
+  opacity: 0.6;
+  margin-left: 10%;
+  color:rgb(0, 123, 255)
 }

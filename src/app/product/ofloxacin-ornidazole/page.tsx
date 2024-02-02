@@ -12,9 +12,21 @@ import {
 import { FiberManualRecord } from "@mui/icons-material";
 import { Metadata } from "next";
 import * as styles from "@/components/ProductPages/styles.js";
+import ScrollToSection from "@/components/ProductPages/ScrollToSection/ScrollToSrction";
 
 export default function Page() {
   const link = "ofloxacin-ornidazole";
+  const Sections = [
+    "description",
+    "indications",
+    "mechanism",
+    "action of antibiotic",
+    "interactions",
+    "side effects",
+    "contraindication",
+    "pracautions",
+    "conclusion"
+  ];
 
   return (
     <Grid
@@ -102,7 +114,8 @@ export default function Page() {
           </Grid>
         </Grid>
 
-        <Grid item md={12} sx={styles.lowerGrid}>
+        <Grid container item md={12} sx={styles.lowerGrid}>
+          <ScrollToSection Sections={Sections}/>
           <Typography variant="h6" sx={styles.sectionTitle} id="description">
             DESCRIPTION
           </Typography>
@@ -136,7 +149,7 @@ export default function Page() {
           </Typography>
 
           {/** Indications Section */}
-          <Typography variant="h6" sx={styles.sectionTitle}>
+          <Typography variant="h6" id="indications" sx={styles.sectionTitle}>
             Indications
           </Typography>
           <List dense sx={styles.list}>
@@ -173,7 +186,7 @@ export default function Page() {
           </List>
 
           {/** Mechanism Section */}
-          <Typography variant="h6" sx={styles.sectionTitle}>
+          <Typography variant="h6" id="mechanism" sx={styles.sectionTitle}>
             Mechanism
           </Typography>
           <Typography sx={styles.sectionData}>
@@ -191,7 +204,7 @@ export default function Page() {
             C.trachomatis, M.leprae, M.tuberculosis and other Mycobacterium spp.
           </Typography>
 
-          <Typography variant="h6" sx={styles.sectionTitle}>
+          <Typography variant="h6" id="action of antibiotic" sx={styles.sectionTitle}>
             Action of Antibiotic
           </Typography>
           <List dense sx={styles.list}>
@@ -211,7 +224,7 @@ export default function Page() {
           </List>
 
           {/** Pharmacokinetics Section */}
-          <Typography variant="h6" sx={styles.sectionTitle} id="interactions">
+          <Typography variant="h6" id="interactions" sx={styles.sectionTitle}>
             Interactions
           </Typography>
           <Typography sx={styles.sectionData}>
@@ -230,7 +243,7 @@ export default function Page() {
           </Typography>
 
           {/** Side Effects Section */}
-          <Typography variant="h6" sx={styles.sectionTitle}>
+          <Typography variant="h6" id="side effects" sx={styles.sectionTitle}>
             Side Effects
           </Typography>
           <List dense sx={styles.list}>
@@ -251,7 +264,7 @@ export default function Page() {
           </List>
 
           {/** Contraindication Section */}
-          <Typography variant="h6" sx={styles.sectionTitle}>
+          <Typography variant="h6" id="contraindication" sx={styles.sectionTitle}>
             Contraindication
           </Typography>
           <Typography sx={styles.sectionData}>
@@ -259,7 +272,7 @@ export default function Page() {
             pregnancy, Caution when used during lactation.
           </Typography>
 
-          <Typography variant="h6" sx={styles.sectionTitle}>
+          <Typography variant="h6" id="pracautions" sx={styles.sectionTitle}>
             Precautions
           </Typography>
           <Typography sx={styles.sectionData}>
@@ -267,7 +280,7 @@ export default function Page() {
           </Typography>
 
           {/** Conclusion Section */}
-          <Typography variant="h6" sx={styles.sectionTitle}>
+          <Typography variant="h6" id="conclusion" sx={styles.sectionTitle}>
             Conclusion
           </Typography>
           <Typography sx={styles.sectionData}>

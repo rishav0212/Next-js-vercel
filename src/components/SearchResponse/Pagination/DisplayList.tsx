@@ -4,11 +4,14 @@ import React, { useState, useEffect, useCallback, useMemo } from "react";
 import Link from "next/link";
 import styles from "./pagination.module.css";
 import paginationRange from "@/utils/appUtils";
-import { Grid, useMediaQuery, Paper } from "@mui/material";
+import { Popover, Grid, useMediaQuery, Paper } from "@mui/material";
 import { color, fontSize, useTheme } from "@mui/system";
 
 const MakeRows = ({ paginatedList }) => {
   //FUNCTION TO MAKE ROWS CATEGORY BY COUNTING PRODUCTS IN MAIN CATEGORY AND SUB CATEGORY
+
+  const [hoveredLink, setHoveredLink] = useState(null);
+
   let Main = paginatedList[0].mainCategory;
   let numberOfProductsMain = [];
   let count = 0;
@@ -63,6 +66,8 @@ const MakeRows = ({ paginatedList }) => {
               className={`${styles.rowHover} ${
                 index % 2 === 0 ? styles.evenRow : styles.oddRow
               }`}
+              onMouseEnter={() => setHoveredLink(index)}
+              onMouseLeave={() => setHoveredLink(null)}
             >
               {product.linkAvailable ? (
                 <Link
@@ -73,12 +78,10 @@ const MakeRows = ({ paginatedList }) => {
                   }
                   style={{ color: "black", textDecoration: "none" }}
                 >
-                  {product.name}
-                  <span
-                    style={{ color: "blue", fontSize: "0.8em", float: "right" }}
-                  >
-                    Read More
-                  </span>
+                  {product.name}{" "}
+                  {hoveredLink === index && (
+                    <span className={styles.customPopover}>Learn more</span>
+                  )}
                 </Link>
               ) : (
                 product["name"]

@@ -33,9 +33,9 @@ export default function RootLayout({
         <AppRouterCacheProvider>
           <AppThemeProvider>
             <Navbar />
-            <QuickEnquiry/>
+            <QuickEnquiry />
             {children}
-            <ScrollToTop/>
+            <ScrollToTop />
             <Footer />
           </AppThemeProvider>
         </AppRouterCacheProvider>

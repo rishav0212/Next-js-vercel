@@ -83,6 +83,7 @@ export const sectionData = {
 };
 
 export const list={
+  width:"100%",
   fontSize: "1.8em",
 }
 

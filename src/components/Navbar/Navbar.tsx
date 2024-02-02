@@ -21,6 +21,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
+import SearchIcon from "@mui/icons-material/Search";
 import { usePathname } from "next/navigation";
 import DrawerItem from "./DrawerItems";
 import Dropdown from "./dropdown";
@@ -122,8 +123,8 @@ const Navbar = () => {
           backgroundImage: "none",
           // position: "-webkit-sticky",
           position: "sticky",
-          height:{xs:"6vh",sm:"9vh" , md:"9vh"} ,
-          top: 0
+          // height:{xs:"6vh",sm:"9vh" , md:"9vh"} ,
+          top: 0,
         }}
       >
         <Toolbar>
@@ -144,6 +145,11 @@ const Navbar = () => {
                   />
                 </Link>
               </Typography>
+              <Link href="/products">
+                <IconButton title="See Products">
+                  <SearchIcon fontSize="medium" style={{ color: "black" }} />
+                </IconButton>
+              </Link>
               <IconButton edge="end" onClick={toggleDrawer}>
                 <SegmentSharpIcon fontSize="large" style={{ color: "black" }} />
               </IconButton>

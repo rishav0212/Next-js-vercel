@@ -20,7 +20,7 @@ const buttonStyles = {
   borderRadius: "40px",
   width: "4em",
   height: "4em",
-  top: "20em",
+  top: { md: "20em", sm: "20em", xs: "90%" },
   left: "1.5em",
   opacity: "0.8",
   boxShadow: "2px 4px 8px rgb(0,0,0,0.5)",
