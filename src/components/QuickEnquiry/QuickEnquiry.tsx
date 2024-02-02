@@ -3,7 +3,7 @@ import MailOutlineOutlinedIcon from "@mui/icons-material/MailOutlineOutlined";
 import { Popover, Typography, Box, Modal, Button } from "@mui/material";
 // import { useState }, React from "react";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import QueryForm from "../Footer/QueryForm";
+import QueryForm from "../hook-form/QueryForm";
 import { useState } from "react";
 
 const darkTheme = createTheme({
