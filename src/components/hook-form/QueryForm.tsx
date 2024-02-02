@@ -52,7 +52,7 @@ export default function QueryForm({ props }) {
         }
       );
 
-      const result = await response;
+      const result = await response.json();
       console.log(result);
     } catch (error) {
       console.log(error);
