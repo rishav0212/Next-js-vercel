@@ -2,8 +2,7 @@ name: saar-biotech-next-cicd-pipeline
 run-name: ${{ github.actor }} is executing the pipeline. Branch Name is ${{ github.ref }}
 
 on:
-  push:
-  workflow_dispatch: {}
+  push:  
   workflow_run:
     workflows: ["ftp-deploy-workflow"]
     types:
@@ -58,15 +57,15 @@ jobs:
           github.event_name == 'workflow_run' &&
           github.event.workflow == 'ftp-deploy-workflow' &&
           github.event.workflow_run.conclusion == 'success' &&
-          startsWith(github.event.workflow_run.head_branch, 'sandeepsaar/')
-        run: echo "This step requires manual approval for release branches"
+          startsWith(github.event.workflow_run.head_branch, 'sandeepsaar')
+        run: echo "This step requires manual approval for release branches $github.event.workflow_run.head_branch. N"
 
       - name: FTP Deploy
         if: |
           github.event.workflow_run.conclusion == 'success' &&
-          !startsWith(github.event.workflow_run.head_branch, 'sandeepsaar/')
+          !startsWith(github.event.workflow_run.head_branch, 'sandeepsaar')
         run: |          
-          echo "FTP deployment logic..."
+          echo "FTP deployment logic... $github.event.workflow_run.head_branch. N"
         
       - name: Manual Trigger For GoDaddy
         id: manual_deploy
