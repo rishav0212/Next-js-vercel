@@ -53,11 +53,13 @@ jobs:
 
     steps:
 
-      - name: Manual Approval Step      
+      - name: Displaying Variables
         run: |
             echo "Displaying some variables"
             echo "Event Name ${{github.event_name}}"
             echo "Event Worklfow ${{github.event.workflow}}"
+            echo "Event Worklfow ${{github.event.workflow_run.conclusion}}"
+            echo "Event Worklfow ${{github.event.workflow_run.head_branch}}"
             
 
       - name: Manual Approval Step
