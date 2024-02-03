@@ -74,7 +74,10 @@ const MakeRows = ({ paginatedList }) => {
                   href={
                     product.link.includes("dmpharma")
                       ? product.link
-                      : "/product/" + product.link.toLowerCase()
+                      : product.pageMade
+                      ? "/product/" + product.link.toLowerCase()
+                      : "https://node.saarbiotech.in/product/" +
+                        product.link.toLowerCase()
                   }
                   style={{ color: "black", textDecoration: "none" }}
                 >

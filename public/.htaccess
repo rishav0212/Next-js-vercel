@@ -267,8 +267,8 @@ RewriteRule ^product/cefpodoxime/$ https://old.saarbiotech.in/ds4.html [R=302,L]
 RewriteRule ^ds4\.html$ https://old.saarbiotech.in/ds4.html [R=302,L]
 
 # Redirects for Terbutaline, Guaiphenesin, Ambroxol and Menthol Syrup.html
-RewriteRule ^product/terbutaline-sulphate-guaiphenesin-ambroxol-hcl-menthol/$ https://old.saarbiotech.in/Terbutaline,\ Guaiphenesin,\ Ambroxol\ and\ Menthol\ Syrup.html [R=302,L]
-RewriteRule ^cs1\.html$ https://old.saarbiotech.in/cs1.html [R=302,L]
+RewriteRule ^product/terbutaline-sulphate-guaiphenesin-ambroxol-hcl-menthol/$ https://old.saarbiotech.in/cs1.html [R=302,L]
+RewriteRule ^cs1.html$ https://old.saarbiotech.in/cs1.html [R=302,L]
 
 # Redirects for cs1.html
 RewriteRule ^product/terbutaline-sulphate-guaiphenesin-bromhexine-hcl-menthol/$ https://old.saarbiotech.in/cs1.html [R=302,L]
@@ -295,7 +295,7 @@ RewriteRule ^product/enzyme-formula-in-food/$ https://old.saarbiotech.in/Enzyme\
 RewriteRule ^Enzyme\ Formula\.html$ https://old.saarbiotech.in/Enzyme\ Formula.html [R=302,L]
 
 # Redirects for Calcium Carbonate and Vitamin D3.html
-RewriteRule ^product/calcium-carbonate-(eq-to-elemental-calcium)-d3/$ https://old.saarbiotech.in/Calcium\ Carbonate\ and\ Vitamin\ D3\.html [R=302,L]
+RewriteRule ^product/calcium-carbonate-\(eq-to-elemental-calcium\)-d3/$ https://old.saarbiotech.in/Calcium\ Carbonate\ and\ Vitamin\ D3\.html [R=302,L]
 RewriteRule ^Calcium\ Carbonate\ and\ Vitamin\ D3\.html$ https://old.saarbiotech.in/Calcium\ Carbonate\ and\ Vitamin\ D3\.html [R=302,L]
 
 # Redirects for Alpha-Amylases with papain Syrup.html

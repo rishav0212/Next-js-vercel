@@ -9,6 +9,7 @@ const items = {
         subCategory: "Antibiotic",
         packing: "15 ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 2,
@@ -18,6 +19,7 @@ const items = {
         subCategory: "Antibiotic",
         packing: "30 ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 3,
@@ -27,6 +29,7 @@ const items = {
         subCategory: "Antibiotic",
         packing: "30 ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 4,
@@ -36,6 +39,7 @@ const items = {
         subCategory: "Antibiotic",
         packing: "30 ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 5,
@@ -45,6 +49,7 @@ const items = {
         subCategory: "Antibiotic",
         packing: "30 ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 6,
@@ -54,6 +59,7 @@ const items = {
         subCategory: "Antibiotic",
         packing: "30 ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 7,
@@ -63,6 +69,7 @@ const items = {
         subCategory: "Antibiotic",
         packing: "30 ml",
         linkAvailable: true,
+        pageMade: false,
       },
     ],
     Anticold: [
@@ -74,6 +81,7 @@ const items = {
         subCategory: "Anticold",
         packing: "60 ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 9,
@@ -83,6 +91,7 @@ const items = {
         subCategory: "Anticold",
         packing: "60 ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 10,
@@ -92,6 +101,7 @@ const items = {
         subCategory: "Anticold",
         packing: "60 ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 11,
@@ -101,6 +111,7 @@ const items = {
         subCategory: "Anticold",
         packing: "60 ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 12,
@@ -110,6 +121,7 @@ const items = {
         subCategory: "Anticold",
         packing: "60 ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 13,
@@ -119,6 +131,7 @@ const items = {
         subCategory: "Anticold",
         packing: "60 ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 14,
@@ -128,6 +141,7 @@ const items = {
         subCategory: "Anticold",
         packing: "60 ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 15,
@@ -137,6 +151,7 @@ const items = {
         subCategory: "Anticold",
         packing: "100 ml",
         linkAvailable: true,
+        pageMade: false,
       },
     ],
     "Analgesic & Anti-Inflammatory": [
@@ -148,6 +163,7 @@ const items = {
         subCategory: "Analgesic & Anti-Inflammatory",
         packing: "30 ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 17,
@@ -157,6 +173,7 @@ const items = {
         subCategory: "Analgesic & Anti-Inflammatory",
         packing: "60 ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 18,
@@ -166,6 +183,7 @@ const items = {
         subCategory: "Analgesic & Anti-Inflammatory",
         packing: "60 ml",
         linkAvailable: true,
+        pageMade: false,
       },
     ],
     Antacid: [
@@ -177,6 +195,7 @@ const items = {
         subCategory: "Antacid",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 20,
@@ -186,6 +205,7 @@ const items = {
         subCategory: "Antacid",
         packing: "200 ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 21,
@@ -195,6 +215,7 @@ const items = {
         subCategory: "Antacid",
         packing: "175 ml",
         linkAvailable: true,
+        pageMade: false,
       },
     ],
   },
@@ -208,6 +229,7 @@ const items = {
         subCategory: "Dry Syrup",
         packing: "30 ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 23,
@@ -217,6 +239,7 @@ const items = {
         subCategory: "Dry Syrup",
         packing: "30 ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 24,
@@ -226,6 +249,7 @@ const items = {
         subCategory: "Dry Syrup",
         packing: "30 ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 25,
@@ -235,6 +259,7 @@ const items = {
         subCategory: "Dry Syrup",
         packing: "30 ml",
         linkAvailable: true,
+        pageMade: false,
       },
     ],
     "Tonic Syrup": [
@@ -246,6 +271,7 @@ const items = {
         subCategory: "Tonic Syrup",
         packing: "200 ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 27,
@@ -273,6 +299,7 @@ const items = {
         subCategory: "Tonic Syrup",
         packing: "200 ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 30,
@@ -282,6 +309,7 @@ const items = {
         subCategory: "Tonic Syrup",
         packing: "200 ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 31,
@@ -300,6 +328,7 @@ const items = {
         subCategory: "Tonic Syrup",
         packing: "200 ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 33,
@@ -318,6 +347,7 @@ const items = {
         subCategory: "Tonic Syrup",
         packing: "200 ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 35,
@@ -327,6 +357,7 @@ const items = {
         subCategory: "Tonic Syrup",
         packing: "200 ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 36,
@@ -363,6 +394,7 @@ const items = {
         subCategory: "Tonic Syrup",
         packing: "60 ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 40,
@@ -381,6 +413,7 @@ const items = {
         subCategory: "Tonic Syrup",
         packing: "200 ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 42,
@@ -390,6 +423,7 @@ const items = {
         subCategory: "Tonic Syrup",
         packing: "200 ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 43,
@@ -419,6 +453,7 @@ const items = {
         subCategory: "Drops",
         packing: "30 ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 46,
@@ -428,6 +463,7 @@ const items = {
         subCategory: "Drops",
         packing: "30 ml",
         linkAvailable: true,
+        pageMade: false,
       },
     ],
     "Cough Syrup": [
@@ -439,6 +475,7 @@ const items = {
         subCategory: "Cough Syrup",
         packing: "100 ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 48,
@@ -448,6 +485,7 @@ const items = {
         subCategory: "Cough Syrup",
         packing: "100 ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 49,
@@ -457,6 +495,7 @@ const items = {
         subCategory: "Cough Syrup",
         packing: "100 ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 50,
@@ -502,6 +541,7 @@ const items = {
         subCategory: "Cough Syrup",
         packing: "100 ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 55,
@@ -538,6 +578,7 @@ const items = {
         subCategory: "Cough Syrup",
         packing: "100 ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 59,
@@ -589,6 +630,7 @@ const items = {
         subCategory: "Ointments",
         packing: "50 gm",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 64,
@@ -607,6 +649,7 @@ const items = {
         subCategory: "Ointments",
         packing: "30 gm",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 66,
@@ -616,6 +659,7 @@ const items = {
         subCategory: "Ointments",
         packing: "15 gm",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 67,
@@ -625,6 +669,7 @@ const items = {
         subCategory: "Ointments",
         packing: "20 gm",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 68,
@@ -634,6 +679,7 @@ const items = {
         subCategory: "Ointments",
         packing: "10 gm",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 69,
@@ -652,6 +698,7 @@ const items = {
         subCategory: "Ointments",
         packing: "10 gm",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 71,
@@ -807,6 +854,7 @@ const items = {
         subCategory: "Shampoo",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
     ],
     Lotions: [
@@ -838,6 +886,7 @@ const items = {
         subCategory: "Roll On",
         packing: "50 gm",
         linkAvailable: true,
+        pageMade: false,
       },
     ],
   },
@@ -851,6 +900,7 @@ const items = {
         subCategory: "",
         packing: "100 ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 92,
@@ -860,6 +910,7 @@ const items = {
         subCategory: "",
         packing: "100 ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 93,
@@ -878,6 +929,7 @@ const items = {
         subCategory: "",
         packing: "100 ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 95,
@@ -887,6 +939,7 @@ const items = {
         subCategory: "",
         packing: "170 ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 96,
@@ -896,6 +949,7 @@ const items = {
         subCategory: "",
         packing: "100 ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 97,
@@ -905,6 +959,7 @@ const items = {
         subCategory: "",
         packing: "100 ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 98,
@@ -914,6 +969,7 @@ const items = {
         subCategory: "",
         packing: "40 gm",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 99,
@@ -923,10 +979,11 @@ const items = {
         subCategory: "",
         packing: "5 ml",
         linkAvailable: true,
+        pageMade: false,
       },
     ],
   },
-  "Tablets": {
+  Tablets: {
     "": [
       {
         id: 100,
@@ -936,6 +993,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 101,
@@ -945,6 +1003,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 102,
@@ -954,6 +1013,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 103,
@@ -963,6 +1023,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 104,
@@ -972,6 +1033,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 105,
@@ -981,6 +1043,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 106,
@@ -990,6 +1053,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 107,
@@ -999,6 +1063,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 108,
@@ -1008,6 +1073,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 109,
@@ -1017,6 +1083,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 110,
@@ -1026,6 +1093,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 111,
@@ -1035,6 +1103,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 112,
@@ -1044,6 +1113,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 113,
@@ -1053,6 +1123,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 114,
@@ -1062,6 +1133,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 115,
@@ -1071,6 +1143,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 116,
@@ -1080,6 +1153,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 117,
@@ -1089,6 +1163,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 118,
@@ -1098,6 +1173,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 119,
@@ -1107,6 +1183,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 120,
@@ -1116,6 +1193,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 121,
@@ -1125,6 +1203,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 122,
@@ -1134,6 +1213,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 123,
@@ -1143,6 +1223,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 124,
@@ -1152,6 +1233,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 125,
@@ -1161,6 +1243,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 126,
@@ -1170,6 +1253,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 127,
@@ -1179,6 +1263,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 128,
@@ -1188,6 +1273,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 129,
@@ -1197,6 +1283,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 130,
@@ -1206,6 +1293,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 131,
@@ -1215,6 +1303,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 132,
@@ -1224,6 +1313,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 133,
@@ -1233,6 +1323,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 134,
@@ -1242,6 +1333,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 135,
@@ -1251,6 +1343,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 136,
@@ -1260,6 +1353,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 137,
@@ -1269,6 +1363,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 138,
@@ -1278,6 +1373,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 139,
@@ -1287,6 +1383,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 140,
@@ -1296,6 +1393,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 141,
@@ -1305,6 +1403,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 142,
@@ -1314,6 +1413,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 143,
@@ -1323,6 +1423,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 144,
@@ -1332,6 +1433,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 145,
@@ -1341,6 +1443,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 146,
@@ -1350,6 +1453,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 147,
@@ -1359,6 +1463,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 148,
@@ -1368,6 +1473,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 149,
@@ -1377,6 +1483,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 150,
@@ -1386,6 +1493,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 151,
@@ -1395,6 +1503,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 152,
@@ -1404,6 +1513,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 153,
@@ -1413,6 +1523,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 154,
@@ -1422,6 +1533,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 155,
@@ -1431,6 +1543,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 156,
@@ -1440,6 +1553,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 157,
@@ -1449,6 +1563,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 158,
@@ -1458,6 +1573,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 159,
@@ -1467,6 +1583,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 160,
@@ -1476,6 +1593,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 161,
@@ -1485,6 +1603,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 162,
@@ -1494,6 +1613,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 163,
@@ -1503,6 +1623,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 164,
@@ -1512,6 +1633,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 165,
@@ -1521,6 +1643,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 166,
@@ -1530,6 +1653,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 167,
@@ -1539,6 +1663,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 168,
@@ -1548,6 +1673,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 169,
@@ -1557,6 +1683,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 170,
@@ -1566,6 +1693,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 171,
@@ -1575,6 +1703,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 172,
@@ -1584,6 +1713,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 173,
@@ -1593,6 +1723,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 174,
@@ -1602,6 +1733,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 175,
@@ -1611,6 +1743,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 176,
@@ -1620,6 +1753,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 177,
@@ -1629,6 +1763,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 178,
@@ -1638,6 +1773,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 179,
@@ -1647,6 +1783,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 180,
@@ -1656,6 +1793,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 181,
@@ -1665,6 +1803,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 182,
@@ -1674,6 +1813,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 183,
@@ -1683,6 +1823,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 184,
@@ -1692,6 +1833,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 185,
@@ -1701,6 +1843,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 186,
@@ -1710,6 +1853,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 187,
@@ -1719,6 +1863,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 188,
@@ -1728,6 +1873,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 189,
@@ -1737,6 +1883,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 190,
@@ -1746,6 +1893,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 191,
@@ -1755,6 +1903,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 192,
@@ -1764,6 +1913,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 193,
@@ -1773,6 +1923,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 194,
@@ -1782,6 +1933,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 195,
@@ -1791,6 +1943,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 196,
@@ -1800,6 +1953,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 197,
@@ -1809,6 +1963,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 198,
@@ -1818,6 +1973,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 199,
@@ -1827,6 +1983,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 200,
@@ -1836,6 +1993,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 201,
@@ -1845,6 +2003,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 202,
@@ -1854,6 +2013,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 203,
@@ -1863,6 +2023,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 204,
@@ -1872,6 +2033,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 205,
@@ -1881,6 +2043,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 206,
@@ -1890,6 +2053,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 207,
@@ -1899,6 +2063,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 208,
@@ -1908,6 +2073,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 209,
@@ -1917,6 +2083,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 210,
@@ -1926,6 +2093,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 211,
@@ -1935,6 +2103,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 212,
@@ -1944,6 +2113,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 213,
@@ -1953,6 +2123,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 214,
@@ -1962,6 +2133,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 215,
@@ -1971,6 +2143,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 216,
@@ -1980,6 +2153,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 217,
@@ -1989,6 +2163,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 218,
@@ -1998,6 +2173,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 219,
@@ -2007,6 +2183,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 220,
@@ -2016,6 +2193,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 221,
@@ -2025,6 +2203,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 222,
@@ -2034,6 +2213,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 223,
@@ -2043,6 +2223,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 224,
@@ -2052,6 +2233,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 225,
@@ -2061,6 +2243,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 226,
@@ -2070,10 +2253,11 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
     ],
   },
-  "Capsules": {
+  Capsules: {
     "": [
       {
         id: 227,
@@ -2083,6 +2267,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 228,
@@ -2092,6 +2277,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 229,
@@ -2101,6 +2287,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 230,
@@ -2110,6 +2297,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 231,
@@ -2119,6 +2307,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 232,
@@ -2128,6 +2317,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 233,
@@ -2137,6 +2327,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 234,
@@ -2146,6 +2337,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 235,
@@ -2155,6 +2347,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 236,
@@ -2164,6 +2357,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 237,
@@ -2173,6 +2367,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 238,
@@ -2182,6 +2377,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 239,
@@ -2191,6 +2387,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 240,
@@ -2200,6 +2397,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 241,
@@ -2209,6 +2407,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 242,
@@ -2218,6 +2417,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 243,
@@ -2227,6 +2427,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 244,
@@ -2236,6 +2437,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 245,
@@ -2245,6 +2447,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 246,
@@ -2254,6 +2457,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 247,
@@ -2263,6 +2467,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 248,
@@ -2272,6 +2477,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 249,
@@ -2281,6 +2487,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 250,
@@ -2290,6 +2497,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 251,
@@ -2299,6 +2507,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 252,
@@ -2308,6 +2517,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 253,
@@ -2317,6 +2527,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 254,
@@ -2326,6 +2537,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 255,
@@ -2335,6 +2547,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 256,
@@ -2344,6 +2557,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 257,
@@ -2353,6 +2567,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 258,
@@ -2362,6 +2577,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 259,
@@ -2371,6 +2587,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 260,
@@ -2380,6 +2597,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 261,
@@ -2389,10 +2607,11 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
     ],
   },
-  "Sachets": {
+  Sachets: {
     "": [
       {
         id: 262,
@@ -2402,6 +2621,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 263,
@@ -2411,6 +2631,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 264,
@@ -2420,6 +2641,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 265,
@@ -2429,6 +2651,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 266,
@@ -2438,6 +2661,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 267,
@@ -2447,6 +2671,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 268,
@@ -2456,6 +2681,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 269,
@@ -2465,6 +2691,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 270,
@@ -2474,6 +2701,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 271,
@@ -2483,6 +2711,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 272,
@@ -2492,6 +2721,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 273,
@@ -2501,6 +2731,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 274,
@@ -2510,6 +2741,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 275,
@@ -2519,6 +2751,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 276,
@@ -2528,6 +2761,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 277,
@@ -2537,6 +2771,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 278,
@@ -2546,6 +2781,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 279,
@@ -2555,6 +2791,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 280,
@@ -2564,6 +2801,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 281,
@@ -2573,6 +2811,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 282,
@@ -2582,6 +2821,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
       {
         id: 283,
@@ -2591,6 +2831,7 @@ const items = {
         subCategory: "",
         packing: "15ml",
         linkAvailable: true,
+        pageMade: false,
       },
     ],
   },
