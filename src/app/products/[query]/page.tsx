@@ -27,6 +27,8 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }): Promise<Metadata> {
   // read route params
   const cate = params.query;
+  console.log(cate)
+  console.log(decodeURI(cate))
   const meta = {
     Suspensions: {
       description:
@@ -52,7 +54,7 @@ export async function generateMetadata({ params }): Promise<Metadata> {
   };
   const title =
     decodeURI(cate) +
-    "| Saar Biotech| Third party Medicine Contract Manufacturing";
+    " | Saar Biotech| Third party Medicine Contract Manufacturing";
 
   return {
     title: title,
