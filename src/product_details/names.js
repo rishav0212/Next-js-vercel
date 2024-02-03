@@ -9,7 +9,7 @@ const items = {
         subCategory: "Antibiotic",
         packing: "15 ml",
         linkAvailable: true,
-        pageMade: false,
+        pageMade: true,
       },
       {
         id: 2,
@@ -39,7 +39,7 @@ const items = {
         subCategory: "Antibiotic",
         packing: "30 ml",
         linkAvailable: true,
-        pageMade: false,
+        pageMade: true,
       },
       {
         id: 5,

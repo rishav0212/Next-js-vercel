@@ -267,8 +267,8 @@ RewriteRule ^product/cefpodoxime/$ https://old.saarbiotech.in/ds4.html [R=302,L]
 RewriteRule ^ds4\.html$ https://old.saarbiotech.in/ds4.html [R=302,L]
 
 # Redirects for Terbutaline, Guaiphenesin, Ambroxol and Menthol Syrup.html
-RewriteRule ^product/terbutaline-sulphate-guaiphenesin-ambroxol-hcl-menthol/$ https://old.saarbiotech.in/cs1.html [R=302,L]
-RewriteRule ^cs1.html$ https://old.saarbiotech.in/cs1.html [R=302,L]
+RewriteRule ^product/terbutaline-sulphate-guaiphenesin-ambroxol-hcl-menthol/$ https://old.saarbiotech.in/Terbutaline\,\ Guaiphenesin\,\ Ambroxol\ and\ Menthol\ Syrup.html [R=302,L]
+RewriteRule ^Terbutaline\,\ Guaiphenesin\,\ Ambroxol\ and\ Menthol\ Syrup\.html$ https://old.saarbiotech.in/Terbutaline\,\ Guaiphenesin\,\ Ambroxol\ and\ Menthol\ Syrup.html [R=302,L]
 
 # Redirects for cs1.html
 RewriteRule ^product/terbutaline-sulphate-guaiphenesin-bromhexine-hcl-menthol/$ https://old.saarbiotech.in/cs1.html [R=302,L]
@@ -284,7 +284,7 @@ RewriteRule ^Cetirizine\ and\ Ambroxal\ HCL\ Syrup\.html$ https://old.saarbiotec
 
 # Redirects for Iron (III) - hydroxide polymaltose complex+Folic acid Suspension.html
 RewriteRule ^product/iron-iii-hydroxide-polymaltose-complex-folic-acid/$ https://old.saarbiotech.in/Iron\ \(III\)\ -\ hydroxide\ polymaltose\ complex\+Folic\ acid\ Suspension.html [R=302,L]
-RewriteRule ^ts4\.html$ https://old.saarbiotech.in/ts4.html [R=302,L]
+RewriteRule ^Iron\ \(III\)\ -\ hydroxide\ polymaltose\ complex\+Folic\ acid\ Suspension\.html$ https://old.saarbiotech.in/Iron\ \(III\)\ -\ hydroxide\ polymaltose\ complex\+Folic\ acid\ Suspension.html [R=302,L]
 
 # Redirects for ts4.html
 RewriteRule ^product/ferrous-ascorbate-folic-acid/$ https://old.saarbiotech.in/ts4.html [R=302,L]
@@ -308,7 +308,7 @@ RewriteRule ^Cyproheptadine\ and\ Tricholine\ Citrate\ Syrup\.html$ https://old.
 
 # Redirects for Tricholine Citrate Syrup.html
 RewriteRule ^product/tricholine-citrate-sorbitol-solution-70-qs/$ https://old.saarbiotech.in/Tricholine\ Citrate\ Syrup.html [R=302,L]
-RewriteRule ^ns2\.html$ https://old.saarbiotech.in/ns2.html [R=302,L]
+RewriteRule ^Tricholine\ Citrate\ Syrup\.html$ https://old.saarbiotech.in/Tricholine\ Citrate\ Syrup.html [R=302,L]
 
 # Redirects for ns2.html
 RewriteRule ^product/xylometazoline-hcl-nasal-drops-spray/$ https://old.saarbiotech.in/ns2.html [R=302,L]
@@ -324,7 +324,7 @@ RewriteRule ^Diclofenac\ Sodium\ Gel\.html$ https://old.saarbiotech.in/Diclofena
 
 # Redirects for Terbinafine Hydrochloride & Mometasone Furoate Cream.html
 RewriteRule ^product/mometasone-furoate/$ https://old.saarbiotech.in/Terbinafine\ Hydrochloride\ &\ Mometasone\ Furoate\ Cream\.html [R=302,L]
-RewriteRule ^Ketoconazole\ cream\.html$ https://old.saarbiotech.in/Ketoconazole\ cream\.html [R=302,L]
+RewriteRule ^Terbinafine\ Hydrochloride\ &\ Mometasone\ Furoate\ Cream\.html$ https://old.saarbiotech.in/Terbinafine\ Hydrochloride\ &\ Mometasone\ Furoate\ Cream\.html [R=302,L]
 
 # Redirects for Ketoconazole cream.html
 RewriteRule ^product/ketoconazole/$ https://old.saarbiotech.in/ketoconazole-cream.html [R=302,L]
