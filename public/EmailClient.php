@@ -41,17 +41,27 @@ try {
 		$company = $data['company'];
 		$query = $data['query'];
 	} else {
-		// echo "Error decoding JSON\n";
+		response['success'] = false
+		response['error'] = "error decoding input fields"
 	}
+
+	response['name'] = $data['name'];
+	response['email'] = $data['email'];
+	response['phone'] = $data['phone'];
+	response['company'] = $data['company'];
+	response['query'] = $data['query'];
 
 	//Fetch the Referrer Site.
 	$referrer = $_SERVER['HTTP_REFERER'];
 	$DEFAULT_REFERRER = "default.saarbiotech.in";
+	response['referred'] = $referrer
 	// echo "Referred: $referrer\n";
 
 	if ($referrer !== null) {
 		$parsedURL = parse_url($referrer)['host'];
 		// echo "Parsed URL: $parsedURL\n";
+		response['Parsed_URL'] = $parsedURL
+
 	} else {
 		// echo "Referrer not found. Defualting it to: DEFAULT_REFERRER";
 		$parsedURL  = $DEFAULT_REFERRER;
