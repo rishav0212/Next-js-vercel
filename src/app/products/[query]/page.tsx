@@ -26,7 +26,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }): Promise<Metadata> {
   // read route params
-  const cate = decodeURI(params.query);
+  const cate = params.query;
   const meta = {
     Suspensions: {
       description:
@@ -44,14 +44,15 @@ export async function generateMetadata({ params }): Promise<Metadata> {
     Bulk medicine manufacturers in Chandigarh,  Top Pharmaceutical companies in Chandigarh,  DCGI Approved Molecules, pharmaceutical companies in India, 
     pharmaceuticals export india, top 10 pharmaceutical companies , third party, medicine, manufacturer, pharmaceutical manufacturer in india,pharma exporters, medicines`,
     },
-    "External Preparations": { description: "", keywords: "" },
-    "Miscellaneous Products": { description: "", keywords: "" },
+    "External%20Preparations": { description: "", keywords: "" },
+    "Miscellaneous%20Products": { description: "", keywords: "" },
     Tablets: { description: "", keywords: "" },
     Sachets: { description: "", keywords: "" },
     Capsules: { description: "", keywords: "" },
   };
   const title =
-    cate + "| Saar Biotech| Third party Medicine Contract Manufacturing";
+    decodeURI(cate) +
+    "| Saar Biotech| Third party Medicine Contract Manufacturing";
 
   return {
     title: title,
