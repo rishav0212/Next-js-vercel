@@ -62,20 +62,21 @@ jobs:
 
       - name: Define Variable for deciding the manual path        
         run: |
-            RELEASE_TRIGGER=false;
-            RELEASE_TAG=false;
+          RELEASE_TRIGGER=false;
+          RELEASE_TAG=false;
             if [[ ${{ startsWith(github.ref, 'refs/tags/v') }} ]]; then            
               echo "This is a tag that starts with v"
               RELEASE_TAG=true;
               if [[ ${{ github.event_name == 'workflow_dispatch' }} ]]; then
-                  RELEASE_TRIGGER=true;
+                echo "This is manual trigger"
+                RELEASE_TRIGGER=true;
               fi            
             fi
             echo "V_RELEASE_TRIGGER=$RELEASE_TRIGGER" >> $GITHUB_OUTPUT
             echo "V_RELEASE_TAG=$RELEASE_TAG" >> $GITHUB_OUTPUT
 
-            echo ${{ steps.set-ftp-vars.outputs.V_RELEASE_TRIGGER }}
-            echo ${{ steps.set-ftp-vars.outputs.V_RELEASE_TAG }}
+            echo "Release Trigger Vars: $RELEASE_TRIGGER ${{ steps.set-ftp-vars.outputs.V_RELEASE_TRIGGER }}"
+            echo "Release Tag Vars: $RELEASE_TAG ${{ steps.set-ftp-vars.outputs.V_RELEASE_TAG }}"
 
       - uses: actions/download-artifact@v4
         with:
@@ -96,6 +97,10 @@ jobs:
 
           branch_name=$(echo $GITHUB_REF | awk -F'/' '{print $NF}')
           echo "Branch Name is $branch_name"
+
+          echo "Release Trigger Vars: ${{ steps.set-ftp-vars.outputs.V_RELEASE_TRIGGER }}"
+          echo "Release Tag Vars: ${{ steps.set-ftp-vars.outputs.V_RELEASE_TAG }}"
+          
           if [ "$branch_name" = "Next-App" ]; then
             FTP_USERNAME=$FTP_USERNAME_UAT
             FTP_PASSWORD=$FTP_PASSWORD_UAT
