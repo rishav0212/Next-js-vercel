@@ -127,19 +127,21 @@ const Navbar = () => {
           top: 0,
         }}
       >
-        <Toolbar>
+        <Toolbar disableGutters>
           {isMobile ? (
             <>
               <Link href="/" style={{ flexGrow: 1 }}>
                 <img
-                  src="/images/Logo.jpg"
+                  src="/images/LogoAqua.jpg"
                   alt="Recode7"
                   style={{
-                    height: "6vh",
+                    height: "5.2vh",
                     objectFit: "contain",
                     display: "flex",
-                    marginLeft: "auto",
+                    marginLeft: "1em",
                     marginRight: "auto",
+                    marginTop: "auto",
+                    marginBottom: "auto",
                   }}
                 />
               </Link>
@@ -165,12 +167,14 @@ const Navbar = () => {
               >
                 <Link href="/">
                   <img
-                    src="/images/Logo.jpg"
+                    src="/images/LogoAqua.jpg"
                     alt="Recode7"
-                    height="60"
+                    height="12%"
+                    width="12%"
                     style={{
                       objectFit: "contain",
-                      marginLeft: "40px",
+                      marginLeft: "1em",
+                      display: "{ xs: 'none', md: 'flex' }, mr: 1 }",
                     }}
                   />
                 </Link>

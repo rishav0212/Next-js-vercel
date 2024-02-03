@@ -79,6 +79,12 @@ const MakeRows = ({ paginatedList }) => {
                   style={{ color: "black", textDecoration: "none" }}
                 >
                   {product.name}{" "}
+                  <img
+                    width={20}
+                    height={20}
+                    src={"/images/icons/info-64px.png"}
+                    alt={"Product Information"}
+                  />
                   {hoveredLink === index && (
                     <span className={styles.customPopover}>Learn more</span>
                   )}
@@ -166,6 +172,41 @@ const DisplayList = ({ list, initialPage = 1 }) => {
           padding: 2,
         }}
       >
+        <Grid
+          container
+          justifySelf={"center"}
+          margin={"auto"}
+          sx={{
+            // height: "100%",
+            width: "85vw",
+            overflow: "auto",
+            border: "1px solid #3fc0a9",
+            borderRadius: "10px",
+          }}
+        >
+          <table className={styles.tableStyle}>
+            <caption>Products</caption>
+            <thead>
+              <tr>
+                <th style={{ width: "66vw" }}>COMPOSITION</th>
+                <th style={{ width: "10vw" }}>PACKING</th>
+                <th style={{ width: "12vw" }}>SUB CATEGORY</th>
+                <th style={{ width: "12vw" }}>MAIN CATEGORY</th>
+              </tr>
+            </thead>
+            <tbody>
+              {paginatedList.length ? (
+                <MakeRows paginatedList={paginatedList} />
+              ) : (
+                <tr>
+                  <td colSpan={5} rowSpan={10} style={{ textAlign: "center" }}>
+                    No Products Found
+                  </td>
+                </tr>
+              )}
+            </tbody>
+          </table>
+        </Grid>
         <Grid
           container
           spacing={"0.3vh"}
@@ -276,42 +317,6 @@ const DisplayList = ({ list, initialPage = 1 }) => {
             </select>
             <span className="p-2">Products</span>
           </Grid>
-        </Grid>
-
-        <Grid
-          container
-          justifySelf={"center"}
-          margin={"auto"}
-          sx={{
-            // height: "100%",
-            width: "85vw",
-            overflow: "auto",
-            border: "1px solid #8fae2d",
-            borderRadius: "10px",
-          }}
-        >
-          <table className={styles.tableStyle}>
-            <caption>Products</caption>
-            <thead>
-              <tr>
-                <th style={{ width: "66vw" }}>COMPOSITION</th>
-                <th style={{ width: "10vw" }}>PACKING</th>
-                <th style={{ width: "12vw" }}>SUB CATEGORY</th>
-                <th style={{ width: "12vw" }}>MAIN CATEGORY</th>
-              </tr>
-            </thead>
-            <tbody>
-              {paginatedList.length ? (
-                <MakeRows paginatedList={paginatedList} />
-              ) : (
-                <tr>
-                  <td colSpan={5} rowSpan={10} style={{ textAlign: "center" }}>
-                    No Products Found
-                  </td>
-                </tr>
-              )}
-            </tbody>
-          </table>
         </Grid>
       </Paper>
     </>

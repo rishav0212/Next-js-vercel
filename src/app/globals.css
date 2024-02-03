@@ -1,7 +1,8 @@
 :root {
-  --primary-color: #8fae2d;
+  --primary-color: #3cb6a0;
   /*Other Color being considered: 089abb*/
   /*Other Color being considered: ef3e00 (Orange)*/
+  /** Older Green 8fae2d**/
   --primary-font-family: "Montserrat", sans-serif;
 }
 body {

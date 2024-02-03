@@ -64,7 +64,7 @@ export const sectionTitle = {
   color: "whitesmoke",
   display: "inline-block",
   borderRadius: 10,
-  background: `linear-gradient(45deg, var(--primary-color) 30%, #FF8E53 90%)`,
+  background: `linear-gradient(45deg, var(--primary-color) 30%, var(--primary-color) 10%)`,
   padding: 1.2,
   boxShadow: "0 4px 6px rgba(0,0,0, 0.8)",
   marginBottom: 2,

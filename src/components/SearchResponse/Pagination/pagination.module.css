@@ -1,15 +1,14 @@
 .prev,
 .button-des {
-  background-color: rgb(251, 229, 200);
+  background-color: color-mix(in srgb, var(--primary-color) 50%, transparent);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-  border: 0.5px solid #e95d2a;
+  border: 0.5px solid black;
   margin: 3px;
   height: 2em;
-  font-size: 2em;
-  color: rgb(158, 9, 9);
+  font-size: 1.4em;
+  color: black;
   text-justify: center;
   text-align: center;
-
   transition: background-color 0.3s ease, transform 0.3s ease,
     box-shadow 0.3s ease;
 }
@@ -24,7 +23,11 @@
 
 .active {
   color: white;
-  background: linear-gradient(to bottom, var(--primary-color), #ff7e00);
+  background: linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--primary-color) 10%, transparent),
+    color-mix(in srgb, var(--primary-color) 90%, transparent)
+  );
   transform: scale(1.15);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
@@ -32,7 +35,11 @@
 @media (hover: hover) {
   .button-des:hover,
   .prev:hover {
-    background: linear-gradient(to bottom, #ff7e00, var(--primary-color));
+    background: linear-gradient(
+      to bottom,
+      color-mix(in srgb, var(--primary-color) 90%, transparent),
+      color-mix(in srgb, var(--primary-color) 10%, transparent)
+    );
     color: aliceblue;
     transform: scale(1.1);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -46,7 +53,7 @@
 }
 
 .entries {
-  font-size: 2em;
+  font-size: 1.4em;
   height: 2em;
 }
 
@@ -71,19 +78,19 @@
   border: 0.5px solid var(--primary-color);
   vertical-align: top;
   padding: 10px 10px;
-  font-size: 1.8em;
+  font-size: 1.3em;
 }
 
 .tableStyle .evenRow {
-  background: #ffeac6;
+  background: color-mix(in srgb, var(--primary-color) 5%, transparent);
 }
 
 .tableStyle .oddRow {
-  background: #ffdab5;
+  background: color-mix(in srgb, var(--primary-color) 40%, transparent);
 }
 
 .tableStyle .category {
-  background: #fde5bd;
+  background: color-mix(in srgb, var(--primary-color) 20%, transparent);
 }
 
 .tableStyle tr:hover .rowHover {
@@ -91,7 +98,7 @@
 }
 @media (hover: hover) {
   .tableStyle tr:hover .rowHover {
-    background: rgb(255, 194, 128, 0.8);
+    background: color-mix(in srgb, var(--primary-color) 20%, transparent);
     transform: scale(1.01);
   }
 }
