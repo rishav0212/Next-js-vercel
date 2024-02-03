@@ -3,7 +3,14 @@ import { useForm } from "react-hook-form";
 import { FormProvider as Form } from "react-hook-form";
 import * as Yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { Grid, Typography } from "@mui/material";
+import {
+  Grid,
+  Typography,
+  Backdrop,
+  CircularProgress,
+  Snackbar,
+  Alert,
+} from "@mui/material";
 import RHFTextField from "./RHFText.Field";
 import { LoadingButton } from "@mui/lab";
 import { useState } from "react";
@@ -39,7 +46,8 @@ export default function QueryForm({ props }) {
   } = methods;
 
   const [loading, setLoading] = useState(false);
-  const [successMessage, setSuccessMessage] = useState("");
+  const [success, setSuccess] = useState(false);
+  const [failed, setFailed] = useState(false);
 
   const onSubmit = async (data) => {
     try {
@@ -60,13 +68,15 @@ export default function QueryForm({ props }) {
       console.log(result);
 
       if (result.success) {
-        setSuccessMessage("Query submitted successfully!");
-        setTimeout(() => setSuccessMessage(""), 5000);
+        setSuccess(true);
+        setTimeout(() => setSuccess(false), 8000);
       } else {
-        setSuccessMessage("pls try again after some time!");
-        setTimeout(() => setSuccessMessage(""), 5000);
+        setFailed(true);
+        setTimeout(() => setFailed(false), 8000);
       }
     } catch (error) {
+      setFailed(true);
+      setTimeout(() => setFailed(false), 8000);
       console.log(error);
       setError("name", {
         ...error,
@@ -121,16 +131,26 @@ export default function QueryForm({ props }) {
                   helperText={undefined}
                 />
                 <div>
-                  {
-                    <Typography variant="body1" color="green">
-                      {successMessage}
+                  <Typography variant="body1" color="green">
+                    {success ? "Query Submitted Successfully!" : null}
+                    {failed ? "please try after some time!" : null}
+                  </Typography>
+                  <Backdrop
+                    sx={{
+                      color: "#fff",
+                      zIndex: 1000,
+                    }}
+                    open={loading}
+                  >
+                    <Typography
+                      fontSize={"3em"}
+                      fontWeight={600}
+                      color="primary"
+                    >
+                      Submitting
                     </Typography>
-                  }
-                  {loading ? (
-                    <Typography variant="body1" color="blue">
-                      Sending Query . . .
-                    </Typography>
-                  ) : null}
+                    <CircularProgress sx={{ margin: 5 }} color="primary" />
+                  </Backdrop>
                 </div>
 
                 <LoadingButton
@@ -179,15 +199,29 @@ export default function QueryForm({ props }) {
             <div>
               {
                 <Typography variant="body1" color="green">
-                  {successMessage}
+                  {success ? "Query Submitted Successfully!" : null}
+                  {failed ? "please try after some time!" : null}
                 </Typography>
               }
-              {loading ? (
-                <Typography variant="body1" color="blue">
-                  Sending Query . . .
+              <Backdrop
+                sx={{
+                  color: "#fff",
+                  zIndex: 1000,
+                }}
+                open={loading}
+              >
+                <Typography
+                  fontSize={"3em"}
+                  fontWeight={600}
+                  color="secondary"
+                  sx={{ textShadow: "2px 4px 2px rgb(0,0,0,1)" }}
+                >
+                  Submitting
                 </Typography>
-              ) : null}
+                <CircularProgress sx={{ margin: 5 }} color="secondary" />
+              </Backdrop>
             </div>
+
             <LoadingButton
               color="primary"
               size="medium"
@@ -201,6 +235,26 @@ export default function QueryForm({ props }) {
             </LoadingButton>
           </>
         )}
+        <Snackbar open={success} autoHideDuration={10000}>
+          <Alert
+            onClose={() => setSuccess(false)}
+            severity="success"
+            variant="filled"
+            sx={{ width: "100%", fontSize: "1.8em" }}
+          >
+            Query Submitted Succesfully!
+          </Alert>
+        </Snackbar>{" "}
+        <Snackbar open={failed} autoHideDuration={10000}>
+          <Alert
+            onClose={() => setFailed(false)}
+            severity="error"
+            variant="filled"
+            sx={{ width: "100%", fontSize: "1.8em" }}
+          >
+            Submission failed! Try after some time!
+          </Alert>
+        </Snackbar>
       </form>
     </Form>
   );
