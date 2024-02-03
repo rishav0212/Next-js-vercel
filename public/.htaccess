@@ -56,6 +56,9 @@ RewriteRule ^sa1\.html$ https://node.saarbiotech.in/product/azithromycin/ [R=302
 
 RewriteRule ^2\.html$ https://node.saarbiotech.in/product/ofloxacin-ornidazole/ [R=302,L]
 
+
+
+#Products that were dynamically rendered
 RewriteRule ^Ketaconazole\.html$ https://node.saarbiotech.in/product/ketoconazole/ [R=302,L]
 
 RewriteRule ^sac3\.html$ https://node.saarbiotech.in/product/cpm-pcm-phenylepherine-hcl/ [R=302,L]
@@ -63,7 +66,6 @@ RewriteRule ^sac3\.html$ https://node.saarbiotech.in/product/cpm-pcm-phenylepher
 RewriteRule ^sa2\.html$ https://node.saarbiotech.in/product/ofloxacin/ [R=302,L]
 
 RewriteRule ^sa3\.html$ https://node.saarbiotech.in/product/ofloxacin-tinidazole/ [R=302,L]
-
 
 RewriteRule ^sa6\.html$ https://node.saarbiotech.in/product/roxithromycin/ [R=302,L]
 

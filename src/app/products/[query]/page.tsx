@@ -16,8 +16,8 @@ export async function generateStaticParams() {
   return [
     { query: "Suspensions" },
     { query: "Syrups" },
-    { query: "External%20Preparations" },
-    { query: "Miscellaneous%20Products" },
+    { query: "External Preparations" },
+    { query: "Miscellaneous Products" },
     { query: "Tablets" },
     { query: "Capsules" },
     { query: "Sachets" },
