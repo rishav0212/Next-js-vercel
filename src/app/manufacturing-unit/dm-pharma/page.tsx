@@ -20,12 +20,8 @@ export default function DmPharmaContent() {
             boxShadow: "0px 4px 8px rgb(0,0,0,0.4)",
           }}
         >
-          <Grid item xs={12} margin={4}>
-            <Typography
-              fontSize={"4em"}
-              variant="h4"
-              className="color-primary"
-            >
+          <Grid item xs={12} margin={1}>
+            <Typography fontSize={"4em"} variant="h4" className="color-primary">
               DM Pharma Manufacuring Unit
             </Typography>
           </Grid>
@@ -114,16 +110,26 @@ export default function DmPharmaContent() {
           }}
         >
           <Grid item xs={12} margin={2} className="text-center color-primary">
-            <Typography fontSize={"3em"} variant="h4">Our Strengths</Typography>
+            <Typography fontSize={"3em"} variant="h4">
+              Our Strengths
+            </Typography>
           </Grid>
 
           <Grid item xs={12} sm={12} md={5} margin={1}>
-            <Typography fontSize={"1.9em"} variant="h6" className="font--size-1125">
+            <Typography
+              fontSize={"1.9em"}
+              variant="h6"
+              className="font--size-1125"
+            >
               <li>Timely Delivery of Product</li>
             </Typography>
           </Grid>
           <Grid item xs={12} sm={12} md={5} margin={1}>
-            <Typography fontSize={"1.9em"} variant="h6" className="font--size-1125">
+            <Typography
+              fontSize={"1.9em"}
+              variant="h6"
+              className="font--size-1125"
+            >
               <li>Determined by quality, integrity and core values </li>
             </Typography>
           </Grid>
@@ -136,7 +142,11 @@ export default function DmPharmaContent() {
             </Typography>
           </Grid>
           <Grid item xs={12} sm={12} md={5} margin={1}>
-            <Typography fontSize={"1.9em"} variant="h6" className="font--size-1125">
+            <Typography
+              fontSize={"1.9em"}
+              variant="h6"
+              className="font--size-1125"
+            >
               <li>
                 Multidisciplined workforce that is motivated towards the highest
                 standards of customer satisfaction

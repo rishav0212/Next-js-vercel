@@ -3,12 +3,7 @@ import { Grid, Paper, Typography } from "@mui/material";
 export default function SaarBiotechContent() {
   return (
     <>
-      <Grid
-        container
-        alignContent={"center"}
-        justifyContent={"center"}
-        fontSize={"calc(0.7vh+0.3vw)"}
-      >
+      <Grid container alignContent={"center"} justifyContent={"center"}>
         <Grid
           container
           xs={11}
@@ -25,7 +20,7 @@ export default function SaarBiotechContent() {
             boxShadow: "0px 4px 8px rgb(0,0,0,0.4)",
           }}
         >
-          <Grid item xs={12} margin={4}>
+          <Grid item xs={12} margin={1}>
             <Typography fontSize={"4em"} variant="h4" className="color-primary">
               Saar Biotech Manufacuring Unit
             </Typography>

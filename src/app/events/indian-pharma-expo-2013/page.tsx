@@ -16,7 +16,7 @@ export default function Expo2013Content() {
         >
           <Grid item xs={12} m={2}>
             <Typography
-              fontSize={"4em"}
+              fontSize={"3.5em"}
               variant="h4"
               className="color-primary text-center"
             >
@@ -25,7 +25,7 @@ export default function Expo2013Content() {
           </Grid>
           <Grid item xs={12} sm={12} md={7} p={2}>
             <Typography
-              fontSize={"1.8em"}
+              fontSize={"1.6em"}
               className="lh-lg"
               textAlign={"justify"}
             >
@@ -63,19 +63,19 @@ export default function Expo2013Content() {
           </Grid>
           <Grid item xs={11} sm={11} md={3} p={2}>
             <Typography
-              fontSize={"2.2em"}
+              fontSize={"2em"}
               variant="h6"
               className="color-primary text-start"
             >
               Exhibition Highlights
             </Typography>
-            <Typography m={2} fontSize={"1.6em"} variant="body1">
+            <Typography m={2} fontSize={"1.5em"} variant="body1">
               B2B (Business-to-business) Exhibition
             </Typography>
-            <Typography m={2} fontSize={"1.6em"} variant="body1">
+            <Typography m={2} fontSize={"1.5em"} variant="body1">
               Pharmaceuticals Products Exhibition
             </Typography>
-            <Typography m={2} fontSize={"1.6em"} variant="body1">
+            <Typography m={2} fontSize={"1.5em"} variant="body1">
               Perfect platform for All Contract & API manufacturers.
             </Typography>
           </Grid>

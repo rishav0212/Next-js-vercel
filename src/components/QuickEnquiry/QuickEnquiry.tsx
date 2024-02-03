@@ -17,7 +17,7 @@ const buttonStyles = {
   zIndex: "999",
   background: "var(--primary-color)",
   color: "white",
-  borderRadius: "40px",
+  borderRadius: "4em",
   width: "4em",
   height: "4em",
   top: { md: "20em", sm: "20em", xs: "90%" },
@@ -31,7 +31,7 @@ const buttonStyles = {
     background: "var(--primary-color)",
     transform: "scale(1.1)",
     boxShadow: "2px 6px 12px rgb(0,0,0,0.7)",
-    width: "10.5em",
+    width: "11em",
   },
 };
 
@@ -109,7 +109,7 @@ function QuickEnquiry() {
           >
             <Typography
               variant="h3"
-              fontSize={"3em"}
+              fontSize={"2.5em"}
               color={"rgb(255,255,255,0.8)"}
               textAlign={"center"}
               margin={3}

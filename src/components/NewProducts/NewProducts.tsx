@@ -57,8 +57,13 @@ export default function NewProducts() {
                       />
                     </div>
                     <div className={`${styles.cardImgOverlay}`}>
-                      <h5 className="card-title" style={{fontSize:"2.3em"}}>{e}</h5>
-                      <p className="card-text text-justify" style={{fontSize:"1.3em"}}>
+                      <h5 className="card-title" style={{ fontSize: "2.1em" }}>
+                        {e}
+                      </h5>
+                      <p
+                        className="card-text text-justify"
+                        style={{ fontSize: "1.3em" }}
+                      >
                         {newProductsData[e].description}
                       </p>
                       <div className="overlay ctr">

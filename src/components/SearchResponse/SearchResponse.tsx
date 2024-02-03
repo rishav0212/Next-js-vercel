@@ -203,7 +203,7 @@ function SearchResponse({ q = "" }) {
                 fontWeight: "bold",
                 textShadow: "2px 4px 3px rgba(0, 0, 0, 0.9)",
                 marginBottom: 4,
-                fontSize: "5em",
+                fontSize: "4em",
                 textAlign: "center",
                 "&:hover": {
                   textShadow: "2px 5px 4px rgba(0, 0, 0, 1)",
@@ -218,7 +218,7 @@ function SearchResponse({ q = "" }) {
             xs={12}
             sm={12}
             md={3}
-            sx={{ fontSize: "1vh", padding: 0.5 }}
+            sx={{ fontSize: "1em", padding: 0.5 }}
           >
             <Autocomplete
               disablePortal
@@ -243,7 +243,7 @@ function SearchResponse({ q = "" }) {
             xs={12}
             sm={6}
             md={3}
-            sx={{ fontSize: "1vh", padding: 0.5 }}
+            sx={{ fontSize: "1em", padding: 0.5 }}
           >
             <Autocomplete
               disablePortal
@@ -266,7 +266,7 @@ function SearchResponse({ q = "" }) {
             xs={12}
             sm={6}
             md={3}
-            sx={{ fontSize: "1vh", padding: 0.5 }}
+            sx={{ fontSize: "1em", padding: 0.5 }}
           >
             <Autocomplete
               disablePortal
@@ -309,6 +309,7 @@ const autocompleteStyles = {
   "& .MuiInputBase-root": {
     backgroundColor: "rgba(255,255,255, 1)", // White background for contrast
     borderRadius: "12px",
+    height:"3.5em",
     border: "1px solid #000",
     boxShadow: "6px 8px 8px rgba(0, 0, 0, 0.7)",
     "&:hover": {

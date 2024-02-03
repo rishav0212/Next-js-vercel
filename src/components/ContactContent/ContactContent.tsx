@@ -3,11 +3,11 @@ import QueryForm from "@/components/hook-form/QueryForm";
 
 const contactBoxStyles = {
   textAlign: "center",
-  padding: "20px",
+  padding: "2em",
   marginInline: "auto",
   my: 2,
   background: "rgba(0, 0, 0, 0.06)",
-  borderRadius: "25px",
+  borderRadius: "2em",
   transition: "0.1s ease",
   boxShadow: "0 2px 4px rgb(0,0,0,0.8)",
   "&:hover": {
@@ -23,7 +23,7 @@ export default function ContactContent() {
         container
         justifyContent={"center"}
         alignContent={"center"}
-        marginY={5}
+        marginY={"3em"}
       >
         <Grid
           container
@@ -65,18 +65,18 @@ export default function ContactContent() {
           </Grid>
         </Grid>
 
-        <Grid xs={11} sm={11} md={5} lg={5} padding={5} item>
+        <Grid xs={11} sm={11} md={5} lg={5} padding={"3em"} item>
           <Typography variant="h5" className="color-primary">
             Send Us a Message
           </Typography>
           <QueryForm props={"contact"} />
         </Grid>
-        <Grid item xs={12} sm={12} md={7} lg={7} padding={5}>
+        <Grid item xs={12} sm={12} md={7} lg={7} padding={"3em"}>
           <iframe
             title="Saar Biotech"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3429.0870831895018!2d76.74135717456915!3d30.744055285087114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390feddedd955551%3A0xf990db21aadebf62!2sSAAR%20BIOTECH!5e0!3m2!1sen!2sus!4v1696870040314!5m2!1sen!2sus"
             width="100%"
-            height="500"
+            height="500em"
             style={{ border: "0" }}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"

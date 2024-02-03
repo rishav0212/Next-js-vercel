@@ -1,6 +1,7 @@
 "use client";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import SegmentSharpIcon from "@mui/icons-material/SegmentSharp";
+import "./navbar.css";
 import {
   Collapse,
   Container,
@@ -27,7 +28,7 @@ import DrawerItem from "./DrawerItems";
 import Dropdown from "./dropdown";
 
 const Navbar = () => {
-  const isMobile = useMediaQuery(`(max-width: 950px)`);
+  const isMobile = useMediaQuery(`(max-width: 900px)`);
   const [openDrawer, setOpenDrawer] = useState(false);
 
   const path = usePathname();
@@ -123,11 +124,12 @@ const Navbar = () => {
           backgroundImage: "none",
           // position: "-webkit-sticky",
           position: "sticky",
-          height: { xs: "6.3vh", sm: "9vh", md: "9vh" },
+          height: "6em",
           top: 0,
         }}
       >
-        <Toolbar disableGutters>
+        <Toolbar>
+          {/* removed disableGlitters as it was creaqting problem */}
           {isMobile ? (
             <>
               <Link href="/" style={{ flexGrow: 1 }}>
@@ -135,13 +137,13 @@ const Navbar = () => {
                   src="/images/LogoAqua.jpg"
                   alt="Recode7"
                   style={{
-                    height: "5.2vh",
+                    height: "5.2em",
                     objectFit: "contain",
                     display: "flex",
-                    marginLeft: "1em",
+                    // marginLeft: "1em",
                     marginRight: "auto",
                     marginTop: "auto",
-                    marginBottom: "auto",
+                    marginBottom: "0.5em",
                   }}
                 />
               </Link>
@@ -169,12 +171,11 @@ const Navbar = () => {
                   <img
                     src="/images/LogoAqua.jpg"
                     alt="Recode7"
-                    height="12%"
-                    width="12%"
                     style={{
+                      height: "5.2em",
                       objectFit: "contain",
                       marginLeft: "1em",
-                      display: "{ xs: 'none', md: 'flex' }, mr: 1 }",
+                      // display: "{ xs: 'none', md: 'flex' }, mr: 1 }",
                     }}
                   />
                 </Link>
@@ -215,7 +216,7 @@ const Navbar = () => {
         }}
         sx={{
           display: { xs: "block", sm: "block", md: "none" },
-          "& .MuiDrawer-paper": { boxSizing: "border-box", width: "245px" },
+          "& .MuiDrawer-paper": { boxSizing: "border-box", width: "30em" },
         }}
       >
         <Stack

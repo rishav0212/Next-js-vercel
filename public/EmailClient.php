@@ -91,9 +91,9 @@ try {
 
 	//Content
 	$mail->isHTML(true);                                  //Set email format to HTML
-	$mail->Subject = "$parsedURL | Enquiry | $name";
-	$mail->Body    = "HTML Enquiry from $name. Email is $email. Phone is: $phone. Query: $query";
-	$mail->AltBody = "Plain Enquiry from $name. Email is $email. Phone is: $phone. Query: $query";
+	$mail->Subject = "$parsedURL | Enquiry | {$name}";
+	$mail->Body    = "HTML Enquiry from {$name}. Email is {$email}. Phone is: {$phone}. Query: {$query}";
+	$mail->AltBody = "Plain Enquiry from {$name}. Email is {$email}. Phone is: {$phone}. Query: {$query}";
 
 	$mail->send();
 	// print("Message has been sent");

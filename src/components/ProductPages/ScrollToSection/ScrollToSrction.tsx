@@ -14,8 +14,8 @@ const StyledButton = styled(Button)({
   whiteSpace: "nowrap",
   zIndex: 12,
   fontSize: "1.3em",
-  padding: "10px",
-  borderRadius: "10px",
+  padding: "0.5em",
+  borderRadius: "0.6em",
   cursor: "pointer",
   boxShadow: "0 2px 4px rgb(0,0,0,0.4)",
   transition:
@@ -31,8 +31,8 @@ const StyledNaviButton = styled("button")({
   color: "rgb(230,230,230,1)",
   backgroundColor: "rgb(150,150,165)",
   border: "none",
-  width: "2.3em",
-  height: "2.3em",
+  width: "2.1em",
+  height: "2.1em",
   zIndex: 15,
   fontSize: "1.5em",
   borderRadius: "50%",
@@ -117,7 +117,7 @@ const ScrollToSection = ({ Sections }) => {
       sx={{
         overflowY: "hidden",
         whiteSpace: "nowrap",
-        top: { md: "9.3vh", sm: "9.3vh", xs: "6.3vh" },
+        top: "6.2em",
         backgroundColor: "#f0f0f0",
         WebkitOverflowScrolling: "touch",
         "&::-webkit-scrollbar": {

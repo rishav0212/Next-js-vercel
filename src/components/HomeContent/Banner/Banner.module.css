@@ -37,7 +37,7 @@
 .description {
   font-weight: 500;
   width: 80%;
-  font-size: calc(0.8rem + 0.5vw) !important;
+  font-size: 1em !important;
 }
 
 .checkButton {

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { TextField, useTheme } from "@mui/material";
 import PropTypes from "prop-types";
 import { Controller, useFormContext } from "react-hook-form";
@@ -37,13 +37,12 @@ export default function RHFTextField({ name, label, helperText, ...other }) {
           InputLabelProps={{
             style: {
               color: isFocused ? theme.palette.primary.main : "#b8b8b8",
- 
             },
           }}
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
           {...other}
-          style={{margin:10}}
+          style={{ margin: 10 }}
         />
       )}
     />

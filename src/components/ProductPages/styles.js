@@ -21,7 +21,7 @@ export const titleStyle = {
   fontWeight: "bold",
   textShadow: "4px 2px 4px rgba(0, 0, 0, 0.3)",
   marginBottom: 3,
-  fontSize: "4.5em",
+  fontSize: "4em",
   textAlign: "center",
   "&:hover": {
     textShadow: "5px 2px 4px rgba(0, 0, 0, 0.4)",
@@ -31,10 +31,10 @@ export const titleStyle = {
 export const indications = {
   title: {
     color: "var(--primary-color)",
-    fontSize: "2.3em",
+    fontSize: "2.2em",
   },
   data: {
-    fontSize: "2.3em",
+    fontSize: "2.2em",
     marginLeft: "5px",
   },
 };
@@ -42,35 +42,34 @@ export const indications = {
 export const approved = {
   title: {
     color: "var(--primary-color)",
-    fontSize: "2.3em",
+    fontSize: "2.2em",
   },
   data: {
-    fontSize: "2.3em",
+    fontSize: "2.2em",
     marginLeft: "5px",
   },
 };
 
 export const presentation = {
   title: {
-    fontSize: "2.1em",
+    fontSize: "2em",
   },
   data: {
-    fontSize: "1.8em",
-    marginLeft: "35px",
+    fontSize: "1.7em",
+    marginLeft: "2em",
   },
 };
 
 export const sectionTitle = {
   color: "whitesmoke",
   display: "inline-block",
-  borderRadius: 10,
-  background: `linear-gradient(45deg, var(--primary-color) 30%, var(--primary-color) 10%)`,
-  padding: 1.2,
+  borderRadius: "2em",
+  background: `linear-gradient(45deg, #3cb6a0 0%, #3498db 100%)`,
+  padding: "0.5em 1em",
   boxShadow: "0 4px 6px rgba(0,0,0, 0.8)",
   marginBottom: 2,
   marginTop: 3,
-  width: "calc(15vh + 9vw)",
-  fontSize: "2.1em",
+  fontSize: "1.9em",
   textAlign: "center",
   "&:hover": {
     boxShadow: "0 6px 10px rgba(0, 0, 0, 0.9)",
@@ -78,13 +77,13 @@ export const sectionTitle = {
 };
 
 export const sectionData = {
-  fontSize: "1.8em",
+  fontSize: "1.6em",
   textAlign: "justify",
 };
 
 export const list = {
   width: "100%",
-  fontSize: "1.8em",
+  fontSize: "1.6em",
 };
 
 export const imgPaper = {
@@ -118,5 +117,5 @@ export const readMoreGrid = {
   textOverflow: "ellipsis",
   marginInline: 2,
   marginTop: 1,
-  fontSize: "1.6em",
+  fontSize: "1.4em",
 };

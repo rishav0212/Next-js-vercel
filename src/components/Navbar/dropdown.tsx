@@ -2,15 +2,14 @@ import React from "react";
 import styled from "@emotion/styled";
 import Link from "next/link";
 import { Divider, Stack } from "@mui/material";
-
 const StyledLink = styled(Link)({
   textDecoration: "none",
   color: "white",
   display: "inline-flex",
-  fontSize: "1.7em",
+  fontSize: "1.4em",
   fontWeight: "400",
-  padding: "10px 12px",
-  transition: ".3s",
+  padding: "0.8em 1.2em",
+  transition: "textDecoration 0.3s ease-out",
   "&:hover": {
     textDecoration: "underline",
   },

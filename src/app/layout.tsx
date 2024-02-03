@@ -27,7 +27,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         style={{
-          fontSize: "calc(0.7vh + 0.3vw)",
+          fontSize: "calc(calc(15px + 0.390625vw) * 0.54)",
         }}
       >
         <AppRouterCacheProvider>
