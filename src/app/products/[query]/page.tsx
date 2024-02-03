@@ -27,8 +27,8 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }): Promise<Metadata> {
   // read route params
   const cate = params.query;
-  console.log(cate)
-  console.log(decodeURI(cate))
+  console.log(cate);
+  console.log(decodeURI(cate));
   const meta = {
     Suspensions: {
       description:
