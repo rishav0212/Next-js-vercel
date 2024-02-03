@@ -118,8 +118,18 @@ jobs:
           echo "Using $FTP_SERVER $FTP_USERNAME $FTP_PASSWORD"
           echo "V_FTP_ERVER=$FTP_SERVER" >> $GITHUB_OUTPUT
 
+      - name: Variables before FTP
+        run: |
+          echo ${{ steps.set-env-vars.outputs.V_RELEASE_TAG }}  
+          echo ${{ steps.set-env-vars.outputs.V_RELEASE_TRIGGER }}  
+          echo " 2 ${{ steps.set-env-vars.outputs.V_RELEASE_TRIGGER == true}} "
+          echo " 3 ${{ steps.set-env-vars.outputs.V_RELEASE_TRIGGER == false}} " 
+          echo " 4 ${{ steps.set-env-vars.outputs.V_RELEASE_TAG == true}} 4" 
+          echo " 5 ${{ steps.set-env-vars.outputs.V_RELEASE_TAG == false}} 5" 
+          echo " 6 ${{ steps.set-env-vars.outputs.V_RELEASE_TAG == false || steps.set-env-vars.outputs.V_RELEASE_TRIGGER == true }} 6"
+
       - name: FTP Deploy to Go Daddy using Deploy Action
-        if: ${{  steps.set-env-vars.outputs.V_RELEASE_TAG == false || steps.set-env-vars.outputs.V_RELEASE_TRIGGER == true }}
+        if: ${{ steps.set-env-vars.outputs.V_RELEASE_TAG == false || steps.set-env-vars.outputs.V_RELEASE_TRIGGER == true }}
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ steps.set-ftp-vars.outputs.V_FTP_ERVER }}
