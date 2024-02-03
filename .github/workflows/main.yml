@@ -64,10 +64,10 @@ jobs:
         run: |
             RELEASE_TRIGGER=false;
             RELEASE_TAG=false;
-            if $ { { startsWith(github.ref, 'refs/tags/v') }}; then            
+            if [[ ${{ startsWith(github.ref, 'refs/tags/v') }} ]]; then            
               echo "This is a tag that starts with v"
               RELEASE_TAG=true;
-              if $ { { github.event_name == 'workflow_dispatch' }}; then
+              if [[ ${{ github.event_name == 'workflow_dispatch' }} ]]; then
                   RELEASE_TRIGGER=true;
               fi            
             fi
