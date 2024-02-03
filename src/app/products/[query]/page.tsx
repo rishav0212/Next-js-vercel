@@ -16,8 +16,8 @@ export async function generateStaticParams() {
   return [
     { query: "Suspensions" },
     { query: "Syrups" },
-    { query: "External Preparations" },
-    { query: "Miscellaneous Products" },
+    { query: "External%20Preparations" },
+    { query: "Miscellaneous%20Products" },
     { query: "Tablets" },
     { query: "Capsules" },
     { query: "Sachets" },
@@ -26,7 +26,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }): Promise<Metadata> {
   // read route params
-  const query = params.query;
+  const cate = decodeURI(params.query);
   const meta = {
     Suspensions: {
       description:
@@ -51,11 +51,11 @@ export async function generateMetadata({ params }): Promise<Metadata> {
     Capsules: { description: "", keywords: "" },
   };
   const title =
-    query + "| Saar Biotech| Third party Medicine Contract Manufacturing";
+    cate + "| Saar Biotech| Third party Medicine Contract Manufacturing";
 
   return {
     title: title,
-    description: meta[query].description,
-    keywords: meta[query].keywords,
+    description: meta[cate].description,
+    keywords: meta[cate].keywords,
   };
 }
