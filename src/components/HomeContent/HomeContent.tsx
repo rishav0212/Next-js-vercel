@@ -67,7 +67,7 @@ export default function HomeContent() {
       <NewProducts />
       <Toolbar />
 
-      <div class="diamond green">
+      {/* <div class="diamond green">
         <span>Attractive Packing</span>
       </div>
       <div class="diamond darkGreen">
@@ -75,7 +75,7 @@ export default function HomeContent() {
       </div>
       <div class="diamond green">
         <span>Timely Delivery</span>
-      </div>
+      </div> */}
 
       {/* <Container>
         <Link href="/products">
