@@ -55,6 +55,7 @@ jobs:
           echo "Event Worklfow ${{github.event.workflow}}"
 
       - name: Define Variable for deciding the manual path
+        id: set-env-vars
         run: |
           RELEASE_TRIGGER=false
           RELEASE_TAG=false
@@ -62,6 +63,7 @@ jobs:
           echo "Name: ${{ github.event_name}}"
           echo "Comp With Refs: ${{ startsWith(github.ref, 'refs') }}"
           echo "Comp With Tags: ${{ startsWith(github.ref, 'refs/tags') }}"
+          echo "Comp With Rele: ${{ startsWith(github.ref, 'refs/tags/release-') }}"
           echo "Github: ${{github.ref}}"          
 
           if [[ ${{ startsWith(github.ref, 'refs/tags/release-') }} == true ]]; then            
@@ -76,8 +78,8 @@ jobs:
           echo "V_RELEASE_TRIGGER=$RELEASE_TRIGGER" >> $GITHUB_OUTPUT
           echo "V_RELEASE_TAG=$RELEASE_TAG" >> $GITHUB_OUTPUT
 
-          echo "Release Trigger Vars: $RELEASE_TRIGGER ${{ steps.set-ftp-vars.outputs.V_RELEASE_TRIGGER }}"
-          echo "Release Tag Vars: $RELEASE_TAG ${{ steps.set-ftp-vars.outputs.V_RELEASE_TAG }}"
+          echo "Release Trigger Vars: $RELEASE_TRIGGER ${{ steps.set-env-vars.outputs.V_RELEASE_TRIGGER }}"
+          echo "Release Tag Vars: $RELEASE_TAG ${{ steps.set-env-vars.outputs.V_RELEASE_TAG }}"
 
       - uses: actions/download-artifact@v4
         with:
@@ -96,31 +98,28 @@ jobs:
           echo $FTP_USERNAME_UAT        
           echo $FTP_USERNAME_UAT | sed -e 's/\(.\)/\1 /g'
 
-          branch_name=$(echo $GITHUB_REF | awk -F'/' '{print $NF}')
-          echo "Branch Name is $branch_name"
+          echo "Release Trigger Vars: ${{ steps.set-env-vars.outputs.V_RELEASE_TRIGGER }}"
+          echo "Release Tag Vars: ${{ steps.set-env-vars.outputs.V_RELEASE_TAG }}"
 
-          echo "Release Trigger Vars: ${{ steps.set-ftp-vars.outputs.V_RELEASE_TRIGGER }}"
-          echo "Release Tag Vars: ${{ steps.set-ftp-vars.outputs.V_RELEASE_TAG }}"
-
-          if [ "$branch_name" = "Next-App" ]; then
-            FTP_USERNAME=$FTP_USERNAME_UAT
-            FTP_PASSWORD=$FTP_PASSWORD_UAT
-            echo "Using FTP User from main as $FTP_USERNAME"
-            echo "V_FTP_USERNAME=$FTP_USERNAME" >> $GITHUB_OUTPUT
-            echo "V_FTP_PASSWORD=$FTP_PASSWORD" >> $GITHUB_OUTPUT
-          else         
-            FTP_USERNAME=$FTP_USERNAME_UAT
-            FTP_PASSWORD=$FTP_PASSWORD_UAT
-            echo "Using FTP User from other as $FTP_USERNAME"
-            echo "V_FTP_USERNAME=$FTP_USERNAME" >> $GITHUB_OUTPUT
-            echo "V_FTP_PASSWORD=$FTP_PASSWORD" >> $GITHUB_OUTPUT
+          FTP_USERNAME=$FTP_USERNAME_UAT
+          FTP_PASSWORD=$FTP_PASSWORD_UAT
+          if [ ${{ steps.set-env-vars.outputs.V_RELEASE_TAG }} == false ]; then
+            echo "Using FTP User from non release branch as $FTP_USERNAME"
+          else                     
+            echo "Using FTP User from release branch as $FTP_USERNAME"            
+            FTP_USERNAME=$FTP_USERNAME_PROD
+            FTP_PASSWORD=$FTP_PASSWORD_PROD
           fi
+
+          echo "V_FTP_USERNAME=$FTP_USERNAME" >> $GITHUB_OUTPUT
+          echo "V_FTP_PASSWORD=$FTP_PASSWORD" >> $GITHUB_OUTPUT
 
           FTP_SERVER="ftp.alenslim.co.in"
           echo "Using $FTP_SERVER $FTP_USERNAME $FTP_PASSWORD"
           echo "V_FTP_ERVER=$FTP_SERVER" >> $GITHUB_OUTPUT
 
       - name: FTP Deploy to Go Daddy using Deploy Action
+        if: ${{  steps.set-env-vars.outputs.V_RELEASE_TAG == false || steps.set-env-vars.outputs.V_RELEASE_TRIGGER == true }}
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ steps.set-ftp-vars.outputs.V_FTP_ERVER }}
