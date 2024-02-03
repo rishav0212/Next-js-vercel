@@ -1,5 +1,5 @@
 import { Grid, Typography } from "@mui/material";
-import QueryForm from "@/components/Footer/QueryForm";
+import QueryForm from "@/components/hook-form/QueryForm";
 
 const contactBoxStyles = {
   textAlign: "center",
