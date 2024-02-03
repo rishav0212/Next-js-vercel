@@ -3,6 +3,7 @@ run-name: ${{ github.actor }} is executing the pipeline. Branch Name is ${{ gith
 
 on:
   push:  
+  workflow_dispatch: {}
   workflow_run:
     workflows: ["ftp-deploy-workflow"]
     types:
