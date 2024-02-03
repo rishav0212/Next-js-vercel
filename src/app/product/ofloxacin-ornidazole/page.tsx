@@ -312,9 +312,9 @@ export default function Page() {
 
 export const metadata: Metadata = {
   title:
-    "Azithromycin Suspension | Saar Biotech | Third party Medicine Contract Manufacturing",
+    "Ofloxacin and Ornidazole suspension | Saar Biotech | Third party Medicine Contract Manufacturing",
   description:
-    "Saar biotech Contract manufacturer of pharmaceuticals located in baddi( Excise free Zone) maufacturing  Azithromycin  Tablet/Suspension which is used to treat or prevent certain bacterial infections, most often those causing middle ear infections, strep throat, pneumonia, typhoid, and sinusitis.It is also effective against certain sexually transmitted infections, such as nongonococcal urethritis, chlamydia, and cervicitis.",
+    "We at Saar Biotech manufacturer of pharmaceutical products manufacture composition of Ofloxacin and Ornidazole.Ofloxacin is a quinolone antibiotic used for treating certain kinds of bacterial infections(ear infections, urinary tract infections) and also useful in pelvic inflammatory disease (PID).Ornidazole is a nitroimidazole which is an antibacterial and antiprotozoal drug used to treat anaerobic enteric protozoa. ",
   keywords:
-    "Azithromycin dihydrate IP, azithromycin suspension, azithromycin side effects, azithromycin dosage, azithromycin uses, azithromycin indication, skin infection, ear infection, Gonococcal Infection, 100mg, 200mg, mg, antibiotic drugs, antibacterial drugs ",
+    "Ofloxacin and Ornidazole suspension, Ofloxacin and Ornidazole side effects, Ofloxacin and Ornidazole composition, Ofloxacin and Ornidazole uses, Ofloxacin and Ornidazole combination, Ofloxacin and Ornidazole dosage, Ofloxacin and Ornidazole indication, protozoa infection, bacterial infections, antibiotech, ofloxacin, ornidazole, ofloxacin side effets, ornidazole dosage, 50mg, 125mg ",
 };

@@ -1,4 +1,5 @@
 import { Grid, Typography } from "@mui/material";
+import { Metadata } from "next";
 
 export default function Expo2012Content() {
   return (
@@ -93,3 +94,11 @@ export default function Expo2012Content() {
     </>
   );
 }
+
+export const metadata: Metadata = {
+  title: "Pharmac South 2014| Saar Biotech |Chennai Trade Center",
+  description:
+    "Saar Biotech is GMP , ISO Certified and WHO Applied company involved in making DCGI approved new Drugs from Past seven years",
+  keywords:
+    "pharmac south, orbit, expo, exhibition, 3rd party, III, rd, third party, contract manufacturer, pharmaceuticals, pharma exporters, pharma company in baddi, pharma company in chandigarh, pharma suppliers, medication, iso gmp certified, pharma company. ",
+};

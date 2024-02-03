@@ -6,7 +6,7 @@ import {
   Toolbar,
   Typography,
   Grid,
-  Link
+  Link,
 } from "@mui/material";
 import { FiberManualRecord } from "@mui/icons-material";
 import { Metadata } from "next";
@@ -228,6 +228,8 @@ export default function Page() {
 export const metadata: Metadata = {
   title:
     "MultiVitamin Iron Spray | Saar Biotech | Third party Medicine Contract Manufacturing",
-  description: "",
-  keywords: "",
+  description:
+    "The Multi Vitamin oral spray is designed to give our bodies a unique formulation of vitamins many of us miss out on due to busy lifestyles, poor diets and the reduced nutrient quality in highly processed foods. Formulated to provide optimal nutritional delivery, each spray provides active ingredients in micro-sized droplets that coat and permeate the soft-tissue of the inner cheek, delivery the essential nutrients into the rich vein system.",
+  keywords:
+    "Multi Vitamin, Oral Spray, dietary supplement, health, food, product, third party, pharma, pharmaceutical, manufacturing, baddi, chandigarh",
 };

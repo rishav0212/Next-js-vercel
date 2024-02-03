@@ -1,4 +1,5 @@
 import { Grid, Typography } from "@mui/material";
+import { Metadata } from "next";
 
 export default function DmPharmaContent() {
   return (
@@ -158,3 +159,11 @@ export default function DmPharmaContent() {
     </>
   );
 }
+
+export const metadata: Metadata = {
+  title: "Saar Biotech | Manufacturing Unit",
+  description:
+    "Our Factory is located in Baddi, Dictrict Solan of Himachal Pradesh .DM Pharma, DM, Pharma, PHARMACEUTICALS INDUSTRY,DRUGS , Pharmaceutical ,Drugs , Pharmaceutical Medicines, Our product range comprisesAnti retrovirals,Anti malarials, Cardiovascular, Dermatology , Ophthalmology, Anti deprossants, Anti aging, Anti virus, Anti anxiety, Anti pyreticdrugs in Chandigarh India.We are one from  the top 10 pharmaceutical Companies in India.DM Pharma factory is fulfilled with new and latest equipments equipment",
+  keywords:
+    "export, exports, exporter, exporters,DM, Pharma, Excise freee Zone ,DCGI approved drugs, DM Pharma, Pharmaceutical Manufacturing,  companies in India,  PHARMACEUTICAL, Manufacturers ,Baddi Himachal,Third party medicine manufacturers ,Bulk medicine manufacturers in Chandigarh,  Top Pharmaceutical companies in Chandigarh,  DCGI Approved Molecules, pharmaceutical companies in India, pharmaceuticals export india, top 10 pharmaceutical companies , third party, medicine, manufacturer, pharmaceutical manufacturer in india,pharma exporters, medicines, Anti retrovirals,Anti malarials, Cardiovascular, Dermatology , Ophthalmology, Anti deprossants, Anti aging, Anti virus, Anti anxiety, Anti pyretic, pain killers, pain killer, pain relief , medicines. ",
+};
