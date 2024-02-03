@@ -2,7 +2,7 @@ name: saar-biotech-next-cicd-pipeline
 run-name: ${{ github.actor }} is executing the pipeline. Branch Name is ${{ github.ref }}
 
 on:
-  push:  
+  push:
   workflow_dispatch: {}
 
 jobs:
@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Print Branch Name
         run: echo "The branch name running is_ GitHub Ref - ${{ github.ref }}  ${{github.event.workflow_run.head_branch}}"
-        
+
       - name: Checkout code
         uses: actions/checkout@v4
 
@@ -48,39 +48,31 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Displaying Variables
         run: |
-            echo "Displaying some variables"
-            echo "Event Name ${{github.event_name}}"
-            echo "Event Worklfow ${{github.event.workflow}}"
+          echo "Displaying some variables"
+          echo "Event Name ${{github.event_name}}"
+          echo "Event Worklfow ${{github.event.workflow}}"
 
-
-      - name: Define Variable for deciding the manual path        
+      - name: Define Variable for deciding the manual path
         run: |
-          RELEASE_TRIGGER=false;
-          RELEASE_TAG=false;
-          echo "Name: ${{ github.event_name}}"
-          echo "Comparison1: ${{ github.event_name == 'workflow_dispatch' }}"          
-          
-          if [[ ${{ startsWith(github.ref, 'refs/tags/v') }} ]]; then            
-            echo "This is a tag that starts with v"
-            RELEASE_TAG=true;
-            if [[ ${{ github.event_name == 'workflow_dispatch' }} ]]; then
-              echo "This is a manual trigger"
-              RELEASE_TRIGGER=true;
-            fi            
-          fi
+          RELEASE_TRIGGER=false
+          RELEASE_TAG=false
 
-          if [[ ${{ startsWith(github.ref, 'refs/tags/v') }} ]]; then            
-            echo "This is a tag that starts with v"
-            RELEASE_TAG=true;
+          echo "Name: ${{ github.event_name}}"
+          echo "Comp With Refs: ${{ startsWith(github.ref, 'refs') }}"
+          echo "Comp With Tags: ${{ startsWith(github.ref, 'refs/tags') }}"
+          echo "Github: ${{github.ref}}"          
+
+          if [[ ${{ startsWith(github.ref, 'refs/tags/release-') }} == true ]]; then            
+            echo "The branch start with tags (release). Marking it for production"
+            RELEASE_TAG=true
             if [[ ${{ github.event_name }} == 'workflow_dispatch' ]]; then
-              echo "This is a manual trigger"
-              RELEASE_TRIGGER=true;
+              echo "This is a manual trigger. Will skip auto deployment"
+              RELEASE_TRIGGER=true
             fi            
           fi
-          
+           
           echo "V_RELEASE_TRIGGER=$RELEASE_TRIGGER" >> $GITHUB_OUTPUT
           echo "V_RELEASE_TAG=$RELEASE_TAG" >> $GITHUB_OUTPUT
 
@@ -109,7 +101,7 @@ jobs:
 
           echo "Release Trigger Vars: ${{ steps.set-ftp-vars.outputs.V_RELEASE_TRIGGER }}"
           echo "Release Tag Vars: ${{ steps.set-ftp-vars.outputs.V_RELEASE_TAG }}"
-          
+
           if [ "$branch_name" = "Next-App" ]; then
             FTP_USERNAME=$FTP_USERNAME_UAT
             FTP_PASSWORD=$FTP_PASSWORD_UAT
@@ -136,5 +128,3 @@ jobs:
           password: ${{ steps.set-ftp-vars.outputs.V_FTP_PASSWORD }}
           local-dir: myCustomFolder/
           log-level: standard
-
-
