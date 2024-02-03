@@ -60,7 +60,7 @@ jobs:
             echo "Event Worklfow ${{github.event.workflow}}"
             
 
-      - name: Manual Approval Step        
+      - name: Define Variable for deciding the manual path        
         run: |
             RELEASE_TRIGGER=false;
             RELEASE_TAG=false;
