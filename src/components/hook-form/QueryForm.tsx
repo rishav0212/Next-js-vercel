@@ -11,7 +11,7 @@ import { useState } from "react";
 export default function QueryForm({ props }) {
   const QuerySchema = Yup.object().shape({
     name: Yup.string().required("Name is required"),
-    email: Yup.string().email().required("Email is required"),
+    email: Yup.string().email().required("Email is requi`red"),
     phone: Yup.string().required("Mobile Number is required"),
     company: Yup.string().required("Company name is required"),
     query: Yup.string().required("Query is required"),
