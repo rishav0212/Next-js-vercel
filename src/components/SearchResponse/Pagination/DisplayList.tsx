@@ -74,7 +74,10 @@ const MakeRows = ({ paginatedList }) => {
                   href={
                     product.link.includes("dmpharma")
                       ? product.link
-                      : "/product/" + product.link.toLowerCase()
+                      : product.pageMade
+                      ? "/product/" + product.link.toLowerCase()
+                      : "https://node.saarbiotech.in/product/" +
+                        product.link.toLowerCase()
                   }
                   style={{ color: "black", textDecoration: "none" }}
                 >
@@ -216,7 +219,7 @@ const DisplayList = ({ list, initialPage = 1 }) => {
           zIndex={1}
           sx={{
             background: "#f0f0f0",
-            top: { md: "9.3vh", sm: "9.3vh", xs: "6.3vh" },
+            top: "6.3em",
           }}
         >
           <Grid item>

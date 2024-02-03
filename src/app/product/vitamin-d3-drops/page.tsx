@@ -238,6 +238,8 @@ export default function Page() {
 export const metadata: Metadata = {
   title:
     "Vitamin d3 dops | Saar Biotech | Third party Medicine Contract Manufacturing",
-  description: "",
-  keywords: "",
+  description:
+    "This drops of vitamin D3 helps to get rid of bone disorders such as rickets and osteomalacia in children. As, the age and dark skin leads to restricted exposure to sunlight thus this result in deficiency of vitamin D. ",
+  keywords:
+    "Vitamin D3, Bone disorders, Rickets, Osteomalacia, Children, Sunlight, Small intestine, Calcium, Phosphorus, Osteoblasts, Nuclear factor KB, Rickets, Osteomalacia",
 };

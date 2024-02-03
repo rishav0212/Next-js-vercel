@@ -3,12 +3,7 @@ import * as styles from "@/components/ProductPages/styles";
 
 export default function AboutContent() {
   return (
-    <Grid
-      container
-      alignContent={"center"}
-      justifyContent={"center"}
-      fontSize="calc(0.7vh + 0.3vw)"
-    >
+    <Grid container alignContent={"center"} justifyContent={"center"}>
       <Grid
         container
         item
@@ -20,8 +15,7 @@ export default function AboutContent() {
         sx={{
           backgroundColor: "#fff",
           boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.6)",
-          padding: "10px 20px",
-          paddingBottom: "40px",
+          padding: "2em 1em",
           borderRadius: "10px",
           transition: "boxShadow 0.3s ease",
           "&:hover": {
@@ -37,10 +31,10 @@ export default function AboutContent() {
           textAlign={"center"}
           sx={styles.titleStyle}
         >
-          <h2 style={{ fontSize: "1em" }}>About Saar Biotech</h2>
+          <h2 style={{ fontSize: "0.9em" }}>About Saar Biotech</h2>
         </Grid>
         <Grid item xs={12} sm={12} md={7}>
-          <Typography fontSize={"2em"} textAlign={"justify"}>
+          <Typography fontSize={"1.6em"} textAlign={"justify"}>
             Saar Biotech is one of the leading pharmaceuticals manufacturing
             company in India. We use latest techniques and technologies for
             performing test. We are engaged in third party manufacturing of
@@ -63,7 +57,7 @@ export default function AboutContent() {
           <img
             src="/images/about.jpg"
             alt="Saar Biotech"
-            width={"100%"}
+            width={"90%"}
             style={{
               // backgroundColor: "#fff",
               // boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.3)",
@@ -78,10 +72,10 @@ export default function AboutContent() {
       <Grid
         className="w-100 d-flex align-items-center justify-content-center text-center background-primary"
         sx={{
-          height: "15vh",
+          padding: "2em",
         }}
       >
-        <h5 className="fst-italic text-light" style={{ fontSize: "2.7em" }}>
+        <h5 className="fst-italic text-light" style={{ fontSize: "2.3em" }}>
           "For us Quality Means Doing it Right When No one is Looking."
         </h5>
       </Grid>

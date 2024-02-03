@@ -1,4 +1,5 @@
 import { Grid, Typography } from "@mui/material";
+import { Metadata } from "next";
 
 export default function DmPharmaContent() {
   return (
@@ -20,12 +21,8 @@ export default function DmPharmaContent() {
             boxShadow: "0px 4px 8px rgb(0,0,0,0.4)",
           }}
         >
-          <Grid item xs={12} margin={4}>
-            <Typography
-              fontSize={"4em"}
-              variant="h4"
-              className="color-primary"
-            >
+          <Grid item xs={12} margin={1}>
+            <Typography fontSize={"4em"} variant="h4" className="color-primary">
               DM Pharma Manufacuring Unit
             </Typography>
           </Grid>
@@ -114,16 +111,26 @@ export default function DmPharmaContent() {
           }}
         >
           <Grid item xs={12} margin={2} className="text-center color-primary">
-            <Typography fontSize={"3em"} variant="h4">Our Strengths</Typography>
+            <Typography fontSize={"3em"} variant="h4">
+              Our Strengths
+            </Typography>
           </Grid>
 
           <Grid item xs={12} sm={12} md={5} margin={1}>
-            <Typography fontSize={"1.9em"} variant="h6" className="font--size-1125">
+            <Typography
+              fontSize={"1.9em"}
+              variant="h6"
+              className="font--size-1125"
+            >
               <li>Timely Delivery of Product</li>
             </Typography>
           </Grid>
           <Grid item xs={12} sm={12} md={5} margin={1}>
-            <Typography fontSize={"1.9em"} variant="h6" className="font--size-1125">
+            <Typography
+              fontSize={"1.9em"}
+              variant="h6"
+              className="font--size-1125"
+            >
               <li>Determined by quality, integrity and core values </li>
             </Typography>
           </Grid>
@@ -136,7 +143,11 @@ export default function DmPharmaContent() {
             </Typography>
           </Grid>
           <Grid item xs={12} sm={12} md={5} margin={1}>
-            <Typography fontSize={"1.9em"} variant="h6" className="font--size-1125">
+            <Typography
+              fontSize={"1.9em"}
+              variant="h6"
+              className="font--size-1125"
+            >
               <li>
                 Multidisciplined workforce that is motivated towards the highest
                 standards of customer satisfaction
@@ -148,3 +159,11 @@ export default function DmPharmaContent() {
     </>
   );
 }
+
+export const metadata: Metadata = {
+  title: "Saar Biotech | Manufacturing Unit",
+  description:
+    "Our Factory is located in Baddi, Dictrict Solan of Himachal Pradesh .DM Pharma, DM, Pharma, PHARMACEUTICALS INDUSTRY,DRUGS , Pharmaceutical ,Drugs , Pharmaceutical Medicines, Our product range comprisesAnti retrovirals,Anti malarials, Cardiovascular, Dermatology , Ophthalmology, Anti deprossants, Anti aging, Anti virus, Anti anxiety, Anti pyreticdrugs in Chandigarh India.We are one from  the top 10 pharmaceutical Companies in India.DM Pharma factory is fulfilled with new and latest equipments equipment",
+  keywords:
+    "export, exports, exporter, exporters,DM, Pharma, Excise freee Zone ,DCGI approved drugs, DM Pharma, Pharmaceutical Manufacturing,  companies in India,  PHARMACEUTICAL, Manufacturers ,Baddi Himachal,Third party medicine manufacturers ,Bulk medicine manufacturers in Chandigarh,  Top Pharmaceutical companies in Chandigarh,  DCGI Approved Molecules, pharmaceutical companies in India, pharmaceuticals export india, top 10 pharmaceutical companies , third party, medicine, manufacturer, pharmaceutical manufacturer in india,pharma exporters, medicines, Anti retrovirals,Anti malarials, Cardiovascular, Dermatology , Ophthalmology, Anti deprossants, Anti aging, Anti virus, Anti anxiety, Anti pyretic, pain killers, pain killer, pain relief , medicines. ",
+};

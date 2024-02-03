@@ -41,26 +41,26 @@ try {
 		$company = $data['company'];
 		$query = $data['query'];
 	} else {
-		response['success'] = false
-		response['error'] = "error decoding input fields"
+		// response['success'] = false
+		// response['error'] = "error decoding input fields"
 	}
 
-	response['name'] = $data['name'];
-	response['email'] = $data['email'];
-	response['phone'] = $data['phone'];
-	response['company'] = $data['company'];
-	response['query'] = $data['query'];
+	// response['name'] = $data['name'];
+	// response['email'] = $data['email'];
+	// response['phone'] = $data['phone'];
+	// response['company'] = $data['company'];
+	// response['query'] = $data['query'];
 
 	//Fetch the Referrer Site.
 	$referrer = $_SERVER['HTTP_REFERER'];
 	$DEFAULT_REFERRER = "default.saarbiotech.in";
-	response['referred'] = $referrer
+	// response['referred'] = $referrer
 	// echo "Referred: $referrer\n";
 
 	if ($referrer !== null) {
 		$parsedURL = parse_url($referrer)['host'];
 		// echo "Parsed URL: $parsedURL\n";
-		response['Parsed_URL'] = $parsedURL
+		// response['Parsed_URL'] = $parsedURL
 
 	} else {
 		// echo "Referrer not found. Defualting it to: DEFAULT_REFERRER";
@@ -91,9 +91,9 @@ try {
 
 	//Content
 	$mail->isHTML(true);                                  //Set email format to HTML
-	$mail->Subject = "$parsedURL | Enquiry | $name";
-	$mail->Body    = "HTML Enquiry from $name. Email is $email. Phone is: $phone. Query: $query";
-	$mail->AltBody = "Plain Enquiry from $name. Email is $email. Phone is: $phone. Query: $query";
+	$mail->Subject = "$parsedURL | Enquiry | {$name}";
+	$mail->Body    = "HTML Enquiry from {$name}. Email is {$email}. Phone is: {$phone}. Query: {$query}";
+	$mail->AltBody = "Plain Enquiry from {$name}. Email is {$email}. Phone is: {$phone}. Query: {$query}";
 
 	$mail->send();
 	// print("Message has been sent");

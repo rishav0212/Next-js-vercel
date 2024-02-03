@@ -14,7 +14,7 @@ export default function Footer() {
     <>
       <ThemeProvider theme={darkTheme}>
         <Box
-          py={5}
+          py={2}
           sx={{
             width: "100%",
             display: "flex",
@@ -32,7 +32,7 @@ export default function Footer() {
                 md={5}
                 color={"white"}
                 alignSelf={"center"}
-                fontSize={"2em"}
+                fontSize={"1.5em"}
               >
                 <h4>Contact Us</h4>
                 <ul>
@@ -68,7 +68,7 @@ export default function Footer() {
                 </ul>
               </Grid>
 
-              <Grid item xs={11} sm={9} md={5}>
+              <Grid item xs={11} sm={9} md={5} mt={2}>
                 <QueryForm props={"footer"} />
               </Grid>
             </Grid>

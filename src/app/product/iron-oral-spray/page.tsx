@@ -199,6 +199,6 @@ export default function Page() {
 export const metadata: Metadata = {
   title:
     "Iron Oral Spray | Saar Biotech | Third party Medicine Contract Manufacturing",
-  description: "",
-  keywords: "",
+  description: "Iron oral spray is an effective intra-spray technology formulated to directly deliver iron into the bloodstream, bypassing the primary processing by the digestive system and thus preventing digestive discomfort experienced from ingested iron supplements while also enhancing bioavailability. ",
+  keywords: "iron, oral, spray, Avoiding digestive comfort, enhancing bioavailability, digestive system, third party, pharma, pharmaceutical, manufacturing, baddi, chandigarh",
 };

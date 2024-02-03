@@ -9,152 +9,350 @@ RewriteEngine On
 
 
 # Redirect to new links from old website
-RewriteRule ^index\.html$ https://node.saarbiotech.in/ [R=302,L]
+RewriteRule ^index\.html$ / [R=302,L]
 
-RewriteRule ^about\.html$ https://node.saarbiotech.in/about/ [R=302,L]
+RewriteRule ^about\.html$ /about/ [R=302,L]
 
-RewriteRule ^saar\.html$ https://node.saarbiotech.in/manufacturing-unit/saar-biotech/ [R=302,L]
+RewriteRule ^saar\.html$ /manufacturing-unit/saar-biotech/ [R=302,L]
 
-RewriteRule ^dm\.html$ https://node.saarbiotech.in/manufacturing-unit/dm-pharma/ [R=302,L]
+RewriteRule ^dm\.html$ /manufacturing-unit/dm-pharma/ [R=302,L]
 
-RewriteRule ^Suspensions\.html$ https://node.saarbiotech.in/products/Suspensions/ [R=302,L]
+RewriteRule ^Suspensions\.html$ /products/Suspensions/ [R=302,L]
 
-RewriteRule ^Syrup\.html$ https://node.saarbiotech.in/products/Syrups/ [R=302,L]
+RewriteRule ^Syrup\.html$ /products/Syrups/ [R=302,L]
 
-RewriteRule ^External\.html$ https://node.saarbiotech.in/products/External\ Preparations/ [R=302,L]
+RewriteRule ^External\.html$ /products/External\ Preparations/ [R=302,L]
 
-RewriteRule ^Miscellaneous\.html$ https://node.saarbiotech.in/products/Miscellaneous\ Products/ [R=302,L]
+RewriteRule ^Miscellaneous\.html$ /products/Miscellaneous\ Products/ [R=302,L]
 
-RewriteRule ^Tablet\.html$ https://node.saarbiotech.in/products/Tablets/ [R=302,L]
+RewriteRule ^Tablet\.html$ /products/Tablets/ [R=302,L]
 
-RewriteRule ^Capsule\.html$ https://node.saarbiotech.in/products/Capsules/ [R=302,L]
+RewriteRule ^Capsule\.html$ /products/Capsules/ [R=302,L]
 
-RewriteRule ^Sachets\.html$ https://node.saarbiotech.in/products/Sachets/ [R=302,L]
+RewriteRule ^Sachets\.html$ /products/Sachets/ [R=302,L]
 
-RewriteRule ^Event\.html$ https://node.saarbiotech.in/events/ [R=302,L]
+RewriteRule ^Event\.html$ /events/ [R=302,L]
 
-RewriteRule ^pharmac\ south\ 2014\.html$ https://node.saarbiotech.in/events/pharma-south-2014/ [R=302,L]
+RewriteRule ^pharmac\ south\ 2014\.html$ /events/pharma-south-2014/ [R=302,L]
 
-RewriteRule ^Indian\ pharma\ Expo\ 2013\.html$ https://node.saarbiotech.in/events/indian-pharma-expo-2013/ [R=302,L]
+RewriteRule ^Indian\ pharma\ Expo\ 2013\.html$ /events/indian-pharma-expo-2013/ [R=302,L]
 
-RewriteRule ^Indian\ pharma\ Expo\ 2012\.html$ https://node.saarbiotech.in/events/indian-pharma-expo-2012/ [R=302,L]
+RewriteRule ^Indian\ pharma\ Expo\ 2012\.html$ /events/indian-pharma-expo-2012/ [R=302,L]
 
 
-RewriteRule ^contact-us\.html$ https://node.saarbiotech.in/contact/ [R=302,L]
+RewriteRule ^contact-us\.html$ /contact/ [R=302,L]
 
 
 # PRoducts Pages
-RewriteRule ^Vitamin\ D3\ Drops\.html$ https://node.saarbiotech.in/product/vitamin-d3-drops/ [R=302,L]
+RewriteRule ^Vitamin\ D3\ Drops\.html$ /product/vitamin-d3-drops/ [R=302,L]
 
-RewriteRule ^Multivitamin\ Oral\ Spray\.html$ https://node.saarbiotech.in/product/multivitamin-oral-spray/ [R=302,L]
+RewriteRule ^Multivitamin\ Oral\ Spray\.html$ /product/multivitamin-oral-spray/ [R=302,L]
 
-RewriteRule ^Immunity\ Booster\ Spray\.html$ https://node.saarbiotech.in/product/immunity-booster-spray/ [R=302,L]
+RewriteRule ^Immunity\ Booster\ Spray\.html$ /product/immunity-booster-spray/ [R=302,L]
 
-RewriteRule ^Iron\ Oral\ Spray\.html$ https://node.saarbiotech.in/product/iron-oral-spray/ [R=302,L]
+RewriteRule ^Iron\ Oral\ Spray\.html$ /product/iron-oral-spray/ [R=302,L]
 
-RewriteRule ^Ketaconazole\.html$ https://node.saarbiotech.in/product/ketoconazole/ [R=302,L]
+RewriteRule ^sa1\.html$ /product/azithromycin/ [R=302,L]
+
+RewriteRule ^2\.html$ /product/ofloxacin-ornidazole/ [R=302,L]
 
 
-RewriteRule ^sac3\.html$ https://node.saarbiotech.in/product/cpm-pcm-phenylepherine-hcl/ [R=302,L]
+#Products that were dynamically rendered# RewriteRule ^Ketaconazole\.html$ /product/ketoconazole/ [R=302,L]
 
-RewriteRule ^sa1\.html$ https://node.saarbiotech.in/product/azithromycin/ [R=302,L]
+# RewriteRule ^sac3\.html$ /product/cpm-pcm-phenylepherine-hcl/ [R=302,L]
 
-RewriteRule ^sa2\.html$ https://node.saarbiotech.in/product/ofloxacin/ [R=302,L]
+# RewriteRule ^sa2\.html$ /product/ofloxacin/ [R=302,L]
 
-RewriteRule ^sa3\.html$ https://node.saarbiotech.in/product/ofloxacin-tinidazole/ [R=302,L]
+# RewriteRule ^sa3\.html$ /product/ofloxacin-tinidazole/ [R=302,L]
 
-RewriteRule ^2\.html$ https://node.saarbiotech.in/product/ofloxacin-ornidazole/ [R=302,L]
+# RewriteRule ^sa6\.html$ /product/roxithromycin/ [R=302,L]
 
-RewriteRule ^sa6\.html$ https://node.saarbiotech.in/product/roxithromycin/ [R=302,L]
+# RewriteRule ^sa8\.html$ /product/ofloxacin-nitozoxanide/ [R=302,L]
 
-RewriteRule ^sa8\.html$ https://node.saarbiotech.in/product/ofloxacin-nitozoxanide/ [R=302,L]
+# RewriteRule ^Ofloxacin\ &\ Metronidazole\ Suspension\.html$ /product/ofloxacin-metronidazole/ [R=302,L]
 
-RewriteRule ^Ofloxacin\ &\ Metronidazole\ Suspension\.html$ https://node.saarbiotech.in/product/ofloxacin-metronidazole/ [R=302,L]
+# RewriteRule ^sac7\.html$ /product/pcm-cpm-phenylephrine-hcl-sodium-citrate-menthol/ [R=302,L]
 
-RewriteRule ^sac7\.html$ https://node.saarbiotech.in/product/pcm-cpm-phenylephrine-hcl-sodium-citrate-menthol/ [R=302,L]
+# RewriteRule ^sac6\.html$ /product/cetirizine-dihcl/ [R=302,L]
 
-RewriteRule ^sac6\.html$ https://node.saarbiotech.in/product/cetirizine-dihcl/ [R=302,L]
+# RewriteRule ^sac1\.html$ /product/levocetirizine-dihcl/ [R=302,L]
 
-RewriteRule ^sac1\.html$ https://node.saarbiotech.in/product/levocetirizine-dihcl/ [R=302,L]
+# RewriteRule ^sac5\.html$ /product/dextromethorphen-hbr-cpm-guaiphenesin-ammonium-chloride/ [R=302,L]
 
-RewriteRule ^sac5\.html$ https://node.saarbiotech.in/product/dextromethorphen-hbr-cpm-guaiphenesin-ammonium-chloride/ [R=302,L]
+# RewriteRule ^sac4\.html$ /product/cetirizine-hcl-pcm-phenylepherine-hcl/ [R=302,L]
 
-RewriteRule ^sac4\.html$ https://node.saarbiotech.in/product/cetirizine-hcl-pcm-phenylepherine-hcl/ [R=302,L]
+# RewriteRule ^Dicyclomine\+PCM\.html$ /product/dicyclomine-hcl-pcm/ [R=302,L]
 
-RewriteRule ^Dicyclomine\+PCM\.html$ https://node.saarbiotech.in/product/dicyclomine-hcl-pcm/ [R=302,L]
+# RewriteRule ^sac2\.html$ /product/fexofenadine-hcl/ [R=302,L]
 
-RewriteRule ^sac2\.html$ https://node.saarbiotech.in/product/fexofenadine-hcl/ [R=302,L]
+# RewriteRule ^Dextromethorphan\ Hydrobromide\ &\ Chlorpheniramine\ Maleate\ Suspension\.html$ /product/dextromethorphan-hydrobromide-chlorpheniramine-maleate/ [R=302,L]
 
-RewriteRule ^Dextromethorphan\ Hydrobromide\ &\ Chlorpheniramine\ Maleate\ Suspension\.html$ https://node.saarbiotech.in/product/dextromethorphan-hydrobromide-chlorpheniramine-maleate/ [R=302,L]
+# RewriteRule ^Deflazacort\.html$ /product/deflazacort/ [R=302,L]
 
-RewriteRule ^Deflazacort\.html$ https://node.saarbiotech.in/product/deflazacort/ [R=302,L]
+# RewriteRule ^saa6\.html$ /product/promethazine-hcl/ [R=302,L]
 
-RewriteRule ^saa6\.html$ https://node.saarbiotech.in/product/promethazine-hcl/ [R=302,L]
+# RewriteRule ^PCM\+Promethazine\.html$ /product/pcm-promethazine-hcl/ [R=302,L]
 
-RewriteRule ^PCM\+Promethazine\.html$ https://node.saarbiotech.in/product/pcm-promethazine-hcl/ [R=302,L]
+# RewriteRule ^d2\.html$ /product/ondansetron/ [R=302,L]
 
-RewriteRule ^d2\.html$ https://node.saarbiotech.in/product/ondansetron/ [R=302,L]
+# RewriteRule ^d1\.html$ /product/domperidone/ [R=302,L]
 
-RewriteRule ^d1\.html$ https://node.saarbiotech.in/product/domperidone/ [R=302,L]
+# RewriteRule ^ds7\.html$ /product/cefixime-ofloxacin/ [R=302,L]
 
-RewriteRule ^ds7\.html$ https://node.saarbiotech.in/product/cefixime-ofloxacin/ [R=302,L]
+# RewriteRule ^ac1\.html$ /product/megaldrate-simethicon/ [R=302,L]
 
-RewriteRule ^ac1\.html$ https://node.saarbiotech.in/product/megaldrate-simethicon/ [R=302,L]
+# RewriteRule ^Oxetacaine\ \+\ Aluminum\ hydroxide\ \+\ Magnesium\ hydroxide\.html$ /product/oxetacaine-aluminium-hydrixide-magnesium-hydroxide/ [R=302,L]
 
-RewriteRule ^Oxetacaine\ \+\ Aluminum\ hydroxide\ \+\ Magnesium\ hydroxide\.html$ https://node.saarbiotech.in/product/oxetacaine-aluminium-hydrixide-magnesium-hydroxide/ [R=302,L]
+# RewriteRule ^Activated\ Dimethicone\ \+\ Magnesium\ hydro\ \+\ dried\ Aluminum\ hydro\.html$ /product/activated-dimethicon-magnesium-hydro-dried-aliminium-hydro/ [R=302,L]
 
-RewriteRule ^Activated\ Dimethicone\ \+\ Magnesium\ hydro\ \+\ dried\ Aluminum\ hydro\.html$ https://node.saarbiotech.in/product/activated-dimethicon-magnesium-hydro-dried-aliminium-hydro/ [R=302,L]
+# RewriteRule ^ds2\.html$ /product/amoxycillin/ [R=302,L]
 
-RewriteRule ^ds2\.html$ https://node.saarbiotech.in/product/amoxycillin/ [R=302,L]
+# RewriteRule ^ds3\.html$ /product/cefixime/ [R=302,L]
 
-RewriteRule ^ds3\.html$ https://node.saarbiotech.in/product/cefixime/ [R=302,L]
+# RewriteRule ^ds4\.html$ /product/cefpodoxime/ [R=302,L]
 
-RewriteRule ^ds4\.html$ https://node.saarbiotech.in/product/cefpodoxime/ [R=302,L]
+# RewriteRule ^Terbutaline,\ Guaiphenesin,\ Ambroxol\ and\ Menthol\ Syrup\.html$ /product/terbutaline-sulphate-guaiphenesin-ambroxol-hcl-menthol/ [R=302,L]
 
-RewriteRule ^Terbutaline,\ Guaiphenesin,\ Ambroxol\ and\ Menthol\ Syrup\.html$ https://node.saarbiotech.in/product/terbutaline-sulphate-guaiphenesin-ambroxol-hcl-menthol/ [R=302,L]
+# RewriteRule ^cs1\.html$ /product/terbutaline-sulphate-guaiphenesin-bromhexine-hcl-menthol/ [R=302,L]
 
-RewriteRule ^cs1\.html$ https://node.saarbiotech.in/product/terbutaline-sulphate-guaiphenesin-bromhexine-hcl-menthol/ [R=302,L]
+# RewriteRule ^cs2\.html$ /product/diphenhydramine-amonium-chloride-sodium-citrate-menthol/ [R=302,L]
 
-RewriteRule ^cs2\.html$ https://node.saarbiotech.in/product/diphenhydramine-amonium-chloride-sodium-citrate-menthol/ [R=302,L]
+# RewriteRule ^Cetirizine\ and\ Ambroxal\ HCL\ Syrup\.html$ /product/cetirizine-dihcl-ambroxol-hcl/ [R=302,L]
 
-RewriteRule ^Cetirizine\ and\ Ambroxal\ HCL\ Syrup\.html$ https://node.saarbiotech.in/product/cetirizine-dihcl-ambroxol-hcl/ [R=302,L]
+# RewriteRule ^Iron\ \(III\)\ -\ hydroxide\ polymaltose\ complex\+Folic\ acid\ Suspension\.html$ /product/iron-iii-hydroxide-polymaltose-complex-folic-acid/ [R=302,L]
 
-RewriteRule ^Iron\ \(III\)\ -\ hydroxide\ polymaltose\ complex\+Folic\ acid\ Suspension\.html$ https://node.saarbiotech.in/product/iron-iii-hydroxide-polymaltose-complex-folic-acid/ [R=302,L]
+# RewriteRule ^ts4\.html$ /product/ferrous-ascorbate-folic-acid/ [R=302,L]
 
-RewriteRule ^ts4\.html$ https://node.saarbiotech.in/product/ferrous-ascorbate-folic-acid/ [R=302,L]
+# RewriteRule ^Enzyme\ Formula\.html$ /product/enzyme-formula-in-food/ [R=302,L]
 
-RewriteRule ^Enzyme\ Formula\.html$ https://node.saarbiotech.in/product/enzyme-formula-in-food/ [R=302,L]
+# RewriteRule ^Calcium\ Carbonate\ and\ Vitamin\ D3\.html$ /product/calcium-carbonate-(eq-to-elemental-calcium)-d3/ [R=302,L]
 
-RewriteRule ^Calcium\ Carbonate\ and\ Vitamin\ D3\.html$ https://node.saarbiotech.in/product/calcium-carbonate-(eq-to-elemental-calcium)-d3/ [R=302,L]
+# RewriteRule ^Alpha-Amylases\ with\ papain\ Syrup\.html$ /product/alpha-amyalase-bacterial-papain/ [R=302,L]
 
-RewriteRule ^Alpha-Amylases\ with\ papain\ Syrup\.html$ https://node.saarbiotech.in/product/alpha-amyalase-bacterial-papain/ [R=302,L]
+# RewriteRule ^Cyproheptadine\ and\ Tricholine\ Citrate\ Syrup\.html$ /product/cyproheptadine-hcl-tricholine-citrate/ [R=302,L]
 
-RewriteRule ^Cyproheptadine\ and\ Tricholine\ Citrate\ Syrup\.html$ https://node.saarbiotech.in/product/cyproheptadine-hcl-tricholine-citrate/ [R=302,L]
+# RewriteRule ^Tricholine\ Citrate\ Syrup\.html$ /product/tricholine-citrate-sorbitol-solution-70-qs/ [R=302,L]
 
-RewriteRule ^Tricholine\ Citrate\ Syrup\.html$ https://node.saarbiotech.in/product/tricholine-citrate-sorbitol-solution-70-qs/ [R=302,L]
+# RewriteRule ^ns2\.html$ /product/xylometazoline-hcl-nasal-drops-spray/ [R=302,L]
 
-RewriteRule ^ns2\.html$ https://node.saarbiotech.in/product/xylometazoline-hcl-nasal-drops-spray/ [R=302,L]
+# RewriteRule ^Potassium\ nitrate\ and\ Sodium\ Fluoride\ gel\.html$ /product/potassium-nitrate-sodium-fluoride/ [R=302,L]
 
-RewriteRule ^Potassium\ nitrate\ and\ Sodium\ Fluoride\ gel\.html$ https://node.saarbiotech.in/product/potassium-nitrate-sodium-fluoride/ [R=302,L]
+# RewriteRule ^Diclofenac\ Sodium\ Gel\.html$ /product/diclofenac-diethylamine-eq-dicofenac-sodium/ [R=302,L]
 
-RewriteRule ^Diclofenac\ Sodium\ Gel\.html$ https://node.saarbiotech.in/product/diclofenac-diethylamine-eq-dicofenac-sodium/ [R=302,L]
+# RewriteRule ^Terbinafine\ Hydrochloride\ &\ Mometasone\ Furoate\ Cream\.html$ /product/mometasone-furoate/ [R=302,L]
 
-RewriteRule ^Terbinafine\ Hydrochloride\ &\ Mometasone\ Furoate\ Cream\.html$ https://node.saarbiotech.in/product/mometasone-furoate/ [R=302,L]
+# RewriteRule ^Ketoconazole\ cream\.html$ /product/ketoconazole/ [R=302,L]
 
-RewriteRule ^Ketoconazole\ cream\.html$ https://node.saarbiotech.in/product/ketoconazole/ [R=302,L]
+# RewriteRule ^Adapalene\ and\ Clindamycin\ Phosphate\ Gel\.html$ /product/adapalene-clindamycin-phosphate/ [R=302,L]
 
-RewriteRule ^Adapalene\ and\ Clindamycin\ Phosphate\ Gel\.html$ https://node.saarbiotech.in/product/adapalene-clindamycin-phosphate/ [R=302,L]
+# RewriteRule ^Clobetasol\ Propionate\ and\ Salicylic\ acid\ Ointment\.html$ /product/clobetasol-propionate-neomycin-sulphate-miconazole-nitrate-chlorocresol/ [R=302,L]
 
-RewriteRule ^Clobetasol\ Propionate\ and\ Salicylic\ acid\ Ointment\.html$ https://node.saarbiotech.in/product/clobetasol-propionate-neomycin-sulphate-miconazole-nitrate-chlorocresol/ [R=302,L]
+# RewriteRule ^Clindamycin\ and\ Nicotinamide\ Gel\.html$ /product/clindamycin-phosphate-nicotinamide/ [R=302,L]
 
-RewriteRule ^Clindamycin\ and\ Nicotinamide\ Gel\.html$ https://node.saarbiotech.in/product/clindamycin-phosphate-nicotinamide/ [R=302,L]
+# RewriteRule ^Alkalizer_Disodium\ Hydrogen\ Citrate\.html$ /product/disodium-hydrogen-citrate/ [R=302,L]
 
-RewriteRule ^Alkalizer_Disodium\ Hydrogen\ Citrate\.html$ https://node.saarbiotech.in/product/disodium-hydrogen-citrate/ [R=302,L]
+# RewriteRule ^Chlorhexidine\ Gluconate\ Solution\.html$ /product/chlorhexidine-gluconate/ [R=302,L]
 
-RewriteRule ^Chlorhexidine\ Gluconate\ Solution\.html$ https://node.saarbiotech.in/product/chlorhexidine-gluconate/ [R=302,L]
+# RewriteRule ^Milk\ of\ Magnesia\ and\ Liquid\ Paraffin\ Susupension\.html$ /product/milk-of-magnesia-liquid-paraffin/ [R=302,L]
 
-RewriteRule ^Milk\ of\ Magnesia\ and\ Liquid\ Paraffin\ Susupension\.html$ https://node.saarbiotech.in/product/milk-of-magnesia-liquid-paraffin/ [R=302,L]
 
+#new redirects for above 
+
+# Redirects for Ketaconazole.html
+RewriteRule ^product/ketoconazole/$ https://old.saarbiotech.in/Ketaconazole.html [R=302,L]
+RewriteRule ^Ketaconazole\.html$ https://old.saarbiotech.in/Ketaconazole.html [R=302,L]
+
+# Redirects for sac3.html
+RewriteRule ^product/cpm-pcm-phenylepherine-hcl/$ https://old.saarbiotech.in/sac3.html [R=302,L]
+RewriteRule ^sac3\.html$ https://old.saarbiotech.in/sac3.html [R=302,L]
+
+# Redirects for sa2.html
+RewriteRule ^product/ofloxacin/$ https://old.saarbiotech.in/sa2.html [R=302,L]
+RewriteRule ^sa2\.html$ https://old.saarbiotech.in/sa2.html [R=302,L]
+
+# Redirects for sa3.html
+RewriteRule ^product/ofloxacin-tinidazole/$ https://old.saarbiotech.in/sa3.html [R=302,L]
+RewriteRule ^sa3\.html$ https://old.saarbiotech.in/sa3.html [R=302,L]
+
+# Redirects for sa6.html
+RewriteRule ^product/roxithromycin/$ https://old.saarbiotech.in/sa6.html [R=302,L]
+RewriteRule ^sa6\.html$ https://old.saarbiotech.in/sa6.html [R=302,L]
+
+# Redirects for sa8.html
+RewriteRule ^product/ofloxacin-nitozoxanide/$ https://old.saarbiotech.in/sa8.html [R=302,L]
+RewriteRule ^sa8\.html$ https://old.saarbiotech.in/sa8.html [R=302,L]
+
+# Redirects for Ofloxacin & Metronidazole Suspension.html
+RewriteRule ^product/ofloxacin-metronidazole/$ https://old.saarbiotech.in/Ofloxacin\ &\ Metronidazole\ Suspension.html [R=302,L]
+RewriteRule ^Ofloxacin\ &\ Metronidazole\ Suspension\.html$ https://old.saarbiotech.in/Ofloxacin\ &\ Metronidazole\ Suspension.html [R=302,L]
+
+# Redirects for sac7.html
+RewriteRule ^product/pcm-cpm-phenylephrine-hcl-sodium-citrate-menthol/$ https://old.saarbiotech.in/sac7.html [R=302,L]
+RewriteRule ^sac7\.html$ https://old.saarbiotech.in/sac7.html [R=302,L]
+
+# Redirects for sac6.html
+RewriteRule ^product/cetirizine-dihcl/$ https://old.saarbiotech.in/sac6.html [R=302,L]
+RewriteRule ^sac6\.html$ https://old.saarbiotech.in/sac6.html [R=302,L]
+
+# Redirects for sac1.html
+RewriteRule ^product/levocetirizine-dihcl/$ https://old.saarbiotech.in/sac1.html [R=302,L]
+RewriteRule ^sac1\.html$ https://old.saarbiotech.in/sac1.html [R=302,L]
+
+# Redirects for sac5.html
+RewriteRule ^product/dextromethorphen-hbr-cpm-guaiphenesin-ammonium-chloride/$ https://old.saarbiotech.in/sac5.html [R=302,L]
+RewriteRule ^sac5\.html$ https://old.saarbiotech.in/sac5.html [R=302,L]
+
+# Redirects for sac4.html
+RewriteRule ^product/cetirizine-hcl-pcm-phenylepherine-hcl/$ https://old.saarbiotech.in/sac4.html [R=302,L]
+RewriteRule ^sac4\.html$ https://old.saarbiotech.in/sac4.html [R=302,L]
+
+# Redirects for Dicyclomine+PCM.html
+RewriteRule ^product/dicyclomine-hcl-pcm/$ https://old.saarbiotech.in/Dicyclomine+PCM.html [R=302,L]
+RewriteRule ^Dicyclomine\+PCM\.html$ https://old.saarbiotech.in/Dicyclomine+PCM.html [R=302,L]
+
+# Redirects for sac2.html
+RewriteRule ^product/fexofenadine-hcl/$ https://old.saarbiotech.in/sac2.html [R=302,L]
+RewriteRule ^sac2\.html$ https://old.saarbiotech.in/sac2.html [R=302,L]
+
+# Redirects for Dextromethorphan Hydrobromide & Chlorpheniramine Maleate Suspension.html
+RewriteRule ^product/dextromethorphan-hydrobromide-chlorpheniramine-maleate/$ https://old.saarbiotech.in/Dextromethorphan\ Hydrobromide\ &\ Chlorpheniramine\ Maleate\ Suspension.html [R=302,L]
+RewriteRule ^Dextromethorphan\ Hydrobromide\ &\ Chlorpheniramine\ Maleate\ Suspension\.html$ https://old.saarbiotech.in/Dextromethorphan\ Hydrobromide\ &\ Chlorpheniramine\ Maleate\ Suspension.html [R=302,L]
+
+# Redirects for Deflazacort.html
+RewriteRule ^product/deflazacort/$ https://old.saarbiotech.in/Deflazacort.html [R=302,L]
+RewriteRule ^Deflazacort\.html$ https://old.saarbiotech.in/Deflazacort.html [R=302,L]
+
+# Redirects for saa6.html
+RewriteRule ^product/promethazine-hcl/$ https://old.saarbiotech.in/saa6.html [R=302,L]
+RewriteRule ^saa6\.html$ https://old.saarbiotech.in/saa6.html [R=302,L]
+
+# Redirects for PCM+Promethazine.html
+RewriteRule ^product/pcm-promethazine-hcl/$ https://old.saarbiotech.in/PCM\+Promethazine.html [R=302,L]
+RewriteRule ^PCM\+Promethazine\.html$ https://old.saarbiotech.in/PCM\+Promethazine.html [R=302,L]
+
+# Redirects for d2.html
+RewriteRule ^product/ondansetron/$ https://old.saarbiotech.in/d2.html [R=302,L]
+RewriteRule ^d2\.html$ https://old.saarbiotech.in/d2.html [R=302,L]
+
+# Redirects for d1.html
+RewriteRule ^product/domperidone/$ https://old.saarbiotech.in/d1.html [R=302,L]
+RewriteRule ^d1\.html$ https://old.saarbiotech.in/d1.html [R=302,L]
+
+# Redirects for ds7.html
+RewriteRule ^product/cefixime-ofloxacin/$ https://old.saarbiotech.in/ds7.html [R=302,L]
+RewriteRule ^ds7\.html$ https://old.saarbiotech.in/ds7.html [R=302,L]
+
+# Redirects for ac1.html
+RewriteRule ^product/megaldrate-simethicon/$ https://old.saarbiotech.in/ac1.html [R=302,L]
+RewriteRule ^ac1\.html$ https://old.saarbiotech.in/ac1.html [R=302,L]
+
+# Redirects for Oxetacaine + Aluminum hydroxide + Magnesium hydroxide.html
+RewriteRule ^product/oxetacaine-aluminium-hydrixide-magnesium-hydroxide/$ https://old.saarbiotech.in/Oxetacaine\ \+\ Aluminum\ hydroxide\ \+\ Magnesium\ hydroxide\.html [R=302,L]
+RewriteRule ^Oxetacaine\ \+\ Aluminum\ hydroxide\ \+\ Magnesium\ hydroxide\.html$ https://old.saarbiotech.in/Oxetacaine\ \+\ Aluminum\ hydroxide\ \+\ Magnesium\ hydroxide\.html [R=302,L]
+
+# Redirects for Activated Dimethicone + Magnesium hydro + dried Aluminum hydro.html
+RewriteRule ^product/activated-dimethicon-magnesium-hydro-dried-aliminium-hydro/$ https://old.saarbiotech.in/Activated\ Dimethicone\ \+\ Magnesium\ hydro\ \+\ dried\ Aluminum\ hydro\.html [R=302,L]
+RewriteRule ^Activated\ Dimethicone\ \+\ Magnesium\ hydro\ \+\ dried\ Aluminum\ hydro\.html$ https://old.saarbiotech.in/Activated\ Dimethicone\ \+\ Magnesium\ hydro\ \+\ dried\ Aluminum\ hydro\.html [R=302,L]
+
+# Redirects for ds2.html
+RewriteRule ^product/amoxycillin/$ https://old.saarbiotech.in/ds2.html [R=302,L]
+RewriteRule ^ds2\.html$ https://old.saarbiotech.in/ds2.html [R=302,L]
+
+# Redirects for ds3.html
+RewriteRule ^product/cefixime/$ https://old.saarbiotech.in/ds3.html [R=302,L]
+RewriteRule ^ds3\.html$ https://old.saarbiotech.in/ds3.html [R=302,L]
+
+# Redirects for ds4.html
+RewriteRule ^product/cefpodoxime/$ https://old.saarbiotech.in/ds4.html [R=302,L]
+RewriteRule ^ds4\.html$ https://old.saarbiotech.in/ds4.html [R=302,L]
+
+# Redirects for Terbutaline, Guaiphenesin, Ambroxol and Menthol Syrup.html
+RewriteRule ^product/terbutaline-sulphate-guaiphenesin-ambroxol-hcl-menthol/$ https://old.saarbiotech.in/Terbutaline\,\ Guaiphenesin\,\ Ambroxol\ and\ Menthol\ Syrup.html [R=302,L]
+RewriteRule ^Terbutaline\,\ Guaiphenesin\,\ Ambroxol\ and\ Menthol\ Syrup\.html$ https://old.saarbiotech.in/Terbutaline\,\ Guaiphenesin\,\ Ambroxol\ and\ Menthol\ Syrup.html [R=302,L]
+
+# Redirects for cs1.html
+RewriteRule ^product/terbutaline-sulphate-guaiphenesin-bromhexine-hcl-menthol/$ https://old.saarbiotech.in/cs1.html [R=302,L]
+RewriteRule ^cs1\.html$ https://old.saarbiotech.in/cs1.html [R=302,L]
+
+# Redirects for cs2.html
+RewriteRule ^product/diphenhydramine-amonium-chloride-sodium-citrate-menthol/$ https://old.saarbiotech.in/cs2.html [R=302,L]
+RewriteRule ^cs2\.html$ https://old.saarbiotech.in/cs2.html [R=302,L]
+
+# Redirects for Cetirizine and Ambroxal HCL Syrup.html
+RewriteRule ^product/cetirizine-dihcl-ambroxol-hcl/$ https://old.saarbiotech.in/Cetirizine\ and\ Ambroxal\ HCL\ Syrup.html [R=302,L]
+RewriteRule ^Cetirizine\ and\ Ambroxal\ HCL\ Syrup\.html$ https://old.saarbiotech.in/Cetirizine\ and\ Ambroxal\ HCL\ Syrup.html [R=302,L]
+
+# Redirects for Iron (III) - hydroxide polymaltose complex+Folic acid Suspension.html
+RewriteRule ^product/iron-iii-hydroxide-polymaltose-complex-folic-acid/$ https://old.saarbiotech.in/Iron\ \(III\)\ -\ hydroxide\ polymaltose\ complex\+Folic\ acid\ Suspension.html [R=302,L]
+RewriteRule ^Iron\ \(III\)\ -\ hydroxide\ polymaltose\ complex\+Folic\ acid\ Suspension\.html$ https://old.saarbiotech.in/Iron\ \(III\)\ -\ hydroxide\ polymaltose\ complex\+Folic\ acid\ Suspension.html [R=302,L]
+
+# Redirects for ts4.html
+RewriteRule ^product/ferrous-ascorbate-folic-acid/$ https://old.saarbiotech.in/ts4.html [R=302,L]
+RewriteRule ^ts4\.html$ https://old.saarbiotech.in/ts4.html [R=302,L]
+
+# Redirects for Enzyme Formula.html
+RewriteRule ^product/enzyme-formula-in-food/$ https://old.saarbiotech.in/Enzyme\ Formula.html [R=302,L]
+RewriteRule ^Enzyme\ Formula\.html$ https://old.saarbiotech.in/Enzyme\ Formula.html [R=302,L]
+
+# Redirects for Calcium Carbonate and Vitamin D3.html
+RewriteRule ^product/calcium-carbonate-\(eq-to-elemental-calcium\)-d3/$ https://old.saarbiotech.in/Calcium\ Carbonate\ and\ Vitamin\ D3\.html [R=302,L]
+RewriteRule ^Calcium\ Carbonate\ and\ Vitamin\ D3\.html$ https://old.saarbiotech.in/Calcium\ Carbonate\ and\ Vitamin\ D3\.html [R=302,L]
+
+# Redirects for Alpha-Amylases with papain Syrup.html
+RewriteRule ^product/alpha-amyalase-bacterial-papain/$ https://old.saarbiotech.in/Alpha-Amylases\ with\ papain\ Syrup.html [R=302,L]
+RewriteRule ^Alpha-Amylases\ with\ papain\ Syrup\.html$ https://old.saarbiotech.in/Alpha-Amylases\ with\ papain\ Syrup.html [R=302,L]
+
+# Redirects for Cyproheptadine and Tricholine Citrate Syrup.html
+RewriteRule ^product/cyproheptadine-hcl-tricholine-citrate/$ https://old.saarbiotech.in/Cyproheptadine\ and\ Tricholine\ Citrate\ Syrup.html [R=302,L]
+RewriteRule ^Cyproheptadine\ and\ Tricholine\ Citrate\ Syrup\.html$ https://old.saarbiotech.in/Cyproheptadine\ and\ Tricholine\ Citrate\ Syrup.html [R=302,L]
+
+# Redirects for Tricholine Citrate Syrup.html
+RewriteRule ^product/tricholine-citrate-sorbitol-solution-70-qs/$ https://old.saarbiotech.in/Tricholine\ Citrate\ Syrup.html [R=302,L]
+RewriteRule ^Tricholine\ Citrate\ Syrup\.html$ https://old.saarbiotech.in/Tricholine\ Citrate\ Syrup.html [R=302,L]
+
+# Redirects for ns2.html
+RewriteRule ^product/xylometazoline-hcl-nasal-drops-spray/$ https://old.saarbiotech.in/ns2.html [R=302,L]
+RewriteRule ^ns2\.html$ https://old.saarbiotech.in/ns2.html [R=302,L]
+
+# Redirects for Potassium nitrate and Sodium Fluoride gel.html
+RewriteRule ^product/potassium-nitrate-sodium-fluoride/$ https://old.saarbiotech.in/Potassium\ nitrate\ and\ Sodium\ Fluoride\ gel\.html [R=302,L]
+RewriteRule ^Potassium\ nitrate\ and\ Sodium\ Fluoride\ gel\.html$ https://old.saarbiotech.in/Potassium\ nitrate\ and\ Sodium\ Fluoride\ gel\.html [R=302,L]
+
+# Redirects for Diclofenac Sodium Gel.html
+RewriteRule ^product/diclofenac-diethylamine-eq-dicofenac-sodium/$ https://old.saarbiotech.in/Diclofenac\ Sodium\ Gel\.html [R=302,L]
+RewriteRule ^Diclofenac\ Sodium\ Gel\.html$ https://old.saarbiotech.in/Diclofenac\ Sodium\ Gel\.html [R=302,L]
+
+# Redirects for Terbinafine Hydrochloride & Mometasone Furoate Cream.html
+RewriteRule ^product/mometasone-furoate/$ https://old.saarbiotech.in/Terbinafine\ Hydrochloride\ &\ Mometasone\ Furoate\ Cream\.html [R=302,L]
+RewriteRule ^Terbinafine\ Hydrochloride\ &\ Mometasone\ Furoate\ Cream\.html$ https://old.saarbiotech.in/Terbinafine\ Hydrochloride\ &\ Mometasone\ Furoate\ Cream\.html [R=302,L]
+
+# Redirects for Ketoconazole cream.html
+RewriteRule ^product/ketoconazole/$ https://old.saarbiotech.in/ketoconazole-cream.html [R=302,L]
+RewriteRule ^Ketoconazole\ cream\.html$ https://old.saarbiotech.in/ketoconazole-cream.html [R=302,L]
+
+# Redirects for Adapalene and Clindamycin Phosphate Gel.html
+RewriteRule ^product/adapalene-clindamycin-phosphate/$ https://old.saarbiotech.in/Adapalene\ and\ Clindamycin\ Phosphate\ Gel\.html [R=302,L]
+RewriteRule ^Adapalene\ and\ Clindamycin\ Phosphate\ Gel\.html$ https://old.saarbiotech.in/Adapalene\ and\ Clindamycin\ Phosphate\ Gel\.html [R=302,L]
+
+# Redirects for Clobetasol Propionate and Salicylic acid Ointment.html
+RewriteRule ^product/clobetasol-propionate-neomycin-sulphate-miconazole-nitrate-chlorocresol/$ https://old.saarbiotech.in/Clobetasol\ Propionate\ and\ Salicylic\ acid\ Ointment\.html [R=302,L]
+RewriteRule ^Clobetasol\ Propionate\ and\ Salicylic\ acid\ Ointment\.html$ https://old.saarbiotech.in/Clobetasol\ Propionate\ and\ Salicylic\ acid\ Ointment\.html [R=302,L]
+
+# Redirects for Clindamycin and Nicotinamide Gel.html
+RewriteRule ^product/clindamycin-phosphate-nicotinamide/$ https://old.saarbiotech.in/Clindamycin\ and\ Nicotinamide\ Gel\.html [R=302,L]
+RewriteRule ^Clindamycin\ and\ Nicotinamide\ Gel\.html$ https://old.saarbiotech.in/Clindamycin\ and\ Nicotinamide\ Gel\.html [R=302,L]
+
+# Redirects for Alkalizer_Disodium Hydrogen Citrate.html
+RewriteRule ^product/disodium-hydrogen-citrate/$ https://old.saarbiotech.in/Alkalizer_Disodium\ Hydrogen\ Citrate\.html [R=302,L]
+RewriteRule ^Alkalizer_Disodium\ Hydrogen\ Citrate\.html$ https://old.saarbiotech.in/Alkalizer_Disodium\ Hydrogen\ Citrate\.html [R=302,L]
+
+# Redirects for Chlorhexidine Gluconate Solution.html
+RewriteRule ^product/chlorhexidine-gluconate/$ https://old.saarbiotech.in/Chlorhexidine\ Gluconate\ Solution\.html [R=302,L]
+RewriteRule ^Chlorhexidine\ Gluconate\ Solution\.html$ https://old.saarbiotech.in/Chlorhexidine\ Gluconate\ Solution\.html [R=302,L]
+
+# Redirects for Milk of Magnesia and Liquid Paraffin Susupension.html
+RewriteRule ^product/milk-of-magnesia-liquid-paraffin/$ https://old.saarbiotech.in/Milk\ of\ Magnesia\ and\ Liquid\ Paraffin\ Susupension\.html [R=302,L]
+RewriteRule ^Milk\ of\ Magnesia\ and\ Liquid\ Paraffin\ Susupension\.html$ https://old.saarbiotech.in/Milk\ of\ Magnesia\ and\ Liquid\ Paraffin\ Susupension\.html [R=302,L]
 
 
 #Redirects of pages not made in node-webite to old website

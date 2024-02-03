@@ -1,4 +1,5 @@
 import { Grid, Typography } from "@mui/material";
+import { Metadata } from "next";
 
 export default function Expo2012Content() {
   return (
@@ -16,7 +17,7 @@ export default function Expo2012Content() {
         >
           <Grid item xs={12} m={2}>
             <Typography
-              fontSize={"4em"}
+              fontSize={"3.5em"}
               variant="h4"
               className="color-primary text-center"
             >
@@ -25,7 +26,7 @@ export default function Expo2012Content() {
           </Grid>
           <Grid item xs={12} sm={12} md={7} p={2}>
             <Typography
-              fontSize={"1.8em"}
+              fontSize={"1.6em"}
               className="lh-lg"
               textAlign={"justify"}
             >
@@ -71,20 +72,20 @@ export default function Expo2012Content() {
           </Grid>
           <Grid item xs={11} sm={11} md={3} p={2}>
             <Typography
-              fontSize={"2.2em"}
+              fontSize={"2em"}
               variant="h6"
               className="color-primary text-start"
             >
               Exhibition Highlights
             </Typography>
-            <Typography m={2} fontSize={"1.6em"} variant="body1">
+            <Typography m={2} fontSize={"1.5em"} variant="body1">
               Pharmaceuticals Products Exhibition
             </Typography>
-            <Typography m={2} fontSize={"1.6em"} variant="body1">
+            <Typography m={2} fontSize={"1.5em"} variant="body1">
               Expo based on the theme 'Destination for Innovative and Reliable
               Healthcare Products'.
             </Typography>
-            <Typography m={2} fontSize={"1.6em"} variant="body1">
+            <Typography m={2} fontSize={"1.5em"} variant="body1">
               B2B Exhibition
             </Typography>
           </Grid>
@@ -93,3 +94,11 @@ export default function Expo2012Content() {
     </>
   );
 }
+
+export const metadata: Metadata = {
+  title: "Pharmac South 2014| Saar Biotech |Chennai Trade Center",
+  description:
+    "Saar Biotech is GMP , ISO Certified and WHO Applied company involved in making DCGI approved new Drugs from Past seven years",
+  keywords:
+    "pharmac south, orbit, expo, exhibition, 3rd party, III, rd, third party, contract manufacturer, pharmaceuticals, pharma exporters, pharma company in baddi, pharma company in chandigarh, pharma suppliers, medication, iso gmp certified, pharma company. ",
+};

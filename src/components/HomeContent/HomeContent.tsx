@@ -67,6 +67,16 @@ export default function HomeContent() {
       <NewProducts />
       <Toolbar />
 
+      {/* <div class="diamond green">
+        <span>Attractive Packing</span>
+      </div>
+      <div class="diamond darkGreen">
+        <span>Attractive Rate</span>
+      </div>
+      <div class="diamond green">
+        <span>Timely Delivery</span>
+      </div> */}
+
       {/* <Container>
         <Link href="/products">
           <LoadingButton

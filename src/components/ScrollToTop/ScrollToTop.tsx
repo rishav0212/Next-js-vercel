@@ -58,7 +58,7 @@ function ScrollToTop() {
 
   return (
     <motion.div
-      initial={{ y: "70px" }}
+      initial={{ y: "100px" }}
       animate={{ y: isVisible ? "0" : "100px" }}
       transition={{
         type: "spring",
