@@ -15,11 +15,8 @@ export default function Home() {
 }
 
 export const metadata: Metadata = {
-  title: "Saar Biotech | Third party Medicine Contract Manufacturing",
-  description: `Saar Biotech Deals in Liquids, Suspensions, Dry syrups, sprays, Nasal sprays, Ointments, Tablets,creams, skin ceams, antibiotic, Anticold, Analgesic & Anti-inflammatory, Antacid, Dry Syrups, Tonic, Drops, Cough, Shampoo, Lotions, Roll On, Capsules, Sachets in very attractive packings for Amber Bottle PACKING, measuring Cap, Blister Packing, Metallic Cartons. Saar Biotech is GMP Certified company 
-  involved in making DCGI approved new Drugs from Past four years`,
-  keywords: `Contract manufacturing, export, exports, exporter, exporters,DM,Saar, biotech, Pharma, Excise freee Zone ,DCGI approved drugs, Saar Biotech, 
-  Pharmaceutical Manufacturing,  companies in India,  PHARMACEUTICAL, Manufacturers ,Baddi Himachal,Third party medicine manufacturers ,
-  Bulk medicine manufacturers in Chandigarh,  Top Pharmaceutical companies in Chandigarh,  DCGI Approved Molecules, pharmaceutical companies in India, 
-  pharmaceuticals export india, top 10 pharmaceutical companies , third party, medicine, manufacturer, pharmaceutical manufacturer in india,pharma exporters, medicines `,
+  title: "Saar Biotech | Thirdparty Pharmaceutical Contract Manufacturing",
+  description: `Saar Biotech specializes in the production of high-quality Liquids, Suspensions, Dry Syrups, Sprays, Nasal Sprays, Ointments, Creams, Skin Creams, Antibiotics, Anticold, Analgesic & Anti-inflammatory medications, Antacids, Tonic formulations, Drops, Cough remedies, Shampoos, Lotions, Roll On products, Capsules, and Sachets. Our products come in attractive packagings with features such as measuring caps, blister packing, and metallic cartons.
+  As a GMP Certified company, Saar Biotech has been dedicatedly crafting DCGI approved new drugs for the past fourteen years. Explore our comprehensive pharmaceutical offerings, ensuring quality, safety, and efficacy in every product we deliver.`,
+  keywords: `Contract Manufacturing, Pharmaceutical Manufacturing, Export of DCGI Approved Drugs, Third party medicine manufacturers, Pharmaceutical Companies in India, Bulk Medicine Manufacturers in Chandigarh, Top Pharmaceutical Companies in Chandigarh, DM, Saar, biotech, Pharma, Excise freee Zone, DCGI approved drugs, Saar Biotech, Baddi Himachal, DCGI Approved Molecules,  pharmaceuticals export india, top 10 pharmaceutical companies , third party, medicine, manufacturer, pharmaceutical manufacturer in india, pharma exporters, Third-Party Medicine Manufacturers`,
 };

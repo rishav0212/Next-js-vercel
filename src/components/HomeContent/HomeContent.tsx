@@ -120,8 +120,17 @@ export default function HomeContent() {
                   },
                 }}
               >
-                <ApprovalIcon sx={{ fontSize: "4rem" }} />
-                <br />
+                <img
+                  src="/images/icons/certificate/WHO.png"
+                  alt="Recode7"
+                  style={{
+                    height: "11em",
+                    objectFit: "contain",
+                    display: "flex",
+                    margin: "auto",
+                  }}
+                />
+
                 <h6 className="text-center">WHO Certified</h6>
               </Box>
             </Paper>
@@ -149,8 +158,17 @@ export default function HomeContent() {
                   },
                 }}
               >
-                <SecurityIcon sx={{ fontSize: "4rem" }} />
-                <br />
+                <img
+                  src="/images/icons/certificate/GMP.png"
+                  alt="Recode7"
+                  style={{
+                    height: "11em",
+                    objectFit: "contain",
+                    display: "flex",
+                    margin: "auto",
+                  }}
+                />
+
                 <h6 className="text-center">GMP Certification</h6>
               </Box>
             </Paper>
@@ -178,9 +196,18 @@ export default function HomeContent() {
                   },
                 }}
               >
-                <LocalDiningIcon sx={{ fontSize: "4rem" }} />
-                <br />
-                <h6 className="text-center">Food Supplement License</h6>
+                <img
+                  src="/images/icons/certificate/ISO.png"
+                  alt="Recode7"
+                  style={{
+                    height: "11em",
+                    objectFit: "contain",
+                    display: "flex",
+                    margin: "auto",
+                  }}
+                />
+
+                <h6 className="text-center">ISO Certified</h6>
               </Box>
             </Paper>
           </Grid>
@@ -207,9 +234,18 @@ export default function HomeContent() {
                   },
                 }}
               >
-                <GavelIcon sx={{ fontSize: "4rem" }} />
-                <br />
-                <h6 className="text-center">Non Conviction Certificate</h6>
+                <img
+                  src="/images/icons/certificate/FSSAI.png"
+                  alt="Recode7"
+                  style={{
+                    height: "8em",
+                    objectFit: "contain",
+                    display: "flex",
+                    margin: "auto",
+                  }}
+                />
+
+                <h6 className="text-center">Food Suppliment License</h6>
               </Box>
             </Paper>
           </Grid>

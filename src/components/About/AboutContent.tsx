@@ -123,7 +123,7 @@ export default function AboutContent() {
               Quality Certifications
             </Typography>
             <Typography variant="body2">
-              WHO Applied
+              WHO Certified
               <br />
               ISO Certification <br />
               GMP Certification
