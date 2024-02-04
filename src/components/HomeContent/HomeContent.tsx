@@ -18,6 +18,7 @@ import {
 import { useTheme } from "@mui/material/styles";
 import NewProducts from "../NewProducts/NewProducts";
 import NumberCounter from "./NumberCounter/NumberCounter";
+import { Diamond } from "@mui/icons-material";
 
 const tabs = ["Our Vision", "Our Mission", "Our Values"];
 
@@ -95,159 +96,72 @@ export default function HomeContent() {
       <Toolbar /> */}
 
       <Container maxWidth="md">
-        <h3 className="text-center mb-4">Our Certifications</h3>
-        <Grid container spacing={4}>
-          <Grid item md={6} sm={12} xs={12}>
-            <Paper
-              elevation={1}
-              sx={{
-                borderRadius: "15px",
+        {/* <div style={diamond}>
+          <span>Attractive Packing</span>
+        </div>
+        <div style={diamond}>
+          <span>Attractive Rate</span>
+        </div>
+        <div style={diamond}>
+          <span>Timely Delivery</span>
+        </div> */}
+        <h3 className="text-center">Our Certifications</h3>
+        <Grid container justifyContent={"center"}>
+          <Grid item md={5} sm={5} xs={8} sx={certificateBoxStyle}>
+            <img
+              src="/images/icons/certificate/WHO.png"
+              alt="Recode7"
+              style={{
+                height: "11em",
+                objectFit: "contain",
+                display: "flex",
+                margin: "auto",
               }}
-            >
-              <Box
-                sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "100%",
-                  height: "20vh",
-                  transition: ".5s",
-                  borderRadius: "15px",
-                  "&:hover": {
-                    backgroundColor: "var(--primary-color)",
-                    boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)",
-                  },
-                }}
-              >
-                <img
-                  src="/images/icons/certificate/WHO.png"
-                  alt="Recode7"
-                  style={{
-                    height: "11em",
-                    objectFit: "contain",
-                    display: "flex",
-                    margin: "auto",
-                  }}
-                />
+            />
 
-                <h6 className="text-center">WHO Certified</h6>
-              </Box>
-            </Paper>
+            <h6 className="text-center">WHO Certified</h6>
           </Grid>
-          <Grid item md={6} sm={12} xs={12}>
-            <Paper
-              elevation={1}
-              sx={{
-                borderRadius: "15px",
+          <Grid item md={5} sm={5} xs={8} sx={certificateBoxStyle}>
+            <img
+              src="/images/icons/certificate/GMP.png"
+              alt="Recode7"
+              style={{
+                height: "11em",
+                objectFit: "contain",
+                display: "flex",
+                margin: "auto",
               }}
-            >
-              <Box
-                sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "100%",
-                  height: "20vh",
-                  transition: ".5s",
-                  borderRadius: "15px",
-                  "&:hover": {
-                    backgroundColor: "var(--primary-color)",
-                    boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)",
-                  },
-                }}
-              >
-                <img
-                  src="/images/icons/certificate/GMP.png"
-                  alt="Recode7"
-                  style={{
-                    height: "11em",
-                    objectFit: "contain",
-                    display: "flex",
-                    margin: "auto",
-                  }}
-                />
+            />
 
-                <h6 className="text-center">GMP Certification</h6>
-              </Box>
-            </Paper>
+            <h6 className="text-center">GMP Certification</h6>
           </Grid>
-          <Grid item md={6} sm={12} xs={12}>
-            <Paper
-              elevation={1}
-              sx={{
-                borderRadius: "15px",
+          <Grid item md={5} sm={5} xs={8} sx={certificateBoxStyle}>
+            <img
+              src="/images/icons/certificate/ISO.png"
+              alt="Recode7"
+              style={{
+                height: "11em",
+                objectFit: "contain",
+                display: "flex",
+                margin: "auto",
               }}
-            >
-              <Box
-                sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "100%",
-                  height: "20vh",
-                  transition: ".5s",
-                  borderRadius: "15px",
-                  "&:hover": {
-                    backgroundColor: "var(--primary-color)",
-                    boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)",
-                  },
-                }}
-              >
-                <img
-                  src="/images/icons/certificate/ISO.png"
-                  alt="Recode7"
-                  style={{
-                    height: "11em",
-                    objectFit: "contain",
-                    display: "flex",
-                    margin: "auto",
-                  }}
-                />
+            />
 
-                <h6 className="text-center">ISO Certified</h6>
-              </Box>
-            </Paper>
+            <h6 className="text-center">ISO Certified</h6>
           </Grid>
-          <Grid item md={6} sm={12} xs={12}>
-            <Paper
-              elevation={1}
-              sx={{
-                borderRadius: "15px",
+          <Grid item md={5} sm={5} xs={8} sx={certificateBoxStyle}>
+            <img
+              src="/images/icons/certificate/FSSAI.png"
+              alt="Recode7"
+              style={{
+                height: "8em",
+                objectFit: "contain",
+                display: "flex",
+                margin: "auto",
               }}
-            >
-              <Box
-                sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "100%",
-                  height: "20vh",
-                  transition: ".5s",
-                  borderRadius: "15px",
-                  "&:hover": {
-                    backgroundColor: "var(--primary-color)",
-                    boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)",
-                  },
-                }}
-              >
-                <img
-                  src="/images/icons/certificate/FSSAI.png"
-                  alt="Recode7"
-                  style={{
-                    height: "8em",
-                    objectFit: "contain",
-                    display: "flex",
-                    margin: "auto",
-                  }}
-                />
+            />
 
-                <h6 className="text-center">Food Suppliment License</h6>
-              </Box>
-            </Paper>
+            <h6 className="text-center">Food Suppliment License</h6>
           </Grid>
         </Grid>
       </Container>
@@ -327,3 +241,30 @@ export default function HomeContent() {
     </>
   );
 }
+
+const certificateBoxStyle = {
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+  width: "100%",
+  height: "15em",
+  margin: "1.5em",
+  transition: ".5s",
+  borderRadius: "15px",
+  boxShadow: "0px 2px 4px 2px rgb(0,0,0,0.2)",
+  "&:hover": {
+    backgroundColor: "var(--primary-color)",
+    boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)",
+  },
+};
+
+// const diamond = {
+//   width: "150px",
+//   height: "150px",
+//   display: "inline-block",
+//   backgroundColor: "green",
+//   color: "white",
+//   // textAlign: "center",
+//   transform: "rotate(45deg)"
+// };

@@ -7,40 +7,45 @@ RewriteEngine On
 # RewriteRule ^Capsule\.html$ https://www.saarbiotech.in/Capsule.html [R=302,L]
  
 
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+
+RewriteCond %{HTTP_HOST} ^www.saarbiotech.in [NC]
+RewriteRule ^(.*)$ https://saarbiotech.in/$1 [L,R=301]
 
 # Redirect to new links from old website
-RewriteRule ^index\.html$ / [R=302,L]
+RewriteRule ^index\.html$ / [R=301,L]
 
-RewriteRule ^about\.html$ /about/ [R=302,L]
+RewriteRule ^about\.html$ /about/ [R=301,L]
 
-RewriteRule ^saar\.html$ /manufacturing-unit/saar-biotech/ [R=302,L]
+RewriteRule ^saar\.html$ /manufacturing-unit/saar-biotech/ [R=301,L]
 
-RewriteRule ^dm\.html$ /manufacturing-unit/dm-pharma/ [R=302,L]
+RewriteRule ^dm\.html$ /manufacturing-unit/dm-pharma/ [R=301,L]
 
-RewriteRule ^Suspensions\.html$ /products/Suspensions/ [R=302,L]
+RewriteRule ^Suspensions\.html$ /products/Suspensions/ [R=301,L]
 
-RewriteRule ^Syrup\.html$ /products/Syrups/ [R=302,L]
+RewriteRule ^Syrup\.html$ /products/Syrups/ [R=301,L]
 
-RewriteRule ^External\.html$ /products/External\ Preparations/ [R=302,L]
+RewriteRule ^External\.html$ /products/External\ Preparations/ [R=301,L]
 
-RewriteRule ^Miscellaneous\.html$ /products/Miscellaneous\ Products/ [R=302,L]
+RewriteRule ^Miscellaneous\.html$ /products/Miscellaneous\ Products/ [R=301,L]
 
-RewriteRule ^Tablet\.html$ /products/Tablets/ [R=302,L]
+RewriteRule ^Tablet\.html$ /products/Tablets/ [R=301,L]
 
-RewriteRule ^Capsule\.html$ /products/Capsules/ [R=302,L]
+RewriteRule ^Capsule\.html$ /products/Capsules/ [R=301,L]
 
-RewriteRule ^Sachets\.html$ /products/Sachets/ [R=302,L]
+RewriteRule ^Sachets\.html$ /products/Sachets/ [R=301,L]
 
 RewriteRule ^Event\.html$ /events/ [R=302,L]
 
-RewriteRule ^pharmac\ south\ 2014\.html$ /events/pharma-south-2014/ [R=302,L]
+RewriteRule ^pharmac\ south\ 2014\.html$ /events/pharma-south-2014/ [R=301,L]
 
-RewriteRule ^Indian\ pharma\ Expo\ 2013\.html$ /events/indian-pharma-expo-2013/ [R=302,L]
+RewriteRule ^Indian\ pharma\ Expo\ 2013\.html$ /events/indian-pharma-expo-2013/ [R=301,L]
 
-RewriteRule ^Indian\ pharma\ Expo\ 2012\.html$ /events/indian-pharma-expo-2012/ [R=302,L]
+RewriteRule ^Indian\ pharma\ Expo\ 2012\.html$ /events/indian-pharma-expo-2012/ [R=301,L]
 
-
-RewriteRule ^contact-us\.html$ /contact/ [R=302,L]
+RewriteRule ^contact-us\.html$ /contact/ [R=301,L]
 
 
 # PRoducts Pages
@@ -52,7 +57,7 @@ RewriteRule ^Immunity\ Booster\ Spray\.html$ /product/immunity-booster-spray/ [R
 
 RewriteRule ^Iron\ Oral\ Spray\.html$ /product/iron-oral-spray/ [R=302,L]
 
-RewriteRule ^sa1\.html$ /product/azithromycin/ [R=302,L]
+RewriteRule ^sa1\.html$ /product/azithromycin/ [R=301,L]
 
 RewriteRule ^2\.html$ /product/ofloxacin-ornidazole/ [R=302,L]
 
