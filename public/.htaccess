@@ -8,11 +8,11 @@ RewriteEngine On
  
 
 RewriteCond %{HTTPS} off
-RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=302]
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 
 RewriteCond %{HTTP_HOST} ^www.saarbiotech.in [NC]
-RewriteRule ^(.*)$ https://saarbiotech.in/$1 [L,R=302]
+RewriteRule ^(.*)$ https://saarbiotech.in/$1 [L,R=301]
 
 # Redirect to new links from old website
 RewriteRule ^index\.html$ / [R=301,L]
@@ -23,19 +23,19 @@ RewriteRule ^saar\.html$ /manufacturing-unit/saar-biotech/ [R=301,L]
 
 RewriteRule ^dm\.html$ /manufacturing-unit/dm-pharma/ [R=301,L]
 
-RewriteRule ^Suspensions\.html$ /products/Suspensions/ [R=302,L]
+RewriteRule ^Suspensions\.html$ /products/Suspensions/ [R=301,L]
 
-RewriteRule ^Syrup\.html$ /products/Syrups/ [R=302,L]
+RewriteRule ^Syrup\.html$ /products/Syrups/ [R=301,L]
 
-RewriteRule ^External\.html$ /products/External\ Preparations/ [R=302,L]
+RewriteRule ^External\.html$ /products/External\ Preparations/ [R=301,L]
 
-RewriteRule ^Miscellaneous\.html$ /products/Miscellaneous\ Products/ [R=302,L]
+RewriteRule ^Miscellaneous\.html$ /products/Miscellaneous\ Products/ [R=301,L]
 
-RewriteRule ^Tablet\.html$ /products/Tablets/ [R=302,L]
+RewriteRule ^Tablet\.html$ /products/Tablets/ [R=301,L]
 
-RewriteRule ^Capsule\.html$ /products/Capsules/ [R=302,L]
+RewriteRule ^Capsule\.html$ /products/Capsules/ [R=301,L]
 
-RewriteRule ^Sachets\.html$ /products/Sachets/ [R=302,L]
+RewriteRule ^Sachets\.html$ /products/Sachets/ [R=301,L]
 
 RewriteRule ^Event\.html$ /events/ [R=302,L]
 
@@ -44,7 +44,6 @@ RewriteRule ^pharmac\ south\ 2014\.html$ /events/pharma-south-2014/ [R=301,L]
 RewriteRule ^Indian\ pharma\ Expo\ 2013\.html$ /events/indian-pharma-expo-2013/ [R=301,L]
 
 RewriteRule ^Indian\ pharma\ Expo\ 2012\.html$ /events/indian-pharma-expo-2012/ [R=301,L]
-
 
 RewriteRule ^contact-us\.html$ /contact/ [R=301,L]
 
