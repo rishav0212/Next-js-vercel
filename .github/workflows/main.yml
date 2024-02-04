@@ -1,5 +1,5 @@
-name: saar-biotech-next-cicd-pipeline
-run-name: ${{ github.actor }} is executing the pipeline. Branch Name is ${{ github.ref }}
+name: saar-biotech-pipeline
+run-name: Actor - ${{ github.actor }}, trigger - ${{ github.event_name }}, branch - ${{ github.ref }}
 
 on:
   push:
@@ -68,12 +68,13 @@ jobs:
 
           if [[ ${{ startsWith(github.ref, 'refs/tags/release-') }} == true ]]; then            
             echo "The branch start with tags (release). Marking it for production"
-            RELEASE_TAG=true
-            if [[ ${{ github.event_name }} == 'workflow_dispatch' ]]; then
-              echo "This is a manual trigger. Will skip auto deployment"
-              RELEASE_TRIGGER=true
-            fi            
+            RELEASE_TAG=true            
           fi
+
+          if [[ ${{ github.event_name }} == 'workflow_dispatch' ]]; then
+            echo "This is a manual trigger."
+            RELEASE_TRIGGER=true
+          fi            
            
           echo "V_RELEASE_TRIGGER=$RELEASE_TRIGGER" >> $GITHUB_OUTPUT
           echo "V_RELEASE_TAG=$RELEASE_TAG" >> $GITHUB_OUTPUT
@@ -118,18 +119,18 @@ jobs:
           echo "Using $FTP_SERVER $FTP_USERNAME $FTP_PASSWORD"
           echo "V_FTP_ERVER=$FTP_SERVER" >> $GITHUB_OUTPUT
 
-      - name: Variables before FTP
+      - name: Display Variables before FTP
         run: |
-          echo ${{ steps.set-env-vars.outputs.V_RELEASE_TAG }}  
-          echo ${{ steps.set-env-vars.outputs.V_RELEASE_TRIGGER }}  
-          echo " 2 ${{ steps.set-env-vars.outputs.V_RELEASE_TRIGGER == true}} "
-          echo " 3 ${{ steps.set-env-vars.outputs.V_RELEASE_TRIGGER == false}} " 
-          echo " 4 ${{ steps.set-env-vars.outputs.V_RELEASE_TAG == true}} 4" 
-          echo " 5 ${{ steps.set-env-vars.outputs.V_RELEASE_TAG == false}} 5" 
-          echo " 6 ${{ steps.set-env-vars.outputs.V_RELEASE_TAG == false || steps.set-env-vars.outputs.V_RELEASE_TRIGGER == true }} 6"
+          echo " 0 ${{ steps.set-env-vars.outputs.V_RELEASE_TAG }} 0"
+          echo " 1 ${{ steps.set-env-vars.outputs.V_RELEASE_TRIGGER }} 1"
+          echo " 2 ${{ steps.set-env-vars.outputs.V_RELEASE_TRIGGER == 'true'}} 2"
+          echo " 3 ${{ steps.set-env-vars.outputs.V_RELEASE_TRIGGER == 'false'}} 3" 
+          echo " 4 ${{ steps.set-env-vars.outputs.V_RELEASE_TAG == 'true'}} 4" 
+          echo " 5 ${{ steps.set-env-vars.outputs.V_RELEASE_TAG == 'false'}} 5" 
+          echo " 6 ${{ steps.set-env-vars.outputs.V_RELEASE_TAG == 'false' || steps.set-env-vars.outputs.V_RELEASE_TRIGGER == 'true' }} 6"
 
       - name: FTP Deploy to Go Daddy using Deploy Action
-        if: ${{ steps.set-env-vars.outputs.V_RELEASE_TAG == false || steps.set-env-vars.outputs.V_RELEASE_TRIGGER == true }}
+        if: ${{ steps.set-env-vars.outputs.V_RELEASE_TAG == 'false' || steps.set-env-vars.outputs.V_RELEASE_TRIGGER == 'true' }}
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ steps.set-ftp-vars.outputs.V_FTP_ERVER }}
