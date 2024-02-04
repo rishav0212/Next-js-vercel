@@ -94,6 +94,8 @@ jobs:
         env:
           FTP_USERNAME_UAT: ${{ secrets.GODADDY_FTP_NODE_UAT_USER }}
           FTP_PASSWORD_UAT: ${{ secrets.GODADDY_FTP_NODE_UAT_PASSWORD }}
+          FTP_USERNAME_PROD: ${{ secrets.GODADDY_FTP_NODE_PROD_USER }}
+          FTP_PASSWORD_PROD: ${{ secrets.GODADDY_FTP_NODE_PROD_PASSWORD }}
         id: set-ftp-vars
         run: |
           echo $FTP_USERNAME_UAT        
