@@ -53,16 +53,13 @@ export default function QueryForm({ props }) {
     try {
       console.log(data);
       setLoading(true);
-      const response = await fetch(
-        "https://node.saarbiotech.in/EmailClient.php",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(data),
-        }
-      );
+      const response = await fetch("https://saarbiotech.in/EmailClient.php", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
 
       const result = await response.json();
       console.log(result);

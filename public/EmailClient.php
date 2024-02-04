@@ -82,10 +82,11 @@ try {
 
 	//Recipients
 	$mail->setFrom('sandeep138@alenslim.co.in', 'SAAR Biotech Admin');
-	$mail->addAddress('sandeep138@gmail.com', 'Sandeep Jindal'); //Add a recipient
 	$mail->addAddress('sandeep@saarbiotech.com', 'Sandeep SAAR'); //Name is optional    
+	$mail->addAddress('varunaggarwal@saarbiotech.com', 'Varun Aggarwal'); //Name is optional    
+	$mail->addAddress('specification@alainapharma.com', 'Specifications Alainapharma'); //Name is optional    
 	$mail->addAddress('rishavj0212@gmail.com', 'Rishav Jindal');
-	$mail->addCC('sandeep138@gmail.com');
+	$mail->addAddress('web@alaina.co.in', 'Alaina Web');
 	$mail->addBCC('sandeep138@alenslim.co.in');
 
 
@@ -98,13 +99,13 @@ try {
 	$mail->send();
 	// print("Message has been sent");
 	$response['success'] = true;
-    $response['message'] = 'Message has been sent';
+	$response['message'] = 'Message has been sent';
 	// echo 'Message has been sent';
 } catch (Exception $e) {
 	// print("Exception occured");
 	// echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 	$response['success'] = false;
-    $response['message'] = 'Message could not be sent. Mailer Error: ' . $mail->ErrorInfo;
+	$response['message'] = 'Message could not be sent. Mailer Error: ' . $mail->ErrorInfo;
 }
 
 header('Content-Type: application/json');
