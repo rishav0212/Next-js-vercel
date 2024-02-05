@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Toolbar, Typography } from "@mui/material";
+import { Box, Container, Grid, Typography } from "@mui/material";
 
 import NewProducts from "../NewProducts/NewProducts";
 import NumberCounter from "./NumberCounter/NumberCounter";
@@ -34,11 +34,8 @@ export default function HomeContent() {
           </Typography>
         </Grid>
 
-        <Toolbar />
         <NumberCounter />
-        <Toolbar />
         <NewProducts />
-        <Toolbar />
 
         {/* <div class="diamond green">
         <span>Attractive Packing</span>
@@ -137,8 +134,6 @@ export default function HomeContent() {
             </Grid>
           </Grid>
         </Container>
-
-        <Toolbar />
 
         <Box
           sx={{
