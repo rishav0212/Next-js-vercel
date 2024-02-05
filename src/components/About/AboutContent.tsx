@@ -1,5 +1,6 @@
 import { Grid, Typography } from "@mui/material";
 import * as styles from "@/components/ProductPages/styles";
+import Certificates from "./Certificates";
 
 export default function AboutContent() {
   return (
@@ -67,6 +68,10 @@ export default function AboutContent() {
             }}
           />
         </Grid>
+      </Grid>
+
+      <Grid item md={9} xs={12} sm={11}>
+        <Certificates />
       </Grid>
 
       <Grid

@@ -2,7 +2,6 @@ import { Grid, Typography } from "@mui/material";
 
 import NewProducts from "../NewProducts/NewProducts";
 import NumberCounter from "./NumberCounter/NumberCounter";
-import { margin } from "@mui/system";
 
 const tabs = ["Our Vision", "Our Mission", "Our Values"];
 

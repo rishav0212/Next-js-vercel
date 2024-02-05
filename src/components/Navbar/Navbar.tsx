@@ -80,7 +80,7 @@ const Navbar = () => {
           "Saar Biotech": "/saar-biotech",
           "DM Pharma": "/dm-pharma",
           Infrastructure: "/dm-pharma",
-          "Factory Video": "/dm-pharma",
+          "Factory Video": "/video",
         },
         onClickMethod: handleManufacturingUnitChange,
         stateVar: manufacturingUnitOpen,
