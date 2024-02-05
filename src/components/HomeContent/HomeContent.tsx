@@ -1,11 +1,4 @@
-import {
-  Box,
-  Container,
-  Grid,
-  Stack,
-  Toolbar,
-  Typography,
-} from "@mui/material";
+import { Box, Container, Grid, Toolbar, Typography } from "@mui/material";
 
 import NewProducts from "../NewProducts/NewProducts";
 import NumberCounter from "./NumberCounter/NumberCounter";
@@ -19,10 +12,9 @@ export default function HomeContent() {
   return (
     <>
       <Container>
-        <Stack
+        <Grid
           alignItems={"center"}
           justifyContent={"center"}
-          // sx={isSmallerScreen ? { width: "100%" } : { flex: 0.9 }}
           sx={{ md: { flex: 0.9 }, xs: { width: "100%" } }}
         >
           <h2 className="text-center">Welcome to Saar Biotech</h2>
@@ -40,7 +32,7 @@ export default function HomeContent() {
             have wide product range which comprises Anti-Fungal, Anti-Bacterial,
             Anti-Inflammatory, Antitussive and Dermatological products.
           </Typography>
-        </Stack>
+        </Grid>
 
         <Toolbar />
         <NumberCounter />
