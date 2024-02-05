@@ -2,19 +2,32 @@ import { Grid, Typography } from "@mui/material";
 
 import NewProducts from "../NewProducts/NewProducts";
 import NumberCounter from "./NumberCounter/NumberCounter";
+import { margin } from "@mui/system";
 
 const tabs = ["Our Vision", "Our Mission", "Our Values"];
 
 export default function HomeContent() {
   return (
-    <Grid width={"100%"} justifyContent={"center"}>
+    <Grid container width={"100%"} justifyContent={"center"}>
       <Grid
+        item
+        sm={11}
+        xs={11}
+        sx={{
+          maxWidth: { md: "100em" },
+          margin: "3em",
+          borderRadius: "1em",
+          padding: 2,
+          background: "#f8f8f8",
+          boxShadow: "1px 2px 3px rgb(0,0,0,0.4)",
+        }}
         alignItems={"center"}
         justifyContent={"center"}
-        sx={{ md: { flex: 0.9 }, xs: { width: "100%" } }}
       >
-        <h2 className="text-center">Welcome to Saar Biotech</h2>
-        <Typography variant="body1" textAlign={"justify"}>
+        <h2 className="text-center" style={{ fontSize: "3em" }}>
+          Welcome to Saar Biotech
+        </h2>
+        <Typography variant="body1" textAlign={"justify"} fontSize={"1.5em"}>
           Saar Biotech Pvt. Ltd., a distinguished and WHO-GMP certified
           third-party pharmaceutical manufacturing company. Since our
           establishment in 2005, we have been operating from our
@@ -30,17 +43,21 @@ export default function HomeContent() {
         </Typography>
       </Grid>
       <NumberCounter />
-      <NewProducts />
+      <Grid item xs={10} my={5}>
+        <NewProducts />
+      </Grid>
 
+      {/* <Grid> */}
       {/* <div class="diamond green">
-        <span>Attractive Packing</span>
-      </div>
-      <div class="diamond darkGreen">
-        <span>Attractive Rate</span>
-      </div>
-      <div class="diamond green">
-        <span>Timely Delivery</span>
-      </div> */}
+          <span>Attractive Packing</span>
+        </div>
+        <div class="diamond darkGreen">
+          <span>Attractive Rate</span>
+        </div>
+        <div class="diamond green">
+          <span>Timely Delivery</span>
+        </div> */}
+      {/* </Grid> */}
 
       {/* <Grid>
         <Link href="/products">
@@ -58,18 +75,20 @@ export default function HomeContent() {
       </Grid>
 
       <Toolbar /> */}
+      {/* <Grid item justifyContent={"center"}>
+        <Grid sx={diamond}>
+          <span style={spanStyle}>Attractive Packing</span>
+        </Grid>
+        <Grid sx={diamond}>
+          <span style={spanStyle}>Attractive Rate</span>
+        </Grid>
+        <Grid sx={diamond}>
+          <span style={spanStyle}>Timely Delivery</span>
+        </Grid>
+      </Grid> */}
 
-      {/* <div style={diamond}>
-          <span>Attractive Packing</span>
-        </div>
-        <div style={diamond}>
-          <span>Attractive Rate</span>
-        </div>
-        <div style={diamond}>
-          <span>Timely Delivery</span>
-        </div> */}
-      <h3 className="text-center">Our Certifications</h3>
-      <Grid container justifyContent={"center"}>
+      <Grid container item md={8} justifyContent={"center"}>
+        <h3 className="text-center w-100">Our Certifications</h3>
         <Grid item md={5} sm={5} xs={8} sx={certificateBoxStyle}>
           <img
             src="/images/icons/certificate/WHO.png"
@@ -137,9 +156,10 @@ export default function HomeContent() {
           alignItems: "center",
           justifyContent: "center",
           textAlign: "center",
+          marginY: "2em",
         }}
       >
-        <h5 style={{ fontStyle: "italic", color: "white" }}>
+        <h5 style={{ fontStyle: "italic", color: "white", fontSize: "2em" }}>
           "Wherever the art of Medicine is love, there is also a love for
           humanity"
         </h5>
@@ -217,12 +237,32 @@ const certificateBoxStyle = {
   },
 };
 
-// const diamond = {
-//   width: "150px",
-//   height: "150px",
-//   display: "inline-block",
-//   backgroundColor: "green",
-//   color: "white",
-//   // textAlign: "center",
-//   transform: "rotate(45deg)"
-// };
+const diamond = {
+  width: "140px",
+  height: "140px",
+  display: "inline-flex",
+  color: "#fff",
+  transform: "rotate(45deg)",
+  justifyContent: "center",
+  alignItems: "center",
+  margin: "2em 5vw",
+  textAlign: "center",
+  background: "linear-gradient(45deg, #3cb6a0 0%, #4a90e2 130%)",
+  border: "2px solid #3cb6a0",
+  transition: "background 0.3s ease-in,transform 0.7s ease-in",
+  "&:hover": {
+    background: "linear-gradient(-45deg, #3cb6a0 0%, #4a90e2 130%)",
+    backgroundPosition: "100% 0",
+    border: "2px solid #4a90e2",
+
+    transform: "scale(1.1) rotate(45deg)",
+  },
+  "@media (max-width: 600px)": {
+    width: "80px",
+    height: "80px",
+  },
+};
+const spanStyle = {
+  transform: "rotate(-45deg)",
+  fontSize: "1.3em",
+};

@@ -14,6 +14,7 @@ import {
 import RHFTextField from "./RHFText.Field";
 import { LoadingButton } from "@mui/lab";
 import { useState } from "react";
+import { fail } from "assert";
 
 export default function QueryForm({ props }) {
   const QuerySchema = Yup.object().shape({
@@ -128,10 +129,17 @@ export default function QueryForm({ props }) {
                   helperText={undefined}
                 />
                 <div>
-                  <Typography variant="body1" color="green">
-                    {success ? "Query Submitted Successfully!" : null}
-                    {failed ? "please try after some time!" : null}
-                  </Typography>
+                  {success ? (
+                    <Typography variant="body1" color="green">
+                      Query Submitted Successfully!
+                    </Typography>
+                  ) : null}
+
+                  {failed ? (
+                    <Typography variant="body1" color="red">
+                      please try after some time!
+                    </Typography>
+                  ) : null}
                   <Backdrop
                     sx={{
                       color: "#fff",
@@ -194,12 +202,17 @@ export default function QueryForm({ props }) {
               helperText={undefined}
             />
             <div>
-              {
+              {" "}
+              {success ? (
                 <Typography variant="body1" color="green">
-                  {success ? "Query Submitted Successfully!" : null}
-                  {failed ? "please try after some time!" : null}
+                  Query Submitted Successfully!
                 </Typography>
-              }
+              ) : null}
+              {failed ? (
+                <Typography variant="body1" color="red">
+                  please try after some time!
+                </Typography>
+              ) : null}
               <Backdrop
                 sx={{
                   color: "#fff",

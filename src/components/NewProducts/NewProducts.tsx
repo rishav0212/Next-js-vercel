@@ -37,50 +37,48 @@ export default function NewProducts() {
 
   return (
     <>
-      <div className="container-fluid">
-        <div className="container">
-          <div className={`row`}>
-            <div className="col-md-12">
-              <h2 className="text-center color-primary">Featured Products</h2>
-            </div>
+      {/* <div className="container"> */}
+        <div className={`row`}>
+          <div className="col-md-12">
+            <h2 className="text-center color-primary">Featured Products</h2>
           </div>
-          <div className={`row`}>
-            {Object.keys(newProductsData).map((e, i) => (
-              <React.Fragment key={e}>
-                <div className="col-lg-3 col-md-6 col-sm-6 mt-3">
-                  <div className={`card ${styles.customCard}`}>
-                    <div className={`${styles.teamItem}`}>
-                      <img
-                        className={`card-img-top img-fluid ${styles.cardImg}`}
-                        src={newProductsData[e].imageURL}
-                        alt={newProductsData[e].imageAlt}
-                      />
-                    </div>
-                    <div className={`${styles.cardImgOverlay}`}>
-                      <h5 className="card-title" style={{ fontSize: "2.1em" }}>
-                        {e}
-                      </h5>
-                      <p
-                        className="card-text text-justify"
-                        style={{ fontSize: "1.3em" }}
-                      >
-                        {newProductsData[e].description}
-                      </p>
-                      <div className="overlay ctr">
-                        <Link href={newProductsData[e].link}>
-                          <button className="btn btn-light" type="button">
-                            Learn More
-                          </button>
-                        </Link>
-                      </div>
+        </div>
+        <div className={`row`}>
+          {Object.keys(newProductsData).map((e, i) => (
+            <React.Fragment key={e}>
+              <div className="col-lg-3 col-md-6 col-sm-6 mt-3">
+                <div className={`card ${styles.customCard}`}>
+                  <div className={`${styles.teamItem}`}>
+                    <img
+                      className={`card-img-top img-fluid ${styles.cardImg}`}
+                      src={newProductsData[e].imageURL}
+                      alt={newProductsData[e].imageAlt}
+                    />
+                  </div>
+                  <div className={`${styles.cardImgOverlay}`}>
+                    <h5 className="card-title" style={{ fontSize: "2.1em" }}>
+                      {e}
+                    </h5>
+                    <p
+                      className="card-text text-justify"
+                      style={{ fontSize: "1.3em" }}
+                    >
+                      {newProductsData[e].description}
+                    </p>
+                    <div className="overlay ctr">
+                      <Link href={newProductsData[e].link}>
+                        <button className="btn btn-light" type="button">
+                          Learn More
+                        </button>
+                      </Link>
                     </div>
                   </div>
                 </div>
-              </React.Fragment>
-            ))}
-          </div>
+              </div>
+            </React.Fragment>
+          ))}
         </div>
-      </div>
+      {/* </div> */}
     </>
   );
 }
