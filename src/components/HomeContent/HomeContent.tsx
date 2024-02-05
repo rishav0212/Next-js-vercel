@@ -1,74 +1,55 @@
 "use client";
-import ApprovalIcon from "@mui/icons-material/Approval";
-import GavelIcon from "@mui/icons-material/Gavel";
-import LocalDiningIcon from "@mui/icons-material/LocalDining";
-import SecurityIcon from "@mui/icons-material/Security";
-import { LoadingButton } from "@mui/lab";
 import {
   Box,
   Container,
   Grid,
-  Paper,
   Stack,
   Toolbar,
   Typography,
-  useMediaQuery,
 } from "@mui/material";
 
-import { useTheme } from "@mui/material/styles";
 import NewProducts from "../NewProducts/NewProducts";
 import NumberCounter from "./NumberCounter/NumberCounter";
-import { Diamond } from "@mui/icons-material";
 
 const tabs = ["Our Vision", "Our Mission", "Our Values"];
 
 export default function HomeContent() {
-  const theme = useTheme();
-  const isSmallerScreen = useMediaQuery(theme.breakpoints.down("md"));
+  // const theme = useTheme();
+  // const isSmallerScreen = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
     <>
-      <Toolbar />
-
       <Container>
         <Stack
-          spacing={4}
-          direction={isSmallerScreen ? "column" : "row"}
           alignItems={"center"}
           justifyContent={"center"}
+          // sx={isSmallerScreen ? { width: "100%" } : { flex: 0.9 }}
+          sx={{ md: { flex: 0.9 }, xs: { width: "100%" } }}
         >
-          <Stack
-            spacing={3}
-            alignItems={"center"}
-            justifyContent={"center"}
-            sx={isSmallerScreen ? { width: "100%" } : { flex: 0.9 }}
-          >
-            <h2 className="text-center">Welcome to Saar Biotech</h2>
-            <Typography variant="body1" textAlign={"justify"}>
-              Saar Biotech Pvt. Ltd., a distinguished and WHO-GMP certified
-              third-party pharmaceutical manufacturing company. Since our
-              establishment in 2005, we have been operating from our
-              state-of-the-art manufacturing unit in Baddi, complemented by our
-              centrally located head office in Chandigarh. With a track record
-              of serving a diverse clientele comprising over 1700 companies, we
-              have firmly established ourselves as a trusted and quality-driven
-              partner in the pharmaceutical industry. At Saar Biotech, we
-              specialize in the manufacturing of a wide range of pharmaceutical
-              products, including Oral Liquids, Ointments, Sprays, Mouthwash,
-              and Paste. We have wide product range which comprises Anti-Fungal,
-              Anti-Bacterial, Anti-Inflammatory, Antitussive and Dermatological
-              products.
-            </Typography>
-          </Stack>
+          <h2 className="text-center">Welcome to Saar Biotech</h2>
+          <Typography variant="body1" textAlign={"justify"}>
+            Saar Biotech Pvt. Ltd., a distinguished and WHO-GMP certified
+            third-party pharmaceutical manufacturing company. Since our
+            establishment in 2005, we have been operating from our
+            state-of-the-art manufacturing unit in Baddi, complemented by our
+            centrally located head office in Chandigarh. With a track record of
+            serving a diverse clientele comprising over 1700 companies, we have
+            firmly established ourselves as a trusted and quality-driven partner
+            in the pharmaceutical industry. At Saar Biotech, we specialize in
+            the manufacturing of a wide range of pharmaceutical products,
+            including Oral Liquids, Ointments, Sprays, Mouthwash, and Paste. We
+            have wide product range which comprises Anti-Fungal, Anti-Bacterial,
+            Anti-Inflammatory, Antitussive and Dermatological products.
+          </Typography>
         </Stack>
-      </Container>
-      <Toolbar />
-      <NumberCounter />
-      <Toolbar />
-      <NewProducts />
-      <Toolbar />
 
-      {/* <div class="diamond green">
+        <Toolbar />
+        <NumberCounter />
+        <Toolbar />
+        <NewProducts />
+        <Toolbar />
+
+        {/* <div class="diamond green">
         <span>Attractive Packing</span>
       </div>
       <div class="diamond darkGreen">
@@ -78,7 +59,7 @@ export default function HomeContent() {
         <span>Timely Delivery</span>
       </div> */}
 
-      {/* <Container>
+        {/* <Container>
         <Link href="/products">
           <LoadingButton
             color="primary"
@@ -95,8 +76,8 @@ export default function HomeContent() {
 
       <Toolbar /> */}
 
-      <Container maxWidth="md">
-        {/* <div style={diamond}>
+        <Container maxWidth="md">
+          {/* <div style={diamond}>
           <span>Attractive Packing</span>
         </div>
         <div style={diamond}>
@@ -105,89 +86,89 @@ export default function HomeContent() {
         <div style={diamond}>
           <span>Timely Delivery</span>
         </div> */}
-        <h3 className="text-center">Our Certifications</h3>
-        <Grid container justifyContent={"center"}>
-          <Grid item md={5} sm={5} xs={8} sx={certificateBoxStyle}>
-            <img
-              src="/images/icons/certificate/WHO.png"
-              alt="Recode7"
-              style={{
-                height: "11em",
-                objectFit: "contain",
-                display: "flex",
-                margin: "auto",
-              }}
-            />
+          <h3 className="text-center">Our Certifications</h3>
+          <Grid container justifyContent={"center"}>
+            <Grid item md={5} sm={5} xs={8} sx={certificateBoxStyle}>
+              <img
+                src="/images/icons/certificate/WHO.png"
+                alt="Recode7"
+                style={{
+                  height: "11em",
+                  objectFit: "contain",
+                  display: "flex",
+                  margin: "auto",
+                }}
+              />
 
-            <h6 className="text-center">WHO Certified</h6>
+              <h6 className="text-center">WHO Certified</h6>
+            </Grid>
+            <Grid item md={5} sm={5} xs={8} sx={certificateBoxStyle}>
+              <img
+                src="/images/icons/certificate/GMP.png"
+                alt="Recode7"
+                style={{
+                  height: "11em",
+                  objectFit: "contain",
+                  display: "flex",
+                  margin: "auto",
+                }}
+              />
+
+              <h6 className="text-center">GMP Certification</h6>
+            </Grid>
+            <Grid item md={5} sm={5} xs={8} sx={certificateBoxStyle}>
+              <img
+                src="/images/icons/certificate/ISO.png"
+                alt="Recode7"
+                style={{
+                  height: "11em",
+                  objectFit: "contain",
+                  display: "flex",
+                  margin: "auto",
+                }}
+              />
+
+              <h6 className="text-center">ISO Certified</h6>
+            </Grid>
+            <Grid item md={5} sm={5} xs={8} sx={certificateBoxStyle}>
+              <img
+                src="/images/icons/certificate/FSSAI.png"
+                alt="Recode7"
+                style={{
+                  height: "8em",
+                  objectFit: "contain",
+                  display: "flex",
+                  margin: "auto",
+                }}
+              />
+
+              <h6 className="text-center">Food Suppliment License</h6>
+            </Grid>
           </Grid>
-          <Grid item md={5} sm={5} xs={8} sx={certificateBoxStyle}>
-            <img
-              src="/images/icons/certificate/GMP.png"
-              alt="Recode7"
-              style={{
-                height: "11em",
-                objectFit: "contain",
-                display: "flex",
-                margin: "auto",
-              }}
-            />
+        </Container>
 
-            <h6 className="text-center">GMP Certification</h6>
-          </Grid>
-          <Grid item md={5} sm={5} xs={8} sx={certificateBoxStyle}>
-            <img
-              src="/images/icons/certificate/ISO.png"
-              alt="Recode7"
-              style={{
-                height: "11em",
-                objectFit: "contain",
-                display: "flex",
-                margin: "auto",
-              }}
-            />
+        <Toolbar />
 
-            <h6 className="text-center">ISO Certified</h6>
-          </Grid>
-          <Grid item md={5} sm={5} xs={8} sx={certificateBoxStyle}>
-            <img
-              src="/images/icons/certificate/FSSAI.png"
-              alt="Recode7"
-              style={{
-                height: "8em",
-                objectFit: "contain",
-                display: "flex",
-                margin: "auto",
-              }}
-            />
+        <Box
+          sx={{
+            width: "100%",
+            height: "15vh",
+            backgroundColor: "var(--primary-color)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            textAlign: "center",
+          }}
+        >
+          <h5 style={{ fontStyle: "italic", color: "white" }}>
+            "Wherever the art of Medicine is love, there is also a love for
+            humanity"
+          </h5>
+        </Box>
 
-            <h6 className="text-center">Food Suppliment License</h6>
-          </Grid>
-        </Grid>
-      </Container>
+        {/* <Toolbar /> */}
 
-      <Toolbar />
-
-      <Box
-        sx={{
-          width: "100%",
-          height: "15vh",
-          backgroundColor: "var(--primary-color)",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          textAlign: "center",
-        }}
-      >
-        <h5 style={{ fontStyle: "italic", color: "white" }}>
-          "Wherever the art of Medicine is love, there is also a love for
-          humanity"
-        </h5>
-      </Box>
-
-      {/* <Toolbar /> */}
-
-      {/* <div className="p-5 m-5">
+        {/* <div className="p-5 m-5">
         <div className="row row-cols-1 row-cols-md-3  text-center">
           <div className="col">
             <div className="card mb-4 rounded-3 shadow-sm">
@@ -236,8 +217,7 @@ export default function HomeContent() {
           </div>
         </div>
       </div> */}
-
-      <Toolbar />
+      </Container>
     </>
   );
 }

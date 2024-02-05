@@ -47,7 +47,7 @@ export default function NewProducts() {
           <div className={`row`}>
             {Object.keys(newProductsData).map((e, i) => (
               <React.Fragment key={e}>
-                <div className="col-md-3 mt-3">
+                <div className="col-lg-3 col-md-6 col-sm-6 mt-3">
                   <div className={`card ${styles.customCard}`}>
                     <div className={`${styles.teamItem}`}>
                       <img
