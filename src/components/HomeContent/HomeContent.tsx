@@ -1,4 +1,4 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 
 import NewProducts from "../NewProducts/NewProducts";
 import NumberCounter from "./NumberCounter/NumberCounter";
@@ -128,7 +128,7 @@ export default function HomeContent() {
         </Grid>
       </Grid>
 
-      <Box
+      <Grid
         sx={{
           width: "100%",
           height: "15vh",
@@ -143,7 +143,7 @@ export default function HomeContent() {
           "Wherever the art of Medicine is love, there is also a love for
           humanity"
         </h5>
-      </Box>
+      </Grid>
 
       {/* <Toolbar /> */}
 
