@@ -37,7 +37,9 @@ RewriteRule ^Capsule\.html$ /products/Capsules/ [R=301,L]
 
 RewriteRule ^Sachets\.html$ /products/Sachets/ [R=301,L]
 
-RewriteRule ^Event\.html$ /events/ [R=302,L]
+RewriteRule ^Event\.html$ /broucher/ [R=301,L]
+
+RewriteRule ^brochure1\.pdf$ /broucher/ [R=301,L]
 
 RewriteRule ^pharmac\ south\ 2014\.html$ /events/pharma-south-2014/ [R=301,L]
 
@@ -46,6 +48,9 @@ RewriteRule ^Indian\ pharma\ Expo\ 2013\.html$ /events/indian-pharma-expo-2013/ 
 RewriteRule ^Indian\ pharma\ Expo\ 2012\.html$ /events/indian-pharma-expo-2012/ [R=301,L]
 
 RewriteRule ^contact-us\.html$ /contact/ [R=301,L]
+
+RewriteRule ^Video\.html$ /manufacturing-unit/video/ [R=301,L]
+
 
 
 # PRoducts Pages
@@ -373,7 +378,6 @@ RewriteRule ^Patna\ Expo\ 2023\.html$ https://old.saarbiotech.in/Patna\ Expo\ 20
 RewriteRule ^Pune\ Expo\ 2023\.html$ https://old.saarbiotech.in/Pune\ Expo\ 2023.html [R=302,L]
 RewriteRule ^Srinagar\ Expo\ 2023\.html$ https://old.saarbiotech.in/Srinagar\ Expo\ 2023.html [R=302,L]
 RewriteRule ^infrastructure\.html$ https://old.saarbiotech.in/infrastructure.html [R=302,L]
-RewriteRule ^Video\.html$ https://old.saarbiotech.in/Video.html [R=302,L]
 
 
 
