@@ -59,12 +59,11 @@ export default function Certificates() {
       </Box>
 
       {Object.keys(links).map((link, index) => (
-        <Grid container>
+        <Grid container key={index}>
           <Grid
             item
             md={5}
             sm={6}
-            key={index}
             display={"inline-flex"}
             hidden={value !== index}
             role="tabpanel"
@@ -75,10 +74,10 @@ export default function Certificates() {
               height: { md: "70vh", sm: "60vh" },
             }}
           >
-            {/* <iframe
+            <iframe
               src={links[link]}
               style={{ width: "100%", height: "100%" }}
-            ></iframe> */}
+            ></iframe>
           </Grid>
           <Grid
             item
