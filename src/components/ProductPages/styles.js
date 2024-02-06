@@ -83,14 +83,14 @@ export const imgPaper = {
   position: "relative",
   overflow: "hidden",
   display: "inline-block",
-  borderRadius: 5,
+  borderRadius: 1,
   transition: "box-shadow 0.3s ease-in-out",
   alignContent: "center",
-  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.9)",
-  "&:hover": {
-    boxShadow: "0 8px 16px rgba(0, 0, 0, 0.6)",
-    transform: "scale(1.05)",
-  },
+  boxShadow: "0 1px 1px rgba(0, 0, 0, .9)",
+  // "&:hover": {
+  //   boxShadow: "0 8px 16px rgba(0, 0, 0, 0.6)",
+  //   transform: "scale(1.05)",
+  // },
 };
 
 export const lowerGrid = {
