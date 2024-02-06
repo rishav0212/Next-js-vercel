@@ -16,6 +16,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Saar Biotech",
   description: "",
+  icons:{
+    icon:"/fevicon.png"
+  }
 };
 
 export default function RootLayout({

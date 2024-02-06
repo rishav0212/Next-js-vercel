@@ -46,7 +46,15 @@ export default function Page() {
               TRETINOIN
             </Typography>
           </Grid>
-          <Grid container item md={7} sm={12} xs={12}>
+          <Grid
+            container
+            item
+            display={"flex"}
+            direction={"column"}
+            md={7}
+            sm={12}
+            xs={12}
+          >
             <Grid display={"flex"}>
               <Typography sx={styles.indications.title}>
                 <b>Indications:</b>
@@ -84,14 +92,14 @@ export default function Page() {
                 objectFit: "contain",
               }}
             /> */}
-            <ImageGallery />
+            <ImageGallery imagesCount={5} name={link} />
           </Grid>
         </Grid>
 
         <Grid container item md={12} sx={styles.lowerGrid}>
           <ScrollToSection Sections={Sections} />
 
-          <Typography id="description" sx={styles.sectionTitle}>
+          <Typography variant="h6" id="description" sx={styles.sectionTitle}>
             DESCRIPTION
             {/* <hr style={{ width: "100%" }} /> */}
             <Divider />
