@@ -19,23 +19,23 @@ export const upperGrid = {
 export const titleStyle = {
   color: "var(--primary-color)",
   fontWeight: "bold",
-  textShadow: "4px 2px 4px rgba(0, 0, 0, 0.3)",
+  textShadow: "2px 2px 2px rgba(0, 0, 0, 0.3)",
   marginBottom: 3,
-  fontSize: "4em",
+  fontSize: "3em",
   textAlign: "center",
   "&:hover": {
-    textShadow: "5px 2px 4px rgba(0, 0, 0, 0.4)",
+    textShadow: "3px 2px 3px rgba(0, 0, 0, 0.9)",
   },
 };
 
 export const indications = {
   title: {
     color: "var(--primary-color)",
-    fontSize: "2.2em",
+    fontSize: "1.8em",
   },
   data: {
-    fontSize: "2.2em",
-    marginLeft: "5px",
+    fontSize: "1.7em",
+    marginLeft: "2em",
   },
 };
 
@@ -61,19 +61,12 @@ export const presentation = {
 };
 
 export const sectionTitle = {
-  color: "whitesmoke",
-  display: "inline-block",
-  borderRadius: "2em",
-  background: `linear-gradient(45deg, #3cb6a0 0%, #3498db 100%)`,
-  padding: "0.5em 1em",
-  boxShadow: "0 4px 6px rgba(0,0,0, 0.8)",
+  marginTop: 5,
   marginBottom: 2,
   marginTop: 3,
-  fontSize: "1.9em",
-  textAlign: "center",
-  "&:hover": {
-    boxShadow: "0 6px 10px rgba(0, 0, 0, 0.9)",
-  },
+  fontSize: "2.4em",
+  textAlign: "left",
+  width: "50%",
 };
 
 export const sectionData = {
@@ -90,14 +83,14 @@ export const imgPaper = {
   position: "relative",
   overflow: "hidden",
   display: "inline-block",
-  borderRadius: 5,
+  borderRadius: 1,
   transition: "box-shadow 0.3s ease-in-out",
   alignContent: "center",
-  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.9)",
-  "&:hover": {
-    boxShadow: "0 8px 16px rgba(0, 0, 0, 0.6)",
-    transform: "scale(1.05)",
-  },
+  boxShadow: "0 1px 1px rgba(0, 0, 0, .9)",
+  // "&:hover": {
+  //   boxShadow: "0 8px 16px rgba(0, 0, 0, 0.6)",
+  //   transform: "scale(1.05)",
+  // },
 };
 
 export const lowerGrid = {
