@@ -33,7 +33,7 @@ export default function Page() {
   prevents bacteria from growing by interfering with their protein
   synthesis.`;
 
-  return <ImageGallery imagesCount={5} name="azithromycin"/>;
+  return <ImageGallery imagesCount={5} name="azithromycin" />;
 }
 
 export const metadata: Metadata = {

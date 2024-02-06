@@ -62,6 +62,8 @@ export const presentation = {
 
 export const sectionTitle = {
   marginTop: 5,
+  fontWeight:500,
+  borderBottom:"1px solid #999",
   marginBottom: 2,
   marginTop: 3,
   fontSize: "2.4em",

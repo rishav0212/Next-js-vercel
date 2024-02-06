@@ -6,9 +6,6 @@ import {
   Toolbar,
   Typography,
   Grid,
-  Divider,
-  Chip,
-  Link,
 } from "@mui/material";
 import { FiberManualRecord } from "@mui/icons-material";
 import { Metadata } from "next";
@@ -102,7 +99,7 @@ export default function Page() {
           <Typography variant="h6" id="description" sx={styles.sectionTitle}>
             DESCRIPTION
             {/* <hr style={{ width: "100%" }} /> */}
-            <Divider />
+            
           </Typography>
 
           <Typography sx={styles.sectionData} textAlign="justify">
@@ -126,7 +123,7 @@ export default function Page() {
           {/** Indications Section */}
           <Typography variant="h6" id="indications" sx={styles.sectionTitle}>
             Indications
-            <Divider />
+            
           </Typography>
           <List dense sx={styles.list}>
             {[
@@ -152,7 +149,7 @@ export default function Page() {
           {/** Mechanism Section */}
           <Typography variant="h6" id="mechanism" sx={styles.sectionTitle}>
             Mechanism
-            <Divider />
+            
           </Typography>
           <Typography sx={styles.sectionData} textAlign="justify">
             Azithromycin binds to the 50S subunit of the 70S bacterial
@@ -167,7 +164,7 @@ export default function Page() {
             id="pharmacokinetics"
           >
             Pharmacokinetics
-            <Divider />
+            
           </Typography>
           <Typography textAlign="justify" sx={styles.sectionData}>
             <b> Absorption: </b>
@@ -203,7 +200,7 @@ export default function Page() {
           {/** Side Effects Section */}
           <Typography variant="h6" id="side effects" sx={styles.sectionTitle}>
             Side Effects
-            <Divider />
+            
           </Typography>
           <List dense sx={styles.list}>
             <b>Common side effects include:</b>
@@ -224,7 +221,7 @@ export default function Page() {
             sx={styles.sectionTitle}
           >
             Contraindication
-            <Divider />
+            
           </Typography>
           <Typography sx={styles.sectionData} textAlign="justify">
             The use of azithromycin is contraindicated in patients with
@@ -235,7 +232,7 @@ export default function Page() {
           {/** Conclusion Section */}
           <Typography variant="h6" id="conclusion" sx={styles.sectionTitle}>
             Conclusion
-            <Divider />
+            
           </Typography>
           <Typography sx={styles.sectionData} textAlign="justify">
             <b>

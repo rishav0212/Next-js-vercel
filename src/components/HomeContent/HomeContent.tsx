@@ -1,6 +1,6 @@
 import { Grid, Typography } from "@mui/material";
 
-import NewProducts from "../NewProducts/NewProducts";
+import NewProducts from "./NewProducts/NewProducts";
 import NumberCounter from "./NumberCounter/NumberCounter";
 
 const tabs = ["Our Vision", "Our Mission", "Our Values"];
