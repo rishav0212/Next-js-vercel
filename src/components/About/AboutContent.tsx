@@ -70,7 +70,7 @@ export default function AboutContent() {
         </Grid>
       </Grid>
 
-      <Grid item md={9} xs={12} sm={11}>
+      <Grid item md={9} xs={12} sm={11} margin={3} sx={{background:"#f8f8f8"}}>
         <Certificates />
       </Grid>
 

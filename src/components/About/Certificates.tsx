@@ -1,5 +1,5 @@
 "use client";
-import { Box, Grid, Tab, Tabs, Typography } from "@mui/material";
+import { Box, Grid, Tab, Tabs } from "@mui/material";
 import * as React from "react";
 
 interface TabPanelProps {
@@ -30,16 +30,9 @@ export default function Certificates() {
         }}
       >
         <Tabs
-          sx={
-            {
-              // background: "var(--primary-color)",
-              // opacity: 0.5,
-            }
-          }
           value={value}
           onChange={handleChange}
-          textColor="secondary"
-          indicatorColor="secondary"
+          textColor="inherit"
           aria-label="certificates"
         >
           {Object.keys(links).map((link, index) => (
@@ -48,6 +41,13 @@ export default function Certificates() {
                 fontSize: "1.5em",
                 overflow: "hidden",
                 maxWidth: "33%",
+                background: index === value ? "#3cb6a0" : "null",
+                color: index === value ? "#fff" : "#333",
+                transition:
+                  "background 0.3s ease-in-out, color 0.3s ease-in-out",
+                "&:hover": {
+                  background: "#3cb6a090",
+                },
               }}
               label={link}
               id={`simple-tab-${index}`}
@@ -65,6 +65,7 @@ export default function Certificates() {
             md={5}
             sm={6}
             display={"inline-flex"}
+            borderBottom="1px solid"
             hidden={value !== index}
             role="tabpanel"
             id={`simple-tabpanel-${index}`}
@@ -88,8 +89,11 @@ export default function Certificates() {
             alignItems={"center"}
             justifyContent={"center"}
             hidden={value !== index}
+            sx={{ color: "#333" }}
           >
-            <h3 style={{ fontSize: "2em" }}>WHO Certification </h3>
+            <h3 style={{ fontSize: "2em", color: "#3cb6a0" }}>
+              WHO Certification{" "}
+            </h3>
             <p>
               The "World Health Organization (WHO)" is a specialized agency of
               the "United Nations (UN)" that is concerned with international
