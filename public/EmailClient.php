@@ -99,8 +99,8 @@ try {
 		$response['message'] = 'Message has been sent';
 		// echo 'Message has been sent';
 	} else {
-		response['success'] = false;
-		response['message'] = "error decoding input fields";
+		$response['success'] = false;
+		$response['message'] = "error decoding input fields";
 	}
 
 
