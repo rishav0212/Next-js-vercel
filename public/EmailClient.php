@@ -40,67 +40,70 @@ try {
 		$phone = $data['phone'];
 		$company = $data['company'];
 		$query = $data['query'];
+
+
+			// response['name'] = $data['name'];
+		// response['email'] = $data['email'];
+		// response['phone'] = $data['phone'];
+		// response['company'] = $data['company'];
+		// response['query'] = $data['query'];
+
+		//Fetch the Referrer Site.
+		$referrer = $_SERVER['HTTP_REFERER'];
+		$DEFAULT_REFERRER = "default.saarbiotech.in";
+		// response['referred'] = $referrer
+		// echo "Referred: $referrer\n";
+
+		if ($referrer !== null) {
+			$parsedURL = parse_url($referrer)['host'];
+			// echo "Parsed URL: $parsedURL\n";
+			// response['Parsed_URL'] = $parsedURL
+
+		} else {
+			// echo "Referrer not found. Defualting it to: DEFAULT_REFERRER";
+			$parsedURL  = $DEFAULT_REFERRER;
+		}
+
+
+
+		//Setting Default For testing only
+		//$name = "Sandeep Testing";	
+		//$email = "sandeep138@alenslim.co.in";
+		//$phone = "1111111111";
+		//$query = "Sample Query";
+		//$company = "Sample Company";
+
+
+		// echo "Using Name:$name Email:$email Company:$company ContactNo:$contactNo Query:$query\n";
+
+
+		//Recipients
+		$mail->setFrom('sandeep138@alenslim.co.in', 'SAAR Biotech Admin');
+		$mail->addAddress('sandeep@saarbiotech.com', 'Sandeep SAAR'); //Name is optional    
+		$mail->addAddress('varunaggarwal@saarbiotech.com', 'Varun Aggarwal'); //Name is optional    
+		$mail->addAddress('specification@alainapharma.com', 'Specifications Alainapharma'); //Name is optional    
+		$mail->addAddress('rishavj0212@gmail.com', 'Rishav Jindal');
+		$mail->addAddress('web@alaina.co.in', 'Alaina Web');
+		$mail->addBCC('sandeep138@alenslim.co.in');
+
+
+		//Content
+		$mail->isHTML(true);                                  //Set email format to HTML
+		$mail->Subject = "$parsedURL | Enquiry | {$name}";
+		$mail->Body    = "HTML Enquiry from {$name}. Email is {$email}. Phone is: {$phone}. Query: {$query}";
+		$mail->AltBody = "Plain Enquiry from {$name}. Email is {$email}. Phone is: {$phone}. Query: {$query}";
+
+		$mail->send();
+		// print("Message has been sent");
+		$response['success'] = true;
+		$response['message'] = 'Message has been sent';
+		// echo 'Message has been sent';
 	} else {
-		// response['success'] = false
-		// response['error'] = "error decoding input fields"
+		response['success'] = false
+		response['message'] = "error decoding input fields"
 	}
 
-	// response['name'] = $data['name'];
-	// response['email'] = $data['email'];
-	// response['phone'] = $data['phone'];
-	// response['company'] = $data['company'];
-	// response['query'] = $data['query'];
 
-	//Fetch the Referrer Site.
-	$referrer = $_SERVER['HTTP_REFERER'];
-	$DEFAULT_REFERRER = "default.saarbiotech.in";
-	// response['referred'] = $referrer
-	// echo "Referred: $referrer\n";
-
-	if ($referrer !== null) {
-		$parsedURL = parse_url($referrer)['host'];
-		// echo "Parsed URL: $parsedURL\n";
-		// response['Parsed_URL'] = $parsedURL
-
-	} else {
-		// echo "Referrer not found. Defualting it to: DEFAULT_REFERRER";
-		$parsedURL  = $DEFAULT_REFERRER;
-	}
-
-
-
-	//Setting Default For testing only
-	//$name = "Sandeep Testing";	
-	//$email = "sandeep138@alenslim.co.in";
-	//$phone = "1111111111";
-	//$query = "Sample Query";
-	//$company = "Sample Company";
-
-
-	// echo "Using Name:$name Email:$email Company:$company ContactNo:$contactNo Query:$query\n";
-
-
-	//Recipients
-	$mail->setFrom('sandeep138@alenslim.co.in', 'SAAR Biotech Admin');
-	$mail->addAddress('sandeep@saarbiotech.com', 'Sandeep SAAR'); //Name is optional    
-	$mail->addAddress('varunaggarwal@saarbiotech.com', 'Varun Aggarwal'); //Name is optional    
-	$mail->addAddress('specification@alainapharma.com', 'Specifications Alainapharma'); //Name is optional    
-	$mail->addAddress('rishavj0212@gmail.com', 'Rishav Jindal');
-	$mail->addAddress('web@alaina.co.in', 'Alaina Web');
-	$mail->addBCC('sandeep138@alenslim.co.in');
-
-
-	//Content
-	$mail->isHTML(true);                                  //Set email format to HTML
-	$mail->Subject = "$parsedURL | Enquiry | {$name}";
-	$mail->Body    = "HTML Enquiry from {$name}. Email is {$email}. Phone is: {$phone}. Query: {$query}";
-	$mail->AltBody = "Plain Enquiry from {$name}. Email is {$email}. Phone is: {$phone}. Query: {$query}";
-
-	$mail->send();
-	// print("Message has been sent");
-	$response['success'] = true;
-	$response['message'] = 'Message has been sent';
-	// echo 'Message has been sent';
 } catch (Exception $e) {
 	// print("Exception occured");
 	// echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";

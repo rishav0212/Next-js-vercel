@@ -28,17 +28,18 @@ const ButtonStyles = {
 
 function WhatsappQuery() {
   const url = usePathname();
-  const product =
-    url.slice(
-      0,
-      url.indexOf("/", 1) !== -1 ? url.indexOf("/", 1) : url.length
-    ) === "/product"
-      ? url.slice(url.indexOf("/", 1) + 1, -1)
-      : "";
-
+  const productIndex = url.indexOf("/product");
+  const message =
+    productIndex !== -1
+      ? "Hello! \nWant to enquire about \nProduct: " +
+        url.slice(productIndex + "/product".length + 1, -1)
+      : "Hello!";
   const handleClick = () => {
-    window.open("https://wa.me/+917658852936?text=" + product);
+    window.open(
+      "https://wa.me/+917658852936?text=" + encodeURIComponent(message)
+    );
   };
+
   return (
     <>
       <Button sx={ButtonStyles} onClick={handleClick}>
