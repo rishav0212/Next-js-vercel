@@ -10,6 +10,7 @@ import AppThemeProvider from "@/theme";
 import "@/fonts/fonts.css";
 import ScrollToTop from "@/components/CommonLayout/ScrollToTop/ScrollToTop";
 import QuickEnquiry from "@/components/CommonLayout/QuickEnquiry/QuickEnquiry";
+import WhatsappQuery from "@/components/CommonLayout/WhatsappQuery/WhatsappQuery";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -37,6 +38,7 @@ export default function RootLayout({
           <AppThemeProvider>
             <Navbar />
             <QuickEnquiry />
+            <WhatsappQuery/>
             {children}
             <ScrollToTop />
             <Footer />
