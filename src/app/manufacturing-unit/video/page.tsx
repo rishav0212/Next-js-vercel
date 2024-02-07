@@ -42,4 +42,8 @@ export default function video() {
 
 export const metadata: Metadata = {
   title: "Factory Video | Saar Biotech",
+  description:
+    "Explore Saar Biotech's state-of-the-art manufacturing facility through our factory video. Witness our commitment to quality and innovation in pharmaceutical manufacturing.",
+  keywords:
+    "factory video, manufacturing facility, pharmaceutical manufacturing, Saar Biotech, pharmaceutical companies, pharmaceutical industry, quality manufacturing, innovation, pharmaceutical production, pharmaceutical equipment",
 };

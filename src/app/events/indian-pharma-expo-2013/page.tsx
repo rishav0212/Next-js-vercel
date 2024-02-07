@@ -1,9 +1,16 @@
 import { Grid, Typography } from "@mui/material";
 import { Metadata } from "next";
+import Head from "next/head";;
 
 export default function Expo2013Content() {
   return (
     <>
+          <Head>
+        <link
+          rel="canonical"
+          href="https://old.saarbiotech.in/Indian%20pharma20%Expo%202013.html"
+        />
+      </Head>
       <Grid container justifyContent={"center"} alignContent={"center"}>
         <Grid
           container
@@ -86,12 +93,10 @@ export default function Expo2013Content() {
   );
 }
 
-
-
 export const metadata: Metadata = {
-  title: "Pharmac South 2013| Saar Biotech",
+  title: "Indian Pharma Expo 2013 | Saar Biotech",
   description:
-    "Saar Biotech Deals in Liquids, Suspensions, Dry syrups, sprays, Nasal sprays, Ointments, Tablets,creams, skin ceams, antibiotic, Anticold, Analgesic & Anti-inflammatory, Antacid, Dry Syrups, Tonic, Drops, Cough, Shampoo, Lotions, Roll On, Capsules, Sachets in very attractive packings for Amber Bottle PACKING, measuring Cap, Blister Packing, Metallic Cartons. Saar Biotech is GMP Certified company involved in making DCGI approved new Drugs from Past four years",
+    "Saar Biotech participated in the Indian Pharma Expo 2013, showcasing a wide range of pharmaceutical products. Explore our participation in the exhibition and our commitment to producing high-quality DCGI approved drugs.",
   keywords:
-    "Participation, indian pharme expo 2013, dm pharma, saar biotech , exhibition , expo 2012, delhi, sponsors, Contract manufacturing, export, exports, exporter, exporters,DM,Saar, biotech, Pharma, Excise freee Zone ,DCGI approved drugs, Saar Biotech,Pharmaceutical Manufacturing,  companies in India,  PHARMACEUTICAL, Manufacturers ,Baddi Himachal,Third party medicine manufacturers ,Bulk medicine manufacturers in Chandigarh,  Top Pharmaceutical companies in Chandigarh,  DCGI Approved Molecules, pharmaceutical companies in India, pharmaceuticals export india, top 10 pharmaceutical companies , third party, medicine, manufacturer, pharmaceutical manufacturer in india,pharma exporters, medicines ",
+    "Indian Pharma Expo 2013, Saar Biotech, Pharmaceutical Exhibition, Pharma Expo 2013, Delhi Exhibition, Contract Manufacturing, GMP Certified, DCGI Approved Drugs, Pharmaceutical Manufacturer, Pharma Exporter, Bulk Medicine Manufacturer, Top Pharma Companies, Pharma Industry",
 };

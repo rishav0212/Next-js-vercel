@@ -1,9 +1,16 @@
 import { Grid, Typography } from "@mui/material";
 import { Metadata } from "next";
+import Head from "next/head";;
 
 export default function Expo2012Content() {
   return (
     <>
+      <Head>
+        <link
+          rel="canonical"
+          href="https://old.saarbiotech.in/pharmac%20south%202014.html"
+        />
+      </Head>
       <Grid container justifyContent={"center"} alignContent={"center"}>
         <Grid
           container
@@ -96,9 +103,9 @@ export default function Expo2012Content() {
 }
 
 export const metadata: Metadata = {
-  title: "Pharmac South 2014| Saar Biotech |Chennai Trade Center",
+  title: "Saar Biotech at Pharmac South 2014 | Chennai Trade Center",
   description:
-    "Saar Biotech is GMP , ISO Certified and WHO Applied company involved in making DCGI approved new Drugs from Past seven years",
+    "Saar Biotech participated in PHARMAC SOUTH 2014, showcasing GMP, ISO Certified, and WHO Applied pharmaceutical products. Explore our involvement in the exhibition and our commitment to producing DCGI approved new drugs.",
   keywords:
-    "pharmac south, orbit, expo, exhibition, 3rd party, III, rd, third party, contract manufacturer, pharmaceuticals, pharma exporters, pharma company in baddi, pharma company in chandigarh, pharma suppliers, medication, iso gmp certified, pharma company. ",
+    "Pharmac South 2014, Saar Biotech, Chennai Trade Center, Pharma Exhibition, GMP Certified, ISO Certified, WHO Applied, DCGI Approved Drugs, Contract Manufacturer, Pharmaceuticals, Pharma Exporters, Baddi Pharma Company, Chandigarh Pharma Company, Medication Supplier",
 };

@@ -16,10 +16,10 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Saar Biotech",
-  description: "",
-  icons:{
-    icon:"/fevicon.png"
-  }
+  viewport: "width=device-width, initial-scale=1.0",
+  icons: {
+    icon: "/fevicon.png",
+  },
 };
 
 export default function RootLayout({
@@ -38,7 +38,7 @@ export default function RootLayout({
           <AppThemeProvider>
             <Navbar />
             <QuickEnquiry />
-            <WhatsappQuery/>
+            <WhatsappQuery />
             {children}
             <ScrollToTop />
             <Footer />

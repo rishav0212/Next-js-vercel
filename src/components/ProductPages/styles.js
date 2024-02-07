@@ -62,8 +62,8 @@ export const presentation = {
 
 export const sectionTitle = {
   marginTop: 5,
-  fontWeight:500,
-  borderBottom:"1px solid #999",
+  fontWeight: 500,
+  borderBottom: "1px solid #999",
   marginBottom: 2,
   marginTop: 3,
   fontSize: "2.4em",
@@ -72,13 +72,13 @@ export const sectionTitle = {
 };
 
 export const sectionData = {
-  fontSize: "1.6em",
+  fontSize: "1.4em",
   textAlign: "justify",
 };
 
 export const list = {
   width: "100%",
-  fontSize: "1.6em",
+  fontSize: "1.4em",
 };
 
 export const imgPaper = {

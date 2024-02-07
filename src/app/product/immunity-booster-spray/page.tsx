@@ -209,9 +209,10 @@ export default function Page() {
 
 export const metadata: Metadata = {
   title:
-    "Immunity Booster | Saar Biotech | Third party Medicine Contract Manufacturing",
+    "Immunity Booster Spray | Saar Biotech | Third-party Medicine Contract Manufacturing",
   description:
-    "Our Immunity spray is mainly designed to boost up immunity and prevent damage from free radicals, use this spray to help boost your immune system, especially as the cold and flu season goes on the attack. The functions of all nutrients are well known, and each of them plays one or more key roles in maintaining the daily functions basics to health and life itself.",
+    "Boost your immune system with Saar Biotech's Immunity Booster Spray. Our spray is designed to prevent damage from free radicals and help you combat the cold and flu season. Formulated with key nutrients like Ashwagandha, Giloy, Vitamin B1, Vitamin D, Vitamin C, and Zinc, our spray enhances cell-mediated immunity, removes toxins from the body, supports heart and brain health, promotes strong bones, and contributes to healthy skin. Experience rapid relief and improved well-being with our convenient spray, suitable for those who prefer not to swallow pills or capsules.",
   keywords:
-    "Immunity Booster, Spray, immune system, Ashwagandha, giloy, Vitamin B1, Vitamin D, Vitamin C, zinc, pharma, pharmaceutical, manufacturing, baddi, chandigarh",
+    "Immunity Booster Spray, immune system, Ashwagandha, giloy, Vitamin B1, Vitamin D, Vitamin C, zinc, pharma, pharmaceutical, manufacturing, baddi, chandigarh",
 };
+
