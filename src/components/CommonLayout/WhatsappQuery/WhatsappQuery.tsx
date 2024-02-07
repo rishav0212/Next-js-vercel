@@ -37,9 +37,7 @@ function WhatsappQuery() {
       : "";
 
   const handleClick = () => {
-    window.open(
-      "https://web.whatsapp.com/send?phone=917658852936&text=" + product
-    );
+    window.open("https://wa.me/+917658852936?text=" + product);
   };
   return (
     <>
