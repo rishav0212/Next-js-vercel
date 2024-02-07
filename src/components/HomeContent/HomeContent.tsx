@@ -1,7 +1,8 @@
 import { Grid, Typography } from "@mui/material";
-
 import NewProducts from "./NewProducts/NewProducts";
 import NumberCounter from "./NumberCounter/NumberCounter";
+import Link from "next/link";
+import { fontSize } from "@mui/system";
 
 const tabs = ["Our Vision", "Our Mission", "Our Values"];
 
@@ -44,6 +45,7 @@ export default function HomeContent() {
       <NumberCounter />
       <Grid item xs={10} my={5}>
         <NewProducts />
+        <Link href="/products" style={{float:"right", fontSize:"1.3em", margin:10}}>See More . . .</Link>
       </Grid>
 
       {/* <Grid> */}

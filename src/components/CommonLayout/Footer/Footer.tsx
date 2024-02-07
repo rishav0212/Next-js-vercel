@@ -1,7 +1,7 @@
 "use client";
 import { Box, Container, Divider, Grid, Typography } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import QueryForm from "../hook-form/QueryForm";
+import QueryForm from "../../hook-form/QueryForm";
 
 const darkTheme = createTheme({
   palette: {

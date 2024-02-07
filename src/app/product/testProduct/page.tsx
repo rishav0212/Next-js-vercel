@@ -12,7 +12,7 @@ import { FiberManualRecord } from "@mui/icons-material";
 import { Metadata } from "next";
 import * as styles from "@/components/ProductPages/styles.js";
 import ScrollToSection from "@/components/ProductPages/ScrollToSection/ScrollToSrction";
-import ImageGallery from "@/components/ImageGallery/ImageGallery";
+import ImageGallery from "@/components/ProductPages/ImageGallery/ImageGallery";
 
 export default function Page() {
   const link = "azithromycin";

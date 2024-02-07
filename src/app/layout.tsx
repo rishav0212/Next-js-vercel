@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import "./globals.css";
-import Navbar from "@/components/Navbar/Navbar";
-import Footer from "@/components/Footer/Footer";
+import Navbar from "@/components/CommonLayout/Navbar/Navbar";
+import Footer from "@/components/CommonLayout/Footer/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Script from "next/script";
 import AppThemeProvider from "@/theme";
 import "@/fonts/fonts.css";
-import ScrollToTop from "@/components/ScrollToTop/ScrollToTop";
-import QuickEnquiry from "@/components/QuickEnquiry/QuickEnquiry";
+import ScrollToTop from "@/components/CommonLayout/ScrollToTop/ScrollToTop";
+import QuickEnquiry from "@/components/CommonLayout/QuickEnquiry/QuickEnquiry";
 
 const inter = Inter({ subsets: ["latin"] });
 
