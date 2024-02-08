@@ -1,10 +1,7 @@
-import Image from "next/image";
 import HomeContent from "../components/HomeContent/HomeContent";
-//import styles from "./page.module.css";
 import Banner from "@/components/HomeContent/Banner";
-import AppThemeProvider from "@/theme";
 import { Metadata } from "next";
-import Head  from "next/head";
+import Head from "next/head";
 
 export default function Home() {
   return (
