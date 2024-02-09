@@ -1,4 +1,7 @@
 "use client";
+import ExitToAppIcon from "@mui/icons-material/ExitToApp";
+import LoginIcon from "@mui/icons-material/Login";
+import GoogleIcon from "@mui/icons-material/Google";
 import { VisibilityOff, Visibility } from "@mui/icons-material";
 import { TextField, IconButton, InputAdornment, Button } from "@mui/material";
 import React, { useState } from "react";
@@ -35,10 +38,10 @@ function Signup() {
         width: "100%",
         height: "100vh",
         display: "flex",
-        background: "linear-gradient(45deg, #E8EBF0, #FDFDFD)", // Updated background with subtle gradient
+        background: "linear-gradient(45deg, #E8EBef 20%, #FDFDFD 80%)", // Updated background with subtle gradient
       }}
     >
-      <div style={{ margin: "10vh 15vw", maxWidth: "350px" }}>
+      <div style={{ margin: "7vh 15vw", maxWidth: "350px" }}>
         <img
           src="/LogoAqua.png"
           alt="Logo Saar Biotech"
@@ -51,14 +54,43 @@ function Signup() {
             padding: "2em",
             borderRadius: "15px",
             boxShadow: "0 10px 20px 2px rgba(0, 0, 0, 0.3)", // Added box shadow
-            transition: "box-shadow 0.3s ease-in-out", // Smooth transition for box shadow
+            transition: "box-shadow 0.3s ease-in-out",
+            textAlign: "center",
           }}
         >
-          <Link href={"/home"} style={{ fontSize: "1.2em" }}>
-            <span>{"<- Go to Home"}</span>
-          </Link>
-          <h3 style={{ color: "#6F7E8C" }}>Sign up</h3>
-
+          <div>
+            <Link href={"/"} style={{ fontSize: "1.2em", float: "left" }}>
+              <ExitToAppIcon
+                sx={{ fontSize: "1.2em", transform: "scalex(-1)" }}
+              />
+              <span>Home</span>
+            </Link>
+            <Link href={"/login"} style={{ fontSize: "1.2em", float: "right" }}>
+              <span>Login</span>
+              <LoginIcon sx={{ fontSize: "1.2em" }} />
+            </Link>
+          </div>
+          <h3 style={{ color: "#6F7E8C", marginTop: 25 }}>Sign Up</h3>
+          <div style={{ margin: 10 }}>
+            <Button
+              // onClick={handleClick}
+              sx={{
+                background: "#3cb6a0",
+                color: "#fff",
+                transition:
+                  "background-color 0.3s ease-in-out transform 0.3s ease-in-out",
+                ":hover": {
+                  background: "#3cbfb6",
+                  transform: "scale(1.01)",
+                },
+              }}
+            >
+              <GoogleIcon />
+              <span className="mx-2">Continue with Google</span>
+            </Button>
+            <br />
+            <span style={{ fontSize: "1.5em" }}>Or</span>
+          </div>
           <form onSubmit={handleSubmit}>
             <TextField
               label="Username"
@@ -86,7 +118,7 @@ function Signup() {
                 },
                 background: "linear-gradient(180deg, #FFFFFF 0%, #F0F0FF 100%)", // Added gradient background
                 borderRadius: "8px",
-                marginBottom: "1rem",
+                marginBottom: "0.5em",
               }}
             />
             <TextField
@@ -130,21 +162,26 @@ function Signup() {
                 },
                 background: "linear-gradient(180deg, #FFFFFF 0%, #F0F0FF 100%)", // Added gradient background
                 borderRadius: "8px",
-                marginBottom: "1rem",
+                marginBottom: "0.5em",
               }}
             />
             <Button
               type="submit"
               variant="contained"
               sx={{
-                backgroundColor: "#6F7E8C",
+                backgroundColor: "#3cb6a0",
                 color: "#ffffff",
                 borderRadius: "4px",
                 padding: "0.5rem 1rem",
-                marginTop: "1rem",
-                boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)", // Added box shadow
-                textTransform: "none", // Prevents uppercase transformation
-                transition: "background-color 0.3s ease-in-out", // Smooth transition for background color
+                marginTop: "1em",
+                boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
+                textTransform: "none",
+                transition:
+                  "background-color 0.3s ease-in-out transform 0.3s ease-in-out",
+                ":hover": {
+                  background: "#3cbfb6",
+                  transform: "scale(1.01)",
+                },
               }}
             >
               Sign up
