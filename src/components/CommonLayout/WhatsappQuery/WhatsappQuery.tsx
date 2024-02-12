@@ -9,10 +9,11 @@ const ButtonStyles = {
   background: "#25D366",
   color: "white",
   borderRadius: "50%",
-  width: "4em",
-  height: "4em",
-  top: { md: "25em", sm: "25em", xs: "90dvh" },
-  left: { md: "1.5em", sm: "1.5em", xs: "7em" },
+  width: { sm: "4em", xs: "3em" },
+  height: { sm: "4em", xs: "3em" },
+  bottom: { xs: "1em" },
+  top: { sm: "25em" },
+  left: { sm: "1.5em", xs: "7em" },
   opacity: "0.9",
   boxShadow: "2px 4px 8px rgb(0,0,0,0.5)",
   transition:
@@ -43,7 +44,7 @@ function WhatsappQuery() {
   return (
     <>
       <Button sx={ButtonStyles} onClick={handleClick}>
-        <WhatsAppIcon sx={{ fontSize: "3.5em" }} />
+        <WhatsAppIcon fontSize="large" />
       </Button>
     </>
   );
