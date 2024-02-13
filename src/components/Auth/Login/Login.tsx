@@ -4,12 +4,20 @@ import LoginIcon from "@mui/icons-material/Login";
 import GoogleIcon from "@mui/icons-material/Google";
 import { VisibilityOff, Visibility } from "@mui/icons-material";
 import { TextField, IconButton, InputAdornment, Button } from "@mui/material";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { signIn, useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 function Login() {
-  const [showPassword, setShowPassword] = React.useState(false);
-  const [formData, setFormData] = useState({ username: "", password: "" });
+  const { data: session } = useSession();
+  const router = useRouter();
+  const [showPassword, setShowPassword] = useState(false);
+  const [formData, setFormData] = useState({ email: "", password: "" });
+
+  useEffect(() => {
+    session?.user ? router.push("/profile") : null;
+  });
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
@@ -25,10 +33,17 @@ function Login() {
     }));
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log("Form submitted with data:", formData);
-    setFormData({ username: "", password: "" });
+    try {
+      const res = await signIn("credentials", { ...formData, redirect: false });
+      console.log("Form submitted with data:", formData);
+      router.replace("profile");
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setFormData({ email: "", password: "" });
+    }
   };
 
   return (
@@ -76,7 +91,7 @@ function Login() {
           <h3 style={{ color: "#6F7E8C", marginTop: 25 }}>Login</h3>
           <div style={{ margin: 10 }}>
             <Button
-              // onClick={handleClick}
+              onClick={() => signIn("google")}
               sx={{
                 background: "#3cb6a0",
                 color: "#fff",
@@ -97,9 +112,9 @@ function Login() {
 
           <form onSubmit={handleSubmit}>
             <TextField
-              label="Username"
-              name="username"
-              value={formData.username}
+              label="Email"
+              name="email"
+              value={formData.email}
               onChange={handleChange}
               variant="outlined"
               sx={{

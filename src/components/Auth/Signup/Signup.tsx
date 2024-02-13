@@ -4,12 +4,25 @@ import LoginIcon from "@mui/icons-material/Login";
 import GoogleIcon from "@mui/icons-material/Google";
 import { VisibilityOff, Visibility } from "@mui/icons-material";
 import { TextField, IconButton, InputAdornment, Button } from "@mui/material";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { signIn } from "next-auth/react";
+import { useSession } from "next-auth/react";
 
 function Signup() {
-  const [showPassword, setShowPassword] = React.useState(false);
-  const [formData, setFormData] = useState({ username: "", password: "" });
+  const { data: session } = useSession();
+  const router = useRouter();
+  const [showPassword, setShowPassword] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
+
+  useEffect(()=>{
+    session?.user? router.push("/profile"):null
+  })
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
@@ -25,10 +38,32 @@ function Signup() {
     }));
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log("Form submitted with data:", formData);
-    setFormData({ username: "", password: "" });
+    try {
+      const res = await fetch("api/auth/signup", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+      console.log("Form submitted with data:", formData);
+      // const response = await res.json();
+      console.log(res);
+      if (res.ok) {
+        const res = await signIn("credentials", {
+          ...formData,
+          redirect: false,
+        });
+        console.log("Form submitted with data:", formData);
+        router.replace("profile");
+      }
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setFormData({ name: "", email: "", password: "" });
+    }
   };
 
   return (
@@ -38,10 +73,10 @@ function Signup() {
         width: "100%",
         height: "100vh",
         display: "flex",
-        background: "linear-gradient(45deg, #E8EBef 20%, #FDFDFD 80%)", // Updated background with subtle gradient
+        background: "linear-gradient(45deg, #E8EBef 20%, #FDFDFD 80%)",
       }}
     >
-      <div style={{ margin: "7vh 15vw", maxWidth: "350px" }}>
+      <div style={{ margin: "4vh 15vw", maxWidth: "350px" }}>
         <img
           src="/LogoAqua.png"
           alt="Logo Saar Biotech"
@@ -50,10 +85,10 @@ function Signup() {
         <div
           style={{
             margin: 20,
-            background: "#FFFFFF", // Adjusted background color
+            background: "#FFFFFF",
             padding: "2em",
             borderRadius: "15px",
-            boxShadow: "0 10px 20px 2px rgba(0, 0, 0, 0.3)", // Added box shadow
+            boxShadow: "0 10px 20px 2px rgba(0, 0, 0, 0.3)",
             transition: "box-shadow 0.3s ease-in-out",
             textAlign: "center",
           }}
@@ -73,7 +108,7 @@ function Signup() {
           <h3 style={{ color: "#6F7E8C", marginTop: 25 }}>Sign Up</h3>
           <div style={{ margin: 10 }}>
             <Button
-              // onClick={handleClick}
+              onClick={() => signIn("google")}
               sx={{
                 background: "#3cb6a0",
                 color: "#fff",
@@ -93,17 +128,46 @@ function Signup() {
           </div>
           <form onSubmit={handleSubmit}>
             <TextField
-              label="Username"
-              name="username"
-              value={formData.username}
+              label="Name"
+              name="name"
+              value={formData.name}
               onChange={handleChange}
               variant="outlined"
               sx={{
                 "& label.Mui-focused": {
-                  color: "#6F7E8C", // Adjusted label color when focused
+                  color: "#6F7E8C",
                 },
                 "& .MuiInput-underline:after": {
-                  borderBottomColor: "#6F7E8C", // Adjusted underline color after focus
+                  borderBottomColor: "#6F7E8C",
+                },
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": {
+                    borderColor: "#B2BAC2",
+                  },
+                  "&:hover fieldset": {
+                    borderColor: "#6F7E8C",
+                  },
+                  "&.Mui-focused fieldset": {
+                    borderColor: "#6F7E8C",
+                  },
+                },
+                background: "linear-gradient(180deg, #FFFFFF 0%, #F0F0FF 100%)",
+                borderRadius: "8px",
+                marginBottom: "0.5em",
+              }}
+            />
+            <TextField
+              label="Email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              variant="outlined"
+              sx={{
+                "& label.Mui-focused": {
+                  color: "#6F7E8C",
+                },
+                "& .MuiInput-underline:after": {
+                  borderBottomColor: "#6F7E8C",
                 },
                 "& .MuiOutlinedInput-root": {
                   "& fieldset": {

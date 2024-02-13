@@ -7,6 +7,7 @@ import Script from "next/script";
 import AppThemeProvider from "@/theme";
 import "@/fonts/fonts.css";
 import Layout from "@/components/CommonLayout/Layout";
+import { AuthProvider } from "@/components/Auth/Provider/Provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,7 +33,9 @@ export default function RootLayout({
       >
         <AppRouterCacheProvider>
           <AppThemeProvider>
-            <Layout>{children}</Layout>
+            <AuthProvider>
+              <Layout>{children}</Layout>
+            </AuthProvider>
           </AppThemeProvider>
         </AppRouterCacheProvider>
         <Script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></Script>
