@@ -18,12 +18,12 @@ export default function ImageGallery({ imagesCount, name }) {
           <img
             className={styles.largeImage}
             src={imgSource + (currImage + 1) + ".jpg"}
-            alt="Large Image"
+            alt={name}
           />
         </div>
         <div className={styles.thumb}>
           <ul className={styles.myUL}>
-            {Array.from({ length: 5 }, (_, index) => (
+            {Array.from({ length: imagesCount }, (_, index) => (
               <li key={index}>
                 <img
                   className={index === currImage ? styles.current : null}

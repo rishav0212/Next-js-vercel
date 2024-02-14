@@ -99,7 +99,6 @@ export default function Page() {
           <Typography variant="h6" id="description" sx={styles.sectionTitle}>
             DESCRIPTION
             {/* <hr style={{ width: "100%" }} /> */}
-            
           </Typography>
 
           <Typography sx={styles.sectionData} textAlign="justify">
@@ -123,7 +122,6 @@ export default function Page() {
           {/** Indications Section */}
           <Typography variant="h6" id="indications" sx={styles.sectionTitle}>
             Indications
-            
           </Typography>
           <List dense sx={styles.list}>
             {[
@@ -149,7 +147,6 @@ export default function Page() {
           {/** Mechanism Section */}
           <Typography variant="h6" id="mechanism" sx={styles.sectionTitle}>
             Mechanism
-            
           </Typography>
           <Typography sx={styles.sectionData} textAlign="justify">
             Azithromycin binds to the 50S subunit of the 70S bacterial
@@ -164,7 +161,6 @@ export default function Page() {
             id="pharmacokinetics"
           >
             Pharmacokinetics
-            
           </Typography>
           <Typography textAlign="justify" sx={styles.sectionData}>
             <b> Absorption: </b>
@@ -200,7 +196,6 @@ export default function Page() {
           {/** Side Effects Section */}
           <Typography variant="h6" id="side effects" sx={styles.sectionTitle}>
             Side Effects
-            
           </Typography>
           <List dense sx={styles.list}>
             <b>Common side effects include:</b>
@@ -221,7 +216,6 @@ export default function Page() {
             sx={styles.sectionTitle}
           >
             Contraindication
-            
           </Typography>
           <Typography sx={styles.sectionData} textAlign="justify">
             The use of azithromycin is contraindicated in patients with
@@ -232,7 +226,6 @@ export default function Page() {
           {/** Conclusion Section */}
           <Typography variant="h6" id="conclusion" sx={styles.sectionTitle}>
             Conclusion
-            
           </Typography>
           <Typography sx={styles.sectionData} textAlign="justify">
             <b>
@@ -275,7 +268,7 @@ export const metadata: Metadata = {
   title:
     "Tretinoin | Saar Biotech | Third party Medicine Contract Manufacturing",
   description:
-    "Saar biotech Contract manufacturer of pharmaceuticals located in baddi( Excise free Zone) maufacturing  Azithromycin  Tablet/Suspension which is used to treat or prevent certain bacterial infections, most often those causing middle ear infections, strep throat, pneumonia, typhoid, and sinusitis.It is also effective against certain sexually transmitted infections, such as nongonococcal urethritis, chlamydia, and cervicitis.",
+    "Saar Biotech Contract manufacturer of pharmaceuticals located in baddi( Excise free Zone) manufacturing Tretinoin 0.025% Cream which is a derivative of vitamin A used in the treatment of acne, which appears as spots or pimples on the face, chest, or back. Additionally, it aids in smoothing rough facial skin and diminishing fine wrinkles.",
   keywords:
-    "Azithromycin dihydrate IP, azithromycin suspension, azithromycin side effects, azithromycin dosage, azithromycin uses, azithromycin indication, skin infection, ear infection, Gonococcal Infection, 100mg, 200mg, mg, antibiotic drugs, antibacterial drugs ",
+    "Tretinoin cream, acne treatment, skin care, vitamin A cream, fine wrinkles, Saar Biotech, pharmaceutical manufacturer, contract manufacturing, baddi, third party manufacturing",
 };
