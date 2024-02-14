@@ -1,23 +1,33 @@
-"use client";
-
-import { Container, Grid, Stack, Toolbar, Typography } from "@mui/material";
-import Image from "next/image";
-import * as React from "react";
+import { Grid, Typography } from "@mui/material";
+import { Metadata } from "next";
 
 export default function DmPharmaContent() {
   return (
     <>
-      <Toolbar />
-
-      <Typography variant="h4" className="text-center color-primary">
-        DM Pharma Manufacuring Unit
-      </Typography>
-
-      <Toolbar />
-      <Container>
-        <Grid container spacing={8}>
-          <Grid item xs={12} sm={12} md={8} lg={8}>
-            <Typography className="d-flex align-self-center lh-lg">
+      <Grid container alignContent={"center"} justifyContent={"center"}>
+        <Grid
+          container
+          xs={11}
+          md={10}
+          item
+          justifyContent={"center"}
+          textAlign={"center"}
+          sx={{
+            padding: 4,
+            borderRadius: 5,
+            backgroundColor: "#f0f0f0",
+            mt: 5,
+            justifySelf: "center",
+            boxShadow: "0px 4px 8px rgb(0,0,0,0.4)",
+          }}
+        >
+          <Grid item xs={12} margin={1}>
+            <Typography fontSize={"4em"} variant="h4" className="color-primary">
+              DM Pharma Manufacuring Unit
+            </Typography>
+          </Grid>
+          <Grid item xs={12} sm={12} md={8}>
+            <Typography fontSize={"1.8em"} textAlign={"justify"}>
               The facilities and location of the factory have created an extra
               edge for manufacturing and distributing the products. The factory
               consists of Production department, R&D department, Accounts
@@ -48,73 +58,83 @@ export default function DmPharmaContent() {
               position in the domestic as well as global market.
             </Typography>
           </Grid>
-          <Grid item xs={12} sm={12} md={4} lg={4}>
-            <Stack
-              spacing={2}
-              alignItems="center"
-              justifyContent={"center"}
-              className="w-100 h-100"
-            >
-              <Image
-                className="manufacturing-unit-images"
-                width={250}
-                height={100}
-                src={"/images/dm-image1.jpg"}
-                alt={"Saar Biotech"}
-              />
-              <Image
-                className="manufacturing-unit-images"
-                width={250}
-                height={100}
-                src={"/images/dm-image2.jpg"}
-                alt={"Saar Biotech"}
-              />
-              <Image
-                className="manufacturing-unit-images"
-                width={250}
-                height={100}
-                src={"/images/dm-image3.jpg"}
-                alt={"Saar Biotech"}
-              />
-              <Image
-                className="manufacturing-unit-images"
-                width={250}
-                height={100}
-                src={"/images/dm-image4.jpg"}
-                alt={"Saar Biotech"}
-              />
-              <Image
-                className="manufacturing-unit-images"
-                width={250}
-                height={100}
-                src={"/images/dm-image5.jpg"}
-                alt={"Saar Biotech"}
-              />
-            </Stack>
+          <Grid
+            item
+            alignItems="center"
+            justifyContent={"center"}
+            xs={12}
+            sm={12}
+            md={4}
+          >
+            <img
+              className="manufacturing-unit-images"
+              width={250}
+              height={100}
+              src={"/images/dm-image1.jpg"}
+              alt={"Saar Biotech"}
+            />
+            <img
+              className="manufacturing-unit-images"
+              width={250}
+              height={100}
+              src={"/images/dm-image2.jpg"}
+              alt={"Saar Biotech"}
+            />
+            <img
+              className="manufacturing-unit-images"
+              width={250}
+              height={100}
+              src={"/images/dm-image3.jpg"}
+              alt={"Saar Biotech"}
+            />
+            <img
+              className="manufacturing-unit-images"
+              width={250}
+              height={100}
+              src={"/images/dm-image4.jpg"}
+              alt={"Saar Biotech"}
+            />
           </Grid>
         </Grid>
+        <Grid
+          container
+          xs={11}
+          md={10}
+          item
+          justifyContent={"center"}
+          sx={{
+            borderRadius: 5,
+            backgroundColor: "#f0f0f0",
+            my: 5,
+            justifySelf: "center",
+            boxShadow: "0px 4px 8px rgb(0,0,0,0.4)",
+          }}
+        >
+          <Grid item xs={12} margin={2} className="text-center color-primary">
+            <Typography fontSize={"3em"} variant="h4">
+              Our Strengths
+            </Typography>
+          </Grid>
 
-        <Toolbar />
-        <Toolbar />
-
-        <Typography variant="h4" className="text-center color-primary">
-          Our Strengths
-        </Typography>
-
-        <Toolbar />
-
-        <Grid container spacing={8} className="text-center">
-          <Grid item xs={12} sm={12} md={6} lg={6}>
-            <Typography variant="h6" className="font--size-1125">
+          <Grid item xs={12} sm={12} md={5} margin={1}>
+            <Typography
+              fontSize={"1.9em"}
+              variant="h6"
+              className="font--size-1125"
+            >
               <li>Timely Delivery of Product</li>
             </Typography>
           </Grid>
-          <Grid item xs={12} sm={12} md={6} lg={6}>
-            <Typography variant="h6" className="font--size-1125">
+          <Grid item xs={12} sm={12} md={5} margin={1}>
+            <Typography
+              fontSize={"1.9em"}
+              variant="h6"
+              className="font--size-1125"
+            >
               <li>Determined by quality, integrity and core values </li>
             </Typography>
           </Grid>
-          <Grid item xs={12} sm={12} md={6} lg={6}>
+          <Grid item fontSize={"1.9em"} xs={12} sm={12} md={5} margin={1}>
             <Typography variant="h6" className="font--size-1125">
               <li>
                 Rigid adherence to Good Manufacturing Practises (GMP)
@@ -122,8 +142,12 @@ export default function DmPharmaContent() {
               </li>
             </Typography>
           </Grid>
-          <Grid item xs={12} sm={12} md={6} lg={6}>
-            <Typography variant="h6" className="font--size-1125">
+          <Grid item xs={12} sm={12} md={5} margin={1}>
+            <Typography
+              fontSize={"1.9em"}
+              variant="h6"
+              className="font--size-1125"
+            >
               <li>
                 Multidisciplined workforce that is motivated towards the highest
                 standards of customer satisfaction
@@ -131,9 +155,15 @@ export default function DmPharmaContent() {
             </Typography>
           </Grid>
         </Grid>
-
-        <Toolbar />
-      </Container>
+      </Grid>
     </>
   );
 }
+
+export const metadata: Metadata = {
+  title: "DM Pharma | Manufacturing Unit",
+  description:
+    "DM Pharma's manufacturing unit is located in Baddi, District Solan of Himachal Pradesh. We specialize in the production of pharmaceuticals, including anti-retrovirals, anti-malarials, cardiovascular, dermatology, and ophthalmology products.",
+  keywords:
+    "DM Pharma, pharmaceutical manufacturing, pharmaceutical companies, Baddi Himachal, third-party medicine manufacturers, bulk medicine manufacturers, DCGI approved drugs, pharmaceutical exports, top pharmaceutical companies, anti-retrovirals, anti-malarials, cardiovascular, dermatology, ophthalmology, pharmaceutical manufacturing in India",
+};

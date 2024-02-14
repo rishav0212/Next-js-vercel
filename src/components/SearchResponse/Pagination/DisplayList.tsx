@@ -4,11 +4,14 @@ import React, { useState, useEffect, useCallback, useMemo } from "react";
 import Link from "next/link";
 import styles from "./pagination.module.css";
 import paginationRange from "@/utils/appUtils";
-import { Grid, useMediaQuery } from "@mui/material";
-import { useTheme } from "@mui/system";
+import { Popover, Grid, useMediaQuery, Paper } from "@mui/material";
+import { color, fontSize, useTheme } from "@mui/system";
 
 const MakeRows = ({ paginatedList }) => {
   //FUNCTION TO MAKE ROWS CATEGORY BY COUNTING PRODUCTS IN MAIN CATEGORY AND SUB CATEGORY
+
+  const [hoveredLink, setHoveredLink] = useState(null);
+
   let Main = paginatedList[0].mainCategory;
   let numberOfProductsMain = [];
   let count = 0;
@@ -59,34 +62,63 @@ const MakeRows = ({ paginatedList }) => {
         }
         return (
           <tr key={index}>
-            {product.mainCategory !== prevMain ? (
-              <td
-                rowSpan={numberOfProductsMain[prevMainIndex]}
-                className="align-top"
-              >
-                {product.mainCategory}
-              </td>
-            ) : null}
+            <td
+              className={`${styles.rowHover} ${
+                index % 2 === 0 ? styles.evenRow : styles.oddRow
+              }`}
+              onMouseEnter={() => setHoveredLink(index)}
+              onMouseLeave={() => setHoveredLink(null)}
+            >
+              {product.linkAvailable ? (
+                <Link
+                  href={
+                    product.link.includes("dmpharma")
+                      ? product.link
+                      : product.pageMade
+                      ? "/product/" + product.link.toLowerCase()
+                      : "https://node.saarbiotech.in/product/" +
+                        product.link.toLowerCase()
+                  }
+                  style={{ color: "black", textDecoration: "none" }}
+                >
+                  {product.name}{" "}
+                  <img
+                    width={20}
+                    height={20}
+                    src={"/images/icons/info-64px.png"}
+                    alt={"Product Information"}
+                  />
+                  {hoveredLink === index && (
+                    <span className={styles.customPopover}>Learn more</span>
+                  )}
+                </Link>
+              ) : (
+                product["name"]
+              )}
+            </td>
+            <td
+              className={`${styles.rowHover} ${
+                index % 2 === 0 ? styles.evenRow : styles.oddRow
+              }`}
+            >
+              {product["packing"]}
+            </td>
             {product.subCategory !== prevSub ? (
               <td
                 rowSpan={numberOfProductsSub[prevSubIndex]}
-                className="align-top"
+                className={styles.category}
               >
                 {product.subCategory}
               </td>
             ) : null}
-            <td>{product.name}</td>
-            <td>
-              <Link
-                href={
-                  product.link.includes("dmpharma")
-                    ? product.link
-                    : "/product/" + product.link
-                }
+            {product.mainCategory !== prevMain ? (
+              <td
+                rowSpan={numberOfProductsMain[prevMainIndex]}
+                className={styles.category}
               >
-                {product.name}
-              </Link>
-            </td>
+                {product.mainCategory}
+              </td>
+            ) : null}
           </tr>
         );
       })}
@@ -96,7 +128,7 @@ const MakeRows = ({ paginatedList }) => {
 
 const DisplayList = ({ list, initialPage = 1 }) => {
   const theme = useTheme();
-  const isSmallerScreen = useMediaQuery(theme.breakpoints.down("sm"));
+  const isSmallerScreen = useMediaQuery(theme.breakpoints.down("md"));
   console.log(isSmallerScreen);
 
   const all_products = [];
@@ -114,6 +146,9 @@ const DisplayList = ({ list, initialPage = 1 }) => {
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [list, limit]);
 
   const totalPages = Math.ceil(all_products.length / limit);
 
@@ -130,120 +165,163 @@ const DisplayList = ({ list, initialPage = 1 }) => {
 
   return (
     <>
-      <Grid
-        container
-        item
-        justifyContent="center"
-        alignContent="center"
-        margin={1}
+      <Paper
+        elevation={24}
         sx={{
-          fontSize: { md: 17, sm: 15, xs: 14 },
-          width: { md: "800px", sm:"800px", xs:"350px"},
+          backgroundColor: "#f0f0f0",
+          marginTop: 1,
+          justifyContent: "center",
+          alignContent: "center",
+          padding: 2,
         }}
       >
-        {!isSmallerScreen ? (
-          <Grid item xs={2.4} sm={1.3} md={1.3}>
-            <button
-              className={`btn ${styles.prev} ${
-                currentPage === 1 ? `disabled ${styles.disabled}` : ""
-              }`}
-              onClick={() => handlePageChange(currentPage - 1)}
-              aria-label="Previous"
-            >
-              <span aria-hidden="true">&laquo;</span>
-              <span>Prev</span>
-            </button>
-          </Grid>
-        ) : null}
-
-        {array.map((value, index) => (
-          <Grid item key={index} xs={1.7} sm={0.7} md={0.7}>
-            {value === "..." || value === "... " ? (
-              <button className={"disabled " + styles["button-des"]}>
-                {value}
+        <Grid
+          container
+          justifySelf={"center"}
+          margin={"auto"}
+          sx={{
+            // height: "100%",
+            width: "85vw",
+            overflow: "auto",
+            border: "1px solid #3fc0a9",
+            borderRadius: "10px",
+          }}
+        >
+          <table className={styles.tableStyle}>
+            <caption>Products</caption>
+            <thead>
+              <tr>
+                <th style={{ width: "66vw" }}>COMPOSITION</th>
+                <th style={{ width: "10vw" }}>PACKING</th>
+                <th style={{ width: "12vw" }}>SUB CATEGORY</th>
+                <th style={{ width: "12vw" }}>MAIN CATEGORY</th>
+              </tr>
+            </thead>
+            <tbody>
+              {paginatedList.length ? (
+                <MakeRows paginatedList={paginatedList} />
+              ) : (
+                <tr>
+                  <td colSpan={5} rowSpan={10} style={{ textAlign: "center" }}>
+                    No Products Found
+                  </td>
+                </tr>
+              )}
+            </tbody>
+          </table>
+        </Grid>
+        <Grid
+          container
+          spacing={"0.3vh"}
+          justifyContent={"center"}
+          alignContent={"center"}
+          position={"sticky"}
+          zIndex={1}
+          sx={{
+            background: "#f0f0f0",
+            top: "6.3em",
+          }}
+        >
+          <Grid item>
+            {!isSmallerScreen ? (
+              <button
+                className={`${styles.prev} ${
+                  currentPage === 1 ? ` ${styles.disabled}` : ""
+                }`}
+                onClick={() => handlePageChange(currentPage - 1)}
+                aria-label="Previous"
+              >
+                <span aria-hidden="true">&laquo;</span>
+                <span>Prev</span>
               </button>
             ) : (
               <button
-                className={`${styles["button-des"]} ${
-                  currentPage === value ? styles.active : null
-                } btn `}
-                onClick={() => handlePageChange(value)}
+                className={` ${styles["button-des"]} ${
+                  currentPage === 1 ? ` ${styles.disabled}` : ""
+                }`}
+                onClick={() => handlePageChange(currentPage - 1)}
+                aria-label="Previous"
               >
-                {value}
+                <span>{"<<"}</span>
               </button>
             )}
           </Grid>
-        ))}
 
-        {isSmallerScreen ? (
-          <Grid item xs={2.4}>
-            <button
-              className={`btn ${styles.prev} ${
-                currentPage === 1 ? `disabled ${styles.disabled}` : ""
-              }`}
-              onClick={() => handlePageChange(currentPage - 1)}
-              aria-label="Previous"
-            >
-              <span aria-hidden="true">&laquo;</span>
-              <span>Prev</span>
-            </button>
-          </Grid>
-        ) : null}
+          {array.map((value, index) => (
+            <Grid item key={index}>
+              {value === "..." || value === "... " ? (
+                <button className={styles["button-des"]}>{value}</button>
+              ) : (
+                <button
+                  className={`${styles["button-des"]} ${
+                    currentPage === value ? styles.active : null
+                  } `}
+                  onClick={() => handlePageChange(value)}
+                >
+                  {value}
+                </button>
+              )}
+            </Grid>
+          ))}
 
-        <Grid item xs={2.4} sm={1.3} md={1.3}>
-          <button
-            className={`btn ${styles.prev} ${
-              currentPage === Math.ceil(all_products.length / limit)
-                ? `disabled ${styles.disabled}`
-                : ""
-            }`}
-            onClick={() => handlePageChange(currentPage + 1)}
-            aria-label="Next"
-          >
-            <span>Next</span>
-            <span aria-hidden="true">&raquo;</span>
-          </button>
-        </Grid>
-
-        <Grid item className={styles.entries} xs={7} sm={4} md={4}>
-          <span className="p-2">Show</span>
-          <select
-            className="p-1"
-            onChange={(e) => {
-              setLimit(Number(e.target.value));
-            }}
-            value={limit}
-          >
-            <option value="10">10</option>
-            <option value="20">20</option>
-            <option value="30">30</option>
-          </select>
-          <span className="p-2">Products</span>
-        </Grid>
-      </Grid>
-
-      <Grid container margin={2} sx={{width:"85vw", overflow:"auto"}} >
-        <table className="table table-light table-bordered align-middle ">
-          <caption>Products</caption>
-          <thead className="table-primary">
-            <tr>
-              <th className="p-3">Main Category</th>
-              <th className="p-3">Sub Category</th>
-              <th className="p-3">Composition</th>
-              <th className="p-3">Link</th>
-            </tr>
-          </thead>
-          <tbody>
-            {paginatedList.length ? (
-              <MakeRows paginatedList={paginatedList} />
+          <Grid item>
+            {!isSmallerScreen ? (
+              <button
+                className={` ${styles.prev} ${
+                  currentPage === Math.ceil(all_products.length / limit)
+                    ? `${styles.disabled}`
+                    : ""
+                }`}
+                onClick={() => handlePageChange(currentPage + 1)}
+                aria-label="Next"
+              >
+                <span>Next</span>
+                <span aria-hidden="true">&raquo;</span>
+              </button>
             ) : (
-              <tr>
-                <td>No Products Found</td>
-              </tr>
+              <button
+                className={` ${styles["button-des"]} ${
+                  currentPage === Math.ceil(all_products.length / limit)
+                    ? `${styles.disabled}`
+                    : ""
+                }`}
+                onClick={() => handlePageChange(currentPage + 1)}
+                aria-label="Next"
+              >
+                <span>{">>"}</span>
+              </button>
             )}
-          </tbody>
-        </table>
-      </Grid>
+          </Grid>
+
+          <Grid
+            item
+            md={5}
+            sm={4.5}
+            xs={11}
+            marginY={1}
+            className={styles.entries}
+            textAlign={"right"}
+            alignSelf={"center"}
+            justifyContent={"right"}
+          >
+            <span className="p-2">Show</span>
+            <select
+              className="p-1"
+              onChange={(e) => {
+                setLimit(Number(e.target.value));
+              }}
+              value={limit}
+              style={{ borderRadius: 5 }}
+            >
+              <option value="10">10</option>
+              <option value="20">20</option>
+              <option value="30">30</option>
+              <option value="50">50</option>
+            </select>
+            <span className="p-2">Products</span>
+          </Grid>
+        </Grid>
+      </Paper>
     </>
   );
 };

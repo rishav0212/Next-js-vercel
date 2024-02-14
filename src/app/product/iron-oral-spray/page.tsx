@@ -1,192 +1,189 @@
 import {
-  Container,
   List,
   ListItem,
   ListItemIcon,
   ListItemText,
   Toolbar,
   Typography,
+  Grid,
+  Paper,
+  Link,
 } from "@mui/material";
 import { FiberManualRecord } from "@mui/icons-material";
+import { Metadata } from "next";
+import * as styles from "@/components/ProductPages/styles.js";
 
-export default function IronSpray() {
+export default function Page() {
+  const link = "iron-oral-spray";
+
   return (
-    <>
-      <Toolbar />
-      <Typography variant="h4" className="text-center color-primary">
-        Iron Oral Spray
-      </Typography>
-      <Toolbar />
+    <Grid
+      container
+      marginTop={3}
+      justifyContent="center"
+      alignContent="center"
+      spacing={1}
+    >
+      <Grid container item md={8} sm={10} xs={11} sx={styles.pageItemGrid}>
+        <Grid container sx={styles.upperGrid}>
+          <Grid item xs={12}>
+            <Typography variant="h4" sx={styles.titleStyle}>
+              Iron Oral Spray
+            </Typography>
+          </Grid>
+          <Grid item md={7} sm={12} xs={12}>
+            <Grid display={"flex"}>
+              <Typography variant="h6" sx={styles.indications.title}>
+                <b>Indications -</b>
+              </Typography>
+              <Typography sx={styles.indications.data} variant="subtitle1">
+                Avoiding digestive comfort and enhancing bioavailability
+              </Typography>
+            </Grid>
 
-      <Container maxWidth="md">
-        <img
-          src="/images/iron-oral-spray.jpg"
-          alt="Saar Biotech"
-          style={{ width: "100%" }}
-        />
+            <Grid display={"flex"}>
+              <Typography variant="h6" sx={styles.approved.title}>
+                <b>Approved Name -</b>
+              </Typography>
+              <Typography sx={styles.approved.data} variant="h6">
+                Iron Oral Spray
+              </Typography>
+            </Grid>
 
-        <Typography variant="subtitle1" className="fw-600 mb-2 mt-5">
-          Indications:- Avoiding digestive comfort and enhancing bioavailability
-        </Typography>
+            <Grid>
+              {" "}
+              <Typography sx={styles.presentation.title} variant="h6">
+                <b>Spray Presentation :</b>
+              </Typography>
+              <Typography sx={styles.presentation.data} variant="body1">
+                <b>Iron</b> (As Ferric ammonium citrate) 4.2 mg
+              </Typography>
+            </Grid>
 
-        <Typography
-          variant="h6"
-          className="color-primary mb--25 mt-4 text-uppercase"
-        >
-          Approved Name -{" "}
-          <span style={{ color: "black" }}>Iron Oral Spray</span>
-        </Typography>
+            <Link sx={{ color: "black" }} href="#description">
+              <Typography variant="body2" sx={styles.readMoreGrid}>
+                <b>Description : </b> Iron oral spray is an effective
+                intra-spray technology formulated to directly deliver iron into
+                the bloodstream, bypassing the primary processing by the
+                digestive system and thus preventing digestive discomfort
+                experienced from ingested iron supplements while also enhancing
+                bioavailability. The tiny droplets absorb quickly, providing
+                fast nutrient uptake.
+              </Typography>
+            </Link>
 
-        <Typography variant="button" className="font--size-1125">
-          Spray Presentation:
-        </Typography>
+            <Link sx={{ color: "black" }} href="#interactions">
+              <Typography variant="body2" sx={styles.readMoreGrid}>
+                <b>Main Features : </b> Treats Anemia, Boosts Hemoglobin,
+                Reduces Fatigue, Increases Muscle Strength, Boosts Immunity,
+                Improves Concentration", Reduces Bruising, Restores Sleep
+              </Typography>
+            </Link>
+          </Grid>
 
-        <Typography className="font--size-1125">
-          Iron (As Ferric ammonium citrate) 4.2 mg
-        </Typography>
+          <Grid item md={5} sm={7} xs={9} sx={styles.imgPaper}>
+            <img
+              src={`/images/iron-oral-spray.jpg`}
+              alt="iron oral spray | Saar Biotech Product"
+              style={{
+                width: "100%",
+                // height: "100%",
+                objectFit: "contain",
+              }}
+            />
+          </Grid>
+        </Grid>
 
-        <Typography className="my-3">
-          Iron oral spray is an effective intra-spray technology formulated to
-          directly deliver iron into the bloodstream, bypassing the primary
-          processing by the digestive system and thus preventing digestive
-          discomfort experienced from ingested iron supplements while also
-          enhancing bioavailability. The tiny droplets absorb quickly, providing
-          fast nutrient uptake.
-        </Typography>
+        <Grid item md={12} sx={styles.lowerGrid}>
+          <Typography variant="h6" sx={styles.sectionTitle} id="description">
+            DESCRIPTION
+          </Typography>
 
-        <Typography variant="h6" className="color-primary mt-4 text-uppercase">
-          Indications
-        </Typography>
+          <Typography sx={styles.sectionData}>
+            Iron oral spray is an effective intra-spray technology formulated to
+            directly deliver iron into the bloodstream, bypassing the primary
+            processing by the digestive system and thus preventing digestive
+            discomfort experienced from ingested iron supplements while also
+            enhancing bioavailability. The tiny droplets absorb quickly,
+            providing fast nutrient uptake.
+            <br /> <br /> Iron is an essential mineral. Most of the iron in the
+            body is found in the hemoglobin of red blood cells and in the
+            myoglobin of muscle cells. Iron is vital for transporting oxygen and
+            carbon dioxide. It is highly regarded for its role in supporting a
+            healthy immune system, treating anemia, boosting hemoglobin,
+            reducing tiredness and supporting a normal cognitive function.
+          </Typography>
 
-        <List>
-          <ListItem>
-            <ListItemIcon>
-              <FiberManualRecord className="color-primary icon-small" />
-            </ListItemIcon>
-            <ListItemText>Prevents digestive discomfort</ListItemText>
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <FiberManualRecord className="color-primary icon-small" />
-            </ListItemIcon>
-            <ListItemText>Reduces tiredness and fatigue</ListItemText>
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <FiberManualRecord className="color-primary icon-small" />
-            </ListItemIcon>
-            <ListItemText>Increases bioavailability</ListItemText>
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <FiberManualRecord className="color-primary icon-small" />
-            </ListItemIcon>
-            <ListItemText>
-              Effective alternative to tablets and capsules
-            </ListItemText>
-          </ListItem>
-        </List>
+          {/** Indications Section */}
+          <Typography variant="h6" sx={styles.sectionTitle}>
+            Indications
+          </Typography>
+          <List dense sx={styles.list}>
+            {[
+              "Prevents digestive discomfort",
+              "educes tiredness and fatigue",
+              "Increases bioavailability",
+              "Effective alternative to tablets and capsules",
+            ].map((item, i) => (
+              <ListItem key={i}>
+                <ListItemIcon>
+                  <FiberManualRecord className="color-primary icon-small" />
+                </ListItemIcon>
+                <ListItemText
+                  primary={item}
+                  primaryTypographyProps={{ fontSize: "1em" }}
+                />
+              </ListItem>
+            ))}
+          </List>
 
-        <Typography variant="h6" className="color-primary mt-4 text-uppercase">
-          Main Features
-        </Typography>
+          <Typography variant="h6" sx={styles.sectionTitle}>
+            Main Features
+          </Typography>
+          <List dense sx={styles.list}>
+            {[
+              "Treats Anemia",
+              "Boosts Hemoglobin",
+              "Reduces Fatigue",
+              "Increases Muscle Strength",
+              "Boosts Immunity",
+              "Improves Concentration",
+              "Reduces Bruising",
+              "Restores Sleep",
+            ].map((item, i) => (
+              <ListItem key={i}>
+                <ListItemIcon>
+                  <FiberManualRecord className="color-primary icon-small" />
+                </ListItemIcon>
+                <ListItemText primaryTypographyProps={{ fontSize: "1em" }}>
+                  {item}
+                </ListItemText>
+              </ListItem>
+            ))}
+          </List>
 
-        <List>
-          <ListItem>
-            <ListItemIcon>
-              <FiberManualRecord className="color-primary icon-small" />
-            </ListItemIcon>
-            <ListItemText>Treats Anemia</ListItemText>
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <FiberManualRecord className="color-primary icon-small" />
-            </ListItemIcon>
-            <ListItemText>Boosts Hemoglobin</ListItemText>
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <FiberManualRecord className="color-primary icon-small" />
-            </ListItemIcon>
-            <ListItemText>Reduces Fatigue</ListItemText>
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <FiberManualRecord className="color-primary icon-small" />
-            </ListItemIcon>
-            <ListItemText>Increases Muscle Strength</ListItemText>
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <FiberManualRecord className="color-primary icon-small" />
-            </ListItemIcon>
-            <ListItemText>Boosts Immunity</ListItemText>
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <FiberManualRecord className="color-primary icon-small" />
-            </ListItemIcon>
-            <ListItemText>Improves Concentration</ListItemText>
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <FiberManualRecord className="color-primary icon-small" />
-            </ListItemIcon>
-            <ListItemText>Reduces Bruising</ListItemText>
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <FiberManualRecord className="color-primary icon-small" />
-            </ListItemIcon>
-            <ListItemText>Restores Sleep</ListItemText>
-          </ListItem>
-        </List>
-
-        <Typography
-          variant="h6"
-          className="color-primary mb--25 mt-4 text-uppercase"
-        >
-          Description
-        </Typography>
-
-        <Typography>
-          Iron is an essential mineral. Most of the iron in the body is found in
-          the hemoglobin of red blood cells and in the myoglobin of muscle
-          cells. Iron is vital for transporting oxygen and carbon dioxide. It is
-          highly regarded for its role in supporting a healthy immune system,
-          treating anemia, boosting hemoglobin, reducing tiredness and
-          supporting a normal cognitive function.
-        </Typography>
-
-        <Typography variant="h6" className="color-primary mt-4 text-uppercase">
-          Storage
-        </Typography>
-
-        <List>
-          <ListItem>
-            <ListItemIcon>
-              <FiberManualRecord className="color-primary icon-small" />
-            </ListItemIcon>
-            <ListItemText>
-              tore at room temperature and out of direct sunlight.
-            </ListItemText>
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <FiberManualRecord className="color-primary icon-small" />
-            </ListItemIcon>
-            <ListItemText>Keep out of reach of children.</ListItemText>
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <FiberManualRecord className="color-primary icon-small" />
-            </ListItemIcon>
-            <ListItemText>Once opened, use within 6 months.</ListItemText>
-          </ListItem>
-        </List>
+          <Typography variant="h6" sx={styles.sectionTitle}>
+            Storage
+          </Typography>
+          <List dense sx={styles.list}>
+            {[
+              "Store at room temperature and out of direct sunlight.",
+              "Keep out of reach of children.",
+              "Once opened, use within 6 months.",
+            ].map((item, i) => (
+              <ListItem key={i} sx={{}}>
+                <ListItemIcon>
+                  <FiberManualRecord className="color-primary icon-small" />
+                </ListItemIcon>
+                <ListItemText primaryTypographyProps={{ fontSize: "1em" }}>
+                  {item}
+                </ListItemText>
+              </ListItem>
+            ))}
+          </List>
+        </Grid>
 
         <Toolbar />
-
         <Typography className="fst-italic fw-600">
           Disclaimer: The data uploaded is made from content already available
           on internet. The company holds no right of it and is not responsible
@@ -194,7 +191,14 @@ export default function IronSpray() {
         </Typography>
 
         <Toolbar />
-      </Container>
-    </>
+      </Grid>
+    </Grid>
   );
 }
+
+export const metadata: Metadata = {
+  title:
+    "Iron Oral Spray | Saar Biotech | Third party Medicine Contract Manufacturing",
+  description: "Iron oral spray is an effective intra-spray technology formulated to directly deliver iron into the bloodstream, bypassing the primary processing by the digestive system and thus preventing digestive discomfort experienced from ingested iron supplements while also enhancing bioavailability. ",
+  keywords: "iron, oral, spray, Avoiding digestive comfort, enhancing bioavailability, digestive system, third party, pharma, pharmaceutical, manufacturing, baddi, chandigarh",
+};

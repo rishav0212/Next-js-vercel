@@ -1,0 +1,64 @@
+.navbar-contact {
+  padding: 0.6em 1.1em;
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: 25em;
+  font-weight: 600;
+  font-size: 1.6em;
+}
+
+.navbar-links {
+  color: #000;
+  transition: border 0.3s ease-out, color 0.3s ease-out;
+  font-weight: 600;
+  font-size: 1.4em;
+  cursor: pointer;
+  border-bottom: 0.2em solid transparent;
+  text-decoration: none;
+}
+
+.border-bottom-class {
+  padding: 1.39em 1.1em;
+}
+
+.navbar-dropdown-links {
+  color: #fff;
+  transition: 0.3s;
+  font-weight: 600;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.navbar-links:hover,
+.active-link {
+  color: var(--primary-color);
+  border-bottom: 0.2em solid var(--primary-color);
+}
+
+.active {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.dropdown1 {
+  padding: 0px 0px 0.2em 0px;
+  position: relative;
+  text-align: center;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 92%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  background-color: var(--primary-color);
+  min-width: 16em;
+  box-shadow: 2px 8px 16px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  padding: 0px 1em;
+}
+.dropdown1:hover .dropdown-content {
+  display: block;
+}
