@@ -43,7 +43,7 @@ export default function RootLayout({
           src="https://www.googletagmanager.com/gtag/js?id=G-P50ZVEHX0H"
         ></Script>
         <Script>
-          {`  window.dataLayer = window.dataLayer || [];
+          {` window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
 
